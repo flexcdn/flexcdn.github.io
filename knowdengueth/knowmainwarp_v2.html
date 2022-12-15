@@ -88,6 +88,18 @@
     <div class="knowchartwarpin">
 
         <div class="knowchartinhead">
+            กลุ่มผู้ป่วยและเสียชีวิตสะสมจากไข้เลือดออกแบ่งตามกลุ่มอายุ
+        </div>
+
+        <div class="knowchartinsubhead">
+
+            <div class="knowchartinsubheadcol1">
+                <div class="knowchartinsubheadcol1color"></div> ป่วย (ราย)
+            </div>
+            <div class="knowchartinsubheadcol2">
+                <div class="knowchartinsubheadcol2color"></div> เสียชีวิต (ราย)
+            </div>
+            <div class="knowclearall"></div>
 
         </div>
 
@@ -117,39 +129,40 @@
                 <div class="bar-chart stacked pad">
                     <ul class="plot-container group-by-number" id="knowchartbar">
 
-                        <li>
+                        <li class="knowchartbarinhead">
                             <div data-cp-size="0">0</div>
                         </li>
                         <li>
-                            <div data-cp-size="30">1718</div>
+                            <div data-cp-size="30" class="knowchartbarsick0-4"><p id="ageinfo1c1print"></p></div>
+                            <div data-cp-size="0" data-group="5" class="knowchartbardead0-4"><p id="ageinfo1c2print"></p></div>
                         </li>
                         <li>
-                            <div data-cp-size="90">9550</div>
-                            <div data-cp-size="6" data-group="5">6</div>
+                            <div data-cp-size="90" class="knowchartbarsick5-14"><p id="ageinfo2c1print"></p></div>
+                            <div data-cp-size="6" data-group="5" class="knowchartbardead5-14"><p id="ageinfo2c2print"></p></div>
                         </li>
                         <li>
-                            <div data-cp-size="70">6834</div>
-                            <div data-cp-size="4" data-group="5">4</div>
+                            <div data-cp-size="70" class="knowchartbarsick15-24"><p id="ageinfo3c1print"></p></div>
+                            <div data-cp-size="4" data-group="5" class="knowchartbardead15-24"><p id="ageinfo3c2print"></p></div>
                         </li>
                         <li>
-                            <div data-cp-size="35">4544</div>
-                            <div data-cp-size="3" data-group="5">1</div>
+                            <div data-cp-size="35" class="knowchartbarsick25-34"><p id="ageinfo4c1print"></p></div>
+                            <div data-cp-size="3" data-group="5" class="knowchartbardead25-34"><p id="ageinfo4c2print"></p></div>
                         </li>
                         <li>
-                            <div data-cp-size="25">2850</div>
-                            <div data-cp-size="4" data-group="5">4</div>
+                            <div data-cp-size="25" class="knowchartbarsick35-44"><p id="ageinfo5c1print"></p></div>
+                            <div data-cp-size="4" data-group="5" class="knowchartbardead35-44"><p id="ageinfo5c2print"></p></div>
                         </li>
                         <li>
-                            <div data-cp-size="18">1729</div>
-                            <div data-cp-size="4" data-group="5">4</div>
+                            <div data-cp-size="18" class="knowchartbarsick45-54"><p id="ageinfo6c1print"></p></div>
+                            <div data-cp-size="4" data-group="5" class="knowchartbardead45-54"><p id="ageinfo6c2print"></p></div>
                         </li>
                         <li>
-                            <div data-cp-size="15">1218</div>
-                            <div data-cp-size="3" data-group="5">2</div>
+                            <div data-cp-size="15" class="knowchartbarsick55-64"><p id="ageinfo7c1print"></p></div>
+                            <div data-cp-size="3" data-group="5" class="knowchartbardead55-64"><p id="ageinfo7c2print"></p></div>
                         </li>
                         <li>
-                            <div data-cp-size="10">891</div>
-                            <div data-cp-size="3" data-group="5">2</div>
+                            <div data-cp-size="10" class="knowchartbarsick65"><p id="ageinfo8c1print"></p></div>
+                            <div data-cp-size="3" data-group="5" class="knowchartbardead65"><p id="ageinfo8c2print"></p></div>
                         </li>
 
                     </ul>
@@ -159,6 +172,15 @@
         </div>
 
         <div class="knowclearall"></div>
+
+        <div class="knowchartbotinfo">
+            <div class="knowchartbotinfo1">
+                กลุ่มอายุที่พบอัตราป่วยมากที่สุด คือ <p id="ageinfosum1print"></p>
+            </div>
+            <div class="knowchartbotinfo2">
+                กลุ่มอายุที่พบอัตราเสียชีวิตมากที่สุด คือ <p id="ageinfosum2print"></p>
+            </div>
+        </div>
 
     </div>
 
@@ -172,91 +194,7 @@
 <div id="knowbotcolwarp">
 
     <div id="knowbotcol1">
-    <div class="knowbotcol1in1">แบ่งตามกลุ่มอายุ</div>
 
-    <table id="knowdfagetable">
-        <thead>
-            <tr>
-                <th>กลุ่มอายุ</th>
-                <th>ป่วย</th>
-                <th>ตาย</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>0-4 ปี</td>
-                <td>
-                <p id="ageinfo1c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo1c2print"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>5-14 ปี</td>
-                <td>
-                <p id="ageinfo2c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo2c2print"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>15 -24 ปี</td>
-                <td>
-                <p id="ageinfo3c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo3c2print"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>25-34 ปี</td>
-                <td>
-                <p id="ageinfo4c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo4c2print"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>35-44 ปี</td>
-                <td>
-                <p id="ageinfo5c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo5c2print"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>45-54 ปี</td>
-                <td>
-                <p id="ageinfo6c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo6c2print"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>55-64 ปี</td>
-                <td>
-                <p id="ageinfo7c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo7c2print"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>65 ปีขึ้นไป</td>
-                <td>
-                <p id="ageinfo8c1print"></p>
-                </td>
-                <td>
-                <p id="ageinfo8c2print"></p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     </div>
 
     <div id="knowbotcol2">
@@ -394,6 +332,14 @@
         const ageinfo8c2 = document.createElement('span');
         ageinfo8c2.innerHTML = data[63].ColumnC;
         document.getElementById('ageinfo8c2print').appendChild(ageinfo8c2);
+
+        const ageinfosum1 = document.createElement('span');
+        ageinfosum1.innerHTML = data[8].ColumnB;
+        document.getElementById('ageinfosum1print').appendChild(ageinfosum1);
+
+        const ageinfosum2 = document.createElement('span');
+        ageinfosum2.innerHTML = data[9].ColumnB;
+        document.getElementById('ageinfosum2print').appendChild(ageinfosum2);
 
         const riskinfo1 = document.createElement('span');
         riskinfo1.innerHTML = data[123].ColumnF;
@@ -698,25 +644,126 @@ div.knowtopcol2in3 {
 #knowchartlebel {
     list-style: none;
     text-align: center;
-    line-height: 162%;
+    line-height: 225%;
 }
-#knowchartbar > li:nth-child(1) {
+#knowchartlebel > li {
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+}
+#knowchartlebel > li:nth-child(1) {
+    padding-bottom: 5px;
+}
+.knowchartbarinhead {
     font-size: 0px;
 }
 #knowchartbar > li {
-    border-radius: 10px;
+    padding-bottom: 5px;
+}
+#knowchartbar > li > div {
+    border: none !important;
+}
+#knowchartbar > li > div:nth-child(1) {
+    border-radius: 10px 0px 0px 10px;
     text-align: right;
-}
-.knowinchartdead {
-    padding-left: 10px;
+    border: none !important;
+    background-color: #63d5b4;
     padding-right: 10px;
-    background-color: #DB1F1F;
-    margin-left: 5px;
-    border-radius: 0px 10px 10px 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
+    border-bottom: 0.45em solid #397968 !important;
+    -moz-transition: 0.1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    box-shadow: 0 2px 3px #ccc;
 }
+#knowchartbar > li > div:nth-child(2) {
+    border-radius: 0px 10px 10px 0px;
+    background-color: #DB1F1F;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    border-bottom: 0.45em solid #7c1313 !important;
+    -moz-transition: 0.1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    box-shadow: 0 2px 3px #ccc;
+}
+li.knowchartbarinhead {
 
-#knowchartbar > li:nth-child(2) > span {
+}
+li.knowchartbarinhead > div {
+    font-size: 0px;
+    background-color: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+#knowchartbar > li > div.knowchartbarsick0-4 {
+    border-radius: 10px 10px 10px 10px;
+}
+#knowchartbar > li > div.knowchartbardead0-4 {
     display: none;
+}
+.knowchartinhead {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #143858;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.knowchartinsubhead {
+    max-width: 330px;
+    margin: auto;
+    font-weight: 200;
+    font-size: 18px;
+}
+.knowchartinsubheadcol1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.knowchartinsubheadcol2 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.knowchartinsubheadcol1color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #63d5b4;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+.knowchartinsubheadcol2color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #DB1F1F;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+.knowchartbotinfo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-width: 660px;
+    margin: auto;
+    font-size: 28px;
+    line-height: 140%;
+    font-weight: 200;
+}
+#ageinfosum1print {
+    font-weight: 400;
+    display: inline-block;
+}
+#ageinfosum2print {
+    font-weight: 400;
+    display: inline-block;
 }
 
 /* Demo Class */
