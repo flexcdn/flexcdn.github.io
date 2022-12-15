@@ -85,6 +85,59 @@
 
 <div id="knowchartwarp">
 
+    <div class="knowchartwarpin">
+
+        <div class="knowchartinhead">
+
+        </div>
+
+        <div class="knowchartcol1">
+
+            <div class="chart-wrapper">
+                <div class="vertical-chart">
+                    <ul class="container" id="knowchartlebel">
+                        <li>กลุ่มอายุ (ปี)</li>
+                        <li>0-4</li>
+                        <li>5-14</li>
+                        <li>15-24</li>
+                        <li>25-34</li>
+                        <li>35-44</li>
+                        <li>45-54</li>
+                        <li>55-64</li>
+                        <li>65 ขึ้นไป</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="knowchartcol2">
+
+            <div class="chart-wrapper">
+                <div class="vertical-chart">
+                    <ul class="container" id="knowchartbar">
+                        <li data-cp-size="0">0</li>
+                        <li data-cp-size="100">9234 <span class="knowinchartdead">0</span></li>
+                        <li data-cp-size="30">1234 <span class="knowinchartdead">6</span></li>
+                        <li data-cp-size="20">899 <span class="knowinchartdead">4</span></li>
+                        <li data-cp-size="70">2344 <span class="knowinchartdead">1</span></li>
+                        <li data-cp-size="90">8666 <span class="knowinchartdead">4</span></li>
+                        <li data-cp-size="30">1284 <span class="knowinchartdead">4</span></li>
+                        <li data-cp-size="40">3321 <span class="knowinchartdead">2</span></li>
+                        <li data-cp-size="10">111 <span class="knowinchartdead">2</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="knowclearall"></div>
+
+    </div>
+
+</div>
+
+</div>
 
 
 </div> <!-- /knowchartwarp -->
@@ -221,6 +274,12 @@
 
 </div> <!-- /knowbotcolwarp -->
 
+<div id="knowhideelement">
+
+    <img alt="KnowDengue_element_2" data-entity-type="file" data-entity-uuid="0f52e6e8-7f18-4bf0-bca7-fe676251b32f" src="/sites/default/files/inline-images/KnowDengue_element_2.png" />
+
+</div> <!-- /knowhideelement -->
+
 <script>
 
     fetch(
@@ -341,6 +400,8 @@
 
 </script>
 
+<link href="https://flexcdn.github.io/knowdengueth/cssplot.full.css" rel="stylesheet">
+
 <style type="text/css">
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -355,6 +416,10 @@
     float: none;
     clear: both;
     height: 0px;
+}
+#knowhideelement {
+    display: none !important;
+    height: 0px !important;
 }
 
 /* Header Class */
@@ -582,6 +647,48 @@ div.knowtopcol2in3 {
     color: #dc2021;
     font-weight: 500;
     font-family: 'Kanit', sans-serif;
+}
+
+/* Chart Class */
+
+#knowchartwarp {
+    max-width: 880px;
+    margin: auto;
+    height: auto;
+    display: block;
+    color: #143858;
+    font-weight: 400;
+    font-family: 'Kanit', sans-serif;
+}
+.knowchartcol1 {
+    float: left;
+    width: 15%;
+}
+.knowchartcol2 {
+    float: left;
+    width: 85%;
+}
+#knowchartlebel {
+    list-style: none;
+    text-align: center;
+    line-height: 162%;
+}
+#knowchartbar > li:nth-child(1) {
+    font-size: 0px;
+}
+#knowchartbar > li {
+    border-radius: 10px;
+    text-align: right;
+}
+.knowinchartdead {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #DB1F1F;
+    margin-left: 5px;
+    border-radius: 0px 10px 10px 0px;
+}
+#knowchartbar > li:nth-child(2) > span {
+    display: none;
 }
 
 /* Demo Class */
