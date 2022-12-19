@@ -1242,7 +1242,9 @@ div.knowtopcol2in3 {
 </style>
 <!-- /knowmainwarp -->
 <div id="googlemapapi">
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
     <style type="text/css">
             html,
             body {
@@ -1266,21 +1268,20 @@ div.knowtopcol2in3 {
             }
             #map {
                 height: 600px !important;
-                width: 378px;
+                max-width: 378px;
+                width: 100%;
             }
     </style>
-    <!--<div id="floating-panel"><input id="latlng" type="text" value="13.75279466774569, 100.49286778378779" /> <input id="submit" type="button" value="Reverse Geocode" /></div>-->
 
-    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&callback=initMap&v=beta" defer></script>
 
     <script>
         window.initMap = () => {
             var featureStyleOptions = {
-                strokeColor: "#810FCB",
+                strokeColor: "#eaa532",
                 strokeOpacity: 1.0,
                 strokeWeight: 3.0,
-                fillColor: "#810FCB",
+                fillColor: "#eaa532",
                 fillOpacity: 0.5,
             };
 
@@ -1439,4 +1440,5 @@ div.knowtopcol2in3 {
             });
         }
     </script>
+    
 </div>
