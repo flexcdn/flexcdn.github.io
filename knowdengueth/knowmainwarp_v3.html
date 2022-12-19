@@ -1299,9 +1299,30 @@ div.knowtopcol2in3 {
 
                 document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = item.text;
                 const geocoder = new google.maps.Geocoder();
+                var placename = item.text;
+                
                 geocoder.geocode( {'address' : item.text}, function(results, status) {
                     var placeid = results[0].place_id;
 
+                    if(item.text == 'กรุงเทพมหานคร') {
+                        placeid = 'ChIJ82ENKDJgHTERxw-LhWOFRTY';
+                    } else if (item.text == 'กาญจนบุรี') {
+                        placeid = 'ChIJndZBBtUa4zAREj5xkg68l08';
+                    } else if (item.text == 'จันทบุรี') {
+                        placeid = 'ChIJQ3JU7At2AzERgRfOeSBD2Mc';
+                    } else if (item.text == 'เชียงใหม่') {
+                        placeid = 'ChIJQXiZwsjM0DAR1AMlknbhaWo';
+                    } else if (item.text == 'นครสวรรค์') {
+                        placeid = 'ChIJNVAlmTY-4DARbyjxP-AbA64';
+                    } else if (item.text == 'พิษณุโลก') {
+                        placeid = 'ChIJoej0TmB43zARkEsIsFT7BAE';
+                    } else if (item.text == 'ระนอง') {
+                        placeid = 'ChIJscF6ROVFVjAR0Ew2LLwjAgE';
+                    } else if (item.text == 'ระยอง') {
+                        placeid = 'ChIJIT_DODj8AjERiEAlWu8e-8A';
+                    } else if (item.text == 'สงขลา') {
+                        placeid = 'ChIJQSQJr9zVTDAREo4d7Hg3myU';
+                    }
                     if (status == google.maps.GeocoderStatus.OK) {
                         map.setCenter(results[0].geometry.location);
                     }
