@@ -1,0 +1,1415 @@
+<div id="knowmainwarp">
+<div id="knowtopheadwarp">
+<div class="knowtopheadwarpin">
+<div class="knowtopheadcol1"><img alt="KnowDengue_element_1" class="knowtopheadpinimg" data-entity-type="file" data-entity-uuid="5dcaa813-cc87-4286-93c0-1edb388669e3" src="/sites/default/files/inline-images/KnowDengue_element_1.png" /></div>
+
+<div class="knowtopheadcol2">
+<div class="knowtopheadcol2top">รู้ภัยไข้เลือดออก</div>
+
+<div class="knowtopheadcol2bottom">แน่ใจแค่ไหน...ว่าคุณไม่ได้อยู่ในพื้นที่เสี่ยง ?</div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+</div>
+<!-- /knowtopheadwarp -->
+
+<div id="knowtopcolwarp">
+<div class="knowtopcol1inmob">
+<div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
+
+<div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1print"></span> <span id="info2print"></span></div>
+</div>
+
+<div id="knowtopcol1">
+    <!--<img alt="KnowDengue_element_3" class="knowtopcol1img" data-entity-type="file" data-entity-uuid="28851e1e-d1ef-4e44-b19a-c279fce0d23b" src="/sites/default/files/inline-images/KnowDengue_element_3.jpg" />-->
+    <div id="map"></div>
+    <select id="geodropdown" name="geodropdown">
+        <option value="116">กรุงเทพมหานคร</option>
+        <option value="108">กระบี่</option>
+        <option value="170">กาญจนบุรี</option>
+        <option value="182">กาฬสินธุ์</option>
+        <option value="200">กำแพงเพชร</option>
+        <option value="215">ขอนแก่น</option>
+        <option value="237">จันทบุรี</option>
+        <option value="251">ฉะเชิงเทรา</option>
+        <option value="260">ชลบุรี</option>
+        <option value="272">ชัยนาท</option>
+        <option value="283">ชัยภูมิ</option>
+        <option value="299">ชุมพร</option>
+        <option value="29">เชียงราย</option>
+        <option value="4">เชียงใหม่</option>
+        <option value="308">ตรัง</option>
+        <option value="321">ตราด</option>
+        <option value="329">ตาก</option>
+        <option value="339">นครนายก</option>
+        <option value="343">นครปฐม</option>
+        <option value="354">นครพนม</option>
+        <option value="364">นครราชสีมา</option>
+        <option value="398">นครศรีธรรมราช</option>
+        <option value="416">นครสวรรค์</option>
+        <option value="434">นนทบุรี</option>
+        <option value="441">นราธิวาส</option>
+        <option value="458">น่าน</option>
+        <option value="474">บึงกาฬ</option>
+        <option value="477">บุรีรัมย์</option>
+        <option value="494">ปทุมธานี</option>
+        <option value="501">ประจวบคีรีขันธ์</option>
+        <option value="510">ปราจีนบุรี</option>
+        <option value="516">ปัตตานี</option>
+        <option value="544">พะเยา</option>
+        <option value="528">พระนครศรีอยุธยา</option>
+        <option value="553">พังงา</option>
+        <option value="564">พัทลุง</option>
+        <option value="576">พิจิตร</option>
+        <option value="589">พิษณุโลก</option>
+        <option value="51">เพชรบุรี</option>
+        <option value="60">เพชรบูรณ์</option>
+        <option value="88">แพร่</option>
+        <option value="601">ภูเก็ต</option>
+        <option value="605">มหาสารคาม</option>
+        <option value="618">มุกดาหาร</option>
+        <option value="97">แม่ฮ่องสอน</option>
+        <option value="625">ยโสธร</option>
+        <option value="638">ยะลา</option>
+        <option value="646">ร้อยเอ็ด</option>
+        <option value="664">ระนอง</option>
+        <option value="673">ระยอง</option>
+        <option value="682">ราชบุรี</option>
+        <option value="693">ลพบุรี</option>
+        <option value="705">ลำปาง</option>
+        <option value="719">ลำพูน</option>
+        <option value="74">เลย</option>
+        <option value="726">ศรีสะเกษ</option>
+        <option value="750">สกลนคร</option>
+        <option value="763">สงขลา</option>
+        <option value="783">สตูล</option>
+        <option value="790">สมุทรปราการ</option>
+        <option value="797">สมุทรสงคราม</option>
+        <option value="801">สมุทรสาคร</option>
+        <option value="808">สระแก้ว</option>
+        <option value="817">สระบุรี</option>
+        <option value="829">สิงห์บุรี</option>
+        <option value="834">สุโขทัย</option>
+        <option value="847">สุพรรณบุรี</option>
+        <option value="857">สุราษฎร์ธานี</option>
+        <option value="874">สุรินทร์</option>
+        <option value="894">หนองคาย</option>
+        <option value="904">หนองบัวลำภู</option>
+        <option value="914">อ่างทอง</option>
+        <option value="920">อำนาจเจริญ</option>
+        <option value="923">อุดรธานี</option>
+        <option value="940">อุตรดิตถ์</option>
+        <option value="951">อุทัยธานี</option>
+        <option value="959">อุบลราชธานี</option>
+    </select>
+</div>
+
+<div id="knowtopcol2">
+<div class="knowtopcol2in1">
+<div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
+
+<div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1mobprint"></span> <span id="info2mobprint"></span></div>
+</div>
+
+<div class="knowtopcol2in2">
+<div class="knowtopcol2in2div1">ตอนนี้คุณอยู่ที่</div>
+
+<div class="knowtopcol2in2div2">กรุงเทพมหานคร</div>
+</div>
+
+<div class="knowtopcol2in3">
+<div class="knowtopcol2in3div1">จำนวนผู้ป่วยในจังหวัดที่คุณอยู่ (ราย)</div>
+
+<div class="knowtopcol2in3div2">&nbsp;</div>
+</div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+<!-- /knowtopcolwarp -->
+
+<div id="infoprintwarp">
+<div class="infoprintwarpin">
+<div class="infoprintwarpinner1">สถานการณ์ไข้เลือดออกในประเทศไทย ปี <span id="info5yearprint"></span></div>
+
+<div class="knowclearall">&nbsp;</div>
+
+<div class="infoprintwarpin2col1">
+<div class="infoprintwarpin2col1in1"><img alt="KnowDengue_element_4" class="infoprintwarpin2col1in1img" data-entity-type="file" data-entity-uuid="0aa3887a-2b23-4438-926d-a2e9278e19c5" src="/sites/default/files/inline-images/KnowDengue_element_4.png" /></div>
+
+<div class="infoprintwarpin2col1in2">
+<div id="info3print">&nbsp;</div>
+ผู้ป่วยสะสม (ราย)</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="infoprintwarpin2col2">
+<div class="infoprintwarpin2col2in1"><img alt="KnowDengue_element_5" class="infoprintwarpin2col2in1img" data-entity-type="file" data-entity-uuid="d61c2fee-638f-47b5-ac18-4611f1fe7576" src="/sites/default/files/inline-images/KnowDengue_element_5.png" /></div>
+
+<div class="infoprintwarpin2col2in2">
+<div id="info4print">&nbsp;</div>
+ผู้เสียชีวิตสะสม (ราย)</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+</div>
+<!-- /infoprintwarp -->
+
+<div id="knowchartwarp">
+<div class="knowchartwarpin">
+<div class="knowchartinhead">กลุ่มผู้ป่วยและเสียชีวิตสะสมจากไข้เลือดออกแบ่งตามกลุ่มอายุ</div>
+
+<div class="knowchartinsubhead">
+<div class="knowchartinsubheadcol1">
+<div class="knowchartinsubheadcol1color">&nbsp;</div>
+ป่วย (ราย)</div>
+
+<div class="knowchartinsubheadcol2">
+<div class="knowchartinsubheadcol2color">&nbsp;</div>
+เสียชีวิต (ราย)</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="knowchartcol1">
+<div class="chart-wrapper">
+<div class="bar-chart stacked pad">
+<ul class="plot-container group-by-number" id="knowchartlebel">
+	<li>กลุ่มอายุ (ปี)</li>
+	<li>0-4</li>
+	<li>5-14</li>
+	<li>15-24</li>
+	<li>25-34</li>
+	<li>35-44</li>
+	<li>45-54</li>
+	<li>55-64</li>
+	<li>65 ขึ้นไป</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="knowchartcol2">
+<div class="chart-wrapper">
+<div class="bar-chart stacked pad">
+<ul class="plot-container group-by-number" id="knowchartbar">
+	<li class="knowchartbarinhead">
+	<div data-cp-size="0">0</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick0-4" data-cp-size="30">
+	<p id="ageinfo1c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead0-4" data-cp-size="0" data-group="5">
+	<p id="ageinfo1c2print">&nbsp;</p>
+	</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick5-14" data-cp-size="90">
+	<p id="ageinfo2c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead5-14" data-cp-size="6" data-group="5">
+	<p id="ageinfo2c2print">&nbsp;</p>
+	</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick15-24" data-cp-size="70">
+	<p id="ageinfo3c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead15-24" data-cp-size="4" data-group="5">
+	<p id="ageinfo3c2print">&nbsp;</p>
+	</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick25-34" data-cp-size="35">
+	<p id="ageinfo4c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead25-34" data-cp-size="3" data-group="5">
+	<p id="ageinfo4c2print">&nbsp;</p>
+	</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick35-44" data-cp-size="25">
+	<p id="ageinfo5c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead35-44" data-cp-size="4" data-group="5">
+	<p id="ageinfo5c2print">&nbsp;</p>
+	</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick45-54" data-cp-size="18">
+	<p id="ageinfo6c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead45-54" data-cp-size="4" data-group="5">
+	<p id="ageinfo6c2print">&nbsp;</p>
+	</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick55-64" data-cp-size="15">
+	<p id="ageinfo7c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead55-64" data-cp-size="3" data-group="5">
+	<p id="ageinfo7c2print">&nbsp;</p>
+	</div>
+	</li>
+	<li>
+	<div class="knowchartbarsick65" data-cp-size="10">
+	<p id="ageinfo8c1print">&nbsp;</p>
+	</div>
+
+	<div class="knowchartbardead65" data-cp-size="3" data-group="5">
+	<p id="ageinfo8c2print">&nbsp;</p>
+	</div>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+
+<div class="knowchartbotinfo">
+<div class="knowchartbotinfo1">กลุ่มอายุที่พบอัตราป่วยมากที่สุด คือ
+<p id="ageinfosum1print">&nbsp;</p>
+</div>
+
+<div class="knowchartbotinfo2">กลุ่มอายุที่พบอัตราเสียชีวิตมากที่สุด คือ
+<p id="ageinfosum2print">&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /knowchartwarp -->
+
+<div id="knowbotcolwarp">
+<div id="knowbotcolwarpin">
+<div class="knowbotcol2in1">3 อันดับปัจจัยเสี่ยงสำคัญของการเสียชีวิตจากไข้เลือดออก</div>
+
+<div class="knowbotcol2in2">
+<div id="knowbotcol2in2c1">
+<div class="knowbotcol2in2c1inner1">มีโรคประจำตัว</div>
+
+<div class="knowbotcol2in2c1inner2"><img alt="KnowDengue_element_6" class="knowbotcol2in2c1inner2img" data-entity-type="file" data-entity-uuid="8a057d3e-743d-4383-baac-00d5e077cab0" src="/sites/default/files/inline-images/KnowDengue_element_6.png" /></div>
+
+<div class="knowbotcol2in2c1inner3">
+<p id="riskinfo1print">&nbsp;</p>
+ราย</div>
+</div>
+
+<div id="knowbotcol2in2c2">
+<div class="knowbotcol2in2c2inner1">น้ำหนักเกิน</div>
+
+<div class="knowbotcol2in2c2inner2"><img alt="KnowDengue_element_7" class="knowbotcol2in2c2inner2img" data-entity-type="file" data-entity-uuid="e891fceb-40b2-4bf2-92f9-66425c2b8665" src="/sites/default/files/inline-images/KnowDengue_element_7.png" /></div>
+
+<div class="knowbotcol2in2c2inner3">
+<p id="riskinfo2print">&nbsp;</p>
+ราย</div>
+</div>
+
+<div id="knowbotcol2in2c3">
+<div class="knowbotcol2in2c3inner1">ได้รับยา NSAIDs*</div>
+
+<div class="knowbotcol2in2c3inner2"><img alt="KnowDengue_element_8" class="knowbotcol2in2c3inner2img" data-entity-type="file" data-entity-uuid="29d867eb-4959-4fe5-a4b0-5cef683fe1ed" src="/sites/default/files/inline-images/KnowDengue_element_8.png" /></div>
+
+<div class="knowbotcol2in2c3inner3">
+<p id="riskinfo3print">&nbsp;</p>
+ราย</div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="knowbotcol2in3">ที่มา: กองโรคติดต่อนำโดยแมลง กรมควบคุมโรค กระทรวงสาธารณสุข</div>
+
+<div class="knowbotcol2in4">*ยากลุ่ม NSAIDs (non-steroidal anti-inflammatory drugs) หรือ ยาบรรเทาอาการอักเสบที่ไม่ใช่สเตียรอยด์ มีมากมาย เช่น แอสไพริน ไอบูโพรเฟน ไดโคลฟีแน็ก นาพร็อกเซน เป็นต้น ใช้เพื่อบรรเทาอาการปวดและลดอาการอักเสบในโรคข้ออักเสบต่าง ๆ<br />
+(อ้างอิง: ดร. เภสัชกรหญิง นงลักษณ์ สุขวาณิชย์ศิลป์. (2562). ยาแก้ปวดข้อ ข้ออักเสบ-กลุ่มเอ็นเสด (NSAIDs) สืบค้น 9 ธันวาคม 2565 จาก https://pharmacy.mahidol.ac.th/th/knowledge/article/472ปวดข้อกับยาเอ็นเสด(NSAIDs)/)</div>
+</div>
+</div>
+<!-- /knowbotcolwarp -->
+
+<div id="knowhideelement"><img alt="KnowDengue_element_2" data-entity-type="file" data-entity-uuid="0f52e6e8-7f18-4bf0-bca7-fe676251b32f" src="/sites/default/files/inline-images/KnowDengue_element_2.png" /></div>
+<script>
+
+    fetch(
+    "https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/SUMMARY"
+    )
+    .then((res) => res.json())
+    .then((data) => {
+        
+        const info1 = document.createElement('span');
+        info1.innerHTML = data[2].ColumnB;
+        document.getElementById('info1print').appendChild(info1);
+
+        const info2 = document.createElement('span');
+        info2.innerHTML = data[99].ColumnC;
+        document.getElementById('info2print').appendChild(info2);
+        
+        const info1mob = document.createElement('span');
+        info1mob.innerHTML = data[2].ColumnB;
+        document.getElementById('info1mobprint').appendChild(info1mob);
+
+        const info2mob = document.createElement('span');
+        info2mob.innerHTML = data[99].ColumnC;
+        document.getElementById('info2mobprint').appendChild(info2mob);
+
+        const info3 = document.createElement('span');
+        info3.innerHTML = data[4].ColumnC;
+        document.getElementById('info3print').appendChild(info3);
+
+        const info4 = document.createElement('span');
+        info4.innerHTML = data[6].ColumnC;
+        document.getElementById('info4print').appendChild(info4);
+
+        const info5year = document.createElement('span');
+        info5year.innerHTML = data[3].ColumnB;
+        document.getElementById('info5yearprint').appendChild(info5year);
+
+        const ageinfo1c1 = document.createElement('span');
+        ageinfo1c1.innerHTML = data[26].ColumnC;
+        document.getElementById('ageinfo1c1print').appendChild(ageinfo1c1);
+
+        const ageinfo1c2 = document.createElement('span');
+        ageinfo1c2.innerHTML = data[28].ColumnC;
+        document.getElementById('ageinfo1c2print').appendChild(ageinfo1c2);
+
+        const ageinfo2c1 = document.createElement('span');
+        ageinfo2c1.innerHTML = data[31].ColumnC;
+        document.getElementById('ageinfo2c1print').appendChild(ageinfo2c1);
+
+        const ageinfo2c2 = document.createElement('span');
+        ageinfo2c2.innerHTML = data[33].ColumnC;
+        document.getElementById('ageinfo2c2print').appendChild(ageinfo2c2);
+
+        const ageinfo3c1 = document.createElement('span');
+        ageinfo3c1.innerHTML = data[36].ColumnC;
+        document.getElementById('ageinfo3c1print').appendChild(ageinfo3c1);
+
+        const ageinfo3c2 = document.createElement('span');
+        ageinfo3c2.innerHTML = data[38].ColumnC;
+        document.getElementById('ageinfo3c2print').appendChild(ageinfo3c2);
+
+        const ageinfo4c1 = document.createElement('span');
+        ageinfo4c1.innerHTML = data[41].ColumnC;
+        document.getElementById('ageinfo4c1print').appendChild(ageinfo4c1);
+
+        const ageinfo4c2 = document.createElement('span');
+        ageinfo4c2.innerHTML = data[43].ColumnC;
+        document.getElementById('ageinfo4c2print').appendChild(ageinfo4c2);
+
+        const ageinfo5c1 = document.createElement('span');
+        ageinfo5c1.innerHTML = data[46].ColumnC;
+        document.getElementById('ageinfo5c1print').appendChild(ageinfo5c1);
+
+        const ageinfo5c2 = document.createElement('span');
+        ageinfo5c2.innerHTML = data[48].ColumnC;
+        document.getElementById('ageinfo5c2print').appendChild(ageinfo5c2);
+
+        const ageinfo6c1 = document.createElement('span');
+        ageinfo6c1.innerHTML = data[51].ColumnC;
+        document.getElementById('ageinfo6c1print').appendChild(ageinfo6c1);
+
+        const ageinfo6c2 = document.createElement('span');
+        ageinfo6c2.innerHTML = data[53].ColumnC;
+        document.getElementById('ageinfo6c2print').appendChild(ageinfo6c2);
+
+        const ageinfo7c1 = document.createElement('span');
+        ageinfo7c1.innerHTML = data[56].ColumnC;
+        document.getElementById('ageinfo7c1print').appendChild(ageinfo7c1);
+
+        const ageinfo7c2 = document.createElement('span');
+        ageinfo7c2.innerHTML = data[58].ColumnC;
+        document.getElementById('ageinfo7c2print').appendChild(ageinfo7c2);
+
+        const ageinfo8c1 = document.createElement('span');
+        ageinfo8c1.innerHTML = data[61].ColumnC;
+        document.getElementById('ageinfo8c1print').appendChild(ageinfo8c1);
+
+        const ageinfo8c2 = document.createElement('span');
+        ageinfo8c2.innerHTML = data[63].ColumnC;
+        document.getElementById('ageinfo8c2print').appendChild(ageinfo8c2);
+
+        const ageinfosum1 = document.createElement('span');
+        ageinfosum1.innerHTML = data[8].ColumnB;
+        document.getElementById('ageinfosum1print').appendChild(ageinfosum1);
+
+        const ageinfosum2 = document.createElement('span');
+        ageinfosum2.innerHTML = data[9].ColumnB;
+        document.getElementById('ageinfosum2print').appendChild(ageinfosum2);
+
+        const riskinfo1 = document.createElement('span');
+        riskinfo1.innerHTML = data[123].ColumnF;
+        document.getElementById('riskinfo1print').appendChild(riskinfo1);
+
+        const riskinfo2 = document.createElement('span');
+        riskinfo2.innerHTML = data[124].ColumnF;
+        document.getElementById('riskinfo2print').appendChild(riskinfo2);
+
+        const riskinfo3 = document.createElement('span');
+        riskinfo3.innerHTML = data[125].ColumnF;
+        document.getElementById('riskinfo3print').appendChild(riskinfo3);
+
+    });
+
+</script>
+<link href="https://flexcdn.github.io/knowdengueth/cssplot.full.css" rel="stylesheet" />
+<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global Class */
+
+#knowmainwarp {
+    max-width: 100%;
+    margin: auto;
+}
+.knowclearall {
+    float: none;
+    clear: both;
+    height: 0px;
+}
+#knowhideelement {
+    display: none !important;
+    height: 0px !important;
+}
+
+/* Header Class */
+
+#knowtopheadwarp {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: #e2f7f2;
+    margin-bottom: 30px;
+}
+.knowtopheadwarpin {
+    max-width: 740px;
+    margin: auto;
+}
+.knowtopheadpinimg {
+    width: 100%;
+    height: auto;
+}
+.knowtopheadcol1 {
+    float: left;
+    width: 15%;
+    max-width: 95px;
+    padding: 5px;
+}
+.knowtopheadcol2 {
+    float: left;
+    width: 85%;
+    padding: 5px;
+}
+.knowtopheadcol2top {
+    font-size: 92px;
+    height: 120px;
+    line-height: 120%;
+    overflow: hidden;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    background-image: url(/sites/default/files/inline-images/KnowDengue_element_2.png);
+    background-repeat: no-repeat;
+    background-position: -7px 97px;
+    background-size: 98%;
+    color: #143858;
+}
+.knowtopheadcol2bottom {
+    font-size: 32px;
+    line-height: 100%;
+    font-family: 'Kanit', sans-serif;
+    color: #0081a0;
+}
+
+/* Geolocation Class */
+
+#knowtopcolwarp {
+    max-width: 1080px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+#knowtopcol1 {
+    float: left;
+    width: 35%;
+    padding: 0px;
+    /*background-image: url(/sites/default/files/inline-images/KnowDengue_element_3.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 570px; */
+}
+.knowtopcol1img {
+    width: 100%;
+    height: auto;
+}
+#knowtopcol2 {
+    float: left;
+    width: 65%;
+    padding: 10px;
+    padding-top: 0px;
+}
+div.knowtopcol1inmob {
+    text-align: center;
+    color: #143858;
+    padding: 15px;
+    padding-top: 0px;
+    display: none;
+}
+div.knowtopcol2in1 {
+    text-align: center;
+    color: #143858;
+    padding: 15px;
+    padding-top: 0px;
+}
+div.knowtopcol2in2 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 26px;
+    font-weight: 100;
+    color: #143858;
+    line-height: 100%;
+    margin-top: 100px;
+    padding: 15px;
+}
+div.knowtopcol2in3 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 26px;
+    color: #143858;
+    font-weight: 100;
+    margin-top: 70px;
+    line-height: 100%;
+}
+.knowtopcol2in3div2 {
+    font-size: 200px;
+    font-weight: 500;
+    line-height: 85%;
+    color: #143858;
+    text-shadow: 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 20%);
+}
+.knowtopcol2in2div2 {
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 100%;
+}
+.knowtopcol2in1div1 {
+    font-family: 'Kanit', sans-serif;
+    color: #143858;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+}
+.knowtopcol2in1div2 {
+    font-family: 'Kanit', sans-serif;
+    color: #143858;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 130%;
+}
+#info1print {
+    font-weight: 400;
+}
+#info1mobprint {
+    font-weight: 400;
+}
+#info2print {
+
+}
+#geodropdown {
+    width: 100%;
+    height: 38px;
+    padding: 0.5em 1em;
+    color: #6c6c6c;
+    background: #f2f2f2;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Situation Class */
+
+#infoprintwarp {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #e2f7f2;
+    margin-bottom: 30px;
+}
+.infoprintwarpin {
+    max-width: 960px;
+    margin: auto;
+}
+.infoprintwarpinner1 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    color: #143858;
+}
+.infoprintwarpin2col1 {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+.infoprintwarpin2col2 {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+.infoprintwarpin2col1in1 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+.infoprintwarpin2col1in1img {
+    width: 100%;
+    height: auto;
+}
+.infoprintwarpin2col1in2 {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 120%;
+}
+.infoprintwarpin2col2in1 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+.infoprintwarpin2col2in1img {
+    width: 100%;
+    height: auto;
+}
+.infoprintwarpin2col2in2 {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 120%;
+    max-width: 270px;
+}
+#info3print > span {
+    font-size: 78px;
+    line-height: 100%;
+    color: #143858;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+}
+#info4print > span {
+    font-size: 78px;
+    line-height: 100%;
+    color: #dc2021;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Chart Class */
+
+#knowchartwarp {
+    max-width: 880px;
+    margin: auto;
+    height: auto;
+    display: block;
+    color: #143858;
+    font-weight: 400;
+    font-family: 'Kanit', sans-serif;
+}
+.knowchartcol1 {
+    float: left;
+    width: 15%;
+}
+.knowchartcol2 {
+    float: left;
+    width: 85%;
+}
+#knowchartlebel {
+    list-style: none;
+    text-align: center;
+    line-height: 225%;
+}
+#knowchartlebel > li {
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+}
+#knowchartlebel > li:nth-child(1) {
+    padding-bottom: 5px;
+}
+.knowchartbarinhead {
+    font-size: 0px;
+}
+#knowchartbar > li {
+    padding-bottom: 5px;
+}
+#knowchartbar > li > div {
+    border: none !important;
+}
+#knowchartbar > li > div:nth-child(1) {
+    border-radius: 10px 0px 0px 10px;
+    text-align: right;
+    border: none !important;
+    background-color: #63d5b4;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
+    border-bottom: 0.45em solid #397968 !important;
+    -moz-transition: 0.1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    box-shadow: 0 2px 3px #ccc;
+}
+#knowchartbar > li > div:nth-child(2) {
+    border-radius: 0px 10px 10px 0px;
+    background-color: #DB1F1F;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    border-bottom: 0.45em solid #7c1313 !important;
+    -moz-transition: 0.1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    box-shadow: 0 2px 3px #ccc;
+}
+li.knowchartbarinhead {
+
+}
+li.knowchartbarinhead > div {
+    font-size: 0px;
+    background-color: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+#knowchartbar > li > div.knowchartbarsick0-4 {
+    border-radius: 10px 10px 10px 10px;
+}
+#knowchartbar > li > div.knowchartbardead0-4 {
+    display: none;
+}
+.knowchartinhead {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #143858;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.knowchartinsubhead {
+    max-width: 330px;
+    margin: auto;
+    font-weight: 200;
+    font-size: 18px;
+}
+.knowchartinsubheadcol1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.knowchartinsubheadcol2 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.knowchartinsubheadcol1color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #63d5b4;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+.knowchartinsubheadcol2color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #DB1F1F;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+.knowchartbotinfo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-width: 660px;
+    margin: auto;
+    font-size: 28px;
+    line-height: 140%;
+    font-weight: 200;
+}
+#ageinfosum1print {
+    font-weight: 400;
+    display: inline-block;
+}
+#ageinfosum2print {
+    font-weight: 400;
+    display: inline-block;
+}
+
+/* Threerisk Class */
+
+#knowbotcolwarp {
+    width: 100%;
+    background-color: #e2f7f2;
+}
+#knowbotcolwarpin {
+    max-width: 910px;
+    margin: auto;
+    height: auto;
+    padding: 20px;
+    font-weight: 400;
+    font-family: 'Kanit', sans-serif;
+    color: #143858;
+}
+.knowbotcol2in1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #143858;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#knowbotcol2in2c1 {
+    float: left;
+    width: 33%;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+}
+.knowbotcol2in2c1inner1, .knowbotcol2in2c2inner1, .knowbotcol2in2c3inner1 {
+    font-size: 28px;
+    font-weight: 200;
+    text-align: center;
+}
+#knowbotcol2in2c2 {
+    float: left;
+    width: 33%;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+}
+#knowbotcol2in2c3 {
+    float: left;
+    width: 33%;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+}
+
+div.knowtopcol1in1 {
+    font-size: 21px;
+    color: #000;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+#knowbotcol1 > div {
+    text-align: center;
+    color: #000;
+    font-size: 21px;
+    line-height: 100%;
+    padding-bottom: 15px;
+}
+#knowdfagetable {
+    width: 100%;
+    color: #000;
+}
+#knowdfagetable > thead > tr > th {
+    background-color: #fff2cc;
+}
+#knowdfagetable > tbody > tr > td:nth-child(2) {
+    text-align: right;
+}
+#knowdfagetable > tbody > tr > td:nth-child(3) {
+    text-align: right;
+}
+#knowdfagetable > tbody > tr > td:nth-child(2) > p {
+    margin: auto;
+}
+#knowdfagetable > tbody > tr > td:nth-child(3) > p {
+    margin: auto;
+}
+.knowbotcol2in2c1inner3, .knowbotcol2in2c2inner3, .knowbotcol2in2c3inner3 {
+    font-size: 40px;
+    line-height: 100%;
+    margin-bottom: 0px;
+    font-weight: 100;
+}
+#riskinfo1print, #riskinfo2print, #riskinfo3print {
+    font-size: 82px;
+    font-weight: 400;
+    line-height: 100%;
+    padding: 5px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+.knowbotcol2in2c1inner2img, .knowbotcol2in2c2inner2img, .knowbotcol2in2c3inner2img {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.knowbotcol2in2 {
+    margin-bottom: 30px;
+}
+.knowbotcol2in3, .knowbotcol2in4 {
+    font-size: 18px;
+    font-weight: 100;
+    text-align: left;
+    line-height: 140%;
+}
+.knowbotcol2in4 {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+
+#knowtopcolwarp {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+}
+
+@media (max-width: 863px) {
+
+div.knowtopcol2in1 {
+    max-width: 320px;
+    margin: auto;
+}
+.knowtopcol2in1div2 {
+    max-width: 280px;
+    margin: auto;
+}
+.knowtopcol2in2div2 {
+    font-size: 48px;
+}
+div.knowtopcol2in3 {
+    font-size: 18px;
+}
+.knowtopcol2in3div2 {
+    font-size: 120px;
+}
+
+}
+
+@media (max-width: 785px) {
+
+.infoprintwarpinner1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 460px;
+    font-size: 28px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.knowchartinhead {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 400px;
+    font-size: 28px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.knowbotcol2in1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 390px;
+    font-size: 28px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+}
+
+@media (max-width: 767px) {
+
+div.knowtopcol2in1 {
+    display: none;
+}
+div.knowtopcol1inmob {
+    max-width: 310px;
+    margin: auto;
+    display: block;
+}
+#knowtopcol1 {
+    float: none;
+    width: 100%;
+    padding: 20px;
+}
+#knowtopcol2 {
+    float: none;
+    width: 100%;
+    padding: 15px;
+    padding-top: 0px;
+    margin: auto;
+}
+div.knowtopcol2in2 {
+    margin-top: 5px;
+}
+div.knowtopcol2in3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.infoprintwarpin2col1 {
+    float: none;
+    width: 100%;
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+.infoprintwarpin2col2 {
+    float: none;
+    width: 100%;
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+}
+
+@media (max-width: 724px) {
+
+.knowtopheadcol2top {
+    font-size: 81px;
+    height: 103px;
+    background-position: -6px 85px;
+    background-size: 87%;
+}
+
+}
+
+@media (max-width: 690px) {
+
+.knowtopheadwarpin {
+    max-width: 440px;
+}
+.knowtopheadcol1 {
+    max-width: 57px;
+}
+.knowtopheadcol2top {
+    font-size: 54px;
+    height: 70px;
+}
+.knowtopheadcol2top {
+    font-size: 54px;
+    height: 68px;
+    line-height: 120%;
+    background-position: 1px 57px;
+    background-size: 96%;
+}
+.knowtopheadcol2bottom {
+    font-size: 21px;
+}
+.knowchartinhead {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 320px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.knowbotcol2in1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 320px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.infoprintwarpinner1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 300px;
+    font-size: 28px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.knowchartbotinfo {
+    text-align: center;
+    max-width: 310px;
+    font-size: 20px;
+}
+#ageinfosum1print {
+    display: block;
+}
+#ageinfosum2print {
+    display: block;
+}
+.knowbotcol2in2c1inner1, .knowbotcol2in2c2inner1, .knowbotcol2in2c3inner1 {
+    font-size: 22px;
+}
+
+@media (max-width: 660px) {
+
+.knowchartcol1 {
+    width: 20%;
+}
+.knowchartcol2 {
+    width: 80%;
+}
+
+}
+
+@media (max-width: 551px) {
+
+#knowbotcol2in2c1, #knowbotcol2in2c2, #knowbotcol2in2c3 {
+    float: none;
+    width: 100%;
+    padding: 10px;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+}
+
+@media (max-width: 481px) {
+
+.knowchartcol1 {
+    width: 22%;
+}
+.knowchartcol2 {
+    width: 78%;
+}
+.knowbotcol2in3, .knowbotcol2in4 {
+    font-size: 14px;
+}
+#knowchartbar > li > div:nth-child(1) {
+    font-size: 14px;
+}
+#knowchartbar > li > div:nth-child(2) {
+    font-size: 14px;
+}
+#knowchartbar > li.knowchartbarinhead > div {
+    border: none !important;
+    font-size: 0px;
+    padding-bottom: 12px;
+}
+
+}
+
+@media (max-width: 430px) {
+
+.knowtopheadwarpin {
+    max-width: 365px;
+}
+.knowtopheadcol2top {
+    font-size: 43px;
+    height: 57px;
+    line-height: 120%;
+    background-position: -2px 47px;
+    background-size: 91%;
+}
+.knowtopheadcol2bottom {
+    font-size: 17px;
+}
+
+}
+
+@media (max-width: 400px) {
+
+.knowtopcol2in2div2 {
+    font-size: 38px;
+}
+
+}
+
+}
+</style>
+<!-- /knowmainwarp -->
+<div id="testgooglemapapi" style="padding: 20px; background-color: #dddd;">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #floating-panel {
+                background-color: #fff;
+                padding: 5px;
+                border: 1px solid #999;
+                text-align: center;
+                font-family: "Roboto", "sans-serif";
+                line-height: 30px;
+                padding-left: 10px;
+            }
+
+            #latlng {
+                width: 225px;
+            }
+            #map {
+                height: 600px !important;
+                width: 378px;
+            }
+    </style>
+    <!--<div id="floating-panel"><input id="latlng" type="text" value="13.75279466774569, 100.49286778378779" /> <input id="submit" type="button" value="Reverse Geocode" /></div>-->
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&callback=initMap&v=beta" defer></script>
+
+    <script>
+        window.initMap = () => {
+            var featureStyleOptions = {
+                strokeColor: "#810FCB",
+                strokeOpacity: 1.0,
+                strokeWeight: 3.0,
+                fillColor: "#810FCB",
+                fillOpacity: 0.5,
+            };
+
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                disableDefaultUI: true,
+                mapId: '91136a4467711dd7'
+            });
+            var geocoder = new google.maps.Geocoder();
+
+            var featureLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
+            
+            if ('geolocation' in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+                        
+                        map.setCenter(pos);
+                        geocoder
+                            .geocode({ location: pos })
+                            .then((response) => {
+                                if (response.results[0]) {
+                                    const addrs = response.results;
+                                    const province = addrs.filter((a) => a.address_components.length>1 && a.address_components[0].short_name.startsWith("จ.") && a.types[0]=='administrative_area_level_1');
+                                    const placeid = province[0].place_id;
+                                    const province_name = province[0].address_components[0].short_name.replace("จ.", "");
+                                    document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = province_name;
+                                    const idx = [...document.getElementById('geodropdown').options].findIndex((o) => o.text == province_name);
+                                    document.getElementById('geodropdown').selectedIndex = idx;
+                                    
+                                    featureLayer.style = (options) => {
+                                        if (options.feature.placeId  == placeid) {
+                                            return featureStyleOptions;
+                                        }
+                                    };
+
+                                    fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                                    .then((res) => res.json())
+                                    .then((data) => {
+                                        document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                                        const geonumber = document.createElement('span');
+                                        geonumber.innerHTML = data[idx].ColumnC;
+                                        document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+
+                                    });
+                                }
+                            })
+                    }, (error) => {
+
+                        geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                            var bkkplaceid = results[0].place_id;
+                            featureLayer.style = (options) => {
+                                if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                                    return featureStyleOptions;
+                                }
+                            };
+
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                map.setCenter(results[0].geometry.location);
+                            }
+                        });
+
+                        fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                            const geonumber = document.createElement('span');
+                            geonumber.innerHTML = data[116].ColumnC;
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+
+                        });
+                    }, {
+                        timeout: 10000,
+                        maximumAge: 10000,
+                        enableHighAccuracy: true
+                    }
+                );
+            }else{
+                
+                geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                    var bkkplaceid = results[0].place_id;
+                    featureLayer.style = (options) => {
+                        if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                            return featureStyleOptions;
+                        }
+                    };
+
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        map.setCenter(results[0].geometry.location);
+                    }
+                });
+
+                fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                .then((res) => res.json())
+                .then((data) => {
+                    document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                    const geonumber = document.createElement('span');
+                    geonumber.innerHTML = data[116].ColumnC;
+                    document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+
+                });
+            }
+
+            document.getElementById('geodropdown').addEventListener('change', (e) => {
+                const item = e.target.options[e.target.selectedIndex];
+
+                document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = item.text;
+                const geocoder = new google.maps.Geocoder();
+                geocoder.geocode( {'address' : item.text}, function(results, status) {
+                    var placeid = results[0].place_id;
+
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        map.setCenter(results[0].geometry.location);
+                    }
+                    var featureLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
+                    featureLayer.style = (options) => {
+                        if (options.feature.placeId  == placeid) {
+                            return featureStyleOptions;
+                        }
+                    };
+                });
+                fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                .then((res) => res.json())
+                .then((data) => {
+                    document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                    const geonumber = document.createElement('span');
+                    geonumber.innerHTML = data[item.value].ColumnC;
+                    document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+
+                });
+                
+            });
+        }
+    </script>
+</div>
