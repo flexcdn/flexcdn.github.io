@@ -1155,10 +1155,7 @@ div.knowtopcol2in3 {
 }
 </style>
 <!-- /knowmainwarp -->
-
-<div id="testgooglemapapi" style="padding: 20px; background-color: #dddd;">
-    
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<div id="testgooglemapapi" style="padding: 20px; background-color: #dddd;"><script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <style type="text/css">html,
             body {
                 height: 100%;
@@ -1184,53 +1181,25 @@ div.knowtopcol2in3 {
                 width: 378px;
             }
 </style>
-<!--<div id="floating-panel"><input id="latlng" type="text" value="13.75279466774569, 100.49286778378779" /> <input id="submit" type="button" value="Reverse Geocode" /></div>--><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&callback=initMap&v=weekly" defer></script>
-
-<script>
-        var map = null;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 8,
-                center: { lat: 40.731, lng: -73.997 },
-                disableDefaultUI: true,
-            });
-            const geocoder = new google.maps.Geocoder();
-            geocoder.geocode( {'address' : 'กรุงเทพมหานคร'}, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                }
-            });
-        }
-
-        function geocodeLatLng(geocoder, map, infowindow) {
-            const input = document.getElementById("latlng").value;
-            const latlngStr = input.split(",", 2);
-            const latlng = {
-                lat: parseFloat(latlngStr[0]),
-                lng: parseFloat(latlngStr[1]),
+<!--<div id="floating-panel"><input id="latlng" type="text" value="13.75279466774569, 100.49286778378779" /> <input id="submit" type="button" value="Reverse Geocode" /></div>--><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&callback=initMap&v=beta" defer></script><script>
+        window.initMap = () => {
+            var featureStyleOptions = {
+                strokeColor: "#810FCB",
+                strokeOpacity: 1.0,
+                strokeWeight: 3.0,
+                fillColor: "#810FCB",
+                fillOpacity: 0.5,
             };
 
-            geocoder
-                .geocode({ location: latlng })
-                .then((response) => {
-                if (response.results[0]) {
-                    map.setZoom(11);
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                disableDefaultUI: true,
+                mapId: '91136a4467711dd7'
+            });
+            var geocoder = new google.maps.Geocoder();
 
-                    const marker = new google.maps.Marker({
-                        position: latlng,
-                        map: map,
-                    });
-
-                    infowindow.setContent(response.results[0].formatted_address);
-                    infowindow.open(map, marker);
-                } else {
-                    window.alert("No results found");
-                }
-                })
-                .catch((e) => window.alert("Geocoder failed due to: " + e));
-        }
-
-        window.onload = () => {
+            var featureLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
+            
             if ('geolocation' in navigator) {
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
@@ -1238,19 +1207,25 @@ div.knowtopcol2in3 {
                             lat: position.coords.latitude,
                             lng: position.coords.longitude,
                         };
+                        
                         map.setCenter(pos);
-                        const geocoder = new google.maps.Geocoder();
                         geocoder
                             .geocode({ location: pos })
                             .then((response) => {
                                 if (response.results[0]) {
                                     const addrs = response.results;
-                                    const province = addrs.filter((a) => a.address_components.length>4 && a.address_components[3].short_name.startsWith("จ."));
-                                    //console.log(province[0].address_components[3].short_name.replace("จ.", ""));
-                                    const province_name = province[0].address_components[3].short_name.replace("จ.", "");
+                                    const province = addrs.filter((a) => a.address_components.length>1 && a.address_components[0].short_name.startsWith("จ.") && a.types[0]=='administrative_area_level_1');
+                                    const placeid = province[0].place_id;
+                                    const province_name = province[0].address_components[0].short_name.replace("จ.", "");
                                     document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = province_name;
                                     const idx = [...document.getElementById('geodropdown').options].findIndex((o) => o.text == province_name);
                                     document.getElementById('geodropdown').selectedIndex = idx;
+                                    
+                                    featureLayer.style = (options) => {
+                                        if (options.feature.placeId  == placeid) {
+                                            return featureStyleOptions;
+                                        }
+                                    };
 
                                     fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
                                     .then((res) => res.json())
@@ -1263,8 +1238,60 @@ div.knowtopcol2in3 {
                                     });
                                 }
                             })
+                    }, (error) => {
+
+                        geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                            var bkkplaceid = results[0].place_id;
+                            featureLayer.style = (options) => {
+                                if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                                    return featureStyleOptions;
+                                }
+                            };
+
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                map.setCenter(results[0].geometry.location);
+                            }
+                        });
+
+                        fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                            const geonumber = document.createElement('span');
+                            geonumber.innerHTML = data[116].ColumnC;
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+
+                        });
+                    }, {
+                        timeout: 10000,
+                        maximumAge: 10000,
+                        enableHighAccuracy: true
                     }
                 );
+            }else{
+                
+                geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                    var bkkplaceid = results[0].place_id;
+                    featureLayer.style = (options) => {
+                        if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                            return featureStyleOptions;
+                        }
+                    };
+
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        map.setCenter(results[0].geometry.location);
+                    }
+                });
+
+                fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                .then((res) => res.json())
+                .then((data) => {
+                    document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                    const geonumber = document.createElement('span');
+                    geonumber.innerHTML = data[116].ColumnC;
+                    document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+
+                });
             }
 
             document.getElementById('geodropdown').addEventListener('change', (e) => {
@@ -1273,25 +1300,17 @@ div.knowtopcol2in3 {
                 document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = item.text;
                 const geocoder = new google.maps.Geocoder();
                 geocoder.geocode( {'address' : item.text}, function(results, status) {
+                    var placeid = results[0].place_id;
+
                     if (status == google.maps.GeocoderStatus.OK) {
-                        //console.log(results);
                         map.setCenter(results[0].geometry.location);
-                        /*
-                        const featureLayer = map.getFeatureLayer("LOCALITY");
-                        const featureStyleOptions = {
-                            strokeColor: "#810FCB",
-                            strokeOpacity: 1.0,
-                            strokeWeight: 3.0,
-                            fillColor: "#810FCB",
-                            fillOpacity: 0.5,
-                        };
-                        featureLayer.style = (options) => {
-                            if (options.feature.placeId == results[0].placeId) {
-                            return featureStyleOptions;
-                            }
-                        };
-                        */
                     }
+                    var featureLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
+                    featureLayer.style = (options) => {
+                        if (options.feature.placeId  == placeid) {
+                            return featureStyleOptions;
+                        }
+                    };
                 });
                 fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
                 .then((res) => res.json())
@@ -1304,11 +1323,5 @@ div.knowtopcol2in3 {
                 });
                 
             });
-
-        };
-
-
-        window.initMap = initMap;
-</script>
-
-</div>
+        }
+    </script></div>
