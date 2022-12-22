@@ -1104,6 +1104,7 @@
             float: none;
             width: 100%;
             padding: 20px;
+            padding-bottom: 0px;
         }
         #knowtopcol2 {
             float: none;
@@ -1314,6 +1315,15 @@
                     max-width: 650px;
                     width: 100%;
                 }
+
+                @media (max-width: 767px) {
+
+                #map {
+                    height: 380px !important;
+                }
+
+                }
+
         </style>
     
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&callback=initMap&v=beta" defer></script>
