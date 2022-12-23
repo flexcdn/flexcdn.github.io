@@ -113,7 +113,7 @@ div.knowtopcol2in3 {
     font-family: 'Kanit', sans-serif;
     font-size: 21px;
     color: #143858;
-    font-weight: 100;
+    font-weight: 300;
     margin-top: 70px;
     line-height: 100%;
 }
@@ -128,17 +128,23 @@ div.knowtopcol2in3 {
     font-weight: 500;
     line-height: 100%;
 }
+.knowtopcol2in2div1 {
+    font-weight: 300;
+}
+.knowtopcol2in3div1 {
+    font-weight: 300;
+}
 .knowtopcol2in1div1 {
     font-family: 'Kanit', sans-serif;
     color: #143858;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 120%;
 }
 .knowtopcol2in1div2 {
     font-family: 'Kanit', sans-serif;
     color: #143858;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 20px;
     line-height: 130%;
 }
@@ -499,9 +505,12 @@ div.knowtopcol1in1 {
 .knowbotcol2in2 {
     margin-bottom: 30px;
 }
+.knowbotcol2in3 {
+
+}
 .knowbotcol2in3, .knowbotcol2in4 {
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 300;
     text-align: left;
     line-height: 140%;
 }
@@ -810,8 +819,6 @@ div.knowtopcol2in3 {
 
 .knowtopcol2in2div2 {
     font-size: 38px;
-}
-
 }
 
 }
