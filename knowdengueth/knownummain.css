@@ -151,12 +151,15 @@ div.knowtopcol2in3 {
     line-height: 130%;
 }
 #info1print {
-    font-weight: 400;
+    font-weight: bold;
 }
 #info1mobprint {
     font-weight: bold;
 }
 #info2print {
+    font-weight: bold;
+}
+#info2mobprint {
     font-weight: bold;
 }
 #geodropdown {
