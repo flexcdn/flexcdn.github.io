@@ -621,6 +621,8 @@ div.knowtopcol1inmob {
     width: 95%;
     padding: 15px;
     padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin: auto;
     overflow: hidden;
     position: absolute;
@@ -721,6 +723,9 @@ div.knowtopcol2in3 {
 
 @media (max-width: 660px) {
 
+#knowtopcol2 {
+    width: 94%;
+}
 .knowchartcol1 {
     width: 20%;
 }
@@ -732,6 +737,9 @@ div.knowtopcol2in3 {
 
 @media (max-width: 551px) {
 
+#knowtopcol2 {
+    width: 92%;
+}
 #infoprintwarp {
     padding-top: 5px;
     padding-bottom: 5px;
