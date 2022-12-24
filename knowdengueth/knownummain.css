@@ -603,18 +603,29 @@ div.knowtopcol1inmob {
     margin: auto;
     display: block;
 }
+.knowtopheadcol2top {
+    background-position: 1px 60px;
+    max-width: 332px;
+}
+#knowtopheadwarp {
+    margin-bottom: 15px;
+}
 #knowtopcol1 {
     float: none;
     width: 100%;
     padding: 20px;
     padding-bottom: 0px;
+    padding-top: 235px;
 }
 #knowtopcol2 {
     float: none;
-    width: 100%;
+    width: 95%;
     padding: 15px;
     padding-top: 0px;
     margin: auto;
+    overflow: hidden;
+    position: absolute;
+    margin-top: -695px;
 }
 div.knowtopcol2in2 {
     margin-top: 5px;
