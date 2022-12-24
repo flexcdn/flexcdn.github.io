@@ -1,4 +1,5 @@
 <div id="knowmainwarp">
+
     <div id="knowtopheadwarp">
     <div class="knowtopheadwarpin">
     <div class="knowtopheadcol1"><img alt="KnowDengue_element_1" class="knowtopheadpinimg" data-entity-type="file" data-entity-uuid="5dcaa813-cc87-4286-93c0-1edb388669e3" src="/sites/default/files/inline-images/KnowDengue_element_1.png" /></div>
@@ -18,7 +19,7 @@
     <div class="knowtopcol1inmob">
     <div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
     
-    <div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1print"></span> ประจำสัปดาห์การระบาดที่ <span id="info2print"></span></div>
+    <div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1mobprint"></span> ประจำสัปดาห์การระบาดที่ <span id="info2mobprint"></span></div>
     </div> 
     
     <div id="knowtopcol1">
@@ -109,7 +110,7 @@
     <div class="knowtopcol2in1">
     <div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
     
-    <div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1mobprint"></span> <span id="info2mobprint"></span></div>
+    <div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1print"></span> ประจำสัปดาห์การระบาดที่ <span id="info2print"></span></div>
     </div>
     
     <div class="knowtopcol2in2">
@@ -527,7 +528,7 @@
                 document.getElementById('info1mobprint').appendChild(info1mob);
         
                 const info2mob = document.createElement('span');
-                info2mob.innerHTML = data[99].ColumnC;
+                info2mob.innerHTML = data[99].ColumnB;
                 document.getElementById('info2mobprint').appendChild(info2mob);
         
                 const info3 = document.createElement('span');
