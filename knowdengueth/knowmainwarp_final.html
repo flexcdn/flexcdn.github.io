@@ -1510,33 +1510,62 @@
                                 .then((response) => {
                                     if (response.results[0]) {
                                         const addrs = response.results;
-                                        const province = addrs.filter((a) => a.address_components.length>1 && (a.address_components[0].short_name.startsWith("จ.") || a.address_components[0].short_name=='Bangkok') && a.types[0]=='administrative_area_level_1');
-                                        let placeid = province[0].place_id;
-                                        let province_name = province[0].address_components[0].short_name.replace("จ.", "");
-                                        if(province_name == 'Bangkok'){
-                                            province_name = 'กรุงเทพมหานคร';
-                                            placeid = 'ChIJ82ENKDJgHTERxw-LhWOFRTY';
-                                        }
-                                        document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = province_name;
-                                        const idx = [...document.getElementById('geodropdown').options].findIndex((o) => o.text == province_name);
-                                        document.getElementById('geodropdown').selectedIndex = idx;
-                                        const selected = document.getElementById('geodropdown').options[idx];
-                                        
-                                        featureLayer.style = (options) => {
-                                            if (options.feature.placeId  == placeid) {
-                                                return featureStyleOptions;
+                                        const country = addrs.filter((a) => a.types[0] == 'country' && a.address_components[0].short_name=='TH');
+                                        if(country.length < 1) {
+                                            alert("You're locate outside Thailand. System will display as Bangkok, Thailand");
+
+                                            geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                                                var bkkplaceid = results[0].place_id;
+                                                featureLayer.style = (options) => {
+                                                    if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                                                        return featureStyleOptions;
+                                                    }
+                                                };
+                    
+                                                if (status == google.maps.GeocoderStatus.OK) {
+                                                    map.setCenter(results[0].geometry.location);
+                                                }
+                                            });
+                    
+                                            fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                                            .then((res) => res.json())
+                                            .then((data) => {
+                                                document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                                                const geonumber = document.createElement('span');
+                                                geonumber.innerHTML = data[116].ColumnC;
+                                                document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+                    
+                                            });
+                                        }else{
+
+                                            const province = addrs.filter((a) => a.address_components.length>1 && (a.address_components[0].short_name.startsWith("จ.") || a.address_components[0].short_name=='Bangkok') && a.types[0]=='administrative_area_level_1');
+                                            let placeid = province[0].place_id;
+                                            let province_name = province[0].address_components[0].short_name.replace("จ.", "");
+                                            if(province_name == 'Bangkok'){
+                                                province_name = 'กรุงเทพมหานคร';
+                                                placeid = 'ChIJ82ENKDJgHTERxw-LhWOFRTY';
                                             }
-                                        };
-    
-                                        fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
-                                        .then((res) => res.json())
-                                        .then((data) => {
-                                            document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
-                                            const geonumber = document.createElement('span');
-                                            geonumber.innerHTML = data[selected.value].ColumnC;
-                                            document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
-    
-                                        });
+                                            document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = province_name;
+                                            var idx = [...document.getElementById('geodropdown').options].findIndex((o) => o.text == province_name);
+                                            document.getElementById('geodropdown').selectedIndex = idx;
+                                            var selected = document.getElementById('geodropdown').options[idx];
+
+                                            featureLayer.style = (options) => {
+                                                if (options.feature.placeId  == placeid) {
+                                                    return featureStyleOptions;
+                                                }
+                                            };
+
+                                            fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                                            .then((res) => res.json())
+                                            .then((data) => {
+                                                document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                                                const geonumber = document.createElement('span');
+                                                geonumber.innerHTML = data[selected.value].ColumnC;
+                                                document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+        
+                                            });
+                                        }
                                     }
                                 })
                         }, (error) => {
