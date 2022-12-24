@@ -604,8 +604,7 @@ div.knowtopcol1inmob {
     display: block;
 }
 .knowtopheadcol2top {
-    background-position: 1px 60px;
-    max-width: 332px;
+    
 }
 #knowtopheadwarp {
     margin-bottom: 15px;
@@ -615,7 +614,7 @@ div.knowtopcol1inmob {
     width: 100%;
     padding: 20px;
     padding-bottom: 0px;
-    padding-top: 235px;
+    padding-top: 240px;
 }
 #knowtopcol2 {
     float: none;
@@ -672,14 +671,11 @@ div.knowtopcol2in3 {
 }
 .knowtopheadcol2top {
     font-size: 54px;
-    height: 70px;
-}
-.knowtopheadcol2top {
-    font-size: 54px;
     height: 68px;
     line-height: 120%;
-    background-position: 1px 57px;
     background-size: 96%;
+    background-position: 1px 60px;
+    max-width: 332px;
 }
 .knowtopheadcol2bottom {
     font-size: 21px;
