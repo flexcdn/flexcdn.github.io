@@ -42,6 +42,7 @@
     float: left;
     width: 85%;
     padding: 5px;
+    padding-top: 0px;
 }
 .knowtopheadcol2top {
     font-size: 92px;
@@ -50,11 +51,12 @@
     overflow: hidden;
     font-weight: 500;
     font-family: 'Kanit', sans-serif;
-    background-image: url(/sites/default/files/inline-images/KnowDengue_element_2.png);
     background-repeat: no-repeat;
-    background-position: -7px 97px;
+    background-position: -7px 102px;
     background-size: 98%;
     color: #143858;
+    padding-top: 5px;
+    max-width: 560px;
 }
 .knowtopheadcol2bottom {
     font-size: 32px;
@@ -152,10 +154,10 @@ div.knowtopcol2in3 {
     font-weight: 400;
 }
 #info1mobprint {
-    font-weight: 400;
+    font-weight: bold;
 }
 #info2print {
-
+    font-weight: bold;
 }
 #geodropdown {
     width: 100%;
@@ -506,7 +508,7 @@ div.knowtopcol1in1 {
     margin-bottom: 30px;
 }
 .knowbotcol2in3 {
-
+    margin-bottom: 15px;
 }
 .knowbotcol2in3, .knowbotcol2in4 {
     font-size: 18px;
@@ -516,6 +518,10 @@ div.knowtopcol1in1 {
 }
 .knowbotcol2in4 {
     margin-bottom: 50px;
+}
+.knowbotcol2in4p1 {
+    margin-top: 15px;
+    font-weight: 100;
 }
 #googlemapapi {
     height: 0px;
