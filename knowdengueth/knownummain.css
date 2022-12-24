@@ -842,10 +842,18 @@ div.knowtopcol2in3 {
 @media (max-width: 400px) {
 
 #knowtopcol2 {
-    width: 88%;
+    width: 87.5%;
 }
 .knowtopcol2in2div2 {
     font-size: 38px;
+}
+
+}
+
+@media (max-width: 375px) {
+
+#knowtopcol2 {
+    width: 86%;
 }
 
 }
