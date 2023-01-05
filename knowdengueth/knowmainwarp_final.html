@@ -738,6 +738,8 @@
                         fillOpacity: 0.5,
                     };
 
+                    var marker = null;
+
                     const icon = "https://flexcdn.github.io/knowdengueth/marker.png";
         
                     var map = new google.maps.Map(document.getElementById("map"), {
@@ -758,12 +760,7 @@
                                 };
                                 
                                 map.setCenter(pos);
-                                new google.maps.Marker({
-                                    position: pos,
-                                    map,
-                                    title: 'My location',
-                                    icon: icon,
-                                });
+                                
                                 geocoder
                                     .geocode({ location: pos })
                                     .then((response) => {
@@ -783,6 +780,12 @@
                         
                                                     if (status == google.maps.GeocoderStatus.OK) {
                                                         map.setCenter(results[0].geometry.location);
+                                                        marker = new google.maps.Marker({
+                                                            position: results[0].geometry.location,
+                                                            map,
+                                                            title: 'กรุงเทพมหานคร',
+                                                            icon: icon,
+                                                        });
                                                     }
                                                 });
                         
@@ -808,6 +811,13 @@
                                                 var idx = [...document.getElementById('geodropdown').options].findIndex((o) => o.text == province_name);
                                                 document.getElementById('geodropdown').selectedIndex = idx;
                                                 var selected = document.getElementById('geodropdown').options[idx];
+
+                                                marker = new google.maps.Marker({
+                                                    position: pos,
+                                                    map,
+                                                    title: 'My location',
+                                                    icon: icon,
+                                                });
 
                                                 featureLayer.style = (options) => {
                                                     if (options.feature.placeId  == placeid) {
@@ -840,7 +850,7 @@
                                     if (status == google.maps.GeocoderStatus.OK) {
                                         map.setCenter(results[0].geometry.location);
 
-                                        new google.maps.Marker({
+                                        marker = new google.maps.Marker({
                                             position: results[0].geometry.location,
                                             map,
                                             title: "กรุงเทพมหานคร",
@@ -877,7 +887,7 @@
                             if (status == google.maps.GeocoderStatus.OK) {
                                 map.setCenter(results[0].geometry.location);
 
-                                new google.maps.Marker({
+                                marker = new google.maps.Marker({
                                     position: results[0].geometry.location,
                                     map,
                                     title: "กรุงเทพมหานคร",
@@ -929,7 +939,12 @@
                             if (status == google.maps.GeocoderStatus.OK) {
                                 map.setCenter(results[0].geometry.location);
 
-                                new google.maps.Marker({
+                                if(marker != null){
+                                    marker.setMap(null);
+                                    marker = null;
+                                }
+
+                                marker = new google.maps.Marker({
                                     position: results[0].geometry.location,
                                     map,
                                     title: item.text,
