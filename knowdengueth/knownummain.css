@@ -580,6 +580,10 @@ div.knowtopcol1in1 {
     max-width: 700px;
     margin: auto;
 }
+.fixthwordbreak {
+    display: block !important;
+    margin: 0px !important;
+}
 
 @media (max-width: 1024px) {
 
@@ -617,7 +621,7 @@ div.knowtopcol2in3 {
 .infoprintwarpinner1 {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 460px;
+    /* max-width: 460px; */
     font-size: 21px;
     margin: auto;
     margin-bottom: 15px;
@@ -625,7 +629,7 @@ div.knowtopcol2in3 {
 .knowchartinhead {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 400px;
+    /* max-width: 400px; */
     font-size: 21px;
     margin: auto;
     margin-bottom: 15px;
@@ -633,7 +637,7 @@ div.knowtopcol2in3 {
 .knowbotcol2in1 {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 390px;
+    /* max-width: 390px; */
     font-size: 28px;
     margin: auto;
     margin-bottom: 15px;
@@ -790,21 +794,21 @@ div.knowtopcol2in3 {
 .knowchartinhead {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 320px;
+    /* max-width: 320px; */
     margin: auto;
     margin-bottom: 15px;
 }
 .knowbotcol2in1 {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 320px;
+    /* max-width: 320px; */
     margin: auto;
     margin-bottom: 15px;
 }
 .infoprintwarpinner1 {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 300px;
+    /* max-width: 300px; */
     font-size: 28px;
     margin: auto;
     margin-bottom: 15px;
