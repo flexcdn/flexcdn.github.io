@@ -939,11 +939,8 @@ div.knowtopcol2in3 {
 
 }
 
-@media (max-width: 430px) {
+@media (max-width: 451px) {
 
-.knowtopheadwarpin {
-    max-width: 365px;
-}
 .knowtopheadcol2top {
     font-size: 43px;
     height: 57px;
@@ -953,6 +950,14 @@ div.knowtopcol2in3 {
 }
 .knowtopheadcol2bottom {
     font-size: 15px;
+}
+
+}
+
+@media (max-width: 430px) {
+
+.knowtopheadwarpin {
+    max-width: 365px;
 }
 
 }
