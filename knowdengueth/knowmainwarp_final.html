@@ -19,7 +19,10 @@
     <div class="knowtopcol1inmob">
     <div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
     
-    <div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1mobprint"></span> ประจำสัปดาห์การระบาดที่ <span id="info2mobprint"></span></div>
+    <div class="knowtopcol2in1div2">
+        <p class="knowtopcol2in1div2text1">ข้อมูลเดือน <span id="info1mobprint"></span> <span id="info5mobyearprint2"></span> </p>
+        <p class="knowtopcol2in1div2text2">ประจำสัปดาห์การระบาดที่ <span id="info2mobprint"></span></p>
+    </div>
     </div> 
     
     <div id="knowtopcol1">
@@ -108,9 +111,12 @@
     
     <div id="knowtopcol2">
     <div class="knowtopcol2in1">
-    <div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
-    
-    <div class="knowtopcol2in1div2">ข้อมูลเดือน <span id="info1print"></span> ประจำสัปดาห์การระบาดที่ <span id="info2print"></span></div>
+        <div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
+        
+        <div class="knowtopcol2in1div2">
+            <p class="knowtopcol2in1div2text1">ข้อมูลเดือน <span id="info1print"></span> <span id="info5yearprint2"></span> </p>
+            <p class="knowtopcol2in1div2text2">ประจำสัปดาห์การระบาดที่ <span id="info2print"></span></p>
+        </div>
     </div>
     
     <div class="knowtopcol2in2">
@@ -292,7 +298,6 @@
     </div>
     </div>
     </div>
-    </div>
     <!-- /knowchartwarp -->
     
     <div id="knowbotcolwarp">
@@ -346,6 +351,7 @@
     <div id="knowhideelement">
             <img alt="KnowDengue_element_2" data-entity-type="file" data-entity-uuid="0f52e6e8-7f18-4bf0-bca7-fe676251b32f" src="/sites/default/files/inline-images/KnowDengue_element_2.png" />
     </div>
+    <!-- /knowhideelement -->
 
     <script>
         
@@ -542,6 +548,14 @@
                 const info5year = document.createElement('span');
                 info5year.innerHTML = data[3].ColumnB;
                 document.getElementById('info5yearprint').appendChild(info5year);
+
+                const info5year2 = document.createElement('span');
+                info5year2.innerHTML = data[3].ColumnB;
+                document.getElementById('info5yearprint2').appendChild(info5year2);
+
+                const info5mobyear2 = document.createElement('span');
+                info5mobyear2.innerHTML = data[3].ColumnB;
+                document.getElementById('info5mobyearprint2').appendChild(info5mobyear2);
         
                 // Bar graph
         
@@ -973,5 +987,6 @@
             </script>
             
     </div>
+    <!-- /googlemapapi -->
 
 </div> <!-- /knowmainwarp -->
