@@ -581,7 +581,7 @@ div.knowtopcol1in1 {
     margin: auto;
 }
 .fixthwordbreak {
-    display: block !important;
+    display: inline-block;
     margin: 0px !important;
 }
 
@@ -590,6 +590,15 @@ div.knowtopcol1in1 {
 #knowtopcolwarp {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+}
+
+@media (max-width: 890px) {
+
+.fixthwordbreak {
+    display: block;
+    margin: 0px !important;
 }
 
 }
@@ -938,12 +947,12 @@ div.knowtopcol2in3 {
 .knowtopheadcol2top {
     font-size: 43px;
     height: 57px;
-    line-height: 120%;
-    background-position: -2px 47px;
+    line-height: 138%;
+    background-position: 3px 55px;
     background-size: 91%;
 }
 .knowtopheadcol2bottom {
-    font-size: 17px;
+    font-size: 15px;
 }
 
 }
