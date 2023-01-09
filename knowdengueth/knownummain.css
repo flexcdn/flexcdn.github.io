@@ -942,7 +942,10 @@ div.knowtopcol2in3 {
 @media (max-width: 451px) {
 
 .knowtopheadwarpin {
-    max-width: 365px;
+    max-width: 340px;
+}
+.knowtopheadcol2 {
+    padding-left: 15px;
 }
 .knowtopheadcol2top {
     font-size: 43px;
