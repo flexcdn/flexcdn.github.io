@@ -1,10 +1,71 @@
 <style>
+
 /* https://dev-knowhae-thailand.pantheonsite.io/block/12?destination=/node/21 */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* MENU -- GROBAL CSS */
 
+#navbar > div > div.region.region-navigation > div.knowhae-nav-menus {
+    width: 100% !important;
+}
+#block-patientmenu {
+    max-width: 665px;
+    float: right;
+}
 body.patient-article .region.region-navigation {
     border-bottom: none !important;
+}
+#block-patientmenu > ul > li {
+    font-family: 'Kanit', sans-serif;
+}
+#block-patientmenu > ul > li.first > a {
+    width: 240px;
+}
+#block-patientmenu > ul > li.last > a {
+    width: 320px;
+}
+#block-patientmenu > ul > li > a > span {
+    font-size: 16px;
+    font-family: "Sofiapro-Regular",sans-serif;
+    text-decoration: underline;
+    position: relative;
+    color: transparent;
+    margin: 0px !important;
+    margin-left: 10px !important;
+    margin-top: -5px !important;
+    cursor: pointer;
+    border: none;
+    padding: 15px !important;
+    background-color: #f5333f;
+}
+#block-patientmenu > ul > li > a > span::before {
+    content: " ";
+    font-size: 16px;
+    font-family: "Sofiapro-Regular",sans-serif;
+    text-decoration: underline;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    margin-top: -1px;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+ul.menu.menu--patient-menu.nav ul.dropdown-menu li a {
+    color: #00c8f0 !important;
+    font-family: 'Kanit', sans-serif;
+}
+.patient-article li.menu-icon.active.active-trail.first a.active-trail.is-active {
+    font-family: 'Kanit', sans-serif !important;
+}
+ul.menu.menu--patient-menu.nav ul.dropdown-menu li a:hover {
+    color: #f5333f !important;
 }
 
 </style>
