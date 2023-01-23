@@ -59,6 +59,14 @@
 #block-sitemap {
     display: none !important;
 }
+body h1.page-header {
+    color: #004d98 !important;
+    font-family: 'Kanit', sans-serif !important;
+    font-size: 34px !important;
+    line-height: 115% !important;
+    font-weight: 500 !important;
+    text-align: center;
+}
 #sitemap_block1_1, #sitemap_block1_2, #sitemap_block1_3, #sitemap_block1_4, #sitemap_block1_5 {
     max-width: 720px;
     margin: auto;
@@ -171,6 +179,55 @@
 }
 #sitemap_block1_2 > div > div > div > a:hover {
     color: #f00;
+}
+
+@media (max-width: 991px) {
+
+#sitemap_block1_2 > div > div > button.accordion {
+    background-position: 90% center;
+    text-align: center;
+}
+#sitemap_block1_2 > div:nth-child(1) {
+    margin-bottom: 25px;
+}
+
+}
+
+@media (max-width: 615px) {
+
+.btn-mainsubmit {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-position: right center;
+}
+.btn-mainsubmit2icon > p {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-position: left center;
+}
+#sitemap_block1_2 > div > div > button.accordion {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-position: right center;
+}
+
+}
+
+@media (max-width: 375px) {
+
+.btn-mainsubmit {
+    font-size: 16px;
+}
+.btn-mainsubmit2icon > p {
+    font-size: 16px;
+}
+#sitemap_block1_2 > div > div > button.accordion {
+    font-size: 16px;
+}
+
 }
 
 </style>
