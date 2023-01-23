@@ -423,3 +423,28 @@ section > div.region.region-content > h1 {
 }
 
 </style>
+
+<script>
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+
+const symtoms = Object.entries(params).filter(([key, value]) => value=='y');
+
+if(Object.keys(params).length == 0 || symtoms.length == 0){
+    document.getElementById('knowhaeth-questionresult-title').style.display = 'none';
+    document.getElementById('knowhaeth-questionresult-suggest').style.display = 'none';
+    document.getElementById('knowhaeth-questionresult-diagnosing').style.display = 'none';
+    document.getElementById('knowhaeth-questionresult-diagnosingtable').style.display = 'none';
+}else{
+    document.getElementById('knowhaeth-questionresult-zerotitle').style.display = 'none';
+    document.getElementById('knowhaeth-questionresult-sum').innerHTML = symtoms.length;
+
+    Object.entries(params).forEach(el => {
+        if(el[1] == 'n'){
+            document.getElementById('img'+ el[0]).src = '/sites/default/files/inline-images/' + el[0] + 'no.png';
+        }else{
+            document.getElementById('img'+ el[0]).src = '/sites/default/files/inline-images/' + el[0] + 'yes.png';
+        }
+    });
+}
+</script>
