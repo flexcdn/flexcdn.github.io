@@ -1,10 +1,10 @@
 <!-- START FAMILY BLOCK 1#1 -->
 
 <div class="row" id="family_block1_1">
-    <div class="col-md-2">
-        <img alt="knowhaeth_treating_cross" data-entity-type="file" data-entity-uuid="489463e9-081e-477e-b352-98c85b178375" src="/sites/default/files/inline-images/knowhaeth_family_topicon.png" />
+    <div class="col-xs-3">
+        <img alt="knowhaeth_family_topicon" data-entity-type="file" data-entity-uuid="e9225e05-5297-40c2-b1fd-9da5804b3780" src="/sites/default/files/inline-images/knowhaeth_family_topicon.png" />
     </div>
-    <div class="col-md-10">
+    <div class="col-xs-9">
         <h4 class="treating_block1_h4">โรค HAE และครอบครัวของคุณ</h4>
     </div>
 </div>
@@ -29,25 +29,31 @@
 
 <style>
 
-#family_block1_1 > div.col-md-2 {
-    max-width: 130px;
+#family_block1_1 {
+    margin-bottom: 20px;
 }
-#family_block1_1 > div.col-md-2 > img {
+#family_block1_1 > div.col-xs-3 {
+    max-width: 130px;
+    text-align: center;
     padding: 0px;
-    margin-top: 0px;
+}
+#family_block1_1 > div.col-xs-3 > img {
+    margin-top: 30px;
     width: 100%;
+    max-width: 90px;
     height: auto;
 }
-#family_block1_1 > div.col-md-10 {
-    margin-top: 30px;
+#family_block1_1 > div.col-xs-9 {
+    margin-top: 40px;
+    padding: 0px;
 }
-#family_block1_1 > div.col-md-10 > h4 {
+#family_block1_1 > div.col-xs-9 > h4 {
     font-family: 'Kanit', sans-serif;
     font-size: 30px;
     font-weight: 400;
     padding-bottom: 0px;
 }
-#family_block1_1 > div.col-md-10 > h5 {
+#family_block1_1 > div.col-xs-9 > h5 {
     font-family: 'Kanit', sans-serif;
     font-size: 14.5px;
     font-weight: 400;
@@ -106,6 +112,61 @@ section > div.region.region-content > h1 {
     background-position: center center;
     background-repeat: no-repeat;
     margin-top: 0px;
+}
+
+@media (max-width: 1400px) {
+
+#family_block1_1 > div.col-xs-9 {
+    margin-top: 45px;
+}
+#family_block1_1 > div.col-xs-9 > h4 {
+    font-size: 26px;
+}
+
+}
+
+@media (max-width: 991px) {
+
+#family_block1_1 > div.col-xs-9 {
+    margin-top: 40px;
+}
+#family_block1_1 > div.col-xs-9 > h4 {
+    font-size: 30px;
+}
+body.patient-article .field--item:nth-child(2) .paragraph.paragraph--type--image-papa.paragraph--view-mode--default {
+    padding-bottom: 60px !important;
+}
+
+}
+
+@media (max-width: 560px) {
+
+#family_block1_1 > div.col-xs-9 {
+    margin-top: 45px;
+}
+#family_block1_1 > div.col-xs-9 > h4 {
+    font-size: 26px;
+}
+
+}
+
+@media (max-width: 490px) {
+
+#family_block1_1 {
+    padding-left: 10px;
+}
+#family_block1_1 > div.col-xs-3 {
+    max-width: 55px;
+}
+#family_block1_1 > div.col-xs-9 {
+    margin-top: 35px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+#family_block1_1 > div.col-xs-9 > h4 {
+    font-size: 16px;
+}
+
 }
     
 </style>
