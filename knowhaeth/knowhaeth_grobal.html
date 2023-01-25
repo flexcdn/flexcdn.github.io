@@ -6,6 +6,12 @@
 
 /* MENU -- GROBAL CSS */
 
+.navbar.container {
+
+}
+#navbar > div.navbar-header {
+    border-bottom: #00c8f0 solid 1px;
+}
 #navbar > div > div.region.region-navigation > div.knowhae-nav-menus {
     width: 100% !important;
 }
@@ -73,6 +79,103 @@ ul.menu.menu--patient-menu.nav ul.dropdown-menu li a:hover {
 .main-container.container.js-quickedit-main-content {
     padding-top: 80px !important;
     padding-bottom: 0px !important;
+}
+
+}
+
+@media (max-width: 991px) {
+
+#navbar {
+    background: transparent !important;
+}
+#navbar > div.navbar-header {
+    background: transparent !important;
+}
+#navbar > div > div.region.region-navigation {
+    background: transparent !important;
+}
+#navbar > div > div > div > div.knowhae-hcp-menu {
+    display: none !important;
+}
+#block-patientmenu {
+    float: none !important;
+    max-width: 100% !important;
+}
+#block-patientmenu-menu {
+    display: none !important;
+}
+#block-patientmenu > div {
+    display: none !important;
+}
+#block-patientmenu > ul {
+    display: block;
+    top: unset !important;
+    position: static;
+    width: 100%;
+    background: #fff;
+    max-width: 300px;
+    padding: 15px;
+    float: right;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+}
+#block-patientmenu > ul > li {
+    background: transparent !important;
+}
+#block-patientmenu > ul > li:nth-child(1) > a {
+    width: 100%;
+    position: static;
+    float: none;
+    clear: both;
+    display: block;
+    text-align: right;
+    font-size: 24px;
+}
+#block-patientmenu > ul > li:nth-child(2) > a {
+    width: 100%;
+    position: static;
+    float: none;
+    clear: both;
+    display: block;
+    text-align: right;
+    font-size: 24px;
+}
+#block-patientmenu > ul > li:nth-child(1) > ul {
+    display: block;
+    position: static;
+    float: none;
+    clear: both;
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+#block-patientmenu > ul > li:nth-child(2) > ul {
+    display: block;
+    position: static;
+    float: none;
+    clear: both;
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+#block-patientmenu > ul > li:nth-child(1) > ul > li {
+    text-align: right;
+    padding-right: 0px;
+}
+#block-patientmenu > ul > li:nth-child(1) > ul > li > a {
+    font-size: 16px;
+    font-weight: 200
+}
+#block-patientmenu > ul > li:nth-child(2) > ul > li {
+    text-align: right;
+    padding-right: 0px;
+}
+#block-patientmenu > ul > li:nth-child(2) > ul > li > a {
+    font-size: 16px;
+    font-weight: 200
 }
 
 }
