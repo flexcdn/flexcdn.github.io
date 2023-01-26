@@ -26,10 +26,12 @@ body.patient-article .region.region-navigation {
     font-family: 'Kanit', sans-serif;
 }
 #block-patientmenu > ul > li.first > a {
-    width: 240px;
+    width: 280px;
+    font-size: 28px;
 }
 #block-patientmenu > ul > li.last > a {
-    width: 320px;
+    width: 380px;
+    font-size: 28px;
 }
 #block-patientmenu > ul > li > a > span {
     font-size: 16px;
@@ -44,9 +46,14 @@ body.patient-article .region.region-navigation {
     border: none;
     padding: 15px !important;
     background-color: #f5333f;
+    background-image: url(/sites/default/files/inline-images/knowhaeth_impact_accdown.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #block-patientmenu > ul > li > a > span::before {
     content: " ";
+    /*
     font-size: 16px;
     font-family: "Sofiapro-Regular",sans-serif;
     text-decoration: underline;
@@ -62,16 +69,29 @@ body.patient-article .region.region-navigation {
     border-top: 4px solid\9;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
+    */
+    display: none;
 }
 ul.menu.menu--patient-menu.nav ul.dropdown-menu li a {
     color: #00c8f0 !important;
     font-family: 'Kanit', sans-serif;
+    font-size: 18px;
 }
 .patient-article li.menu-icon.active.active-trail.first a.active-trail.is-active {
     font-family: 'Kanit', sans-serif !important;
 }
 ul.menu.menu--patient-menu.nav ul.dropdown-menu li a:hover {
     color: #f5333f !important;
+}
+#block-footerwebsiteparablock > div > h5 {
+    font-family: 'Kanit', sans-serif;
+}
+#block-footerpara > div > p {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+#block-footerpara > div > p:nth-child(2) {
+    font-weight: 400;
 }
 
 @media screen and (min-width: 320px) and (max-width: 991px) { 
@@ -182,6 +202,23 @@ body.patient-article .main-container.container.js-quickedit-main-content {
 #block-patientmenu > ul > li:nth-child(2) > ul > li > a {
     font-size: 16px;
     font-weight: 200
+}
+#block-patientmenu > ul > li > a > span.caret {
+    display: none;
+}
+#navbar > div > div.mobile-hamber-class::before {
+    content: "MENU";
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    display: block;
+    font-size: 24px;
+    color: #00c8f0;
+    float: left;
+    margin-top: -7px;
+    padding-right: 10px;
+}
+#navbar > div > div.mobile-hamber-class > div.humbar-cls {
+    float: right;
 }
 
 }
