@@ -1,0 +1,1001 @@
+<div id="knowmainwarp">
+
+    <div id="knowtopheadwarp">
+    <div class="knowtopheadwarpin">
+    <div class="knowtopheadcol1"><img alt="KnowDengue_element_1" class="knowtopheadpinimg" data-entity-type="file" data-entity-uuid="5dcaa813-cc87-4286-93c0-1edb388669e3" src="/sites/default/files/inline-images/KnowDengue_element_1.png" /></div>
+    
+    <div class="knowtopheadcol2">
+    <div class="knowtopheadcol2top">รู้ทันพื้นที่เสี่ยง</div>
+    
+    <div class="knowtopheadcol2bottom">แน่ใจแค่ไหน...ว่าคุณไม่ได้อยู่ในพื้นที่เสี่ยง ?</div>
+    </div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    </div>
+    </div>
+    <!-- /knowtopheadwarp -->
+    
+    <div id="knowtopcolwarp">
+    <div class="knowtopcol1inmob">
+    <div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
+    
+    <div class="knowtopcol2in1div2">
+        <p class="knowtopcol2in1div2text1">ข้อมูลเดือน <span id="info1mobprint"></span> <span id="info5mobyearprint2"></span> </p>
+        <p class="knowtopcol2in1div2text2">ประจำสัปดาห์การระบาดที่ <span id="info2mobprint"></span></p>
+    </div>
+    </div> 
+    
+    <div id="knowtopcol1">
+        <!--<img alt="KnowDengue_element_3" class="knowtopcol1img" data-entity-type="file" data-entity-uuid="28851e1e-d1ef-4e44-b19a-c279fce0d23b" src="/sites/default/files/inline-images/KnowDengue_element_3.jpg" />-->
+        <div id="map"></div>
+        <select id="geodropdown" name="geodropdown">
+            <option value="116">กรุงเทพมหานคร</option>
+            <option value="108">กระบี่</option>
+            <option value="170">กาญจนบุรี</option>
+            <option value="182">กาฬสินธุ์</option>
+            <option value="200">กำแพงเพชร</option>
+            <option value="215">ขอนแก่น</option>
+            <option value="237">จันทบุรี</option>
+            <option value="251">ฉะเชิงเทรา</option>
+            <option value="260">ชลบุรี</option>
+            <option value="272">ชัยนาท</option>
+            <option value="283">ชัยภูมิ</option>
+            <option value="299">ชุมพร</option>
+            <option value="29">เชียงราย</option>
+            <option value="4">เชียงใหม่</option>
+            <option value="308">ตรัง</option>
+            <option value="321">ตราด</option>
+            <option value="329">ตาก</option>
+            <option value="339">นครนายก</option>
+            <option value="343">นครปฐม</option>
+            <option value="354">นครพนม</option>
+            <option value="364">นครราชสีมา</option>
+            <option value="398">นครศรีธรรมราช</option>
+            <option value="416">นครสวรรค์</option>
+            <option value="434">นนทบุรี</option>
+            <option value="441">นราธิวาส</option>
+            <option value="458">น่าน</option>
+            <option value="474">บึงกาฬ</option>
+            <option value="477">บุรีรัมย์</option>
+            <option value="494">ปทุมธานี</option>
+            <option value="501">ประจวบคีรีขันธ์</option>
+            <option value="510">ปราจีนบุรี</option>
+            <option value="516">ปัตตานี</option>
+            <option value="544">พะเยา</option>
+            <option value="528">พระนครศรีอยุธยา</option>
+            <option value="553">พังงา</option>
+            <option value="564">พัทลุง</option>
+            <option value="576">พิจิตร</option>
+            <option value="589">พิษณุโลก</option>
+            <option value="51">เพชรบุรี</option>
+            <option value="60">เพชรบูรณ์</option>
+            <option value="88">แพร่</option>
+            <option value="601">ภูเก็ต</option>
+            <option value="605">มหาสารคาม</option>
+            <option value="618">มุกดาหาร</option>
+            <option value="97">แม่ฮ่องสอน</option>
+            <option value="625">ยโสธร</option>
+            <option value="638">ยะลา</option>
+            <option value="646">ร้อยเอ็ด</option>
+            <option value="664">ระนอง</option>
+            <option value="673">ระยอง</option>
+            <option value="682">ราชบุรี</option>
+            <option value="693">ลพบุรี</option>
+            <option value="705">ลำปาง</option>
+            <option value="719">ลำพูน</option>
+            <option value="74">เลย</option>
+            <option value="726">ศรีสะเกษ</option>
+            <option value="750">สกลนคร</option>
+            <option value="763">สงขลา</option>
+            <option value="783">สตูล</option>
+            <option value="790">สมุทรปราการ</option>
+            <option value="797">สมุทรสงคราม</option>
+            <option value="801">สมุทรสาคร</option>
+            <option value="808">สระแก้ว</option>
+            <option value="817">สระบุรี</option>
+            <option value="829">สิงห์บุรี</option>
+            <option value="834">สุโขทัย</option>
+            <option value="847">สุพรรณบุรี</option>
+            <option value="857">สุราษฎร์ธานี</option>
+            <option value="874">สุรินทร์</option>
+            <option value="894">หนองคาย</option>
+            <option value="904">หนองบัวลำภู</option>
+            <option value="914">อ่างทอง</option>
+            <option value="920">อำนาจเจริญ</option>
+            <option value="923">อุดรธานี</option>
+            <option value="940">อุตรดิตถ์</option>
+            <option value="951">อุทัยธานี</option>
+            <option value="959">อุบลราชธานี</option>
+        </select>
+    </div>
+    
+    <div id="knowtopcol2">
+    <div class="knowtopcol2in1">
+        <div class="knowtopcol2in1div1">สถานการณ์ไข้เลือดออกในพื้นที่ที่คุณอยู่</div>
+        
+        <div class="knowtopcol2in1div2">
+            <p class="knowtopcol2in1div2text1">ข้อมูลเดือน <span id="info1print"></span> <span id="info5yearprint2"></span> </p>
+            <p class="knowtopcol2in1div2text2">ประจำสัปดาห์การระบาดที่ <span id="info2print"></span></p>
+        </div>
+    </div>
+    
+    <div class="knowtopcol2in2">
+    <div class="knowtopcol2in2div1">ตอนนี้คุณอยู่ที่</div>
+    
+    <div class="knowtopcol2in2div2">กรุงเทพมหานคร</div>
+    </div>
+    
+    <div class="knowtopcol2in3">
+    <div class="knowtopcol2in3div1">จำนวนผู้ป่วยในจังหวัดที่คุณอยู่ (ราย)</div>
+    
+    <div class="knowtopcol2in3div2">&nbsp;</div>
+    </div>
+    </div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    </div>
+    <!-- /knowtopcolwarp -->
+    
+    <div id="infoprintwarp">
+    <div class="infoprintwarpin">
+    <div class="infoprintwarpinner1">
+        <p class="fixthwordbreak">สถานการณ์ไข้เลือดออก</p>
+        <p class="fixthwordbreak">ในประเทศไทย ปี <span id="info5yearprint"></span></p>
+    </div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    
+    <div class="infoprintwarpin2col1">
+    <div class="infoprintwarpin2col1in1"><img alt="KnowDengue_element_4" class="infoprintwarpin2col1in1img" data-entity-type="file" data-entity-uuid="0aa3887a-2b23-4438-926d-a2e9278e19c5" src="/sites/default/files/inline-images/KnowDengue_element_4.png" /></div>
+    
+    <div class="infoprintwarpin2col1in2">
+    <div id="info3print">&nbsp;</div>
+    ผู้ป่วยสะสม (ราย)</div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    </div>
+    
+    <div class="infoprintwarpin2col2">
+    <div class="infoprintwarpin2col2in1"><img alt="KnowDengue_element_5" class="infoprintwarpin2col2in1img" data-entity-type="file" data-entity-uuid="d61c2fee-638f-47b5-ac18-4611f1fe7576" src="/sites/default/files/inline-images/KnowDengue_element_5.png" /></div>
+    
+    <div class="infoprintwarpin2col2in2">
+    <div id="info4print">&nbsp;</div>
+    ผู้เสียชีวิตสะสม (ราย)</div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    </div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    </div>
+    </div>
+    <!-- /infoprintwarp -->
+    
+    <div id="knowchartwarp">
+    <div class="knowchartwarpin">
+    <div class="knowchartinhead">
+        <p class="fixthwordbreak">กลุ่มผู้ป่วยและเสียชีวิตสะสมจาก</p>
+        <p class="fixthwordbreak">ไข้เลือดออกแบ่งตามกลุ่มอายุ</p>
+    </div>
+    
+    <div class="knowchartinsubhead">
+    <div class="knowchartinsubheadcol1">
+    <div class="knowchartinsubheadcol1color">&nbsp;</div>
+    ป่วย (ราย)</div>
+    
+    <div class="knowchartinsubheadcol2">
+    <div class="knowchartinsubheadcol2color">&nbsp;</div>
+    เสียชีวิต (ราย)</div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    </div>
+    
+    <div class="knowchartcol1">
+    <div class="chart-wrapper">
+    <div class="bar-chart stacked pad">
+    <ul class="plot-container group-by-number" id="knowchartlebel">
+        <li>กลุ่มอายุ (ปี)</li>
+        <li>0-4</li>
+        <li>5-14</li>
+        <li>15-24</li>
+        <li>25-34</li>
+        <li>35-44</li>
+        <li>45-54</li>
+        <li>55-64</li>
+        <li>65 ขึ้นไป</li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    
+    <div class="knowchartcol2">
+    <div class="chart-wrapper">
+    <div class="bar-chart stacked pad">
+    <ul class="plot-container group-by-number" id="knowchartbar">
+        <li class="knowchartbarinhead">
+        <div data-cp-size="0">0</div>
+        </li>
+        <li>
+            <div class="knowchartbarsick0-4" data-cp-size="30">
+                <p id="ageinfo1c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead0-4" data-cp-size="0" data-group="5">
+                <p id="ageinfo1c2print">&nbsp;</p>
+            </div>
+        </li>
+        <li>
+            <div class="knowchartbarsick5-14" data-cp-size="90">
+                <p id="ageinfo2c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead5-14" data-cp-size="6" data-group="5">
+                <p id="ageinfo2c2print">&nbsp;</p>
+            </div>
+        </li>
+        <li>
+            <div class="knowchartbarsick15-24" data-cp-size="70">
+                <p id="ageinfo3c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead15-24" data-cp-size="4" data-group="5">
+                <p id="ageinfo3c2print">&nbsp;</p>
+            </div>
+        </li>
+        <li>
+            <div class="knowchartbarsick25-34" data-cp-size="35">
+                <p id="ageinfo4c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead25-34" data-cp-size="3" data-group="5">
+                <p id="ageinfo4c2print">&nbsp;</p>
+            </div>
+        </li>
+        <li>
+            <div class="knowchartbarsick35-44" data-cp-size="25">
+                <p id="ageinfo5c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead35-44" data-cp-size="4" data-group="5">
+                <p id="ageinfo5c2print">&nbsp;</p>
+            </div>
+        </li>
+        <li>
+            <div class="knowchartbarsick45-54" data-cp-size="18">
+                <p id="ageinfo6c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead45-54" data-cp-size="4" data-group="5">
+                <p id="ageinfo6c2print">&nbsp;</p>
+            </div>
+        </li>
+        <li>
+            <div class="knowchartbarsick55-64" data-cp-size="15">
+            <p id="ageinfo7c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead55-64" data-cp-size="3" data-group="5">
+            <p id="ageinfo7c2print">&nbsp;</p>
+            </div>
+        </li>
+        <li>
+            <div class="knowchartbarsick65" data-cp-size="10">
+                <p id="ageinfo8c1print">&nbsp;</p>
+            </div>
+    
+            <div class="knowchartbardead65" data-cp-size="3" data-group="5">
+                <p id="ageinfo8c2print">&nbsp;</p>
+            </div>
+        </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    
+    <div class="knowchartbotinfo">
+    <div class="knowchartbotinfo1">กลุ่มอายุที่พบอัตราป่วยมากที่สุด คือ
+    <p id="ageinfosum1print">&nbsp;</p>
+    </div>
+    
+    <div class="knowchartbotinfo2">กลุ่มอายุที่พบอัตราเสียชีวิตมากที่สุด คือ
+    <p id="ageinfosum2print">&nbsp;</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- /knowchartwarp -->
+    
+    <div id="knowbotcolwarp">
+    <div id="knowbotcolwarpin">
+    <div class="knowbotcol2in1">
+        <p class="fixthwordbreak">3 อันดับปัจจัยเสี่ยงสำคัญ</p>
+        <p class="fixthwordbreak">ของการเสียชีวิตจากไข้เลือดออก</p>
+    </div>
+    
+    <div class="knowbotcol2in2">
+    <div id="knowbotcol2in2c1">
+    <div class="knowbotcol2in2c1inner1">มีโรคประจำตัว</div>
+    
+    <div class="knowbotcol2in2c1inner2"><img alt="KnowDengue_element_6" class="knowbotcol2in2c1inner2img" data-entity-type="file" data-entity-uuid="8a057d3e-743d-4383-baac-00d5e077cab0" src="/sites/default/files/inline-images/KnowDengue_element_6.png" /></div>
+    
+    <div class="knowbotcol2in2c1inner3">
+    <p id="riskinfo1print">&nbsp;</p>
+    ราย</div>
+    </div>
+    
+    <div id="knowbotcol2in2c2">
+    <div class="knowbotcol2in2c2inner1">น้ำหนักเกิน</div>
+    
+    <div class="knowbotcol2in2c2inner2"><img alt="KnowDengue_element_7" class="knowbotcol2in2c2inner2img" data-entity-type="file" data-entity-uuid="e891fceb-40b2-4bf2-92f9-66425c2b8665" src="/sites/default/files/inline-images/KnowDengue_element_7.png" /></div>
+    
+    <div class="knowbotcol2in2c2inner3">
+    <p id="riskinfo2print">&nbsp;</p>
+    ราย</div>
+    </div>
+    
+    <div id="knowbotcol2in2c3">
+    <div class="knowbotcol2in2c3inner1">ได้รับยา NSAIDs*</div>
+    
+    <div class="knowbotcol2in2c3inner2"><img alt="KnowDengue_element_8" class="knowbotcol2in2c3inner2img" data-entity-type="file" data-entity-uuid="29d867eb-4959-4fe5-a4b0-5cef683fe1ed" src="/sites/default/files/inline-images/KnowDengue_element_8.png" /></div>
+    
+    <div class="knowbotcol2in2c3inner3">
+    <p id="riskinfo3print">&nbsp;</p>
+    ราย</div>
+    </div>
+    
+    <div class="knowclearall">&nbsp;</div>
+    </div>
+    
+    <div class="knowbotcol2in3">ที่มา: กองโรคติดต่อนำโดยแมลง กรมควบคุมโรค กระทรวงสาธารณสุข</div>
+    
+    <div class="knowbotcol2in4">
+        *ยากลุ่ม NSAIDs (non-steroidal anti-inflammatory drugs) หรือ ยาบรรเทาอาการอักเสบที่ไม่ใช่สเตียรอยด์ มีมากมาย เช่น แอสไพริน ไอบูโพรเฟน ไดโคลฟีแน็ก นาพร็อกเซน เป็นต้น ใช้เพื่อบรรเทาอาการปวดและลดอาการอักเสบในโรคข้ออักเสบต่าง ๆ
+        <p  class="knowbotcol2in4p1" >(อ้างอิง: ดร. เภสัชกรหญิง นงลักษณ์ สุขวาณิชย์ศิลป์. (2562). ยาแก้ปวดข้อ ข้ออักเสบ-กลุ่มเอ็นเสด (NSAIDs) สืบค้น 9 ธันวาคม 2565 จาก <a href="https://pharmacy.mahidol.ac.th/th/knowledge/article/472%E0%B8%9B%E0%B8%A7%E0%B8%94%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A2%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%94(NSAIDs)/" target="_blank">https://pharmacy.mahidol.ac.th/th/knowledge/article/472ปวดข้อกับยาเอ็นเสด(NSAIDs)/)</a></p>
+    </div>
+    </div>
+    </div>
+    <!-- /knowbotcolwarp -->
+    
+    <div id="knowhideelement">
+            <img alt="KnowDengue_element_2" data-entity-type="file" data-entity-uuid="0f52e6e8-7f18-4bf0-bca7-fe676251b32f" src="/sites/default/files/inline-images/KnowDengue_element_2.png" />
+    </div>
+    <!-- /knowhideelement -->
+
+    <script>
+        
+        (function(_win) {
+        'use strict';
+
+        if ('IntersectionObserver' in _win) {
+            return;
+        }
+
+        /**
+         * IntersectionObserver polyfill (c) 2016 @jeremenichelli | Licensed MIT
+         */
+        var viewportH = _win.innerHeight,
+            nowOffset = Date.now();
+
+        // error headers
+        var constructError = 'Failed to construct \'Intersection\': ',
+            observeError = 'Failed to execute \'observe\': ',
+            unobserveError = 'Failed to execute \'unobserve\': ';
+
+        // requestAnimationFrame alias
+        var rAF = _win.requestAnimationFrame;
+
+        /**
+         * Returns current time
+         * @method now
+         * @returns {Number} Execution time
+         */
+        var now = function() {
+            return _win.performance && _win.performance.now ? performance.now() : Date.now() - nowOffset;
+        };
+
+        /*
+        * Observer constructor
+        * @constructor IntersectionObserver
+        * @param {Function} callback
+        * @param {Object} options
+        */
+        var IntersectionObserver = function(callback, options) {
+            // throw error if callback is not a funciton
+            if (typeof callback !== 'function') {
+                throw new TypeError(constructError + 'The callback provided as parameter 1 is not a function');
+            }
+
+            // default options object properties
+            var config = options || {
+                root: null,
+                threshold: [ 0 ]
+            };
+
+            // accept number as threshold option
+            if (typeof config.threshold === 'number') {
+                config.threshold = [ config.threshold ];
+            }
+
+            // throw error when threshold value is out of range
+            /*
+            if (config.threshold[0] > 1 || config.threshold[0] < 0) {
+                throw new RangeError(constructError + 'Threshold values must be between 0 and 1');
+            }
+            */
+            // create array for observable elements
+            var elements = [];
+
+            // debounce frame call
+            var ticking = false;
+
+            // trigger actions when elements become visible
+            function trigger(target) {
+                var arr = target ? [ target ] : elements,
+                    count = arr.length,
+                    changes = [],
+                    el,
+                    rect;
+
+                while (count) {
+                    --count;
+
+                    el = arr[ count ];
+                    rect = el.getBoundingClientRect();
+
+                    if (rect.top < viewportH && rect.top >= -rect.height) {
+                        changes.push({
+                            boundingClientRect: rect,
+                            target: el,
+                            time: now()
+                        });
+                    }
+                }
+
+                // execute callback with array of changes
+                callback(changes);
+
+                // clean variables to prevent memory leaks
+                arr = count = changes = el = rect = null;
+
+                // reset ticking
+                ticking = false;
+            }
+
+            function debounceTrigger() {
+                if (!ticking) {
+                    rAF(trigger.bind(_win, null));
+                }
+                ticking = true;
+            }
+
+            // add element to array of observable elements
+            this.observe = function(target) {
+                if (target instanceof _win.Element) {
+                    // reincorporate scroll listener if array is empty
+                    if (elements.length === 0) {
+                        _win.addEventListener('scroll', debounceTrigger);
+                    }
+
+                    elements.push(target);
+
+                    // trigger in case element is already visible
+                    trigger(target);
+                } else {
+                    throw new TypeError(observeError + 'parameter 1 is not of type \'Element\'');
+                }
+            };
+
+            // remove element from array of observable elements
+            this.unobserve = function(target) {
+                if (target instanceof _win.Element) {
+                    var index = elements.indexOf(target);
+
+                    if (index !== -1) {
+                        elements.splice(index, 1);
+                    }
+
+                    // remove scroll listener array is empty
+                    if (elements.length === 0) {
+                        _win.removeEventListener('scroll', debounceTrigger);
+                    }
+                } else {
+                    throw new TypeError(unobserveError + 'parameter 1 is not of type \'Element\'');
+                }
+            };
+
+            // stop observing
+            this.disconnect = function() {
+                _win.removeEventListener('scroll', debounceTrigger);
+            };
+        };
+
+        // update viewport metrics
+        _win.addEventListener('resize', function() {
+            viewportH = _win.innerHeight;
+        });
+
+        // expose constructor globally
+        _win.IntersectionObserver = IntersectionObserver;
+
+    })(window);
+
+            function toInt(str) {
+                return parseInt(str.replace(',', ''));
+            }
+        
+            fetch(
+            "https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/SUMMARY"
+            )
+            .then((res) => res.json())
+            .then((data) => {
+                
+                const info1 = document.createElement('span');
+                info1.innerHTML = data[2].ColumnB;
+                document.getElementById('info1print').appendChild(info1);
+        
+                const info2 = document.createElement('span');
+                info2.innerHTML = data[99].ColumnB;
+                document.getElementById('info2print').appendChild(info2);
+                
+                const info1mob = document.createElement('span');
+                info1mob.innerHTML = data[2].ColumnB;
+                document.getElementById('info1mobprint').appendChild(info1mob);
+        
+                const info2mob = document.createElement('span');
+                info2mob.innerHTML = data[99].ColumnB;
+                document.getElementById('info2mobprint').appendChild(info2mob);
+        
+                const info3 = document.createElement('span');
+                info3.innerHTML = data[4].ColumnC;
+                document.getElementById('info3print').appendChild(info3);
+        
+                const info4 = document.createElement('span');
+                info4.innerHTML = data[6].ColumnC;
+                document.getElementById('info4print').appendChild(info4);
+        
+                const info5year = document.createElement('span');
+                info5year.innerHTML = data[3].ColumnB;
+                document.getElementById('info5yearprint').appendChild(info5year);
+
+                const info5year2 = document.createElement('span');
+                info5year2.innerHTML = data[3].ColumnB;
+                document.getElementById('info5yearprint2').appendChild(info5year2);
+
+                const info5mobyear2 = document.createElement('span');
+                info5mobyear2.innerHTML = data[3].ColumnB;
+                document.getElementById('info5mobyearprint2').appendChild(info5mobyear2);
+        
+                // Bar graph
+        
+                const sicks = [toInt(data[26].ColumnC), toInt(data[31].ColumnC), toInt(data[36].ColumnC), toInt(data[41].ColumnC), toInt(data[46].ColumnC), toInt(data[51].ColumnC), toInt(data[56].ColumnC), toInt(data[61].ColumnC)];
+                const deads = [toInt(data[28].ColumnC), toInt(data[33].ColumnC), toInt(data[38].ColumnC), toInt(data[43].ColumnC), toInt(data[48].ColumnC), toInt(data[53].ColumnC), toInt(data[58].ColumnC), toInt(data[63].ColumnC)];
+        
+                //const t_cases = [...sicks, ...deads].reduce((a, b) => a + b, 0);
+                const t_cases = Math.max(...sicks);
+        
+                var barsicks = [];
+                var bardeads = [];
+        
+                for(i = 0; i < sicks.length; i++){
+                    barsicks[i] = Math.floor((sicks[i]/t_cases) * 90);
+                    if(barsicks[i] < 8 && sicks[i] > 0) {
+                        barsicks[i] = 8;
+                    }
+        
+                    bardeads[i] = Math.floor((deads[i]/t_cases) *90);
+                    if(bardeads[i] < 5 && deads[i] > 0) {
+                        bardeads[i] = 3;
+                    }
+                }
+        
+                document.getElementsByClassName('knowchartbarsick0-4')[0].setAttribute('data-cp-size', barsicks[0]);
+                document.getElementsByClassName('knowchartbardead0-4')[0].setAttribute('data-cp-size', bardeads[0]);
+                document.getElementsByClassName('knowchartbarsick5-14')[0].setAttribute('data-cp-size', barsicks[1]);
+                document.getElementsByClassName('knowchartbardead5-14')[0].setAttribute('data-cp-size', bardeads[1]);
+                document.getElementsByClassName('knowchartbarsick15-24')[0].setAttribute('data-cp-size', barsicks[2]);
+                document.getElementsByClassName('knowchartbardead15-24')[0].setAttribute('data-cp-size', bardeads[2]);
+                document.getElementsByClassName('knowchartbarsick25-34')[0].setAttribute('data-cp-size', barsicks[3]);
+                document.getElementsByClassName('knowchartbardead25-34')[0].setAttribute('data-cp-size', bardeads[3]);
+                document.getElementsByClassName('knowchartbarsick35-44')[0].setAttribute('data-cp-size', barsicks[4]);
+                document.getElementsByClassName('knowchartbardead35-44')[0].setAttribute('data-cp-size', bardeads[4]);
+                document.getElementsByClassName('knowchartbarsick45-54')[0].setAttribute('data-cp-size', barsicks[5]);
+                document.getElementsByClassName('knowchartbardead45-54')[0].setAttribute('data-cp-size', bardeads[5]);
+                document.getElementsByClassName('knowchartbarsick55-64')[0].setAttribute('data-cp-size', barsicks[6]);
+                document.getElementsByClassName('knowchartbardead55-64')[0].setAttribute('data-cp-size', bardeads[6]);
+                document.getElementsByClassName('knowchartbarsick65')[0].setAttribute('data-cp-size', barsicks[7]);
+                document.getElementsByClassName('knowchartbardead65')[0].setAttribute('data-cp-size', bardeads[7]);
+                
+                
+        
+                const ageinfo1c1 = document.createElement('span');
+                ageinfo1c1.innerHTML = data[26].ColumnC;
+                document.getElementById('ageinfo1c1print').appendChild(ageinfo1c1);
+        
+                const ageinfo1c2 = document.createElement('span');
+                ageinfo1c2.innerHTML = data[28].ColumnC;
+                document.getElementById('ageinfo1c2print').appendChild(ageinfo1c2);
+        
+                const ageinfo2c1 = document.createElement('span');
+                ageinfo2c1.innerHTML = data[31].ColumnC;
+                document.getElementById('ageinfo2c1print').appendChild(ageinfo2c1);
+        
+                const ageinfo2c2 = document.createElement('span');
+                ageinfo2c2.innerHTML = data[33].ColumnC;
+                document.getElementById('ageinfo2c2print').appendChild(ageinfo2c2);
+        
+                const ageinfo3c1 = document.createElement('span');
+                ageinfo3c1.innerHTML = data[36].ColumnC;
+                document.getElementById('ageinfo3c1print').appendChild(ageinfo3c1);
+        
+                const ageinfo3c2 = document.createElement('span');
+                ageinfo3c2.innerHTML = data[38].ColumnC;
+                document.getElementById('ageinfo3c2print').appendChild(ageinfo3c2);
+        
+                const ageinfo4c1 = document.createElement('span');
+                ageinfo4c1.innerHTML = data[41].ColumnC;
+                document.getElementById('ageinfo4c1print').appendChild(ageinfo4c1);
+        
+                const ageinfo4c2 = document.createElement('span');
+                ageinfo4c2.innerHTML = data[43].ColumnC;
+                document.getElementById('ageinfo4c2print').appendChild(ageinfo4c2);
+        
+                const ageinfo5c1 = document.createElement('span');
+                ageinfo5c1.innerHTML = data[46].ColumnC;
+                document.getElementById('ageinfo5c1print').appendChild(ageinfo5c1);
+        
+                const ageinfo5c2 = document.createElement('span');
+                ageinfo5c2.innerHTML = data[48].ColumnC;
+                document.getElementById('ageinfo5c2print').appendChild(ageinfo5c2);
+        
+                const ageinfo6c1 = document.createElement('span');
+                ageinfo6c1.innerHTML = data[51].ColumnC;
+                document.getElementById('ageinfo6c1print').appendChild(ageinfo6c1);
+        
+                const ageinfo6c2 = document.createElement('span');
+                ageinfo6c2.innerHTML = data[53].ColumnC;
+                document.getElementById('ageinfo6c2print').appendChild(ageinfo6c2);
+        
+                const ageinfo7c1 = document.createElement('span');
+                ageinfo7c1.innerHTML = data[56].ColumnC;
+                document.getElementById('ageinfo7c1print').appendChild(ageinfo7c1);
+        
+                const ageinfo7c2 = document.createElement('span');
+                ageinfo7c2.innerHTML = data[58].ColumnC;
+                document.getElementById('ageinfo7c2print').appendChild(ageinfo7c2);
+        
+                const ageinfo8c1 = document.createElement('span');
+                ageinfo8c1.innerHTML = data[61].ColumnC;
+                document.getElementById('ageinfo8c1print').appendChild(ageinfo8c1);
+        
+                const ageinfo8c2 = document.createElement('span');
+                ageinfo8c2.innerHTML = data[63].ColumnC;
+                document.getElementById('ageinfo8c2print').appendChild(ageinfo8c2);
+        
+                const ageinfosum1 = document.createElement('span');
+                ageinfosum1.innerHTML = data[8].ColumnB;
+                document.getElementById('ageinfosum1print').appendChild(ageinfosum1);
+        
+                const ageinfosum2 = document.createElement('span');
+                ageinfosum2.innerHTML = data[9].ColumnB;
+                document.getElementById('ageinfosum2print').appendChild(ageinfosum2);
+        
+                const riskinfo1 = document.createElement('span');
+                riskinfo1.innerHTML = data[123].ColumnF;
+                document.getElementById('riskinfo1print').appendChild(riskinfo1);
+        
+                const riskinfo2 = document.createElement('span');
+                riskinfo2.innerHTML = data[124].ColumnF;
+                document.getElementById('riskinfo2print').appendChild(riskinfo2);
+        
+                const riskinfo3 = document.createElement('span');
+                riskinfo3.innerHTML = data[125].ColumnF;
+                document.getElementById('riskinfo3print').appendChild(riskinfo3);
+        
+            });
+        
+    </script>
+
+    <link href="https://flexcdn.github.io/knowdengueth/cssplot.full.css" rel="stylesheet" />
+    <link href="https://flexcdn.github.io/knowdengueth/knownummain.css" rel="stylesheet" />
+
+    <div id="googlemapapi">
+        
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        
+            <style type="text/css">
+                /* Overwrite and Google API CSS */
+                html,
+                body {
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+                .knowtopheadcol2top {
+                    background-image: url(/sites/default/files/inline-images/KnowDengue_element_2.png);
+                }
+                #floating-panel {
+                    background-color: #fff;
+                    padding: 5px;
+                    border: 1px solid #999;
+                    text-align: center;
+                    font-family: "Roboto", "sans-serif";
+                    line-height: 30px;
+                    padding-left: 10px;
+                }
+                #latlng {
+                    width: 225px;
+                }
+                #map {
+                    height: 420px !important;
+                    max-width: 650px;
+                    width: 100%;
+                }
+
+                .kd-header.navbar-default .navbar-nav>li a[href="/know-the-numbers"]:before {
+                    background-image: url("../themes/custom/kd_endemic/images/icon-ktn.svg");
+                }
+                .kd-header.navbar-default .navbar-nav>li a[href="/know-the-numbers-th"]:before {
+                    background-image: url("../themes/custom/kd_endemic/images/icon-ktn.svg");
+                }
+
+                @media (max-width: 767px) {
+
+                #map {
+                    height: 380px !important;
+                }
+
+                }
+
+            </style>
+        
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&callback=initMap&v=beta" defer></script>
+        
+            <script>
+                window.initMap = () => {
+                    var featureStyleOptions = {
+                        strokeColor: "#eaa532",
+                        strokeOpacity: 1.0,
+                        strokeWeight: 3.0,
+                        fillColor: "#eaa532",
+                        fillOpacity: 0.5,
+                    };
+
+                    var marker = null;
+
+                    const icon = "https://flexcdn.github.io/knowdengueth/marker.png";
+        
+                    var map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 12,
+                        disableDefaultUI: true,
+                        mapId: '91136a4467711dd7'
+                    });
+                    var geocoder = new google.maps.Geocoder();
+        
+                    var featureLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
+                    
+                    if ('geolocation' in navigator) {
+                        navigator.geolocation.getCurrentPosition(
+                            (position) => {
+                                const pos = {
+                                    lat: position.coords.latitude,
+                                    lng: position.coords.longitude,
+                                };
+                                
+                                map.setCenter(pos);
+                                
+                                geocoder
+                                    .geocode({ location: pos })
+                                    .then((response) => {
+                                        if (response.results[0]) {
+                                            const addrs = response.results;
+                                            const country = addrs.filter((a) => a.types[0] == 'country' && a.address_components[0].short_name=='TH');
+                                            if(country.length < 1) {
+                                                alert("You're locate outside Thailand. System will display as Bangkok, Thailand");
+
+                                                geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                                                    var bkkplaceid = results[0].place_id;
+                                                    featureLayer.style = (options) => {
+                                                        if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                                                            return featureStyleOptions;
+                                                        }
+                                                    };
+                        
+                                                    if (status == google.maps.GeocoderStatus.OK) {
+                                                        map.setCenter(results[0].geometry.location);
+                                                        marker = new google.maps.Marker({
+                                                            position: results[0].geometry.location,
+                                                            map,
+                                                            title: 'กรุงเทพมหานคร',
+                                                            icon: icon,
+                                                        });
+                                                    }
+                                                });
+                        
+                                                fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                                                .then((res) => res.json())
+                                                .then((data) => {
+                                                    document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                                                    const geonumber = document.createElement('span');
+                                                    geonumber.innerHTML = data[116].ColumnC;
+                                                    document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+                        
+                                                });
+                                            }else{
+
+                                                const province = addrs.filter((a) => a.address_components.length>1 && (a.address_components[0].short_name.startsWith("จ.") || a.address_components[0].short_name=='Bangkok') && a.types[0]=='administrative_area_level_1');
+                                                let placeid = province[0].place_id;
+                                                let province_name = province[0].address_components[0].short_name.replace("จ.", "");
+                                                if(province_name == 'Bangkok'){
+                                                    province_name = 'กรุงเทพมหานคร';
+                                                    placeid = 'ChIJ82ENKDJgHTERxw-LhWOFRTY';
+                                                }
+                                                document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = province_name;
+                                                var idx = [...document.getElementById('geodropdown').options].findIndex((o) => o.text == province_name);
+                                                document.getElementById('geodropdown').selectedIndex = idx;
+                                                var selected = document.getElementById('geodropdown').options[idx];
+
+                                                marker = new google.maps.Marker({
+                                                    position: pos,
+                                                    map,
+                                                    title: 'My location',
+                                                    icon: icon,
+                                                });
+
+                                                featureLayer.style = (options) => {
+                                                    if (options.feature.placeId  == placeid) {
+                                                        return featureStyleOptions;
+                                                    }
+                                                };
+
+                                                fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                                                .then((res) => res.json())
+                                                .then((data) => {
+                                                    document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                                                    const geonumber = document.createElement('span');
+                                                    geonumber.innerHTML = data[selected.value].ColumnC;
+                                                    document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+            
+                                                });
+                                            }
+                                        }
+                                    })
+                            }, (error) => {
+        
+                                geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                                    var bkkplaceid = results[0].place_id;
+                                    featureLayer.style = (options) => {
+                                        if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                                            return featureStyleOptions;
+                                        }
+                                    };
+        
+                                    if (status == google.maps.GeocoderStatus.OK) {
+                                        map.setCenter(results[0].geometry.location);
+
+                                        marker = new google.maps.Marker({
+                                            position: results[0].geometry.location,
+                                            map,
+                                            title: "กรุงเทพมหานคร",
+                                            icon: icon,
+                                        });
+                                    }
+                                });
+        
+                                fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                                .then((res) => res.json())
+                                .then((data) => {
+                                    document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                                    const geonumber = document.createElement('span');
+                                    geonumber.innerHTML = data[116].ColumnC;
+                                    document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+        
+                                });
+                            }, {
+                                timeout: 10000,
+                                maximumAge: 10000,
+                                enableHighAccuracy: true
+                            }
+                        );
+                    }else{
+                        
+                        geocoder.geocode( {'address' : 'Bangkok'}, function(results, status) {
+                            var bkkplaceid = results[0].place_id;
+                            featureLayer.style = (options) => {
+                                if (options.feature.placeId  == 'ChIJ82ENKDJgHTERxw-LhWOFRTY') {
+                                    return featureStyleOptions;
+                                }
+                            };
+        
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                map.setCenter(results[0].geometry.location);
+
+                                marker = new google.maps.Marker({
+                                    position: results[0].geometry.location,
+                                    map,
+                                    title: "กรุงเทพมหานคร",
+                                    icon: icon,
+                                });
+                            }
+                        });
+        
+                        fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                            const geonumber = document.createElement('span');
+                            geonumber.innerHTML = data[116].ColumnC;
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+        
+                        });
+                    }
+        
+                    document.getElementById('geodropdown').addEventListener('change', (e) => {
+                        const item = e.target.options[e.target.selectedIndex];
+        
+                        document.getElementsByClassName("knowtopcol2in2div2")[0].innerHTML = item.text;
+                        const geocoder = new google.maps.Geocoder();
+                        var placename = item.text;
+                        
+                        geocoder.geocode( {'address' : item.text}, function(results, status) {
+                            var placeid = results[0].place_id;
+        
+                            if(item.text == 'กรุงเทพมหานคร') {
+                                placeid = 'ChIJ82ENKDJgHTERxw-LhWOFRTY';
+                            } else if (item.text == 'กาญจนบุรี') {
+                                placeid = 'ChIJndZBBtUa4zAREj5xkg68l08';
+                            } else if (item.text == 'จันทบุรี') {
+                                placeid = 'ChIJQ3JU7At2AzERgRfOeSBD2Mc';
+                            } else if (item.text == 'เชียงใหม่') {
+                                placeid = 'ChIJQXiZwsjM0DAR1AMlknbhaWo';
+                            } else if (item.text == 'นครสวรรค์') {
+                                placeid = 'ChIJNVAlmTY-4DARbyjxP-AbA64';
+                            } else if (item.text == 'พิษณุโลก') {
+                                placeid = 'ChIJoej0TmB43zARkEsIsFT7BAE';
+                            } else if (item.text == 'ระนอง') {
+                                placeid = 'ChIJscF6ROVFVjAR0Ew2LLwjAgE';
+                            } else if (item.text == 'ระยอง') {
+                                placeid = 'ChIJIT_DODj8AjERiEAlWu8e-8A';
+                            } else if (item.text == 'สงขลา') {
+                                placeid = 'ChIJQSQJr9zVTDAREo4d7Hg3myU';
+                            }
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                map.setCenter(results[0].geometry.location);
+
+                                if(marker != null){
+                                    marker.setMap(null);
+                                    marker = null;
+                                }
+
+                                marker = new google.maps.Marker({
+                                    position: results[0].geometry.location,
+                                    map,
+                                    title: item.text,
+                                    icon: icon,
+                                });
+                            }
+                            var featureLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
+                            featureLayer.style = (options) => {
+                                if (options.feature.placeId  == placeid) {
+                                    return featureStyleOptions;
+                                }
+                            };
+                        });
+                        fetch("https://opensheet.elk.sh/1EbNVHInFk9rAQO75YyhHqck6Ql6g_ah0CdpKHtq9T8A/LOCATION")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
+                            const geonumber = document.createElement('span');
+                            geonumber.innerHTML = data[item.value].ColumnC;
+                            document.getElementsByClassName('knowtopcol2in3div2')[0].appendChild(geonumber);
+        
+                        });
+                        
+                    });
+                }
+            </script>
+            
+    </div>
+    <!-- /googlemapapi -->
+
+</div> <!-- /knowmainwarp -->
