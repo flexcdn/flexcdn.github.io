@@ -179,6 +179,25 @@ div.video-cont > p.storyby {
     max-width: 1040px;
 }
 
+/* PSEUDO ELEMENT FOR RESPONSIVE */
+
+#storyno1 > div:nth-child(3),
+#storyno3 > div:nth-child(3),
+#storyno5 > div:nth-child(3),
+#storyno7 > div:nth-child(3),
+#storyno9 > div:nth-child(3),
+#storyno11 > div:nth-child(3) {
+    display: none !important;
+}
+
+#storyno2 > div:nth-child(1),
+#storyno4 > div:nth-child(1),
+#storyno6 > div:nth-child(1),
+#storyno8 > div:nth-child(1),
+#storyno10 > div:nth-child(1) {
+    display: none !important;
+}
+
 </style>
 
 <div>
@@ -186,7 +205,7 @@ div.video-cont > p.storyby {
 </div>
 
 <div class="container storycontainer">
-    <div class="row storyrow">
+    <div class="row storyrow" id="storyno1">
         <div class="col-md-7">
             <div class="video-img">
                 <img alt="รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู" data-entity-type="file" data-entity-uuid="dbb4bde5-3336-4584-a783-4c37ebb082a8" src="/sites/default/files/inline-images/ingma-victim-story-1.jpg" class="img-fluid img-fluid-two" />
@@ -208,8 +227,18 @@ div.video-cont > p.storyby {
                 <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
             </div>
         </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img alt="รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู" data-entity-type="file" data-entity-uuid="dbb4bde5-3336-4584-a783-4c37ebb082a8" src="/sites/default/files/inline-images/ingma-victim-story-1.jpg" class="img-fluid img-fluid-two" />
+            </div>
+        </div>
     </div>
-    <div class="row storyrow">
+    <div class="row storyrow" id="storyno2">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
         <div class="col-md-5">
             <div class="video-cont one">
                 <h5>Story 1 : บัตร Disney on Ice</h5>
@@ -232,7 +261,7 @@ div.video-cont > p.storyby {
             </div>
         </div>
     </div>
-    <div class="row storyrow">
+    <div class="row storyrow" id="storyno3">
         <div class="col-md-7">
             <div class="video-img">
                 <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
@@ -254,8 +283,18 @@ div.video-cont > p.storyby {
                 <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
             </div>
         </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
     </div>
     <div class="row storyrow" id="storyno4">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
         <div class="col-md-5">
             <div class="video-cont one">
                 <h5>Story 1 : บัตร Disney on Ice</h5>
@@ -275,6 +314,202 @@ div.video-cont > p.storyby {
         <div class="col-md-7">
             <div class="video-img">
                 <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="row storyrow" id="storyno5">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="video-cont two">
+                <h5>Story 1 : บัตร Disney on Ice</h5>
+                <h2>
+                    รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู
+                </h2>
+                <p class="storyby">เรื่องจริงจาก : โรส ณัฐกานต์</p>
+                <p>ของชิ้นนี้เป็นของจากคุณโรส เธอคือคนหนึ่งที่เรียกได้ว่าเป็นสาวกดิสนี่ย์ และในปี 2002 ที่จะมี Disney on Ice 100 Years of Magic แน่นอนว่าเธอจะพลาดไม่ได้</p>
+                <p>แต่ด้วยความเป็นเด็ก เธอก็ลุ้นบัตรแบบเด็กๆ ด้วยการโทรไปชิงบัตรกับเบอร์ 1900 ในสมัยก่อน…สุดท้าย คุณแม่ก็ยอมใจอ่อน และหาบัตรมาให้ได้สำเร็จ!</p>
+                <p>
+                    เธอนับวันรอที่จะได้ไปดู Disney on Ice ทุกอย่างก็ดำเนินไปตามปกติ จนวันนั้นเอง วันที่คุณโรสบอกว่าอยู่ๆ เธอก็มีอาการไข้ขึ้น เธอเล่าว่า เธอคิดว่านั่นคือไข้หวัดธรรมดา แต่แล้วอาการอื่นๆ ก็เริ่มตามมา ทั้งอาเจียน หนาวสั่น
+                    เกินกว่าไข้ปกติ คุณแม่กลัวเธอช็อค เลยพาไปแอดมิทที่โรงพยาบาล หมอสรุปว่าเธอเป็นไข้เลือดออก เธอเล่าว่าความรู้สึกตอนนั้นคือเสียใจมาก Disney on Ice ที่นับวันรอคอยที่จะได้ดู โอกาสนั้นกลับหายไปกับตา เพราะเธอป่วยเป็นไข้เลือดออก
+                </p>
+                <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="row storyrow" id="storyno6">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="video-cont one">
+                <h5>Story 1 : บัตร Disney on Ice</h5>
+                <h2>
+                    รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู
+                </h2>
+                <p class="storyby">เรื่องจริงจาก : โรส ณัฐกานต์</p>
+                <p>ของชิ้นนี้เป็นของจากคุณโรส เธอคือคนหนึ่งที่เรียกได้ว่าเป็นสาวกดิสนี่ย์ และในปี 2002 ที่จะมี Disney on Ice 100 Years of Magic แน่นอนว่าเธอจะพลาดไม่ได้</p>
+                <p>แต่ด้วยความเป็นเด็ก เธอก็ลุ้นบัตรแบบเด็กๆ ด้วยการโทรไปชิงบัตรกับเบอร์ 1900 ในสมัยก่อน…สุดท้าย คุณแม่ก็ยอมใจอ่อน และหาบัตรมาให้ได้สำเร็จ!</p>
+                <p>
+                    เธอนับวันรอที่จะได้ไปดู Disney on Ice ทุกอย่างก็ดำเนินไปตามปกติ จนวันนั้นเอง วันที่คุณโรสบอกว่าอยู่ๆ เธอก็มีอาการไข้ขึ้น เธอเล่าว่า เธอคิดว่านั่นคือไข้หวัดธรรมดา แต่แล้วอาการอื่นๆ ก็เริ่มตามมา ทั้งอาเจียน หนาวสั่น
+                    เกินกว่าไข้ปกติ คุณแม่กลัวเธอช็อค เลยพาไปแอดมิทที่โรงพยาบาล หมอสรุปว่าเธอเป็นไข้เลือดออก เธอเล่าว่าความรู้สึกตอนนั้นคือเสียใจมาก Disney on Ice ที่นับวันรอคอยที่จะได้ดู โอกาสนั้นกลับหายไปกับตา เพราะเธอป่วยเป็นไข้เลือดออก
+                </p>
+                <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="row storyrow" id="storyno7">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="video-cont two">
+                <h5>Story 1 : บัตร Disney on Ice</h5>
+                <h2>
+                    รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู
+                </h2>
+                <p class="storyby">เรื่องจริงจาก : โรส ณัฐกานต์</p>
+                <p>ของชิ้นนี้เป็นของจากคุณโรส เธอคือคนหนึ่งที่เรียกได้ว่าเป็นสาวกดิสนี่ย์ และในปี 2002 ที่จะมี Disney on Ice 100 Years of Magic แน่นอนว่าเธอจะพลาดไม่ได้</p>
+                <p>แต่ด้วยความเป็นเด็ก เธอก็ลุ้นบัตรแบบเด็กๆ ด้วยการโทรไปชิงบัตรกับเบอร์ 1900 ในสมัยก่อน…สุดท้าย คุณแม่ก็ยอมใจอ่อน และหาบัตรมาให้ได้สำเร็จ!</p>
+                <p>
+                    เธอนับวันรอที่จะได้ไปดู Disney on Ice ทุกอย่างก็ดำเนินไปตามปกติ จนวันนั้นเอง วันที่คุณโรสบอกว่าอยู่ๆ เธอก็มีอาการไข้ขึ้น เธอเล่าว่า เธอคิดว่านั่นคือไข้หวัดธรรมดา แต่แล้วอาการอื่นๆ ก็เริ่มตามมา ทั้งอาเจียน หนาวสั่น
+                    เกินกว่าไข้ปกติ คุณแม่กลัวเธอช็อค เลยพาไปแอดมิทที่โรงพยาบาล หมอสรุปว่าเธอเป็นไข้เลือดออก เธอเล่าว่าความรู้สึกตอนนั้นคือเสียใจมาก Disney on Ice ที่นับวันรอคอยที่จะได้ดู โอกาสนั้นกลับหายไปกับตา เพราะเธอป่วยเป็นไข้เลือดออก
+                </p>
+                <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="row storyrow" id="storyno8">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="video-cont one">
+                <h5>Story 1 : บัตร Disney on Ice</h5>
+                <h2>
+                    รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู
+                </h2>
+                <p class="storyby">เรื่องจริงจาก : โรส ณัฐกานต์</p>
+                <p>ของชิ้นนี้เป็นของจากคุณโรส เธอคือคนหนึ่งที่เรียกได้ว่าเป็นสาวกดิสนี่ย์ และในปี 2002 ที่จะมี Disney on Ice 100 Years of Magic แน่นอนว่าเธอจะพลาดไม่ได้</p>
+                <p>แต่ด้วยความเป็นเด็ก เธอก็ลุ้นบัตรแบบเด็กๆ ด้วยการโทรไปชิงบัตรกับเบอร์ 1900 ในสมัยก่อน…สุดท้าย คุณแม่ก็ยอมใจอ่อน และหาบัตรมาให้ได้สำเร็จ!</p>
+                <p>
+                    เธอนับวันรอที่จะได้ไปดู Disney on Ice ทุกอย่างก็ดำเนินไปตามปกติ จนวันนั้นเอง วันที่คุณโรสบอกว่าอยู่ๆ เธอก็มีอาการไข้ขึ้น เธอเล่าว่า เธอคิดว่านั่นคือไข้หวัดธรรมดา แต่แล้วอาการอื่นๆ ก็เริ่มตามมา ทั้งอาเจียน หนาวสั่น
+                    เกินกว่าไข้ปกติ คุณแม่กลัวเธอช็อค เลยพาไปแอดมิทที่โรงพยาบาล หมอสรุปว่าเธอเป็นไข้เลือดออก เธอเล่าว่าความรู้สึกตอนนั้นคือเสียใจมาก Disney on Ice ที่นับวันรอคอยที่จะได้ดู โอกาสนั้นกลับหายไปกับตา เพราะเธอป่วยเป็นไข้เลือดออก
+                </p>
+                <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="row storyrow" id="storyno9">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="video-cont two">
+                <h5>Story 1 : บัตร Disney on Ice</h5>
+                <h2>
+                    รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู
+                </h2>
+                <p class="storyby">เรื่องจริงจาก : โรส ณัฐกานต์</p>
+                <p>ของชิ้นนี้เป็นของจากคุณโรส เธอคือคนหนึ่งที่เรียกได้ว่าเป็นสาวกดิสนี่ย์ และในปี 2002 ที่จะมี Disney on Ice 100 Years of Magic แน่นอนว่าเธอจะพลาดไม่ได้</p>
+                <p>แต่ด้วยความเป็นเด็ก เธอก็ลุ้นบัตรแบบเด็กๆ ด้วยการโทรไปชิงบัตรกับเบอร์ 1900 ในสมัยก่อน…สุดท้าย คุณแม่ก็ยอมใจอ่อน และหาบัตรมาให้ได้สำเร็จ!</p>
+                <p>
+                    เธอนับวันรอที่จะได้ไปดู Disney on Ice ทุกอย่างก็ดำเนินไปตามปกติ จนวันนั้นเอง วันที่คุณโรสบอกว่าอยู่ๆ เธอก็มีอาการไข้ขึ้น เธอเล่าว่า เธอคิดว่านั่นคือไข้หวัดธรรมดา แต่แล้วอาการอื่นๆ ก็เริ่มตามมา ทั้งอาเจียน หนาวสั่น
+                    เกินกว่าไข้ปกติ คุณแม่กลัวเธอช็อค เลยพาไปแอดมิทที่โรงพยาบาล หมอสรุปว่าเธอเป็นไข้เลือดออก เธอเล่าว่าความรู้สึกตอนนั้นคือเสียใจมาก Disney on Ice ที่นับวันรอคอยที่จะได้ดู โอกาสนั้นกลับหายไปกับตา เพราะเธอป่วยเป็นไข้เลือดออก
+                </p>
+                <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="row storyrow" id="storyno10">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="video-cont one">
+                <h5>Story 1 : บัตร Disney on Ice</h5>
+                <h2>
+                    รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู
+                </h2>
+                <p class="storyby">เรื่องจริงจาก : โรส ณัฐกานต์</p>
+                <p>ของชิ้นนี้เป็นของจากคุณโรส เธอคือคนหนึ่งที่เรียกได้ว่าเป็นสาวกดิสนี่ย์ และในปี 2002 ที่จะมี Disney on Ice 100 Years of Magic แน่นอนว่าเธอจะพลาดไม่ได้</p>
+                <p>แต่ด้วยความเป็นเด็ก เธอก็ลุ้นบัตรแบบเด็กๆ ด้วยการโทรไปชิงบัตรกับเบอร์ 1900 ในสมัยก่อน…สุดท้าย คุณแม่ก็ยอมใจอ่อน และหาบัตรมาให้ได้สำเร็จ!</p>
+                <p>
+                    เธอนับวันรอที่จะได้ไปดู Disney on Ice ทุกอย่างก็ดำเนินไปตามปกติ จนวันนั้นเอง วันที่คุณโรสบอกว่าอยู่ๆ เธอก็มีอาการไข้ขึ้น เธอเล่าว่า เธอคิดว่านั่นคือไข้หวัดธรรมดา แต่แล้วอาการอื่นๆ ก็เริ่มตามมา ทั้งอาเจียน หนาวสั่น
+                    เกินกว่าไข้ปกติ คุณแม่กลัวเธอช็อค เลยพาไปแอดมิทที่โรงพยาบาล หมอสรุปว่าเธอเป็นไข้เลือดออก เธอเล่าว่าความรู้สึกตอนนั้นคือเสียใจมาก Disney on Ice ที่นับวันรอคอยที่จะได้ดู โอกาสนั้นกลับหายไปกับตา เพราะเธอป่วยเป็นไข้เลือดออก
+                </p>
+                <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-one" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="row storyrow" id="storyno11">
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="video-cont two">
+                <h5>Story 1 : บัตร Disney on Ice</h5>
+                <h2>
+                    รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู
+                </h2>
+                <p class="storyby">เรื่องจริงจาก : โรส ณัฐกานต์</p>
+                <p>ของชิ้นนี้เป็นของจากคุณโรส เธอคือคนหนึ่งที่เรียกได้ว่าเป็นสาวกดิสนี่ย์ และในปี 2002 ที่จะมี Disney on Ice 100 Years of Magic แน่นอนว่าเธอจะพลาดไม่ได้</p>
+                <p>แต่ด้วยความเป็นเด็ก เธอก็ลุ้นบัตรแบบเด็กๆ ด้วยการโทรไปชิงบัตรกับเบอร์ 1900 ในสมัยก่อน…สุดท้าย คุณแม่ก็ยอมใจอ่อน และหาบัตรมาให้ได้สำเร็จ!</p>
+                <p>
+                    เธอนับวันรอที่จะได้ไปดู Disney on Ice ทุกอย่างก็ดำเนินไปตามปกติ จนวันนั้นเอง วันที่คุณโรสบอกว่าอยู่ๆ เธอก็มีอาการไข้ขึ้น เธอเล่าว่า เธอคิดว่านั่นคือไข้หวัดธรรมดา แต่แล้วอาการอื่นๆ ก็เริ่มตามมา ทั้งอาเจียน หนาวสั่น
+                    เกินกว่าไข้ปกติ คุณแม่กลัวเธอช็อค เลยพาไปแอดมิทที่โรงพยาบาล หมอสรุปว่าเธอเป็นไข้เลือดออก เธอเล่าว่าความรู้สึกตอนนั้นคือเสียใจมาก Disney on Ice ที่นับวันรอคอยที่จะได้ดู โอกาสนั้นกลับหายไปกับตา เพราะเธอป่วยเป็นไข้เลือดออก
+                </p>
+                <p class="approvecode">VV-MEDMAT-87178: May 2023</p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="video-img">
+                <img src="https://easiblock.com/html/mixito/demo/assets/images/watch-img-1.jpg" class="img-fluid img-fluid-two" alt="" />
             </div>
         </div>
     </div>
