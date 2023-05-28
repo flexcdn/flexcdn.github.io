@@ -4,6 +4,8 @@
 
 <style>
 
+/* ANIMATION CSS */
+
 html {
   scroll-behavior: smooth;
 }
@@ -73,29 +75,310 @@ html {
 
 @-webkit-keyframes animation-bg {
     0% {
-        background-position: top;
+        background-size: 100%;
     }
 
     50% {
-        background-position: bottom;
+        background-size: 110%;
     }
     100% {
-        background-position: top;
+        background-size: 100%;
     }
 }
 
 @keyframes animation-bg {
     0% {
-        background-position: top;
+        background-size: 100%;
     }
 
     50% {
-        background-position: bottom;
+        background-size: 110%;
     }
     100% {
-        background-position: top;
+        background-size: 100%;
     }
 }
+
+@-webkit-keyframes animation-bg2 {
+    0% {
+        background-size: 110%;
+    }
+
+    50% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
+
+@keyframes animation-bg2 {
+    0% {
+        background-size: 110%;
+    }
+
+    50% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
+
+@keyframes animation-bg-hover {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 125%;
+    }
+}
+
+</style>
+
+<style>
+
+/* HEADER CSS */
+
+#ingma-story-header {
+    margin-bottom: 80px;
+}
+#ingma-story-header-text {
+    background: linear-gradient(0deg,#41948e 0%,#008ba6 100%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+#ingma-story-header-text > h1 {
+    margin-bottom: 0px;
+    font-size: 50px;
+    line-height: 100%;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* TOP MAIN NAV CSS */
+
+#ingma-story-main-nav {
+    margin-bottom: 90px;
+}
+.huu-kts-patients {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 10px 0;
+}
+.huu-kts-patients__patient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 10px;
+    cursor: pointer;
+    -webkit-animation: animation-slide-right-in-data-v-4d53a890 .5s ease;
+    animation: animation-slide-right-in-data-v-4d53a890 .5s ease;
+}
+.huu-kts-patients__patient-image {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: rgba(99,213,180,.6);
+    border-radius: 50%;
+    border: 4px solid #63d5b4;
+    margin-bottom: 10px;
+}
+.nav-a {
+    width: 142px;
+    height: 142px;
+    display: block;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center center;
+    transition: all 0.3s ease-in-out 0.3s;
+}
+.nav-a-name1 {
+    height: 25px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease-in-out 0.3s;
+    text-decoration: none;
+}
+.nav-a-name2 {
+    height: 60px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 195px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out 0.3s;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 125%;
+}
+.nav-a-name1:hover {
+    text-decoration: none;
+}
+.nav-a-name2:hover {
+    text-decoration: none;
+}
+.nav-a-story1 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-1.jpg);
+    -webkit-animation: animation-bg 15s ease-in-out infinite;
+    animation: animation-bg 15s ease-in-out infinite;
+}
+.nav-a-story1:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story2 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-22.jpg);
+    -webkit-animation: animation-bg2 10s ease-in-out infinite;
+    animation: animation-bg2 10s ease-in-out infinite;
+}
+.nav-a-story2:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story3 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-3.jpg);
+    -webkit-animation: animation-bg 12s ease-in-out infinite;
+    animation: animation-bg 12s ease-in-out infinite;
+}
+.nav-a-story3:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story4 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-4.jpg);
+    -webkit-animation: animation-bg2 10s ease-in-out infinite;
+    animation: animation-bg2 10s ease-in-out infinite;
+}
+.nav-a-story4:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story5 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-5.jpg);
+    -webkit-animation: animation-bg 13s ease-in-out infinite;
+    animation: animation-bg 13s ease-in-out infinite;
+}
+.nav-a-story5:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story6 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-6.jpg);
+    -webkit-animation: animation-bg2 11s ease-in-out infinite;
+    animation: animation-bg2 11s ease-in-out infinite;
+}
+.nav-a-story6:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story7 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-7.jpg);
+    -webkit-animation: animation-bg 15s ease-in-out infinite;
+    animation: animation-bg 15s ease-in-out infinite;
+}
+.nav-a-story7:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story8 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-8.jpg);
+    -webkit-animation: animation-bg2 18s ease-in-out infinite;
+    animation: animation-bg2 18s ease-in-out infinite;
+}
+.nav-a-story8:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story9 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-9.jpg);
+    -webkit-animation: animation-bg 11s ease-in-out infinite;
+    animation: animation-bg 11s ease-in-out infinite;
+}
+.nav-a-story9:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story10 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-10.jpg);
+    -webkit-animation: animation-bg2 13s ease-in-out infinite;
+    animation: animation-bg2 13s ease-in-out infinite;
+}
+.nav-a-story10:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+.nav-a-story11 {
+    background-image: url(/sites/default/files/inline-images/ingma-victim-story-11.jpg);
+    -webkit-animation: animation-bg 18s ease-in-out infinite;
+    animation: animation-bg 18s ease-in-out infinite;
+}
+.nav-a-story11:hover {
+    -webkit-animation: none;
+    animation: none;
+    animation: animation-bg-hover 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+/*
+.huu-kts-patients__patient-image::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 90%;
+    box-sizing: border-box;
+}
+.huu-kts-patients__patient-image.juan::before {
+    background: url(https://www.knowdengue.com/modules/custom/kd_endemic_spa_app/modules/spa_know_the_symptoms/img/juan.2bbe6d06.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+}
+*/
+.huu-kts-patients__patient-image::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+    background: url(/modules/custom/kd_endemic_spa_app/modules/spa_know_the_symptoms/img/patient-arrow.df42b5e6.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    border-radius: 50%;
+}
+
+</style>
+
+<style>
+
+/* CSS FOR EACH STORY */
 
 .storyrow {
     margin-bottom: 80px;
@@ -211,9 +494,124 @@ div.video-cont > p.storyby {
 
 </style>
 
-<div>
-    <a href="#story4">TEST</a>
-</div>
+<div id="ingma-story-header">
+
+    <div id="ingma-story-header-hero">
+        <img alt="รีวิวจากอิงมา" data-entity-type="file" data-entity-uuid="73910e35-e38e-4f9a-a644-2dd5de15af27" src="/sites/default/files/inline-images/ingma-victim-story-header.jpg" />
+    </div>
+    <div id="ingma-story-header-text">
+        <h1>รีวิวจากอิงมา</h1>
+    </div>
+
+</div> <!-- /ingma-story-header -->
+
+<div id="ingma-story-main-nav">
+    <div class="huu-kts-home__patients">
+        <div>
+            <div class="huu-kts-patients">
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story1">
+                        <a href="#story1" class="nav-a nav-a-story1"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story1" class="nav-a-name1">Story 1 : บัตร Disney on Ice</a>
+                        <a href="#story1" class="nav-a-name2">เรื่องจริงจาก : โรส ณัฐกานต์<br>รีวิวบัตรการแสดง ที่ไม่มีโอกาสได้ดู</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story2">
+                        <a href="#story2" class="nav-a nav-a-story2"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story2" class="nav-a-name1">Story 2 : แว่นดำน้ำ</a>
+                        <a href="#story2" class="nav-a-name2">เรื่องจริงจาก : กมลกรอง เกษรทิพย์<br>รีวิวแว่นดำน้ำกับความทรงจำดีๆ ที่ไม่มีวันเกิดขึ้น</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story3">
+                        <a href="#story3" class="nav-a nav-a-story3"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story3" class="nav-a-name1">Story 3 : กีต้าร์</a>
+                        <a href="#story3" class="nav-a-name2">เรื่องจริงจาก : คิง ภัชรพงษ์ <br>รีวิวกีต้าร์ตัวโปรดที่ไม่เคยถูกเล่น</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story4">
+                        <a href="#story4" class="nav-a nav-a-story4"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story4" class="nav-a-name1">Story 4 : กระเป๋าเดินทาง</a>
+                        <a href="#story4" class="nav-a-name2">เรื่องจริงจาก : คณิต เจียรทัศนประกิต<br>กระเป๋าเดินทางที่ไม่เคยถูกเปิด</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story5">
+                        <a href="#story5" class="nav-a nav-a-story5"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story5" class="nav-a-name1">Story 5 : ตุ๊กตา</a>
+                        <a href="#story5" class="nav-a-name2">เรื่องจริงจาก : คำเขียน แก้วกระจ่าง<br>ตุ๊กตาที่เคยเป็นตัวโปรดของหลาน</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story6">
+                        <a href="#story6" class="nav-a nav-a-story6"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story6" class="nav-a-name1">Story 6 : ถังป็อปคอร์น</a>
+                        <a href="#story6" class="nav-a-name2">เรื่องจริงจาก : มัลลิกา นันตะเวท<br>รีวิว ถังป็อปคอร์นที่ไม่เคยได้ซื้อ</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story7">
+                        <a href="#story7" class="nav-a nav-a-story7"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story7" class="nav-a-name1">Story 7 : ชุดครุย</a>
+                        <a href="#story7" class="nav-a-name2">เรื่องจริงจาก : เกม ชัญญา<br>รีวิว งานรับปริญญาที่ไร้บัณฑิต</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story8">
+                        <a href="#story8" class="nav-a nav-a-story8"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story8" class="nav-a-name1">Story 8 : รองเท้าสตั๊ด</a>
+                        <a href="#story8" class="nav-a-name2">เรื่องจริงจาก : สุปรีดีย์ โรจน์จตุสกุล<br>รีวิว สตั๊ด ของกองหลังอนาคตดับ</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story9">
+                        <a href="#story9" class="nav-a nav-a-story9"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story9" class="nav-a-name1">Story 9 : เต้นท์สนาม</a>
+                        <a href="#story9" class="nav-a-name2">เรื่องจริงจาก : ธณัชฌา อุดมแสวงทรัพย์<br>รีวิวเต้นท์สนาม กับดอยหลวงเชียงดาว</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story10">
+                        <a href="#story10" class="nav-a nav-a-story10"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story10" class="nav-a-name1">Story 10 : เหรียญทอง</a>
+                        <a href="#story10" class="nav-a-name2">เรื่องจริงจาก : ณัฐชนน มนูกูล <br>รีวิวเหรียญทอง และสัญญาจากพี่ชาย</a>
+                    </div>
+                </div>
+                <div class="huu-kts-patients__patient">
+                    <div class="huu-kts-patients__patient-image nav-story11">
+                        <a href="#story11" class="nav-a nav-a-story11"></a>
+                    </div>
+                    <div class="huu-kts-patients__patient-name">
+                        <a href="#story11" class="nav-a-name1">Story 11 : ดินสอ 2B</a>
+                        <a href="#story11" class="nav-a-name2">เรื่องจริงจาก : ปิเยศ อรรจนสุพพัติ <br>รีวิวดินสอ 2B กับคณะที่ที่อยากเรียนมาทั้งชีวิต</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- /ingma-story-main-nav -->
 
 <div class="container storycontainer">
     <div class="row storyrow" id="story1">
@@ -701,4 +1099,4 @@ div.video-cont > p.storyby {
             </div>
         </div>
     </div>
-</div>
+</div> <!-- storycontainer -->
