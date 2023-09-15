@@ -1,3 +1,10 @@
+<div id="knowhae-alert-div" class="knowhae-alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <div>
+    <a href="/patient/hae-questionnaire"><img alt="KnowHAE_HAE TEST Pop-up" data-entity-type="file" data-entity-uuid="bdd22d6d-afd7-45f9-bd09-17e6b4cf21d1" src="/sites/default/files/inline-images/knowhae-hae-test-pop-up-01.png" /></a>
+    </div>
+</div>
+
 <div id="signs-symptoms-and-causes-page">
     <div class="field--item">
         <div class="paragraph paragraph--type--all-paragraphs paragraph--view-mode--default col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -3232,6 +3239,82 @@
     border-top: none !important;
     padding-top: 35px !important;
     border-bottom: 1px solid #71c1e6 !important;
+}
+.knowhae-alert {
+    padding: 0px;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    top: 22vh;
+    width: 100%;
+    max-width: 1050px;
+    z-index: 999;
+}
+.closebtn {
+    color: #f00;
+    font-family: 'Kanit', sans-serif !important;
+    background-color: #fff;
+    font-weight: normal;
+    float: right;
+    font-size: 58px;
+    line-height: 20px;
+    padding-left: 7px;
+    padding-right: 13px;
+    padding-top: 2px;
+    padding-bottom: 13px;
+    max-width: 36px;
+    max-height: 36px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 100%;
+    transform: translate(-850%,-10px);
+}
+.closebtn:hover {
+  color: black;
+}
+#knowhae-alert-div > div {
+    text-align: center;
+}
+#knowhae-alert-div > div > a > img {
+    height: 70vh;
+    max-height: 450px;
+    width: auto;
+}
+
+@media (max-width: 991px) {
+
+.knowhae-alert {
+    top: 15vh;
+    max-width: 690px;
+}
+.closebtn {
+    transform: translate(-350%,-10px);
+}
+
+}
+
+@media (max-width: 690px) {
+
+.knowhae-alert {
+    top: 20vh;
+    width: 90vw;
+    max-width: 100%;
+}
+.closebtn {
+    transform: translate(0px,-15px);
+    position: absolute;
+    right: 0px;
+}
+
+@media (max-width: 510px) {
+
+#knowhae-alert-div > div > a > img {
+    width: 100%;
+    height: auto;
+}
+
+}
+
 }
 
 </style>
