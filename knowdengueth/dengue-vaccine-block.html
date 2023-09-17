@@ -47,6 +47,18 @@
     background-repeat: no-repeat;
     background-color: #000;
 }
+#dengue-vaccine-warp > div > p {
+    text-align: center;
+}
+#dengue-vaccine-chart,
+#dengue-vaccine-chart-mob {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#dengue-vaccine-chart-mob {
+    display: none;
+}
 
 .hidden-content {
     display: none !important;
@@ -115,6 +127,12 @@ p.approvecode {
 #dengue-vaccine-embed > iframe {
     height: 90vw;
 }
+#dengue-vaccine-chart {
+    display: none;
+}
+#dengue-vaccine-chart-mob {
+    display: block;
+}
 
 }
 
@@ -147,7 +165,12 @@ p.approvecode {
         <p>อ้างอิงจาก ตารางการให้วัคซีนป้องกันโรค</p>
         <p>สมาคมโรคติดเชื้อในเด็ก แห่งประเทศไทย</p>
         <p>และสมาคมโรคติดเชื้อแห่งประเทศไทย</p>
-
+        <div id="dengue-vaccine-chart">
+            <img alt="การให้วัคซีนไข้เลือดออก" data-entity-type="file" data-entity-uuid="f15273b3-d0e3-4175-9695-67ca4dc5f473" src="/sites/default/files/inline-images/Qdenga_Vaccine-Adult_BC_Final-03.png" />
+        </div>
+        <div id="dengue-vaccine-chart-mob">
+            <img alt="การให้วัคซีนไข้เลือดออก" data-entity-type="file" data-entity-uuid="cd0c7a3e-d7d1-422d-b0bb-695568b1ab7f" src="/sites/default/files/inline-images/Qdenga_Vaccine-Adult_BC_Final-03-mobfull.png" />
+        </div>
         <a href="/article/dengue-vaccine" class="btn-toreview">ศึกษาข้อมูลเพิ่มเติม<br>เกี่ยวกับวัคซีนไข้เลือดออก</a>
     </div>
 </div> <!-- /dengue-vaccine-warp -->
