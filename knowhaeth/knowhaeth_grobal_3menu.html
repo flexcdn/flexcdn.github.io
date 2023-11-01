@@ -1,0 +1,237 @@
+<style>
+
+/* https://dev-knowhae-thailand.pantheonsite.io/block/12?destination=/node/21 */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* MENU -- GROBAL CSS */
+
+.navbar.container {
+
+}
+#navbar > div.navbar-header {
+    border-bottom: #00c8f0 solid 1px;
+}
+#navbar > div > div.region.region-navigation > div.knowhae-nav-menus {
+    width: 100% !important;
+}
+#block-patientmenu {
+    max-width: 665px;
+    float: right;
+}
+body.patient-article .region.region-navigation {
+    border-bottom: none !important;
+}
+#block-patientmenu > ul > li {
+    font-family: 'Kanit', sans-serif;
+}
+#block-patientmenu > ul > li.first > a {
+    width: 280px;
+    font-size: 28px;
+    background-image: url(/themes/custom/knowhae/images/icon-box-arrow_2%402x.webp);
+    background-repeat: no-repeat;
+    background-size: 31px;
+    background-position: 215px 15px;
+}
+#block-patientmenu > ul > li.last > a {
+    width: 380px;
+    font-size: 28px;
+    background-image: url(/themes/custom/knowhae/images/icon-box-arrow_2%402x.webp);
+    background-repeat: no-repeat;
+    background-size: 31px;
+    background-position: 90% 15px;
+}
+#block-patientmenu > ul > li > a > span {
+    display: none;
+    /* 
+    font-size: 16px;
+    font-family: "Sofiapro-Regular",sans-serif;
+    text-decoration: underline;
+    position: relative;
+    color: transparent;
+    margin: 0px !important;
+    margin-left: 10px !important;
+    margin-top: -5px !important;
+    cursor: pointer;
+    border: none;
+    padding: 15px !important;
+    background-color: #f5333f;
+    background-image: url(/sites/default/files/inline-images/knowhaeth_impact_accdown.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    */
+}
+#block-patientmenu > ul > li > a > span::before {
+    content: " ";
+    /*
+    font-size: 16px;
+    font-family: "Sofiapro-Regular",sans-serif;
+    text-decoration: underline;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    margin-top: -1px;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    */
+    display: none;
+}
+ul.menu.menu--patient-menu.nav ul.dropdown-menu li a {
+    color: #00c8f0 !important;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+.patient-article li.menu-icon.active.active-trail.first a.active-trail.is-active {
+    font-family: 'Kanit', sans-serif !important;
+}
+ul.menu.menu--patient-menu.nav ul.dropdown-menu li a:hover {
+    color: #f5333f !important;
+}
+#block-footerwebsiteparablock > div > h5 {
+    font-family: 'Kanit', sans-serif;
+}
+#block-footerpara > div > p {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+#block-footerpara > div > p:nth-child(2) {
+    font-weight: 400;
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) { 
+
+.main-container.container.js-quickedit-main-content {
+    padding-top: 80px !important;
+    padding-bottom: 0px !important;
+}
+
+}
+
+@media (max-width: 991px) {
+
+.navbar.is-active {
+    background: transparent !important;
+}
+.knowhae-logo {
+    background-color: #fff !important;
+}
+#navbar > div.navbar-header {
+    background: transparent !important;
+}
+#navbar > div > div.region.region-navigation {
+    background: transparent !important;
+}
+#navbar > div > div > div > div.knowhae-hcp-menu {
+    display: none !important;
+}
+body.patient-article .main-container.container.js-quickedit-main-content {
+    padding-top: 120px !important;
+}
+#block-patientmenu {
+    float: none !important;
+    max-width: 100% !important;
+}
+#block-patientmenu-menu {
+    display: none !important;
+}
+#block-patientmenu > div {
+    display: none !important;
+}
+#block-patientmenu > ul {
+    display: block;
+    top: unset !important;
+    position: static;
+    width: 100%;
+    background: #fff;
+    max-width: 300px;
+    padding: 15px;
+    float: right;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+}
+#block-patientmenu > ul > li {
+    background: transparent !important;
+}
+#block-patientmenu > ul > li:nth-child(1) > a {
+    width: 100%;
+    position: static;
+    float: none;
+    clear: both;
+    display: block;
+    text-align: right;
+    font-size: 24px;
+}
+#block-patientmenu > ul > li:nth-child(2) > a {
+    width: 100%;
+    position: static;
+    float: none;
+    clear: both;
+    display: block;
+    text-align: right;
+    font-size: 24px;
+}
+#block-patientmenu > ul > li:nth-child(1) > ul {
+    display: block;
+    position: static;
+    float: none;
+    clear: both;
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+#block-patientmenu > ul > li:nth-child(2) > ul {
+    display: block;
+    position: static;
+    float: none;
+    clear: both;
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+#block-patientmenu > ul > li:nth-child(1) > ul > li {
+    text-align: right;
+    padding-right: 0px;
+}
+#block-patientmenu > ul > li:nth-child(1) > ul > li > a {
+    font-size: 16px;
+    font-weight: 200
+}
+#block-patientmenu > ul > li:nth-child(2) > ul > li {
+    text-align: right;
+    padding-right: 0px;
+}
+#block-patientmenu > ul > li:nth-child(2) > ul > li > a {
+    font-size: 16px;
+    font-weight: 200
+}
+#block-patientmenu > ul > li > a > span.caret {
+    display: none;
+}
+#navbar > div > div.mobile-hamber-class::before {
+    content: "MENU";
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    display: block;
+    font-size: 24px;
+    color: #00c8f0;
+    float: left;
+    margin-top: -7px;
+    padding-right: 10px;
+}
+#navbar > div > div.mobile-hamber-class > div.humbar-cls {
+    float: right;
+}
+
+}
+
+</style>
