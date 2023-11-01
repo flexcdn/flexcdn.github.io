@@ -16,7 +16,7 @@
     width: 100% !important;
 }
 #block-patientmenu {
-    max-width: 665px;
+    max-width: 900px;
     float: right;
 }
 body.patient-article .region.region-navigation {
@@ -24,8 +24,10 @@ body.patient-article .region.region-navigation {
 }
 #block-patientmenu > ul > li {
     font-family: 'Kanit', sans-serif;
+    padding-left: 0px;
+    padding-right: 0px;
 }
-#block-patientmenu > ul > li.first > a {
+#block-patientmenu > ul > li.menu-icon-66 > a {
     width: 280px;
     font-size: 28px;
     background-image: url(/themes/custom/knowhae/images/icon-box-arrow_2%402x.webp);
@@ -33,13 +35,21 @@ body.patient-article .region.region-navigation {
     background-size: 31px;
     background-position: 215px 15px;
 }
-#block-patientmenu > ul > li.last > a {
+#block-patientmenu > ul > li.menu-icon-67 > a {
     width: 380px;
     font-size: 28px;
     background-image: url(/themes/custom/knowhae/images/icon-box-arrow_2%402x.webp);
     background-repeat: no-repeat;
     background-size: 31px;
     background-position: 90% 15px;
+}
+#block-patientmenu > ul > li.menu-icon-76 > a {
+    width: 340px;
+    font-size: 28px;
+    background-image: url(/themes/custom/knowhae/images/icon-box-arrow_2%402x.webp);
+    background-repeat: no-repeat;
+    background-size: 31px;
+    background-position: 295px 15px;
 }
 #block-patientmenu > ul > li > a > span {
     display: none;
@@ -179,6 +189,9 @@ body.patient-article .main-container.container.js-quickedit-main-content {
     display: block;
     text-align: right;
     font-size: 24px;
+}
+#block-patientmenu > ul > li > a {
+    background-image: none !important;
 }
 #block-patientmenu > ul > li:nth-child(1) > ul {
     display: block;

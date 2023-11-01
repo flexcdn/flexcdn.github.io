@@ -14,6 +14,28 @@
             </div>
         </div>
     </div>
+    <div class="row" id="sitemap_block1_2">
+        <div class="col-xs-12 col-md-5">
+            <div>
+                <button class="accordion">โรค HAE คืออะไร</button>
+                <div class="panel">
+                    <a href="/patient/what-is-hae-full" target="_parent">สัญญาณ อาการ และ สาเหตุ</a>
+                    <a href="/patient/what-is-hae-full#diagnosing_block1_1" target="_parent">การวินิจฉัยโรค HAE</a>
+                    <a href="/patient/what-is-hae-full#treating_block1_1" target="_parent">การรักษาโรค HAE</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-7">
+            <div>
+                <button class="accordion">การใช้ชีวิตอยู่กับโรค HAE</button>
+                <div class="panel">
+                    <a href="/patient/living-with-hae-full" target="_parent">ผลกระทบของโรค HAE</a>
+                    <a href="/patient/living-with-hae-full#family_block1_1" target="_parent">โรค HAE และครอบครัวของคุณ</a>
+                    <a href="/patient/living-with-hae-full#living_block1_1" target="_parent">ร่วมสนับสนุนโรค HAE</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="knowhaeth_hiddenpic">
@@ -81,5 +103,187 @@
 
 }
 
+/* SITEMAP BLOCK */
+
+#sitemap_block1_2 {
+    max-width: 1185px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn-mainsubmit {
+    background-color: #00c8f0;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    padding-right: 80px;
+    padding-left: 80px;
+    border-radius: 10px;
+    margin-top: 0px;
+    border: none;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 28px;
+    line-height: 115%;
+    font-weight: 500;
+    background-image: url(/themes/custom/knowhae/images/icon-box-arrow_2%402x.webp);
+    background-size: 34px;
+    background-repeat: no-repeat;
+    background-position: 96% center;
+}
+.btn-mainsubmit:hover {
+    background-color: #f00;
+}
+.btn-mainsubmit2icon {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+.btn-mainsubmit2icon > p {
+    font-size: 28px;
+    line-height: 115%;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    color: #fff;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 80px;
+    /* background-image: url(/sites/default/files/inline-images/knowhaeth_sitemap_lineicon.png); */
+    background-size: 38px;
+    background-repeat: no-repeat;
+    background-position: 15% center;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+
+}
+.panel {
+  padding: 0 18px;
+  display: block;
+  background-color: transparent;
+  overflow: hidden;
+}
+#sitemap_block1_2 {
+
+}
+#sitemap_block1_2 > div > div > button.accordion {
+    background-color: #00c8f0;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    padding-right: 20px;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin-top: 0px;
+    border: none;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+    line-height: 115%;
+    font-weight: 500;
+    background-image: url(/themes/custom/knowhae/images/icon-box-arrow_2%402x.webp);
+    background-size: 34px;
+    background-repeat: no-repeat;
+    background-position: 93% center;
+}
+#sitemap_block1_2 > div> div {
+    padding-left: 0px;
+    padding-right: 0px;
+    border: #71c1e6 solid 1px !important;
+    border-radius: 15px;
+    background: transparent;
+}
+#sitemap_block1_2 > div > div > div > a {
+    display: block;
+    color: #00c8f0;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    line-height: 200%;
+    padding-left: 10px;
+}
+#sitemap_block1_2 > div > div > div > a:hover {
+    color: #f00;
+}
+
+@media (max-width: 991px) {
+
+#sitemap_block1_2 > div > div > button.accordion {
+    background-position: 90% center;
+    text-align: center;
+}
+#sitemap_block1_2 > div:nth-child(1) {
+    margin-bottom: 25px;
+}
+
+}
+
+@media (max-width: 615px) {
+
+.btn-mainsubmit {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-position: right center;
+}
+.btn-mainsubmit2icon > p {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-position: left center;
+}
+#sitemap_block1_2 > div > div > button.accordion {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-position: right center;
+}
+
+}
+
+@media (max-width: 375px) {
+
+.btn-mainsubmit {
+    font-size: 16px;
+}
+.btn-mainsubmit2icon > p {
+    font-size: 16px;
+}
+#sitemap_block1_2 > div > div > button.accordion {
+    font-size: 16px;
+}
+
+}
+
 </style>
 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
