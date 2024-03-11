@@ -1297,6 +1297,7 @@ const popMarker = (title) => {
             google.maps.event.trigger(markers[i], 'click', {});
         }
     }
+    map.setZoom(14);
 };
 const doSearch = (page) => {
     if(page == 1){
@@ -1659,6 +1660,7 @@ window.initMap = async () => {
             $('#btnseemore').show();
             $(".card__hospital-listing").removeClass("-seeall");
             $("#locatortoollist").removeClass("-fullwidth");
+            $('#btnseemore').attr('disabled', true);
         });
         $("#btnseeall").click(function(){
             $('#hospitalist').hide();
