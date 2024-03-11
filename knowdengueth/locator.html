@@ -3,7 +3,7 @@
 
     <div id="locatorheadwarp">
         <div class="locatorheadwarpin">
-        <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" data-entity-type="file" data-entity-uuid="5dcaa813-cc87-4286-93c0-1edb388669e3" src="https://dev-knowdengue-thailand.pantheonsite.io/sites/default/files/inline-images/KnowDengue_element_1.png" /></div>
+        <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_syringe.png" /></div>
         
         <div class="locatorheadcol2">
         <div class="locatorheadcol2top">สถานที่ฉีดวัคซีนไข้เลือดออกใกล้คุณ</div>
@@ -136,7 +136,7 @@ body {
 /* Header Class */
 
 .locatorheadwarpin {
-    max-width: 900px;
+    max-width: 925px;
     margin: auto;
 }
 .locatorheadcol2 {
@@ -156,6 +156,7 @@ body {
     width: 20%;
     max-width: 85px;
     padding: 5px;
+    text-align: center;
 }
 .locatorheadcol2 {
     float: left;
@@ -167,6 +168,7 @@ body {
 .locatorheadpinimg {
     width: 100%;
     height: auto;
+    max-width: 45px;
 }
 .locatorheadcol1 {
     /* FIX */
@@ -247,6 +249,7 @@ body {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    transition: all 0.6s;
 }
 #locatortoollist {
     float: left;
@@ -255,13 +258,64 @@ body {
     padding-right: 10px;
     padding-top: 30px;
     height: auto;
+    transition: all 0.6s;
 }
-.locatortoolmapbox {
+.locatortoolmapbox,
+#map {
+    width: 740px;
+    height: 500px;
     width: 100%;
     background: #c2d3dd;
     border: 1px solid #1b374f;
     border-radius: 8px;
     height: 500px;
+}
+#mapinfowindow > h1 {
+    font-size: 28px;
+    line-height: 120%;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    color: #1b374f;
+    font-family: 'Kanit', sans-serif;
+}
+#mapinfowindow > p {
+    color: #1b374f;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+#mapinfowindow {
+    min-height: 130px;
+    padding: 5px;
+    padding-bottom: 25px;
+}
+#mapinfowindow > a.card__hospital-mapbutton {
+    color: #1b374f;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 50px;
+    background-image: url(https://flexcdn.github.io/knowdengueth/pin_line.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    border: none !important;
+    text-decoration: none !important;
+}
+#mapinfowindow > a.card__hospital-mapbutton:hover {
+    color: #fff;
+}
+button.gm-ui-hover-effect > span {
+    width: 25px !important;
+    height: 25px !important;
+    margin-top: 10px !important;
+    margin-left: -5px !important;
+}
+.-maphidden {
+    width: 0px !important;
+    padding: 0px !important;
+    overflow: hidden !important;
 }
 
 /* Locator Filter Class */
@@ -313,7 +367,7 @@ select {
     box-shadow: none;
     flex: 1;
     padding: 0 1em;
-    padding-left: 30px;
+    padding-left: 25px;
     font-family: 'Kanit', sans-serif;
     background-color: #c2d3dd;
     color: #143858;
@@ -560,11 +614,6 @@ select::-ms-expand {
     padding-top: 20px !important;
 }
 
-#map {
-    width: 740px;
-    height: 500px;
-}
-
 </style>
 
 <!-- JS FOR DEMO -->
@@ -574,7 +623,7 @@ select::-ms-expand {
 <script>
 var map = null;
 var markers = [];
-const iconurl = "https://flexcdn.github.io/knowdengueth/marker.png";
+const iconurl = "https://flexcdn.github.io/knowdengueth/pin_syringe_sml.png";
 var currentPage = 1;
 
 const resetDropdown = (name) => {
@@ -633,7 +682,7 @@ const renderCard = (el, val) => {
                 (e) => {
                     popMarker(val.hospitalname);
                     if(el.id=='allhospitals'){
-                        $('#locatortoolmap').show();
+                        $("#locatortoolmap").removeClass("-maphidden");
                         $(".card__hospital-listing").removeClass("-seeall");
                         $("#locatortoollist-button").removeClass("-seeallbtn");
                         $("#locatortoollist").removeClass("-fullwidth");
@@ -1392,7 +1441,7 @@ window.initMap = async () => {
     .then((res) =>  res.json())
     .then((data) => {
         if(!data.error){
-            document.getElementById("province").appendChild(createOption(0, "โปรดเลือกจังหวัด"));
+            document.getElementById("province").appendChild(createOption(0, "--เลือกจังหวัด--"));
             data.data.forEach((val) => {
                 document.getElementById("province").appendChild(createOption(val.provinceid, val.name_th));
             });
@@ -1544,7 +1593,7 @@ window.initMap = async () => {
         .then((res) =>  res.json())
         .then((data) => {
             if(!data.error){
-                document.getElementById("district").appendChild(createOption(0, "--โปรดเลือกอำเภอ/เขต--"));
+                document.getElementById("district").appendChild(createOption(0, "--เลือกอำเภอ/เขต--"));
                 data.data.forEach((val) => {
                     document.getElementById("district").appendChild(createOption(val.districtid, val.name_th));
                 });
@@ -1587,7 +1636,7 @@ window.initMap = async () => {
         .then((res) =>  res.json())
         .then((data) => {
             if(!data.error){
-                document.getElementById("subdistrict").appendChild(createOption(0, "--โปรดเลือกตำบล/แขวง--"));
+                document.getElementById("subdistrict").appendChild(createOption(0, "--เลือกตำบล/แขวง--"));
                 data.data.forEach((val) => {
                     document.getElementById("subdistrict").appendChild(createOption(val.subdistrictid, val.name_th));
                 });
@@ -1639,7 +1688,7 @@ window.initMap = async () => {
         $('#btnseemap').hide();
 
         $(".card").click(function(){
-            $("#locatortoolmap").show();
+            $("#locatortoolmap").removeClass("-maphidden");
             $("#sampleloop2").hide();
             $("#sampleloop3").hide();
             $(".card__hospital-listing").removeClass("-seeall");
@@ -1655,7 +1704,7 @@ window.initMap = async () => {
             $("#locatortoollist").removeClass("-fullwidth");
         */
         $('#btnseemap').click(() => {
-            $("#locatortoolmap").show();
+            $("#locatortoolmap").removeClass("-maphidden");
             $('#btnseemap').hide();
             $('#btnseemore').show();
             $(".card__hospital-listing").removeClass("-seeall");
@@ -1664,7 +1713,7 @@ window.initMap = async () => {
         });
         $("#btnseeall").click(function(){
             $('#hospitalist').hide();
-            $("#locatortoolmap").hide();
+            $("#locatortoolmap").addClass("-maphidden");
             $("#sampleloop2").hide();
             $("#allhospitals").show();
             $("#locatortoollist").addClass("-fullwidth");
