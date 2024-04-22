@@ -42,7 +42,7 @@
             ตอนนี้คุณอยู่ที่
         </div>
 
-        <div class="locatorshowadress-adress" id="current_loc">57 ถ. วิทยุ แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330</div>
+        <div class="locatorshowadress-adress" id="current_loc"> &nbsp; </div>
 
         <div class="knowclearall">&nbsp;</div>
     </div>
@@ -81,6 +81,14 @@
                 </div>
 
                 <div class="locatortoolmap-box locatortoolmap-box2">
+                    <label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
+
+                    <div class="locatortoolmap-select"><select id="hospitaltype"></select></div>
+
+                    <div class="knowclearall">&nbsp;</div>
+                </div>
+
+                <div class="locatortoolmap-box locatortoolmap-box3">
                     <label class="locatortoolmap-label">จังหวัด</label>
 
                     <div class="locatortoolmap-select"><select id="province"></select></div>
@@ -88,7 +96,7 @@
                     <div class="knowclearall">&nbsp;</div>
                 </div>
 
-                <div class="locatortoolmap-box locatortoolmap-box3">
+                <div class="locatortoolmap-box locatortoolmap-box4">
                     <label class="locatortoolmap-label">อำเภอ/เขต</label>
 
                     <div class="locatortoolmap-select"><select id="district"></select></div>
@@ -96,7 +104,7 @@
                     <div class="knowclearall">&nbsp;</div>
                 </div>
 
-                <div class="locatortoolmap-box locatortoolmap-box4">
+                <div class="locatortoolmap-box locatortoolmap-box5">
                     <label class="locatortoolmap-label">แขวง/ตำบล</label>
 
                     <div class="locatortoolmap-select"><select id="subdistrict"></select></div>
@@ -456,7 +464,26 @@
         width: 50%;
         max-width: 360px;
         padding: 10px;
-        min-height: 60px;
+        min-height: 70px;
+    }
+    .locatortoolmap-box1 {
+        width: 100%;
+        max-width: 690px;
+        padding-left: 85px;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+    .locatortoolmap-box2 {
+
+    }
+    .locatortoolmap-box2 > label {
+        width: 25% !important;
+        max-width: 100px;
+        margin-top: -12px;
+    }
+    .locatortoolmap-box2 > div {
+
     }
 
     /* Locator Card Class */
@@ -1789,50 +1816,7 @@
             $("#btnseemore").attr("disabled", true);
         });
         $("#btnseeall").click(function () {
-            $("#hospitalist").hide();
-            $("#locatortoolmap").addClass("-maphidden");
-            $("#sampleloop2").hide();
-            $("#allhospitals").show();
-            $("#locatortoollist").addClass("-fullwidth");
-            $("#locatortoollist-button").addClass("-seeallbtn");
-            if ("geolocation" in navigator) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const pos = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude,
-                        };
-                        getAllHospitals(pos);
-                    },
-                    (error) => {
-                        geocoder.geocode({ address: "Bangkok" }, function (results, status) {
-                            const pos = {
-                                lat: results[0].geometry.location.lat(),
-                                lng: results[0].geometry.location.lng(),
-                            };
-                            getAllHospitals(pos);
-                        });
-                    },
-                    {
-                        timeout: 10000,
-                        maximumAge: 10000,
-                        enableHighAccuracy: true,
-                    }
-                );
-            } else {
-                geocoder.geocode({ address: "Bangkok" }, function (results, status) {
-                    const pos = {
-                        lat: results[0].geometry.location.lat(),
-                        lng: results[0].geometry.location.lng(),
-                    };
-                    getAllHospitals(pos);
-                });
-            }
-
-            $("#btnseemore").hide();
-            $("#btnseemap").show();
-
-            // $(".card__hospital-listing").css({"max-width": "345px", "float": "left", "margin-left": "5px", "margin-right": "5px", "margin-bottom": "10px"});
+            window.location.href = "/locator/seeall";
         });
     });
 </script>
