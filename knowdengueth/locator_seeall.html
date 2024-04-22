@@ -59,9 +59,23 @@
         -->
         <div class="locatortoollist-defualt -fullwidth" id="locatortoollist">
 
-            <div id="locatortoollist-header">ดูสถานที่ทั้งหมด</div>
+            <div id="locatortoollist-header">แสดงสถานที่ทั้งหมด</div>
 
             <div id="locatortoolmap-filtertools">
+
+                <div class="locatortoolmap-box locatortoolmap-box0">
+                    <label class="locatortoolmap-label">Sort/จัดเรียง</label>
+
+                    <div class="locatortoolmap-select">
+                        <select id="province">
+                            <option value="Nearest">Nearest/ใกล้ฉันที่สุด</option>
+                            <option value="A-Z">A-Z/ตามชื่อ</option>
+                        </select>
+                    </div>
+
+                    <div class="knowclearall">&nbsp;</div>
+                </div>
+
                 <div class="locatortoolmap-box locatortoolmap-box1">
                     <div class="locatortoolmap-search">
                         <input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="Search..." type="text" />
@@ -126,6 +140,8 @@
 
             <!-- <div id="hospitalist">&nbsp;</div> -->
 
+            <div id="locatortoollist-shownum">จำนวนสถานที่ 99/9999</div>
+
             <div id="allhospitals">&nbsp;</div>
 
             <div class="locatortoollist-div" id="locatortoollist-button">
@@ -133,7 +149,18 @@
                 <button class="locatortoollist-button1" id="btnseemore">ดูเพิ่มเติม</button>
                 <button class="locatortoollist-button2" id="btnseeall">ดูทั้งหมด</button>
                 -->
-                <a>1</a>
+
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+                
                 <a class="locatortoollist-button1" id="btnseemap" href="/locator" target="_parent">ดูแผนที่</a>
             </div>
         </div>
@@ -382,6 +409,14 @@ button.gm-ui-hover-effect > span {
     padding-bottom: 15px;
     color: #1b374f;
 }
+#locatortoollist-shownum {
+    font-size: 24px;
+    text-align: right;
+    line-height: 120%;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #1b374f;
+}
 .locatortoolmap-search {
     width: 100%;
     position: relative;
@@ -469,7 +504,6 @@ select::-ms-expand {
 #locatortoolmap-filtertools {
     padding-bottom: 25px;
     padding-top: 25px;
-    max-width: 760px;
     margin: auto;
     border-bottom: 1px #c2d3dd solid;
     margin-bottom: 35px;
@@ -480,6 +514,26 @@ select::-ms-expand {
     max-width: 360px;
     padding: 10px;
     min-height: 60px;
+}
+.locatortoolmap-box0  > div  > select {
+    background-color: #0081a0 !important;
+    color: #fff;
+}
+.locatortoolmap-box1 {
+    width: 30%;
+    max-width: 345px;
+}
+.locatortoolmap-box2 {
+    width: 33%;
+    max-width: 380px;
+}
+.locatortoolmap-box2 > label {
+    width: 25% !important;
+    max-width: 100px;
+    margin-top: -12px;
+}
+.locatortoolmap-box2 > div {
+
 }
 
 /* Locator Card Class */
@@ -608,7 +662,7 @@ select::-ms-expand {
     color: #1b374f;
     font-weight: bold;
     text-decoration: none;
-    width: 49%;
+    width: 40%;
     font-size: 18px;
     font-family: "Kanit", sans-serif;
     cursor: pointer;
@@ -621,6 +675,11 @@ select::-ms-expand {
 .locatortoollist-button1:not([disabled]):hover {
     background-color: #0081a0;
     color: #c2d3dd;
+}
+#btnseemap {
+    display: block;
+    clear: both;
+    margin: auto;
 }
 .locatortoollist-button2 {
     background-color: #143858;
@@ -672,14 +731,40 @@ select::-ms-expand {
     clear: both !important;
     padding-top: 20px !important;
 }
+.pagination {
+    display: block;
+    clear: both;
+    width: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 35px;
+}
+
+.pagination a {
+  color: #1b374f;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #c2d3dd;
+  margin: 0 4px;
+}
+.pagination a:hover {
+    background-color: #0081a0;
+    color: #c2d3dd;
+}
+.pagination a.active {
+    background-color: #63d5b4;
+    color: #1b374f;
+    font-weight: bold;
+    border: 1px solid #63d5b4;
+}
 
 @media (max-width: 1345px) {
     #locatortoolmap-filtertools {
         padding-top: 0px !important;
     }
     .locatortoolmap-box1 {
-        padding-top: 45px !important;
-        padding-bottom: 0px !important;
+
     }
     .locatortoolmap-select {
         width: 100% !important;
@@ -803,13 +888,8 @@ select::-ms-expand {
                 [
                     "click",
                     (e) => {
-                        popMarker(val.hospitalname);
-                        if (el.id == "allhospitals") {
-                            $("#locatortoolmap").removeClass("-maphidden");
-                            $(".card__hospital-listing").removeClass("-seeall");
-                            $("#locatortoollist-button").removeClass("-seeallbtn");
-                            $("#locatortoollist").removeClass("-fullwidth");
-                        }
+                        // popMarker(val.hospitalname);
+                        window.location.href = "/locator#map";
                     },
                 ],
             ],
@@ -1442,17 +1522,6 @@ select::-ms-expand {
                 }
             });
     };
-    const popMarker = (title) => {
-        $("#btnseemap").hide();
-        for (i = 0; i < markers.length; i++) {
-            const el = markers[i].element;
-
-            if (el.title == title) {
-                google.maps.event.trigger(markers[i], "click", {});
-            }
-        }
-        map.setZoom(14);
-    };
     const doSearch = (page) => {
         if (page == 1) {
             markers.forEach((marker) => {
@@ -1832,9 +1901,8 @@ select::-ms-expand {
         $("#btnseeall").hide();
         $("#btnseemap").show();
 
-
-        $(".card").click(function () {
-            /* DEMO */
+        $(".card__hospital-listing").click(function () {
+            // DEMO
         });
         
     });
