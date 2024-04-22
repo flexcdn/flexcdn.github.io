@@ -2,7 +2,7 @@
 <div id="locatorwarp">
     <div id="locatorheadwarp">
         <div class="locatorheadwarpin">
-            <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_syringe.png" /></div>
+            <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_locator.png" /></div>
 
             <div class="locatorheadcol2">
                 <div class="locatorheadcol2top">สถานที่ฉีดวัคซีนไข้เลือดออกใกล้คุณ</div>
@@ -78,7 +78,7 @@
 
                 <div class="locatortoolmap-box locatortoolmap-box1">
                     <div class="locatortoolmap-search">
-                        <input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="Search..." type="text" />
+                        <input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="ค้นหาจากชื่อสถานพยาบาล..." type="text" />
                         <button class="locatortoolmap-searchButton" id="searchBtn" type="button">
                             <svg
                                 data-arp-injected="true"
@@ -236,7 +236,6 @@ body {
 .locatorheadcol1 {
     float: left;
     width: 20%;
-    max-width: 85px;
     padding: 5px;
     text-align: center;
 }
@@ -250,7 +249,7 @@ body {
 .locatorheadpinimg {
     width: 100%;
     height: auto;
-    max-width: 45px;
+    max-width: 155px;
 }
 .locatorheadcol1 {
     /* FIX */
@@ -831,7 +830,7 @@ select::-ms-expand {
 <script>
     var map = null;
     var markers = [];
-    const iconurl = "https://flexcdn.github.io/knowdengueth/pin_syringe_sml.png";
+    const iconurl = "https://flexcdn.github.io/knowdengueth/pin_locator_sml2.png";
     var currentPage = 1;
 
     const resetDropdown = (name) => {
