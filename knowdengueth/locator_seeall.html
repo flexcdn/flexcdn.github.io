@@ -67,7 +67,7 @@
                     <label class="locatortoolmap-label">Sort/จัดเรียง</label>
 
                     <div class="locatortoolmap-select">
-                        <select id="province">
+                        <select id="sortcard">
                             <option value="Nearest">Nearest/ใกล้ฉันที่สุด</option>
                             <option value="A-Z">A-Z/ตามชื่อ</option>
                         </select>
@@ -140,8 +140,16 @@
 
             <!-- <div id="hospitalist">&nbsp;</div> -->
 
-            <div id="locatortoollist-shownum">จำนวนสถานที่ 99/9999</div>
-
+            <div class="locatortoollist-div">
+                <div id="locatortoollist-shownum">
+                    จำนวนสถานที่ 99
+                </div>
+                <div id="locatortoollist-page">
+                    หน้า 1/99
+                </div>
+                <div class="locatortool-clear"></div>
+            </div>
+            
             <div id="allhospitals">&nbsp;</div>
 
             <div class="locatortoollist-div" id="locatortoollist-button">
@@ -160,7 +168,7 @@
                     <a href="#">6</a>
                     <a href="#">&raquo;</a>
                 </div>
-                
+                <hr>
                 <a class="locatortoollist-button1" id="btnseemap" href="/locator" target="_parent">ดูแผนที่</a>
             </div>
         </div>
@@ -408,13 +416,43 @@ button.gm-ui-hover-effect > span {
     padding-bottom: 15px;
     color: #1b374f;
 }
+.locatortoollist-div {
+    max-width: 1070px;
+    margin: auto;
+}
 #locatortoollist-shownum {
+    text-align: left;
     font-size: 24px;
-    text-align: right;
     line-height: 120%;
     font-weight: 500;
     padding-bottom: 15px;
     color: #1b374f;
+    float: left;
+    width: 50%;
+}
+#locatortoollist-page {
+    float: left;
+    width: 50%;
+    text-align: right;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #1b374f;
+}
+.locatortool-clear {
+    float: none !important;
+    clear: both !important;
+}
+#allhospitals {
+    max-width: 1070px;
+    margin: auto;
+}
+#allhospitals::after {
+    content: "";
+    display: block !important;
+    float: none !important;
+    clear: both !important;
 }
 .locatortoolmap-search {
     width: 100%;
