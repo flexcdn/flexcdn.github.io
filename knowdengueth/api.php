@@ -20,9 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-if(isset($_GET['provinces'])){
+if(isset($_GET['provinces']) && isset($_GET['type'])){
     try {
-        if($result = $mysql->query("SELECT DISTINCT p.provinceid, p.name_th FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid ORDER BY p.name_th")){
+        $condition = " WHERE 1=1";
+        if(!empty($_GET['type'])){
+            $condition = " WHERE h.hospitaltype='".$mysql->real_escape_string($_GET['type'])."'";
+        }
+        if($result = $mysql->query("SELECT DISTINCT p.provinceid, p.name_th FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid ".$condition." ORDER BY p.name_th")){
             $provinces = [];
             while($row = $result->fetch_assoc()){
                 $provinces[] = $row;
@@ -72,6 +76,24 @@ if(isset($_GET['provinces'])){
         echo json_encode(['error'=>true, 'msg'=>$e->getMessage()]);
     }
 
+}elseif(isset($_GET['hospitaltypes'])) {
+    try {
+        if($result = $mysql->query("SELECT DISTINCT h.hospitaltype FROM hospitals h ORDER by h.hospitaltype")){
+            $types = [];
+            while($row = $result->fetch_assoc()){
+                $types[] = $row;
+            }
+            $result->close();
+
+            echo json_encode(['error'=>false, 'data'=>$types]);
+        }else{
+            throw new Exception('Failed to fetch data.');
+        }
+        
+    }catch(Exception $e){
+        echo json_encode(['error'=>true, 'msg'=>$e->getMessage()]);
+    }
+
 }elseif(isset($_GET['search']) && !empty($_GET['q'])){
 
     try{
@@ -91,16 +113,18 @@ if(isset($_GET['provinces'])){
                 $page = $pages;
             }
 
-            $result = $mysql->query("SELECT h.hospitalid, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h WHERE h.hospitalname LIKE '%".$mysql->real_escape_string($_GET['q'])."%' ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
+            $result = $mysql->query("SELECT h.hospitalid, h.hospitaltype, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h WHERE h.hospitalname LIKE '%".$mysql->real_escape_string($_GET['q'])."%' ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
             $rows = [];
-            while($row = $result->fetch_assoc()){
-                $rows[] = $row;
+            if($result !== false){
+                while($row = $result->fetch_assoc()){
+                    $rows[] = $row;
+                }
+                $result->close();
             }
-            $result->close();
 
             echo json_encode(['error'=>false, 'data'=>['pages'=>$pages, 'rows'=>$rows]]);
         }else{
-            throw new Exception('Failed to fetch data.');
+            echo json_encode(['error'=>false, 'data'=>['pages'=>0, 'rows'=>[]]]);
         }
 
     }catch(Exception $e){
@@ -110,7 +134,7 @@ if(isset($_GET['provinces'])){
 }elseif(isset($_GET['allhospitals']) && !empty($_GET['lat']) && !empty($_GET['lon'])){
 
     try{
-        if($result = $mysql->query("SELECT h.hospitalid, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h ORDER BY distance")){
+        if($result = $mysql->query("SELECT h.hospitalid, h.hospitaltype, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h ORDER BY distance")){
             $rows = [];
             while($row = $result->fetch_assoc()){
                 $rows[] = $row;
@@ -145,7 +169,7 @@ if(isset($_GET['provinces'])){
             }
 
 
-            $result = $mysql->query("SELECT h.hospitalid, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid WHERE p.provinceid=".intval($_GET['pid'])." ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
+            $result = $mysql->query("SELECT h.hospitalid, h.hospitaltype, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid WHERE p.provinceid=".intval($_GET['pid'])." ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
             $rows = [];
             while($row = $result->fetch_assoc()){
                 $rows[] = $row;
@@ -171,7 +195,7 @@ if(isset($_GET['provinces'])){
             }
 
 
-            $result = $mysql->query("SELECT h.hospitalid, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid WHERE d.districtid=".intval($_GET['did'])." ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
+            $result = $mysql->query("SELECT h.hospitalid, h.hospitaltype, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid WHERE d.districtid=".intval($_GET['did'])." ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
             $rows = [];
             while($row = $result->fetch_assoc()){
                 $rows[] = $row;
@@ -197,7 +221,7 @@ if(isset($_GET['provinces'])){
             }
 
 
-            $result = $mysql->query("SELECT h.hospitalid, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid WHERE sd.subdistrictid=".intval($_GET['sid'])." ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
+            $result = $mysql->query("SELECT h.hospitalid, h.hospitaltype, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h INNER JOIN subdistricts sd ON sd.subdistrictid=h.subdistrictid INNER JOIN districts d ON d.districtid=sd.districtid INNER JOIN provinces p ON p.provinceid=d.provinceid WHERE sd.subdistrictid=".intval($_GET['sid'])." ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
             $rows = [];
             while($row = $result->fetch_assoc()){
                 $rows[] = $row;
@@ -222,7 +246,7 @@ if(isset($_GET['provinces'])){
                 $page = $pages;
             }
 
-            $result = $mysql->query("SELECT h.hospitalid, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
+            $result = $mysql->query("SELECT h.hospitalid, h.hospitaltype, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h ORDER BY distance LIMIT ".(($page - 1)*10).", 10");
             $rows = [];
             while($row = $result->fetch_assoc()){
                 $rows[] = $row;

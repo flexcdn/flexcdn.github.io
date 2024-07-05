@@ -803,6 +803,19 @@ select::-ms-expand {
         return $el;
     };
 
+    const renderNotfound = () => {
+        const html = h({
+            type: "div",
+            attrs: {
+                class: "card card__notfound"
+            },
+            children: [
+                "ไม่พบโรงพยาบาลที่ค้นหา"
+            ]
+        });
+        document.getElementById("hospitalist").appendChild(html);
+    };
+
     const renderCard = (el, val) => {
         const html = h({
             type: "div",
@@ -860,7 +873,7 @@ select::-ms-expand {
                                 },
                             ],
                         },
-                        "โรงพยาบาลเอกชน",
+                        val.hospitaltype,
                     ],
                 },
                 {
@@ -1496,6 +1509,7 @@ select::-ms-expand {
         map.setZoom(14);
     };
     const doSearch = (page) => {
+        console.log('Clicked!!');
         if (page == 1) {
             markers.forEach((marker) => {
                 marker.setMap(null);
@@ -1510,12 +1524,16 @@ select::-ms-expand {
             return;
         }
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&page=" + page)
+        fetch("https://knowdengueth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&lat=" + window.position.lat + "&lon=" + window.position.lng + "&page=" + page)
             .then((res) => res.json())
             .then((data) => {
                 let el = document.getElementById("hospitalist");
                 if (page == 1) {
                     el.innerHTML = "";
+                }
+
+                if(data.data.rows.length == 0){
+                    renderNotfound();
                 }
 
                 data.data.rows.forEach((val) => {
@@ -1583,16 +1601,16 @@ select::-ms-expand {
         resetDropdown("province");
         resetDropdown("district");
         resetDropdown("subdistrict");
-
-        fetch("https://knowdengueth.flexsolutions.business/api.php?provinces")
+        
+        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitaltypes")
             .then((res) => res.json())
             .then((data) => {
                 if (!data.error) {
-                    document.getElementById("province").appendChild(createOption(0, "--เลือกจังหวัด--"));
+                    document.getElementById("hospitaltype").appendChild(createOption(0, "สถานพยาบาลทุกประเภท"));
                     data.data.forEach((val) => {
-                        document.getElementById("province").appendChild(createOption(val.provinceid, val.name_th));
+                        document.getElementById("hospitaltype").appendChild(createOption(val.hospitaltype, val.hospitaltype));
                     });
-                    document.getElementById("province").disabled = false;
+                    document.getElementById("hospitaltype").disabled = false;
                 }
             });
 
@@ -1605,6 +1623,7 @@ select::-ms-expand {
                     };
 
                     map.setCenter(pos);
+                    window.position = pos;
 
                     geocoder
                         .geocode({ location: pos })
@@ -1635,6 +1654,7 @@ select::-ms-expand {
 
                         if (status == google.maps.GeocoderStatus.OK) {
                             map.setCenter(results[0].geometry.location);
+                            window.position = results[0].geometry.location;
                         }
 
                         document.getElementById("province").selectedText = "กรุงเทพมหานคร";
@@ -1671,6 +1691,7 @@ select::-ms-expand {
 
                 if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
+                    window.position = results[0].geometry.location;
                 }
 
                 document.getElementById("province").selectedText = "กรุงเทพมหานคร";
@@ -1689,6 +1710,21 @@ select::-ms-expand {
                 getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "pid", 1, 1);
             });
         }
+
+        document.getElementById("hospitaltype").addEventListener("change", (e) => {
+            console.log(e);
+            fetch("https://knowdengueth.flexsolutions.business/api.php?provinces&type=" + e.target.value)
+                .then((res) => res.json())
+                .then((data) => {
+                    if (!data.error) {
+                        document.getElementById("province").appendChild(createOption(0, "--เลือกจังหวัด--"));
+                        data.data.forEach((val) => {
+                            document.getElementById("province").appendChild(createOption(val.provinceid, val.name_th));
+                        });
+                        document.getElementById("province").disabled = false;
+                    }
+                });
+        });
 
         document.getElementById("province").addEventListener("change", (ev) => {
             if (ev.target.value == "0") {
@@ -1818,7 +1854,9 @@ select::-ms-expand {
             });
         });
 
-        document.getElementById("searchBtn").addEventListener("click", doSearch(1));
+        document.getElementById("searchBtn").addEventListener("click", (e) => {
+            doSearch(1)
+        });
         document.getElementById("searchBox").addEventListener("keyup", (e) => {
             if (e.keyCode === 13) {
                 doSearch(1);
