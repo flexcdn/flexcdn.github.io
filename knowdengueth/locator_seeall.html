@@ -49,14 +49,7 @@
     <!-- /locatorshowadress -->
 
     <div id="locatortooldiv">
-        <!--
-        <div class="locatortoolmap-defualt" id="locatortoolmap">
-            <div id="locatortoolmap-header">คลินิกใกล้คุณ</div>
-
-            <div id="map">&nbsp;</div>
-
-        </div>
-        -->
+        <div id="map" style="display: none;">&nbsp;</div>
         <div class="locatortoollist-defualt -fullwidth" id="locatortoollist">
 
             <div id="locatortoollist-header">แสดงสถานที่ทั้งหมด</div>
@@ -142,10 +135,10 @@
 
             <div class="locatortoollist-div">
                 <div id="locatortoollist-shownum">
-                    จำนวนสถานที่ 99
+                    จำนวนสถานที่ <span id="totalHospital">99</span>
                 </div>
                 <div id="locatortoollist-page">
-                    หน้า 1/99
+                    หน้า <span id="selectedPage">1/99</span>
                 </div>
                 <div class="locatortool-clear"></div>
             </div>
@@ -161,7 +154,7 @@
                 <div class="pagination">
                     <a href="#">&laquo;</a>
                     <a href="#">1</a>
-                    <a href="#" class="active">2</a>
+                    <a href="#">2</a>
                     <a href="#">3</a>
                     <a href="#">4</a>
                     <a href="#">5</a>
@@ -870,6 +863,8 @@ select::-ms-expand {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&loading=async&callback=initMap&v=weekly" defer></script>
 <script>
+    
+    
     var map = null;
     var markers = [];
     const iconurl = "https://flexcdn.github.io/knowdengueth/pin_locator_sml3.png";
@@ -888,7 +883,7 @@ select::-ms-expand {
         return el;
     };
     const h = (node) => {
-        if (typeof node === "string") {
+        if (typeof node === "string" || typeof node === "number") {
             return document.createTextNode(node);
         }
 
@@ -1346,323 +1341,528 @@ select::-ms-expand {
         });
         el.appendChild(html);
     };
-
+    
     const getFilterHostpitals = (pos, field, pid, page) => {
-        if (page == 1) {
-            markers.forEach((marker) => {
-                marker.setMap(null);
-            });
-            markers = [];
-        }
-        const infoWindow = new google.maps.InfoWindow();
-        currentPage = page;
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&" + field + "=" + pid + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
+        currentPage = page;
+        let el = document.getElementById("allhospitals");
+        el.innerHTML = "";
+
+        const sort = document.getElementById('sortcard').value;
+
+        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&" + field + "=" + pid + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
             .then((res) => res.json())
             .then((data) => {
-                let el = document.getElementById("hospitalist");
-                if (page == 1) {
-                    el.innerHTML = "";
-                }
 
                 data.data.rows.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    marker.addListener("click", (e) => {
-                        const html = h({
-                            type: "div",
-                            attrs: {
-                                id: "mapinfowindow",
-                            },
-                            children: [
-                                {
-                                    type: "h1",
-                                    attrs: {
-                                        class: "heading",
-                                    },
-                                    children: [val.hospitalname],
-                                },
-                                {
-                                    type: "p",
-                                    attrs: {
-                                        class: "content",
-                                    },
-                                    children: [val.address],
-                                },
-                                {
-                                    type: "a",
-                                    attrs: {
-                                        class: "card__hospital-mapbutton",
-                                        target: "_blank",
-                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
-                                    },
-                                    children: ["แผนที่การเดินทาง"],
-                                },
-                            ],
-                        });
-
-                        infoWindow.close();
-                        infoWindow.setContent(html);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
                     renderCard(el, val);
                 });
 
-                var $btn = document.getElementById("btnseemore"),
-                    elClone = $btn.cloneNode(true);
-                elClone.disabled = true;
-                $btn.parentNode.replaceChild(elClone, $btn);
+                document.getElementById('totalHospital').innerHTML = data.data.total;
+                document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
+                data.data.rows.forEach((val) => {
+                    renderCard(el, val);
+                });
+                const pagecontainer = document.querySelector('div.pagination');
+                pagecontainer.innerHTML = '';
 
-                if (currentPage < data.data.pages) {
-                    const $el = document.getElementById("btnseemore");
-                    $el.disabled = false;
-                    $el.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        getFilterHostpitals(pos, field, pid, currentPage + 1);
-                    });
-                    $el.removeAttribute("disabled");
+                if(currentPage > 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getFilterHostpitals(pos, field, pid, currentPage - 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ "<" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ "<" ]
+                    }));
+                }
+
+                for (let i = 1; i <= data.data.pages; i++) {
+                    if (i == 1 || i == data.data.pages || i >= currentPage - 2 || i <= currentPage + 2) {
+                        pagecontainer.appendChild(h({
+                            type: "a",
+                            attrs: {
+                                href: "#",
+                                class: (i == currentPage)?"active":""
+                            },
+                            events: [
+                                [
+                                    "click",
+                                    (e) => {
+                                        e.preventDefault();
+                                        getFilterHostpitals(pos, field, pid, i);
+                                        return false;
+                                    },
+                                ]
+                            ],
+                            children: [ i ]
+                        }));
+                    }
+                }
+
+
+                if(currentPage < data.data.pages - 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getFilterHostpitals(pos, field, pid, currentPage + 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ ">" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ ">" ]
+                    }));
                 }
             });
-    };
-    const getAllHospitals = (pos) => {
-        fetch("https://knowdengueth.flexsolutions.business/api.php?allhospitals&lat=" + pos.lat + "&lon=" + pos.lng)
-            .then((res) => res.json())
-            .then((data) => {
-                const el = document.getElementById("allhospitals");
-                const infoWindow = new google.maps.InfoWindow();
 
-                el.innerHTML = "";
+        var dd = document.getElementById('sortcard'), ddClone = dd.cloneNode(true);
+        ddClone.value = dd.value;
+        dd.parentNode.replaceChild(ddClone, dd);
 
-                markers.forEach((marker) => {
-                    marker.setMap(null);
-                });
-                markers = [];
-
-                data.data.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    marker.addListener("click", (e) => {
-                        const html = h({
-                            type: "div",
-                            attrs: {
-                                id: "mapinfowindow",
-                            },
-                            children: [
-                                {
-                                    type: "h1",
-                                    attrs: {
-                                        class: "heading",
-                                    },
-                                    children: [val.hospitalname],
-                                },
-                                {
-                                    type: "p",
-                                    attrs: {
-                                        class: "content",
-                                    },
-                                    children: [val.address],
-                                },
-                                {
-                                    type: "a",
-                                    attrs: {
-                                        class: "card__hospital-mapbutton",
-                                        target: "_blank",
-                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
-                                    },
-                                    children: ["แผนที่การเดินทาง"],
-                                },
-                            ],
-                        });
-
-                        infoWindow.close();
-                        infoWindow.setContent(html);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
-                    renderCard(el, val);
-                });
-            });
+        document.getElementById('sortcard').addEventListener("change", (e) => {
+            getFilterHostpitals(pos, field, pid, currentPage);
+        });
     };
     const getHostpitals = (pos, page) => {
-        if (page == 1) {
-            markers.forEach((marker) => {
-                marker.setMap(null);
-            });
-            markers = [];
-        }
-        const infoWindow = new google.maps.InfoWindow();
         currentPage = page;
+        let el = document.getElementById("allhospitals");
+        el.innerHTML = "";
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
+        const sort = document.getElementById('sortcard').value;
+        
+        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
             .then((res) => res.json())
             .then((data) => {
-                let el = document.getElementById("hospitalist");
-                if (page == 1) {
-                    el.innerHTML = "";
-                }
-
+                document.getElementById('totalHospital').innerHTML = data.data.total;
+                document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
                 data.data.rows.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    marker.addListener("click", (e) => {
-                        const html = h({
-                            type: "div",
-                            attrs: {
-                                id: "mapinfowindow",
-                            },
-                            children: [
-                                {
-                                    type: "h1",
-                                    attrs: {
-                                        class: "heading",
-                                    },
-                                    children: [val.hospitalname],
-                                },
-                                {
-                                    type: "p",
-                                    attrs: {
-                                        class: "content",
-                                    },
-                                    children: [val.address],
-                                },
-                                {
-                                    type: "a",
-                                    attrs: {
-                                        class: "card__hospital-mapbutton",
-                                        target: "_blank",
-                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
-                                    },
-                                    children: ["แผนที่การเดินทาง"],
-                                },
-                            ],
-                        });
-
-                        infoWindow.close();
-                        infoWindow.setContent(html);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
                     renderCard(el, val);
                 });
-                var $btn = document.getElementById("btnseemore"),
-                    elClone = $btn.cloneNode(true);
-                elClone.disabled = true;
-                $btn.parentNode.replaceChild(elClone, $btn);
+                const pagecontainer = document.querySelector('div.pagination');
+                pagecontainer.innerHTML = '';
 
-                if (currentPage < data.data.pages) {
-                    const $el = document.getElementById("btnseemore");
-                    $el.disabled = false;
-                    $el.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        getHostpitals(pos, currentPage + 1);
-                    });
-                    $el.removeAttribute("disabled");
+                if(currentPage > 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getHostpitals(pos, currentPage - 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ "<" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ "<" ]
+                    }));
+                }
+
+                for (let i = 1; i <= data.data.pages; i++) {
+                    if (i == 1 || i == data.data.pages || i >= currentPage - 2 || i <= currentPage + 2) {
+                        pagecontainer.appendChild(h({
+                            type: "a",
+                            attrs: {
+                                href: "#",
+                                class: (i == currentPage)?"active":""
+                            },
+                            events: [
+                                [
+                                    "click",
+                                    (e) => {
+                                        e.preventDefault();
+                                        getHostpitals(pos, i);
+                                        return false;
+                                    },
+                                ]
+                            ],
+                            children: [ i ]
+                        }));
+                    }
+                }
+
+
+                if(currentPage < data.data.pages - 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getHostpitals(pos, currentPage + 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ ">" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ ">" ]
+                    }));
+                }
+                
+            });
+        var dd = document.getElementById('sortcard'), ddClone = dd.cloneNode(true);
+        ddClone.value = dd.value;
+        dd.parentNode.replaceChild(ddClone, dd);
+
+        document.getElementById('sortcard').addEventListener("change", (e) => {
+            getHostpitals(pos, currentPage);
+        });
+    };
+    const getTypeHostpitals = (pos, page, type) => {
+        currentPage = page;
+        let el = document.getElementById("allhospitals");
+        el.innerHTML = "";
+
+        const sort = document.getElementById('sortcard').value;
+        
+        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&type=" + type + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
+            .then((res) => res.json())
+            .then((data) => {
+                document.getElementById('totalHospital').innerHTML = data.data.total;
+                document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
+                data.data.rows.forEach((val) => {
+                    renderCard(el, val);
+                });
+                const pagecontainer = document.querySelector('div.pagination');
+                pagecontainer.innerHTML = '';
+
+                if(currentPage > 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getTypeHostpitals(pos, currentPage - 1, type);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ "<" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ "<" ]
+                    }));
+                }
+
+                for (let i = 1; i <= data.data.pages; i++) {
+                    if (i == 1 || i == data.data.pages || i >= currentPage - 2 || i <= currentPage + 2) {
+                        pagecontainer.appendChild(h({
+                            type: "a",
+                            attrs: {
+                                href: "#",
+                                class: (i == currentPage)?"active":""
+                            },
+                            events: [
+                                [
+                                    "click",
+                                    (e) => {
+                                        e.preventDefault();
+                                        getTypeHostpitals(pos, i, type);
+                                        return false;
+                                    },
+                                ]
+                            ],
+                            children: [ i ]
+                        }));
+                    }
+                }
+
+
+                if(currentPage < data.data.pages - 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getTypeHostpitals(pos, currentPage + 1, type);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ ">" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ ">" ]
+                    }));
                 }
             });
-    };
-    const doSearch = (page) => {
-        if (page == 1) {
-            markers.forEach((marker) => {
-                marker.setMap(null);
-            });
-            markers = [];
-        }
-        const infoWindow = new google.maps.InfoWindow();
-        currentPage = page;
 
+        var dd = document.getElementById('sortcard'), ddClone = dd.cloneNode(true);
+        ddClone.value = dd.value;
+        dd.parentNode.replaceChild(ddClone, dd);
+
+        document.getElementById('sortcard').addEventListener("change", (e) => {
+            getTypeHostpitals(pos, currentPage, type);
+        });
+    };
+    const doSearch = (pos, page) => {
         const searchBox = document.getElementById("searchBox");
         if (searchBox.value == "") {
             return;
         }
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&page=" + page)
+        currentPage = page;
+        let el = document.getElementById("allhospitals");
+        el.innerHTML = "";
+
+        const sort = document.getElementById('sortcard').value;
+
+        fetch("https://knowdengueth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
             .then((res) => res.json())
             .then((data) => {
-                let el = document.getElementById("hospitalist");
-                if (page == 1) {
-                    el.innerHTML = "";
-                }
-
+                document.getElementById('totalHospital').innerHTML = data.data.total;
+                document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
                 data.data.rows.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map: map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    marker.addListener("click", ({ domEvent, latLng }) => {
-                        const { target } = domEvent;
-                        infoWindow.close();
-                        infoWindow.setContent(val.hospitalname);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
                     renderCard(el, val);
                 });
+                const pagecontainer = document.querySelector('div.pagination');
+                pagecontainer.innerHTML = '';
 
-                var $btn = document.getElementById("btnseemore"),
-                    elClone = $btn.cloneNode(true);
-                elClone.disabled = true;
-                $btn.parentNode.replaceChild(elClone, $btn);
+                if(currentPage > 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    doSearch(pos, currentPage - 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ "<" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ "<" ]
+                    }));
+                }
 
-                if (currentPage < data.data.pages) {
-                    const $el = document.getElementById("btnseemore");
-                    $el.disabled = false;
-                    $el.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        doSearch(currentPage + 1);
-                    });
-                    $el.removeAttribute("disabled");
+                for (let i = 1; i <= data.data.pages; i++) {
+                    if (i == 1 || i == data.data.pages || i >= currentPage - 2 || i <= currentPage + 2) {
+                        pagecontainer.appendChild(h({
+                            type: "a",
+                            attrs: {
+                                href: "#",
+                                class: (i == currentPage)?"active":""
+                            },
+                            events: [
+                                [
+                                    "click",
+                                    (e) => {
+                                        e.preventDefault();
+                                        doSearch(pos, i);
+                                        return false;
+                                    },
+                                ]
+                            ],
+                            children: [ i ]
+                        }));
+                    }
+                }
+
+
+                if(currentPage < data.data.pages - 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    doSearch(pos, currentPage + 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ ">" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ ">" ]
+                    }));
                 }
             });
+
+        var dd = document.getElementById('sortcard'), ddClone = dd.cloneNode(true);
+        ddClone.value = dd.value;
+        dd.parentNode.replaceChild(ddClone, dd);
+
+        document.getElementById('sortcard').addEventListener("change", (e) => {
+            doSearch(pos, currentPage);
+        });
     };
 
     window.initMap = async () => {
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-        const { LatLngBounds, LatLngBoundsLiteral } = await google.maps.importLibrary("core");
-
         var featureStyleOptions = {
             strokeColor: "#eaa532",
             strokeOpacity: 1.0,
@@ -1675,6 +1875,7 @@ select::-ms-expand {
             disableDefaultUI: true,
             mapId: "7ba7b4dd9a3d916",
         });
+        var currentPos = null;
         var geocoder = new google.maps.Geocoder();
         var provinceLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
         var districtLayer = map.getFeatureLayer("LOCALITY");
@@ -1683,111 +1884,32 @@ select::-ms-expand {
         resetDropdown("district");
         resetDropdown("subdistrict");
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?provinces")
+        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitaltypes")
             .then((res) => res.json())
             .then((data) => {
                 if (!data.error) {
-                    document.getElementById("province").appendChild(createOption(0, "--เลือกจังหวัด--"));
+                    document.getElementById("hospitaltype").appendChild(createOption(0, "สถานพยาบาลทุกประเภท"));
                     data.data.forEach((val) => {
-                        document.getElementById("province").appendChild(createOption(val.provinceid, val.name_th));
+                        document.getElementById("hospitaltype").appendChild(createOption(val.hospitaltype, val.hospitaltype));
                     });
-                    document.getElementById("province").disabled = false;
+                    document.getElementById("hospitaltype").disabled = false;
                 }
             });
 
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                    };
-
-                    map.setCenter(pos);
-
-                    geocoder
-                        .geocode({ location: pos })
-                        .then((response) => {
-                            document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
-                        })
-                        .catch((e) => window.alert("Geocoder failed due to: " + e));
-
-                    markers.push(
-                        new AdvancedMarkerElement({
-                            position: pos,
-                            map,
-                        })
-                    );
-
-                    getHostpitals(pos, 1);
-                },
-                (error) => {
-                    geocoder.geocode({ address: "Bangkok" }, function (results, status) {
-                        document.getElementById("current_loc").innerHTML = results[0]?.formatted_address;
-
-                        var bkkplaceid = results[0].place_id;
-                        provinceLayer.style = (options) => {
-                            if (options.feature.placeId == "ChIJ82ENKDJgHTERxw-LhWOFRTY") {
-                                return featureStyleOptions;
-                            }
-                        };
-
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            map.setCenter(results[0].geometry.location);
-                        }
-
-                        document.getElementById("province").selectedText = "กรุงเทพมหานคร";
-                        const bound = {
-                            east: results[0].geometry.bounds.Jh.hi,
-                            west: results[0].geometry.bounds.Jh.lo,
-                            north: results[0].geometry.bounds.Zh.hi,
-                            south: results[0].geometry.bounds.Zh.lo,
-                        };
-
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            map.setCenter(results[0].geometry.location);
-                            map.fitBounds(bound, 10);
-                        }
-
-                        getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "pid", 1, 1);
-                    });
-                },
-                {
-                    timeout: 10000,
-                    maximumAge: 10000,
-                    enableHighAccuracy: true,
-                }
-            );
-        } else {
-            geocoder.geocode({ address: "Bangkok" }, function (results, status) {
-                document.getElementById("current_loc").innerHTML = results[0]?.formatted_address;
-                var bkkplaceid = results[0].place_id;
-                provinceLayer.style = (options) => {
-                    if (options.feature.placeId == "ChIJ82ENKDJgHTERxw-LhWOFRTY") {
-                        return featureStyleOptions;
+        document.getElementById("hospitaltype").addEventListener("change", (e) => {
+            getTypeHostpitals(currentPos, 1, e.target.value);
+            fetch("https://knowdengueth.flexsolutions.business/api.php?provinces&type=" + e.target.value)
+                .then((res) => res.json())
+                .then((data) => {
+                    if (!data.error) {
+                        document.getElementById("province").appendChild(createOption(0, "--เลือกจังหวัด--"));
+                        data.data.forEach((val) => {
+                            document.getElementById("province").appendChild(createOption(val.provinceid, val.name_th));
+                        });
+                        document.getElementById("province").disabled = false;
                     }
-                };
-
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                }
-
-                document.getElementById("province").selectedText = "กรุงเทพมหานคร";
-                const bound = {
-                    east: results[0].geometry.bounds.Jh.hi,
-                    west: results[0].geometry.bounds.Jh.lo,
-                    north: results[0].geometry.bounds.Zh.hi,
-                    south: results[0].geometry.bounds.Zh.lo,
-                };
-
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    map.fitBounds(bound, 10);
-                }
-
-                getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "pid", 1, 1);
-            });
-        }
+                });
+        });
 
         document.getElementById("province").addEventListener("change", (ev) => {
             if (ev.target.value == "0") {
@@ -1856,22 +1978,12 @@ select::-ms-expand {
 
             resetDropdown("subdistrict");
 
-            let district = ev.target.options[ev.target.selectedIndex].text;
-
-            map.data.setStyle({});
-            markers.forEach((m) => m.setMap(null));
-
             geocoder.geocode({ address: district }, function (results, status) {
                 districtLayer.style = (options) => {
                     if (options.feature.placeId == results[0].place_id) {
                         return featureStyleOptions;
                     }
                 };
-
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    map.fitBounds(results[0].geometry.bounds, 10);
-                }
 
                 getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "did", ev.target.value, 1);
             });
@@ -1896,9 +2008,6 @@ select::-ms-expand {
 
             let subdistrict = ev.target.options[ev.target.selectedIndex].text;
 
-            map.data.setStyle({});
-            markers.forEach((m) => m.setMap(null));
-
             subdistrict += " " + document.getElementById("district").options[document.getElementById("district").selectedIndex].text;
 
             geocoder.geocode({ address: subdistrict }, function (results, status) {
@@ -1908,24 +2017,77 @@ select::-ms-expand {
                     }
                 };
 
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    map.fitBounds(results[0].geometry.bounds, 10);
-                }
-
                 getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "sid", ev.target.value, 1);
             });
         });
 
-        document.getElementById("searchBtn").addEventListener("click", doSearch(1));
+        document.getElementById("searchBtn").addEventListener("click", (e) => {
+            doSearch(currentPos, 1);
+        });
         document.getElementById("searchBox").addEventListener("keyup", (e) => {
             if (e.keyCode === 13) {
-                doSearch(1);
+                doSearch(currentPos, 1);
             }
         });
+
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+                    currentPos = pos;
+                    geocoder
+                        .geocode({ location: pos })
+                        .then((response) => {
+                            document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                        })
+                        .catch((e) => window.alert("Geocoder failed due to: " + e));
+                    getHostpitals(pos, 1);
+                },
+                (error) => {
+                    geocoder.geocode({ address: "Bangkok" }, function (results, status) {
+                        const pos = {
+                            lat: results[0].geometry.location.lat(),
+                            lng: results[0].geometry.location.lng(),
+                        };
+                        currentPos = pos;
+                        geocoder
+                            .geocode({ location: pos })
+                            .then((response) => {
+                                document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                            })
+                            .catch((e) => window.alert("Geocoder failed due to: " + e));
+                        getHostpitals(pos, 1);
+                    });
+                },
+                {
+                    timeout: 10000,
+                    maximumAge: 10000,
+                    enableHighAccuracy: true,
+                }
+            );
+        } else {
+            geocoder.geocode({ address: "Bangkok" }, function (results, status) {
+                const pos = {
+                    lat: results[0].geometry.location.lat(),
+                    lng: results[0].geometry.location.lng(),
+                };
+                currentPos = pos;
+                geocoder
+                    .geocode({ location: pos })
+                    .then((response) => {
+                        document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                    })
+                    .catch((e) => window.alert("Geocoder failed due to: " + e));
+                getHostpitals(pos, 1);
+            });
+        }
     };
 </script>
 <script>
+    /*
     $(document).ready(function () {
         const geocoder = new google.maps.Geocoder();
 
@@ -1942,7 +2104,13 @@ select::-ms-expand {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude,
                     };
-                    getAllHospitals(pos);
+                    geocoder
+                        .geocode({ location: pos })
+                        .then((response) => {
+                            document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                        })
+                        .catch((e) => window.alert("Geocoder failed due to: " + e));
+                    getHostpitals(pos, 1);
                 },
                 (error) => {
                     geocoder.geocode({ address: "Bangkok" }, function (results, status) {
@@ -1950,7 +2118,13 @@ select::-ms-expand {
                             lat: results[0].geometry.location.lat(),
                             lng: results[0].geometry.location.lng(),
                         };
-                        getAllHospitals(pos);
+                        geocoder
+                            .geocode({ location: pos })
+                            .then((response) => {
+                                document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                            })
+                            .catch((e) => window.alert("Geocoder failed due to: " + e));
+                        getHostpitals(pos, 1);
                     });
                 },
                 {
@@ -1965,7 +2139,13 @@ select::-ms-expand {
                     lat: results[0].geometry.location.lat(),
                     lng: results[0].geometry.location.lng(),
                 };
-                getAllHospitals(pos);
+                geocoder
+                    .geocode({ location: pos })
+                    .then((response) => {
+                        document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                    })
+                    .catch((e) => window.alert("Geocoder failed due to: " + e));
+                getHostpitals(pos, 1);
             });
         }
 
@@ -1978,4 +2158,5 @@ select::-ms-expand {
         });
         
     });
+    */
 </script>
