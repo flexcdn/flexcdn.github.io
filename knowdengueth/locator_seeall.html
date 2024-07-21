@@ -924,8 +924,7 @@ select::-ms-expand {
                 [
                     "click",
                     (e) => {
-                        // popMarker(val.hospitalname);
-                        window.location.href = "/locator#map";
+                        window.location.href = "./?q=" + encodeURI(val.hospitalname);
                     },
                 ],
             ],
@@ -1275,7 +1274,7 @@ select::-ms-expand {
                                 {
                                     type: "a",
                                     attrs: {
-                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
+                                        href: "./?q=" + encodeURI(val.hospitalname),
                                         target: "_blank",
                                         class: "card__hospital-mapbutton",
                                     },
@@ -1360,6 +1359,7 @@ select::-ms-expand {
 
                 document.getElementById('totalHospital').innerHTML = data.data.total;
                 document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
+                el.innerHTML = "";
                 data.data.rows.forEach((val) => {
                     renderCard(el, val);
                 });
@@ -1893,10 +1893,27 @@ select::-ms-expand {
                         document.getElementById("hospitaltype").appendChild(createOption(val.hospitaltype, val.hospitaltype));
                     });
                     document.getElementById("hospitaltype").disabled = false;
+
+                    getTypeHostpitals(currentPos, 1, 0);
+                    fetch("https://knowdengueth.flexsolutions.business/api.php?provinces&type=0")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            if (!data.error) {
+                                document.getElementById("province").appendChild(createOption(0, "--เลือกจังหวัด--"));
+                                data.data.forEach((val) => {
+                                    document.getElementById("province").appendChild(createOption(val.provinceid, val.name_th));
+                                });
+                                document.getElementById("province").disabled = false;
+                            }
+                        });
                 }
             });
 
         document.getElementById("hospitaltype").addEventListener("change", (e) => {
+            resetDropdown("province");
+            resetDropdown("district");
+            resetDropdown("subdistrict");
+            
             getTypeHostpitals(currentPos, 1, e.target.value);
             fetch("https://knowdengueth.flexsolutions.business/api.php?provinces&type=" + e.target.value)
                 .then((res) => res.json())
@@ -1938,16 +1955,10 @@ select::-ms-expand {
                         return featureStyleOptions;
                     }
                 };
-                const bound = {
-                    east: results[0].geometry.bounds.Jh.hi,
-                    west: results[0].geometry.bounds.Jh.lo,
-                    north: results[0].geometry.bounds.Zh.hi,
-                    south: results[0].geometry.bounds.Zh.lo,
-                };
-
+                
                 if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
-                    map.fitBounds(bound, 10);
+                    map.fitBounds(results[0].geometry.bounds, 10);
                 }
 
                 currentPos = {
@@ -1977,6 +1988,8 @@ select::-ms-expand {
             }
 
             resetDropdown("subdistrict");
+
+            let district = ev.target.options[ev.target.selectedIndex].text;
 
             geocoder.geocode({ address: district }, function (results, status) {
                 districtLayer.style = (options) => {

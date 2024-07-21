@@ -95,26 +95,26 @@ if(isset($_GET['provinces']) && isset($_GET['type'])){
     }
     
 }elseif(isset($_GET['search']) && !empty($_GET['q'])){
-
+    
     try{
+        $page = 1;
+        if(!empty($_GET['page'])){
+            $page = intval($_GET['page']);
+        }
+        $size = 10;
+        if(!empty($_GET['size'])){
+            $size = intval($_GET['size']);
+        }
         if($result = $mysql->query("SELECT COUNT(h.hospitalid) num FROM hospitals h WHERE h.hospitalname LIKE '%".$mysql->real_escape_string($_GET['q'])."%'")){
             $row = $result->fetch_assoc();
             $total = $row['num'];
             $pages = ceil($total/$size);
             $result->close();
-
-            $page = 1;
-            if(!empty($_GET['page'])){
-                $page = intval($_GET['page']);
-            }
+            
             if($page < 0){
                 $page = 1;
             }elseif($page > $pages){
                 $page = $pages;
-            }
-            $size = 10;
-            if(!empty($_GET['size'])){
-                $size = intval($_GET['size']);
             }
 
             $sort = " ORDER BY distance ASC";
@@ -126,13 +126,14 @@ if(isset($_GET['provinces']) && isset($_GET['type'])){
 
             $result = $mysql->query("SELECT h.hospitalid, h.hospitaltype, ST_DISTANCE(h.location, GeomFromText('Point(".floatval($_GET['lon'])." ".floatval($_GET['lat']).")')) * 111.38 AS distance, h.hospitalname, h.address, h.hours, h.phone, h.linelink, h.lineid, h.email, h.website, h.note, ST_X(h.location) lon, ST_Y(h.location) lat FROM hospitals h WHERE h.hospitalname LIKE '%".$mysql->real_escape_string($_GET['q'])."%' ".$sort." LIMIT ".(($page - 1)*$size).", ".$size);
             $rows = [];
+            
             if($result !== false){
                 while($row = $result->fetch_assoc()){
                     $rows[] = $row;
                 }
                 $result->close();
             }
-
+            
             echo json_encode(['error'=>false, 'data'=>['total'=>$total, 'pages'=>$pages, 'rows'=>$rows]]);
         }else{
             echo json_encode(['error'=>false, 'data'=>['total'=>0, 'pages'=>0, 'rows'=>[]]]);
