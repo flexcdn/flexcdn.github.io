@@ -2,7 +2,7 @@
 <div id="locatorwarp">
     <div id="locatorheadwarp">
         <div class="locatorheadwarpin">
-            <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_locator.png" /></div>
+            <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_locator2.png" /></div>
 
             <div class="locatorheadcol2">
                 <div class="locatorheadcol2top">สถานพยาบาลที่สามารถเข้ารับวัคซีนไข้เลือดออก</div>
@@ -194,6 +194,21 @@ body {
 }
 .footer__top {
     border-top: 0 none transparent !important;
+}
+div.ui-dialog > div.external-link-popup-content > div.external-link-popup-body > p {
+    font-size: 0px !important;
+    display: none !important;
+}
+div.ui-dialog > div.external-link-popup-content > div.external-link-popup-body::before {
+	content: 'ท่านสามารถศึกษาข้อมูลเพิ่มเติมจากเว็บไซต์สถานพยาบาลดังกล่าวได้ โดยเว็บไซต์ที่ท่านต้องการไปเยี่ยมชมอยู่นอกเหนือการดูแลของเรา';
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+    color: #0f0f0f !important;
+    display: block;
+    font-size: 1em !important;
+    white-space: normal;
+    max-width: 440px;
+    margin: auto;
 }
 
 /* Global Class */
@@ -867,7 +882,7 @@ select::-ms-expand {
     
     var map = null;
     var markers = [];
-    const iconurl = "https://flexcdn.github.io/knowdengueth/pin_locator_sml3.png";
+    const iconurl = "https://flexcdn.github.io/knowdengueth/pin_locator_sml4.png";
     var currentPage = 1;
 
     const resetDropdown = (name) => {
