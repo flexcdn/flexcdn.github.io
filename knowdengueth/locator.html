@@ -1754,10 +1754,9 @@ select::-ms-expand {
                     $el.removeAttribute("disabled");
                 }
 
-                console.log(markers.length);
-
                 if(markers.length == 1){
                     popMarker(markers[0].title);
+                    document.getElementById("map").scrollIntoView();
                 }
             });
     };
