@@ -93,6 +93,8 @@
                     </div>
                 </div>
 
+                <div class="knowclearallresp">&nbsp;</div>
+
                 <div class="locatortoolmap-box locatortoolmap-box2">
                     <label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
 
@@ -101,7 +103,6 @@
                     <div class="knowclearall">&nbsp;</div>
                 </div>
 
-
                 <div class="locatortoolmap-box locatortoolmap-box3">
                     <label class="locatortoolmap-label">จังหวัด</label>
 
@@ -109,6 +110,8 @@
 
                     <div class="knowclearall">&nbsp;</div>
                 </div>
+
+                <div class="knowclearallresp">&nbsp;</div>
 
                 <div class="locatortoolmap-box locatortoolmap-box4">
                     <label class="locatortoolmap-label">อำเภอ/เขต</label>
@@ -576,6 +579,9 @@ select::-ms-expand {
 .locatortoolmap-box2 > div {
 
 }
+.knowclearallresp {
+    display: none;
+}
 
 /* Locator Card Class */
 
@@ -768,6 +774,7 @@ select::-ms-expand {
 }
 .-seeall > div.card__hospital-line,
 .-seeall > div.card__hospital-email {
+
 }
 .-seeallbtn {
     float: none !important;
@@ -802,7 +809,40 @@ select::-ms-expand {
     border: 1px solid #63d5b4;
 }
 
+@media (max-width: 1359px) {
+
+#allhospitals {
+    max-width: 745px;
+}
+#locatortoolmap-filtertools {
+    max-width: 800px;
+}
+.locatortoolmap-box {
+    width: 50% !important;
+    max-width: 100% !important;
+    padding: 5px !important;
+}
+.knowclearallresp {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    height: 1px !important;
+}
+.locatortoolmap-box2 > label,
+.locatortoolmap-label {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0px !important;
+    text-align: center !important;
+}
+.locatortoolmap-search {
+    margin-top: 35px !important;
+}
+
+}
+
 @media (max-width: 1345px) {
+
     #locatortoolmap-filtertools {
         padding-top: 0px !important;
     }
@@ -812,19 +852,14 @@ select::-ms-expand {
     .locatortoolmap-select {
         width: 100% !important;
     }
-    .locatortoolmap-label {
-        text-align: left;
-        width: 100% !important;
-    }
+
+
 }
 
 @media (max-width: 1080px) {
-    #locatortoolmap {
-        width: 57% !important;
-    }
-    #locatortoollist {
-        width: 42% !important;
-    }
+
+
+
 }
 
 @media (max-width: 935px) {
@@ -859,6 +894,14 @@ select::-ms-expand {
         width: 100% !important;
         max-width: 100% !important;
     }
+}
+
+@media (max-width: 759px) {
+
+#allhospitals {
+    max-width: 390px;
+}
+
 }
 
 @media (max-width: 481px) {

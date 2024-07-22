@@ -56,7 +56,7 @@
             <!--<img src="https://www.prachachat.net/wp-content/uploads/2023/08/Google-Maps.png" class="locatortoolmapbox"/>-->
 
             <div id="locatortoolmap-filtertools">
-                <div class="locatortoolmap-box locatortoolmap-box1">
+                <div id="locatortoolmap-box1" class="locatortoolmap-box locatortoolmap-box1">
                     <div class="locatortoolmap-search">
                         <input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="ค้นหาจากชื่อสถานพยาบาล..." type="text" />
                         <button class="locatortoolmap-searchButton" id="searchBtn" type="button">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="locatortoolmap-box locatortoolmap-box2">
+                <div id="locatortoolmap-box2" class="locatortoolmap-box locatortoolmap-box2">
                     <label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
 
                     <div class="locatortoolmap-select"><select id="hospitaltype"></select></div>
@@ -88,7 +88,7 @@
                     <div class="knowclearall">&nbsp;</div>
                 </div>
 
-                <div class="locatortoolmap-box locatortoolmap-box3">
+                <div id="locatortoolmap-box3" class="locatortoolmap-box locatortoolmap-box3">
                     <label class="locatortoolmap-label">จังหวัด</label>
 
                     <div class="locatortoolmap-select"><select id="province"></select></div>
@@ -96,7 +96,7 @@
                     <div class="knowclearall">&nbsp;</div>
                 </div>
 
-                <div class="locatortoolmap-box locatortoolmap-box4">
+                <div id="locatortoolmap-box4" class="locatortoolmap-box locatortoolmap-box4">
                     <label class="locatortoolmap-label">อำเภอ/เขต</label>
 
                     <div class="locatortoolmap-select"><select id="district"></select></div>
@@ -104,7 +104,7 @@
                     <div class="knowclearall">&nbsp;</div>
                 </div>
 
-                <div class="locatortoolmap-box locatortoolmap-box5">
+                <div id="locatortoolmap-box5" class="locatortoolmap-box locatortoolmap-box5">
                     <label class="locatortoolmap-label">แขวง/ตำบล</label>
 
                     <div class="locatortoolmap-select"><select id="subdistrict"></select></div>
@@ -687,30 +687,55 @@ select::-ms-expand {
     padding-top: 20px !important;
 }
 
-@media (max-width: 1345px) {
-    #locatortoolmap-filtertools {
-        padding-top: 0px !important;
-    }
-    .locatortoolmap-box1 {
-        padding-top: 45px !important;
-        padding-bottom: 0px !important;
-    }
-    .locatortoolmap-select {
-        width: 100% !important;
-    }
-    .locatortoolmap-label {
-        text-align: left;
-        width: 100% !important;
-    }
+@media (max-width: 1360px) {
+
+.locatortoolmap-box2 > label,
+.locatortoolmap-box3 > label,
+.locatortoolmap-box4 > label,
+.locatortoolmap-box5 > label {
+    min-width: 40px;
+    width: 30% !important;
+    max-width: 100px;
+    margin-top: 0px;
+    font-size: 12px;
+    line-height: 110%;
+}
+.locatortoolmap-select {
+    width: 60% !important;
+    max-width: 155px !important;
+}
+.locatortoolmap-box1 {
+    padding-left: 0px;
+    padding-top: 35px !important;
+    padding-bottom: 20px !important;
+    min-height: 40px;
+    display: flex;
+}
+.locatortoolmap-search {
+    max-width: 460px;
+    margin-left: auto;
+}
+#locatortoolmap-filtertools {
+    padding-top: 0px !important;
+}
+.locatortoolmap-label {
+    text-align: right;
+}
+
 }
 
 @media (max-width: 1080px) {
-    #locatortoolmap {
-        width: 57% !important;
-    }
-    #locatortoollist {
-        width: 42% !important;
-    }
+
+#locatortoolmap {
+    width: 57% !important;
+}
+#locatortoollist {
+    width: 42% !important;
+}
+.locatortoolmap-select {
+    max-width: 130px !important;
+}
+
 }
 
 @media (max-width: 935px) {
@@ -719,32 +744,70 @@ select::-ms-expand {
     }
 }
 
+@media (max-width: 800px) {
+
+.locatortoolmap-select {
+    max-width: 110px !important;
+}
+
+}
+
 @media (max-width: 767px) {
-    .locatorheadcol2top {
-        font-size: 28px !important;
-        height: auto !important;
-        line-height: 105% !important;
-        padding-bottom: 10px !important;
-    }
-    #locatortoolmap {
-        width: 100% !important;
-        float: none !important;
-        position: static !important;
-    }
-    #locatortoolmap-filtertools {
-        max-width: 360px;
-        margin: auto;
-    }
-    #locatortoollist {
-        width: 100% !important;
-        float: none !important;
-        position: static !important;
-    }
-    #locatortoolmap-filtertools > div.locatortoolmap-box {
-        float: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
+
+.locatorheadcol2top {
+    font-size: 28px !important;
+    height: auto !important;
+    line-height: 105% !important;
+    padding-bottom: 10px !important;
+}
+#locatortoolmap {
+    width: 100% !important;
+    float: none !important;
+    position: static !important;
+}
+#locatortoolmap-filtertools {
+    max-width: 360px;
+    margin: auto;
+}
+#locatortoollist {
+    width: 100% !important;
+    float: none !important;
+    position: static !important;
+}
+#locatortoolmap-filtertools > div.locatortoolmap-box {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.locatortoolmap-select {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+.locatortoolmap-box2 > label,
+.locatortoolmap-box3 > label,
+.locatortoolmap-box4 > label,
+.locatortoolmap-box5 > label {
+    width: 100% !important;
+    text-align: center;
+    max-width: 100% !important;
+    font-size: 14px;
+}
+.locatortoolmap-box1 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+#mapinfowindow > h1 {
+    font-size: 21px;
+}
+#mapinfowindow > a.card__hospital-mapbutton {
+    font-size: 10px;
+    background-size: 20px;
+}
+button.gm-ui-hover-effect {
+    width: 34px !important;
+    height: 34px !important;
+}
+
 }
 
 @media (max-width: 697px) {
@@ -1757,6 +1820,10 @@ select::-ms-expand {
                 if(markers.length == 1){
                     popMarker(markers[0].title);
                     document.getElementById("map").scrollIntoView();
+                    document.getElementById("locatortoolmap-box2").style.display = "none";
+                    document.getElementById("locatortoolmap-box3").style.display = "none";
+                    document.getElementById("locatortoolmap-box4").style.display = "none";
+                    document.getElementById("locatortoolmap-box5").style.display = "none";
                 }
             });
     };
