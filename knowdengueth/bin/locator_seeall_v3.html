@@ -1,141 +1,106 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <div id="locatorwarp">
-    <div id="locatorheadwarp">
-        <div class="locatorheadwarpin">
-            <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_locator2.png" /></div>
+<div id="locatorheadwarp">
+<div class="locatorheadwarpin">
+<div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_locator2.png" /></div>
 
-            <div class="locatorheadcol2">
-                <div class="locatorheadcol2top">สถานพยาบาลใกล้คุณที่แนะนำการฉีดวัคซีนไข้เลือดออก</div>
+<div class="locatorheadcol2">
+<div class="locatorheadcol2top">สถานพยาบาลที่สามารถเข้ารับวัคซีนไข้เลือดออก</div>
 
-                <div class="locatorheadcol2bottom">ถึงเวลาปรึกษาแพทย์เพื่อเพิ่มเกราะเกี่ยวกับวิธีการป้องกันไข้เลือดออกและการฉีดวัคซีน</div>
-            </div>
-
-            <div class="knowclearall">&nbsp;</div>
-        </div>
-    </div>
-    <!-- /locatorheadwarp -->
-
-    <div id="locatorshowadress">
-        <div class="locatorshowadress-header">
-            <svg
-                class="locatorshowadress-mapbuttonpin"
-                data-arp-injected="true"
-                fill="#c12b2c"
-                height="30px"
-                id="Capa_1"
-                version="1.1"
-                viewbox="0 0 297 297"
-                width="30px"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-                <g>
-                    <path
-                        d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645   c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645   C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892   c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"
-                    ></path>
-                    <path
-                        d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614   c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901   c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104   C179.265,127.948,165.464,141.901,148.5,141.901z"
-                    ></path>
-                </g>
-            </svg>
-            ตอนนี้คุณอยู่ที่
-        </div>
-
-        <div class="locatorshowadress-adress" id="current_loc"> &nbsp; </div>
-
-        <div class="knowclearall">&nbsp;</div>
-    </div>
-    <!-- /locatorshowadress -->
-
-    <div id="locatortooldiv">
-        <div class="locatortoolmap-defualt" id="locatortoolmap">
-            <div id="locatortoolmap-header">คลินิกใกล้คุณ</div>
-
-            <div id="map">&nbsp;</div>
-            <!--<img src="https://www.prachachat.net/wp-content/uploads/2023/08/Google-Maps.png" class="locatortoolmapbox"/>-->
-
-            <div id="locatortoolmap-filtertools">
-                <div id="locatortoolmap-box1" class="locatortoolmap-box locatortoolmap-box1">
-                    <div class="locatortoolmap-search">
-                        <input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="ค้นหาจากชื่อสถานพยาบาล..." type="text" />
-                        <button class="locatortoolmap-searchButton" id="searchBtn" type="button">
-                            <svg
-                                data-arp-injected="true"
-                                fill="#143858"
-                                height="15px"
-                                id="Capa_1"
-                                version="1.1"
-                                viewbox="0 0 183.792 183.792"
-                                width="15px"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
-                                <path
-                                    d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22  c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583  c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0  C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806  c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25  c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div id="locatortoolmap-box2" class="locatortoolmap-box locatortoolmap-box2">
-                    <label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
-
-                    <div class="locatortoolmap-select"><select id="hospitaltype"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div id="locatortoolmap-box3" class="locatortoolmap-box locatortoolmap-box3">
-                    <label class="locatortoolmap-label">จังหวัด</label>
-
-                    <div class="locatortoolmap-select"><select id="province"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div id="locatortoolmap-box4" class="locatortoolmap-box locatortoolmap-box4">
-                    <label class="locatortoolmap-label">อำเภอ/เขต</label>
-
-                    <div class="locatortoolmap-select"><select id="district"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div id="locatortoolmap-box5" class="locatortoolmap-box locatortoolmap-box5">
-                    <label class="locatortoolmap-label">แขวง/ตำบล</label>
-
-                    <div class="locatortoolmap-select"><select id="subdistrict"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div class="knowclearall">&nbsp;</div>
-            </div>
-        </div>
-
-        <div class="locatortoollist-defualt" id="locatortoollist">
-            <div id="locatortoollist-header">ผลการค้นหา</div>
-            <!-- START CARD LOOP -->
-
-            <div id="hospitalist">&nbsp;</div>
-
-            <div id="allhospitals">&nbsp;</div>
-
-            <div class="locatortoollist-div" id="locatortoollist-button">
-                <button class="locatortoollist-button1" id="btnseemore">ดูเพิ่มเติม</button><button class="locatortoollist-button1" id="btnseemap">ดูแผนที่</button><button class="locatortoollist-button2" id="btnseeall">ดูทั้งหมด</button>
-            </div>
-        </div>
-
-        <div class="knowclearall">&nbsp;</div>
-    </div>
-    <!-- /locatortooldiv -->
+<div class="locatorheadcol2bottom">ถึงเวลาเพิ่มเกราะป้องกันด้วยการฉีดวัคซีนไข้เลือดออก</div>
 </div>
-<style type="text/css">
- 
-@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+</div>
+<!-- /locatorheadwarp -->
+
+<div id="locatorshowadress">
+<div class="locatorshowadress-header"><svg class="locatorshowadress-mapbuttonpin" data-arp-injected="true" fill="#c12b2c" height="30px" id="Capa_1" version="1.1" viewbox="0 0 297 297" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645   c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645   C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892   c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"></path> <path d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614   c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901   c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104   C179.265,127.948,165.464,141.901,148.5,141.901z"></path> </g> </svg> ตอนนี้คุณอยู่ที่</div>
+
+<div class="locatorshowadress-adress" id="current_loc">&nbsp;</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+<!-- /locatorshowadress -->
+
+<div id="locatortooldiv">
+<div id="map" style="display: none;">&nbsp;</div>
+
+<div class="locatortoollist-defualt -fullwidth" id="locatortoollist">
+<div id="locatortoollist-header">แสดงสถานที่ทั้งหมด</div>
+
+<div id="locatortoolmap-filtertools">
+<div class="locatortoolmap-box locatortoolmap-box0"><label class="locatortoolmap-label">Sort/จัดเรียง</label>
+
+<div class="locatortoolmap-select"><select id="sortcard"><option value="Nearest">Nearest/ใกล้ฉันที่สุด</option><option value="A-Z">A-Z/ตามชื่อ</option> </select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="locatortoolmap-box locatortoolmap-box1">
+<div class="locatortoolmap-search"><input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="ค้นหาจากชื่อสถานพยาบาล..." type="text" /><button class="locatortoolmap-searchButton" id="searchBtn" type="button"><svg data-arp-injected="true" fill="#143858" height="15px" id="Capa_1" version="1.1" viewbox="0 0 183.792 183.792" width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <path d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22  c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583  c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0  C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806  c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25  c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"></path> </svg></button></div>
+</div>
+
+<div class="knowclearallresp">&nbsp;</div>
+
+<div class="locatortoolmap-box locatortoolmap-box2"><label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
+
+<div class="locatortoolmap-select"><select id="hospitaltype"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="locatortoolmap-box locatortoolmap-box3"><label class="locatortoolmap-label">จังหวัด</label>
+
+<div class="locatortoolmap-select"><select id="province"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="knowclearallresp">&nbsp;</div>
+
+<div class="locatortoolmap-box locatortoolmap-box4"><label class="locatortoolmap-label">อำเภอ/เขต</label>
+
+<div class="locatortoolmap-select"><select id="district"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="locatortoolmap-box locatortoolmap-box5"><label class="locatortoolmap-label">แขวง/ตำบล</label>
+
+<div class="locatortoolmap-select"><select id="subdistrict"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+<!-- START CARD LOOP --><!-- <div id="hospitalist">&nbsp;</div> -->
+
+<div class="locatortoollist-div">
+<div id="locatortoollist-shownum">จำนวนสถานที่ <span id="totalHospital">99</span></div>
+
+<div id="locatortoollist-page">หน้า <span id="selectedPage">1/99</span></div>
+
+<div class="locatortool-clear">&nbsp;</div>
+</div>
+
+<div id="allhospitals">&nbsp;</div>
+
+<div class="locatortoollist-div" id="locatortoollist-button"><!--
+                <button class="locatortoollist-button1" id="btnseemore">ดูเพิ่มเติม</button>
+                <button class="locatortoollist-button2" id="btnseeall">ดูทั้งหมด</button>
+                -->
+<div class="pagination"><a href="#">«</a> <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">»</a></div>
+
+<hr /><a class="locatortoollist-button1" href="/locator" id="btnseemap" target="_parent">ดูแผนที่</a></div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+<!-- /locatortooldiv --></div>
+<style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Overwrite Class */
 body {
@@ -232,7 +197,7 @@ div.ui-dialog > div.external-link-popup-content > div.external-link-popup-body::
     /* FIX */
 }
 .locatorheadcol2top {
-    font-size: 34px;
+    font-size: 38px;
     height: 60px;
     line-height: 120%;
     overflow: hidden;
@@ -243,12 +208,12 @@ div.ui-dialog > div.external-link-popup-content > div.external-link-popup-body::
     background-size: 98%;
     color: #143858;
     padding-top: 5px;
-    max-width: 770px;
+    max-width: 750px;
     margin-top: 22px;
     margin-bottom: 0px;
 }
 .locatorheadcol2bottom {
-    font-size: 22px;
+    font-size: 25.5px;
     line-height: 100%;
     font-family: "Kanit", sans-serif;
     color: #0081a0;
@@ -382,6 +347,44 @@ button.gm-ui-hover-effect > span {
     padding-bottom: 15px;
     color: #1b374f;
 }
+.locatortoollist-div {
+    max-width: 1070px;
+    margin: auto;
+}
+#locatortoollist-shownum {
+    text-align: left;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #1b374f;
+    float: left;
+    width: 50%;
+}
+#locatortoollist-page {
+    float: left;
+    width: 50%;
+    text-align: right;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #1b374f;
+}
+.locatortool-clear {
+    float: none !important;
+    clear: both !important;
+}
+#allhospitals {
+    max-width: 1070px;
+    margin: auto;
+}
+#allhospitals::after {
+    content: "";
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+}
 .locatortoolmap-search {
     width: 100%;
     position: relative;
@@ -469,23 +472,28 @@ select::-ms-expand {
 #locatortoolmap-filtertools {
     padding-bottom: 25px;
     padding-top: 25px;
+    margin: auto;
+    border-bottom: 1px #c2d3dd solid;
+    margin-bottom: 35px;
 }
 .locatortoolmap-box {
     float: left;
     width: 50%;
     max-width: 360px;
     padding: 10px;
-    min-height: 70px;
+    min-height: 60px;
+}
+.locatortoolmap-box0  > div  > select {
+    background-color: #0081a0 !important;
+    color: #fff;
 }
 .locatortoolmap-box1 {
-    width: 100%;
-    max-width: 690px;
-    padding-left: 85px;
-    float: none;
-    display: block;
-    margin: auto;
+    width: 30%;
+    max-width: 345px;
 }
 .locatortoolmap-box2 {
+    width: 33%;
+    max-width: 380px;
 }
 .locatortoolmap-box2 > label {
     width: 25% !important;
@@ -493,6 +501,10 @@ select::-ms-expand {
     margin-top: -12px;
 }
 .locatortoolmap-box2 > div {
+
+}
+.knowclearallresp {
+    display: none;
 }
 
 /* Locator Card Class */
@@ -623,10 +635,11 @@ select::-ms-expand {
     color: #1b374f;
     font-weight: bold;
     text-decoration: none;
-    width: 49%;
+    width: 40%;
     font-size: 18px;
     font-family: "Kanit", sans-serif;
     cursor: pointer;
+    display: inline-block;
 }
 .locatortoollist-button1[disabled] {
     background-color: #333;
@@ -635,6 +648,11 @@ select::-ms-expand {
 .locatortoollist-button1:not([disabled]):hover {
     background-color: #0081a0;
     color: #c2d3dd;
+}
+#btnseemap {
+    display: block;
+    clear: both;
+    margin: auto;
 }
 .locatortoollist-button2 {
     background-color: #143858;
@@ -680,61 +698,91 @@ select::-ms-expand {
 }
 .-seeall > div.card__hospital-line,
 .-seeall > div.card__hospital-email {
+
 }
 .-seeallbtn {
     float: none !important;
     clear: both !important;
     padding-top: 20px !important;
 }
+.pagination {
+    display: block;
+    clear: both;
+    width: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 35px;
+}
 
-@media (max-width: 1360px) {
+.pagination a {
+  color: #1b374f;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #c2d3dd;
+  margin: 0 4px;
+}
+.pagination a:hover {
+    background-color: #0081a0;
+    color: #c2d3dd;
+}
+.pagination a.active {
+    background-color: #63d5b4;
+    color: #1b374f;
+    font-weight: bold;
+    border: 1px solid #63d5b4;
+}
 
-.locatortoolmap-box2 > label,
-.locatortoolmap-box3 > label,
-.locatortoolmap-box4 > label,
-.locatortoolmap-box5 > label {
-    min-width: 40px;
-    width: 30% !important;
-    max-width: 100px;
-    margin-top: 0px;
-    font-size: 12px;
-    line-height: 110%;
-}
-.locatortoolmap-select {
-    width: 60% !important;
-    max-width: 155px !important;
-}
-.locatortoolmap-box1 {
-    padding-left: 0px;
-    padding-top: 35px !important;
-    padding-bottom: 20px !important;
-    min-height: 40px;
-    display: flex;
-}
-.locatortoolmap-search {
-    max-width: 460px;
-    margin-left: auto;
+@media (max-width: 1359px) {
+
+#allhospitals {
+    max-width: 745px;
 }
 #locatortoolmap-filtertools {
-    padding-top: 0px !important;
+    max-width: 800px;
 }
+.locatortoolmap-box {
+    width: 50% !important;
+    max-width: 100% !important;
+    padding: 5px !important;
+}
+.knowclearallresp {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    height: 1px !important;
+}
+.locatortoolmap-box2 > label,
 .locatortoolmap-label {
-    text-align: right;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0px !important;
+    text-align: center !important;
 }
+.locatortoolmap-search {
+    margin-top: 35px !important;
+}
+
+}
+
+@media (max-width: 1345px) {
+
+    #locatortoolmap-filtertools {
+        padding-top: 0px !important;
+    }
+    .locatortoolmap-box1 {
+
+    }
+    .locatortoolmap-select {
+        width: 100% !important;
+    }
+
 
 }
 
 @media (max-width: 1080px) {
 
-#locatortoolmap {
-    width: 57% !important;
-}
-#locatortoollist {
-    width: 42% !important;
-}
-.locatortoolmap-select {
-    max-width: 130px !important;
-}
+
 
 }
 
@@ -744,76 +792,40 @@ select::-ms-expand {
     }
 }
 
-@media (max-width: 800px) {
-
-.locatortoolmap-select {
-    max-width: 110px !important;
-}
-
-}
-
 @media (max-width: 767px) {
-
-.locatorheadcol2top {
-    font-size: 28px !important;
-    height: auto !important;
-    line-height: 105% !important;
-    padding-bottom: 10px !important;
-}
-#locatortoolmap {
-    width: 100% !important;
-    float: none !important;
-    position: static !important;
-}
-#locatortoolmap-filtertools {
-    max-width: 360px;
-    margin: auto;
-}
-#locatortoollist {
-    width: 100% !important;
-    float: none !important;
-    position: static !important;
-}
-#locatortoolmap-filtertools > div.locatortoolmap-box {
-    float: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-}
-.locatortoolmap-select {
-    max-width: 100% !important;
-    width: 100% !important;
-}
-.locatortoolmap-box2 > label,
-.locatortoolmap-box3 > label,
-.locatortoolmap-box4 > label,
-.locatortoolmap-box5 > label {
-    width: 100% !important;
-    text-align: center;
-    max-width: 100% !important;
-    font-size: 14px;
-}
-.locatortoolmap-box1 {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-}
-#mapinfowindow > h1 {
-    font-size: 21px;
-}
-#mapinfowindow > a.card__hospital-mapbutton {
-    font-size: 10px;
-    background-size: 20px;
-}
-button.gm-ui-hover-effect {
-    width: 34px !important;
-    height: 34px !important;
-}
-
-}
-
-@media (max-width: 697px) {
-    .locatorheadcol1 {
-        margin-top: 26px;
+    .locatorheadcol2top {
+        font-size: 28px !important;
+        height: auto !important;
+        line-height: 105% !important;
+        padding-bottom: 10px !important;
     }
+    #locatortoolmap {
+        width: 100% !important;
+        float: none !important;
+        position: static !important;
+    }
+    #locatortoolmap-filtertools {
+        max-width: 360px;
+        margin: auto;
+    }
+    #locatortoollist {
+        width: 100% !important;
+        float: none !important;
+        position: static !important;
+    }
+    #locatortoolmap-filtertools > div.locatortoolmap-box {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 759px) {
+
+#allhospitals {
+    max-width: 390px;
+}
+
 }
 
 @media (max-width: 481px) {
@@ -826,13 +838,10 @@ button.gm-ui-hover-effect {
         padding-top: 15px !important;
     }
 }
-
- 
 </style>
-<!-- JS FOR DEMO -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&loading=async&callback=initMap&v=weekly" defer></script>
-<script>
+<!-- JS FOR DEMO --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&loading=async&callback=initMap&v=weekly" defer></script><script>
+    
+    
     var map = null;
     var markers = [];
     const iconurl = "https://flexcdn.github.io/knowdengueth/pin_locator_sml4.png";
@@ -851,7 +860,7 @@ button.gm-ui-hover-effect {
         return el;
     };
     const h = (node) => {
-        if (typeof node === "string") {
+        if (typeof node === "string" || typeof node === "number") {
             return document.createTextNode(node);
         }
 
@@ -881,19 +890,6 @@ button.gm-ui-hover-effect {
         return $el;
     };
 
-    const renderNotfound = () => {
-        const html = h({
-            type: "div",
-            attrs: {
-                class: "card card__notfound"
-            },
-            children: [
-                "ไม่พบโรงพยาบาลที่ค้นหา"
-            ]
-        });
-        document.getElementById("hospitalist").appendChild(html);
-    };
-
     const renderCard = (el, val) => {
         const html = h({
             type: "div",
@@ -905,13 +901,7 @@ button.gm-ui-hover-effect {
                 [
                     "click",
                     (e) => {
-                        popMarker(val.hospitalname);
-                        if (el.id == "allhospitals") {
-                            $("#locatortoolmap").removeClass("-maphidden");
-                            $(".card__hospital-listing").removeClass("-seeall");
-                            $("#locatortoollist-button").removeClass("-seeallbtn");
-                            $("#locatortoollist").removeClass("-fullwidth");
-                        }
+                        window.location.href = "./?q=" + encodeURI(val.hospitalname);
                     },
                 ],
             ],
@@ -951,7 +941,7 @@ button.gm-ui-hover-effect {
                                 },
                             ],
                         },
-                        val.hospitaltype,
+                        "โรงพยาบาลเอกชน",
                     ],
                 },
                 {
@@ -1261,7 +1251,7 @@ button.gm-ui-hover-effect {
                                 {
                                     type: "a",
                                     attrs: {
-                                        href: val.website,
+                                        href: "./?q=" + encodeURI(val.hospitalname),
                                         target: "_blank",
                                         class: "card__hospital-mapbutton",
                                     },
@@ -1327,264 +1317,267 @@ button.gm-ui-hover-effect {
         });
         el.appendChild(html);
     };
-
+    
     const getFilterHostpitals = (pos, field, pid, page) => {
-        if (page == 1) {
-            markers.forEach((marker) => {
-                marker.setMap(null);
-            });
-            markers = [];
-        }
-        const infoWindow = new google.maps.InfoWindow();
-        currentPage = page;
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&" + field + "=" + pid + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
+        currentPage = page;
+        let el = document.getElementById("allhospitals");
+        el.innerHTML = "";
+
+        const sort = document.getElementById('sortcard').value;
+
+        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&" + field + "=" + pid + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
             .then((res) => res.json())
             .then((data) => {
-                let el = document.getElementById("hospitalist");
-                if (page == 1) {
-                    el.innerHTML = "";
-                }
 
                 data.data.rows.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    marker.addListener("click", (e) => {
-                        const html = h({
-                            type: "div",
-                            attrs: {
-                                id: "mapinfowindow",
-                            },
-                            children: [
-                                {
-                                    type: "h1",
-                                    attrs: {
-                                        class: "heading",
-                                    },
-                                    children: [val.hospitalname],
-                                },
-                                {
-                                    type: "p",
-                                    attrs: {
-                                        class: "content",
-                                    },
-                                    children: [val.address],
-                                },
-                                {
-                                    type: "a",
-                                    attrs: {
-                                        class: "card__hospital-mapbutton",
-                                        target: "_blank",
-                                        href: val.website,
-                                    },
-                                    children: ["แผนที่การเดินทาง"],
-                                },
-                            ],
-                        });
-
-                        infoWindow.close();
-                        infoWindow.setContent(html);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
                     renderCard(el, val);
                 });
 
-                var $btn = document.getElementById("btnseemore"),
-                    elClone = $btn.cloneNode(true);
-                elClone.disabled = true;
-                $btn.parentNode.replaceChild(elClone, $btn);
+                document.getElementById('totalHospital').innerHTML = data.data.total;
+                document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
+                el.innerHTML = "";
+                data.data.rows.forEach((val) => {
+                    renderCard(el, val);
+                });
+                const pagecontainer = document.querySelector('div.pagination');
+                pagecontainer.innerHTML = '';
 
-                if (currentPage < data.data.pages) {
-                    const $el = document.getElementById("btnseemore");
-                    $el.disabled = false;
-                    $el.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        getFilterHostpitals(pos, field, pid, currentPage + 1);
-                    });
-                    $el.removeAttribute("disabled");
+                if(currentPage > 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getFilterHostpitals(pos, field, pid, currentPage - 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ "<" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ "<" ]
+                    }));
+                }
+
+                for (let i = 1; i <= data.data.pages; i++) {
+                    if (i == 1 || i == data.data.pages || i >= currentPage - 2 || i <= currentPage + 2) {
+                        pagecontainer.appendChild(h({
+                            type: "a",
+                            attrs: {
+                                href: "#",
+                                class: (i == currentPage)?"active":""
+                            },
+                            events: [
+                                [
+                                    "click",
+                                    (e) => {
+                                        e.preventDefault();
+                                        getFilterHostpitals(pos, field, pid, i);
+                                        return false;
+                                    },
+                                ]
+                            ],
+                            children: [ i ]
+                        }));
+                    }
+                }
+
+
+                if(currentPage < data.data.pages - 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getFilterHostpitals(pos, field, pid, currentPage + 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ ">" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ ">" ]
+                    }));
                 }
             });
-    };
-    const getAllHospitals = (pos) => {
-        fetch("https://knowdengueth.flexsolutions.business/api.php?allhospitals&lat=" + pos.lat + "&lon=" + pos.lng)
-            .then((res) => res.json())
-            .then((data) => {
-                const el = document.getElementById("allhospitals");
-                const infoWindow = new google.maps.InfoWindow();
 
-                el.innerHTML = "";
+        var dd = document.getElementById('sortcard'), ddClone = dd.cloneNode(true);
+        ddClone.value = dd.value;
+        dd.parentNode.replaceChild(ddClone, dd);
 
-                markers.forEach((marker) => {
-                    marker.setMap(null);
-                });
-                markers = [];
-
-                data.data.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    marker.addListener("click", (e) => {
-                        const html = h({
-                            type: "div",
-                            attrs: {
-                                id: "mapinfowindow",
-                            },
-                            children: [
-                                {
-                                    type: "h1",
-                                    attrs: {
-                                        class: "heading",
-                                    },
-                                    children: [val.hospitalname],
-                                },
-                                {
-                                    type: "p",
-                                    attrs: {
-                                        class: "content",
-                                    },
-                                    children: [val.address],
-                                },
-                                {
-                                    type: "a",
-                                    attrs: {
-                                        class: "card__hospital-mapbutton",
-                                        target: "_blank",
-                                        href: val.website,
-                                    },
-                                    children: ["แผนที่การเดินทาง"],
-                                },
-                            ],
-                        });
-
-                        infoWindow.close();
-                        infoWindow.setContent(html);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
-                    renderCard(el, val);
-                });
-            });
+        document.getElementById('sortcard').addEventListener("change", (e) => {
+            getFilterHostpitals(pos, field, pid, currentPage);
+        });
     };
     const getHostpitals = (pos, page) => {
-        if (page == 1) {
-            markers.forEach((marker) => {
-                marker.setMap(null);
-            });
-            markers = [];
-        }
-        const infoWindow = new google.maps.InfoWindow();
         currentPage = page;
+        let el = document.getElementById("allhospitals");
+        el.innerHTML = "";
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
+        const sort = document.getElementById('sortcard').value;
+        
+        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
             .then((res) => res.json())
             .then((data) => {
-                let el = document.getElementById("hospitalist");
-                if (page == 1) {
-                    el.innerHTML = "";
-                }
-
+                document.getElementById('totalHospital').innerHTML = data.data.total;
+                document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
                 data.data.rows.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    marker.addListener("click", (e) => {
-                        const html = h({
-                            type: "div",
-                            attrs: {
-                                id: "mapinfowindow",
-                            },
-                            children: [
-                                {
-                                    type: "h1",
-                                    attrs: {
-                                        class: "heading",
-                                    },
-                                    children: [val.hospitalname],
-                                },
-                                {
-                                    type: "p",
-                                    attrs: {
-                                        class: "content",
-                                    },
-                                    children: [val.address],
-                                },
-                                {
-                                    type: "a",
-                                    attrs: {
-                                        class: "card__hospital-mapbutton",
-                                        target: "_blank",
-                                        href: val.website,
-                                    },
-                                    children: ["แผนที่การเดินทาง"],
-                                },
-                            ],
-                        });
-
-                        infoWindow.close();
-                        infoWindow.setContent(html);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
                     renderCard(el, val);
                 });
-                var $btn = document.getElementById("btnseemore"),
-                    elClone = $btn.cloneNode(true);
-                elClone.disabled = true;
-                $btn.parentNode.replaceChild(elClone, $btn);
+                const pagecontainer = document.querySelector('div.pagination');
+                pagecontainer.innerHTML = '';
 
-                if (currentPage < data.data.pages) {
-                    const $el = document.getElementById("btnseemore");
-                    $el.disabled = false;
-                    $el.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        getHostpitals(pos, currentPage + 1);
-                    });
-                    $el.removeAttribute("disabled");
+                if(currentPage > 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getHostpitals(pos, currentPage - 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ "<" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ "<" ]
+                    }));
                 }
-            });
-    };
-    const popMarker = (title) => {
-        $("#btnseemap").hide();
-        for (i = 0; i < markers.length; i++) {
-            const el = markers[i].element;
 
-            if (el.title == title) {
-                google.maps.event.trigger(markers[i], "click", {});
-            }
-        }
-        map.setZoom(14);
+                for (let i = 1; i <= data.data.pages; i++) {
+                    if (i == 1 || i == data.data.pages || i >= currentPage - 2 || i <= currentPage + 2) {
+                        pagecontainer.appendChild(h({
+                            type: "a",
+                            attrs: {
+                                href: "#",
+                                class: (i == currentPage)?"active":""
+                            },
+                            events: [
+                                [
+                                    "click",
+                                    (e) => {
+                                        e.preventDefault();
+                                        getHostpitals(pos, i);
+                                        return false;
+                                    },
+                                ]
+                            ],
+                            children: [ i ]
+                        }));
+                    }
+                }
+
+
+                if(currentPage < data.data.pages - 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    getHostpitals(pos, currentPage + 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ ">" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ ">" ]
+                    }));
+                }
+                
+            });
+        var dd = document.getElementById('sortcard'), ddClone = dd.cloneNode(true);
+        ddClone.value = dd.value;
+        dd.parentNode.replaceChild(ddClone, dd);
+
+        document.getElementById('sortcard').addEventListener("change", (e) => {
+            getHostpitals(pos, currentPage);
+        });
     };
     const getTypeHostpitals = (pos, page, type) => {
         currentPage = page;
@@ -1713,125 +1706,140 @@ button.gm-ui-hover-effect {
             getTypeHostpitals(pos, currentPage, type);
         });
     };
-    const doSearch = (page) => {
-        
-        if (page == 1) {
-            markers.forEach((marker) => {
-                marker.setMap(null);
-            });
-            markers = [];
-        }
-        const infoWindow = new google.maps.InfoWindow();
-        currentPage = page;
-
+    const doSearch = (pos, page) => {
         const searchBox = document.getElementById("searchBox");
         if (searchBox.value == "") {
             return;
         }
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&lat=" + window.position.lat + "&lon=" + window.position.lng + "&page=" + page)
+        currentPage = page;
+        let el = document.getElementById("allhospitals");
+        el.innerHTML = "";
+
+        const sort = document.getElementById('sortcard').value;
+
+        fetch("https://knowdengueth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
             .then((res) => res.json())
             .then((data) => {
-                let el = document.getElementById("hospitalist");
-                if (page == 1) {
-                    el.innerHTML = "";
-                }
-
-                if(data.data.rows.length == 0){
-                    renderNotfound();
-                }
-
-                var bounds = new google.maps.LatLngBounds();
-
+                document.getElementById('totalHospital').innerHTML = data.data.total;
+                document.getElementById('selectedPage').innerHTML = currentPage + "/" + data.data.pages;
                 data.data.rows.forEach((val) => {
-                    const icon = document.createElement("img");
-                    icon.src = iconurl;
-
-                    const marker = new google.maps.marker.AdvancedMarkerElement({
-                        position: { lat: parseFloat(val.lat), lng: parseFloat(val.lon) },
-                        map: map,
-                        content: icon,
-                        title: val.hospitalname,
-                    });
-
-                    bounds.extend(marker.position);
-                    marker.addListener("click", (e) => {
-                        const html = h({
-                            type: "div",
-                            attrs: {
-                                id: "mapinfowindow",
-                            },
-                            children: [
-                                {
-                                    type: "h1",
-                                    attrs: {
-                                        class: "heading",
-                                    },
-                                    children: [val.hospitalname],
-                                },
-                                {
-                                    type: "p",
-                                    attrs: {
-                                        class: "content",
-                                    },
-                                    children: [val.address],
-                                },
-                                {
-                                    type: "a",
-                                    attrs: {
-                                        class: "card__hospital-mapbutton",
-                                        target: "_blank",
-                                        href: val.website,
-                                    },
-                                    children: ["แผนที่การเดินทาง"],
-                                },
-                            ],
-                        });
-
-                        infoWindow.close();
-                        infoWindow.setContent(html);
-                        infoWindow.open(marker.map, marker);
-
-                        document.getElementById("hos_" + val.hospitalid).scrollIntoView();
-                    });
-
-                    markers.push(marker);
-
                     renderCard(el, val);
                 });
+                const pagecontainer = document.querySelector('div.pagination');
+                pagecontainer.innerHTML = '';
 
-                map.fitBounds(bounds);
-
-                var $btn = document.getElementById("btnseemore"),
-                    elClone = $btn.cloneNode(true);
-                elClone.disabled = true;
-                $btn.parentNode.replaceChild(elClone, $btn);
-
-                if (currentPage < data.data.pages) {
-                    const $el = document.getElementById("btnseemore");
-                    $el.disabled = false;
-                    $el.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        doSearch(currentPage + 1);
-                    });
-                    $el.removeAttribute("disabled");
+                if(currentPage > 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    doSearch(pos, currentPage - 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ "<" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ "<" ]
+                    }));
                 }
 
-                if(markers.length == 1){
-                    popMarker(markers[0].title);
-                    document.getElementById("map").scrollIntoView();
-                    document.getElementById("locatortoolmap-box2").style.display = "none";
-                    document.getElementById("locatortoolmap-box3").style.display = "none";
-                    document.getElementById("locatortoolmap-box4").style.display = "none";
-                    document.getElementById("locatortoolmap-box5").style.display = "none";
+                for (let i = 1; i <= data.data.pages; i++) {
+                    if (i == 1 || i == data.data.pages || i >= currentPage - 2 || i <= currentPage + 2) {
+                        pagecontainer.appendChild(h({
+                            type: "a",
+                            attrs: {
+                                href: "#",
+                                class: (i == currentPage)?"active":""
+                            },
+                            events: [
+                                [
+                                    "click",
+                                    (e) => {
+                                        e.preventDefault();
+                                        doSearch(pos, i);
+                                        return false;
+                                    },
+                                ]
+                            ],
+                            children: [ i ]
+                        }));
+                    }
+                }
+
+
+                if(currentPage < data.data.pages - 1){
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#"
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    doSearch(pos, currentPage + 1);
+                                    return false;
+                                },
+                            ],
+                        ],
+                        children: [ ">" ]
+                    }));
+                }else{
+                    pagecontainer.appendChild(h({
+                        type: "a",
+                        attrs: {
+                            href: "#",
+                            disabled: true,
+                        },
+                        events: [
+                            [
+                                "click",
+                                (e) => {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            ]
+                        ],
+                        children: [ ">" ]
+                    }));
                 }
             });
+
+        var dd = document.getElementById('sortcard'), ddClone = dd.cloneNode(true);
+        ddClone.value = dd.value;
+        dd.parentNode.replaceChild(ddClone, dd);
+
+        document.getElementById('sortcard').addEventListener("change", (e) => {
+            doSearch(pos, currentPage);
+        });
     };
 
     window.initMap = async () => {
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-        const { LatLngBounds, LatLngBoundsLiteral } = await google.maps.importLibrary("core");
-
         var featureStyleOptions = {
             strokeColor: "#eaa532",
             strokeOpacity: 1.0,
@@ -1844,6 +1852,7 @@ button.gm-ui-hover-effect {
             disableDefaultUI: true,
             mapId: "7ba7b4dd9a3d916",
         });
+        var currentPos = null;
         var geocoder = new google.maps.Geocoder();
         var provinceLayer = map.getFeatureLayer("ADMINISTRATIVE_AREA_LEVEL_1");
         var districtLayer = map.getFeatureLayer("LOCALITY");
@@ -1851,7 +1860,7 @@ button.gm-ui-hover-effect {
         resetDropdown("province");
         resetDropdown("district");
         resetDropdown("subdistrict");
-        
+
         fetch("https://knowdengueth.flexsolutions.business/api.php?hospitaltypes")
             .then((res) => res.json())
             .then((data) => {
@@ -1877,113 +1886,12 @@ button.gm-ui-hover-effect {
                 }
             });
 
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                    };
-
-                    map.setCenter(pos);
-                    window.position = pos;
-
-                    geocoder
-                        .geocode({ location: pos })
-                        .then((response) => {
-                            document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
-                        })
-                        .catch((e) => window.alert("Geocoder failed due to: " + e));
-
-                    markers.push(
-                        new AdvancedMarkerElement({
-                            position: pos,
-                            map,
-                        })
-                    );
-
-                    const params = new Proxy(new URLSearchParams(window.location.search), {
-                        get: (searchParams, prop) => searchParams.get(prop),
-                    });
-                    if(params.q){
-                        document.getElementById("searchBox").value = params.q;
-                        document.getElementById("searchBtn").click();
-                    }else{
-                        getHostpitals(pos, 1);
-                    }
-                },
-                (error) => {
-                    geocoder.geocode({ address: "Bangkok" }, function (results, status) {
-                        document.getElementById("current_loc").innerHTML = results[0]?.formatted_address;
-
-                        var bkkplaceid = results[0].place_id;
-                        provinceLayer.style = (options) => {
-                            if (options.feature.placeId == "ChIJ82ENKDJgHTERxw-LhWOFRTY") {
-                                return featureStyleOptions;
-                            }
-                        };
-
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            map.setCenter(results[0].geometry.location);
-                            window.position = results[0].geometry.location;
-                        }
-
-                        document.getElementById("province").selectedText = "กรุงเทพมหานคร";
-                        
-
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            map.setCenter(results[0].geometry.location);
-                            map.fitBounds(results[0].geometry.bounds, 10);
-                        }
-
-                        const params = new Proxy(new URLSearchParams(window.location.search), {
-                            get: (searchParams, prop) => searchParams.get(prop),
-                        });
-                        if(params.q){
-                            document.getElementById("searchBox").value = params.q;
-                            document.getElementById("searchBtn").click();
-                        }else{
-                            getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "pid", 1, 1);
-                        }
-                    });
-                },
-                {
-                    timeout: 10000,
-                    maximumAge: 10000,
-                    enableHighAccuracy: true,
-                }
-            );
-        } else {
-            geocoder.geocode({ address: "Bangkok" }, function (results, status) {
-                document.getElementById("current_loc").innerHTML = results[0]?.formatted_address;
-                var bkkplaceid = results[0].place_id;
-                provinceLayer.style = (options) => {
-                    if (options.feature.placeId == "ChIJ82ENKDJgHTERxw-LhWOFRTY") {
-                        return featureStyleOptions;
-                    }
-                };
-
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    window.position = results[0].geometry.location;
-                }
-
-                document.getElementById("province").selectedText = "กรุงเทพมหานคร";
-                
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    map.fitBounds(results[0].geometry.bounds, 10);
-                }
-
-                getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "pid", 1, 1);
-            });
-        }
-
         document.getElementById("hospitaltype").addEventListener("change", (e) => {
             resetDropdown("province");
             resetDropdown("district");
             resetDropdown("subdistrict");
-
+            
+            getTypeHostpitals(currentPos, 1, e.target.value);
             fetch("https://knowdengueth.flexsolutions.business/api.php?provinces&type=" + e.target.value)
                 .then((res) => res.json())
                 .then((data) => {
@@ -2060,20 +1968,12 @@ button.gm-ui-hover-effect {
 
             let district = ev.target.options[ev.target.selectedIndex].text;
 
-            map.data.setStyle({});
-            markers.forEach((m) => m.setMap(null));
-
             geocoder.geocode({ address: district }, function (results, status) {
                 districtLayer.style = (options) => {
                     if (options.feature.placeId == results[0].place_id) {
                         return featureStyleOptions;
                     }
                 };
-
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    map.fitBounds(results[0].geometry.bounds, 10);
-                }
 
                 getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "did", ev.target.value, 1);
             });
@@ -2098,9 +1998,6 @@ button.gm-ui-hover-effect {
 
             let subdistrict = ev.target.options[ev.target.selectedIndex].text;
 
-            map.data.setStyle({});
-            markers.forEach((m) => m.setMap(null));
-
             subdistrict += " " + document.getElementById("district").options[document.getElementById("district").selectedIndex].text;
 
             geocoder.geocode({ address: subdistrict }, function (results, status) {
@@ -2110,64 +2007,145 @@ button.gm-ui-hover-effect {
                     }
                 };
 
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    map.fitBounds(results[0].geometry.bounds, 10);
-                }
-
                 getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "sid", ev.target.value, 1);
             });
         });
 
         document.getElementById("searchBtn").addEventListener("click", (e) => {
-            doSearch(1)
+            doSearch(currentPos, 1);
         });
         document.getElementById("searchBox").addEventListener("keyup", (e) => {
             if (e.keyCode === 13) {
-                doSearch(1);
+                doSearch(currentPos, 1);
             }
         });
-    };
-</script>
-<script>
-    $(document).ready(function () {
-        /*
-        const geocoder = new google.maps.Geocoder();
-        geocoder
-            .geocode({ location: pos })
-            .then((response) => {
-                document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
-            })
-            .catch((e) => window.alert("Geocoder failed due to: " + e));
-        */
-        $("#btnseemap").hide();
 
-        $(".card").click(function () {
-            $("#locatortoolmap").removeClass("-maphidden");
-            $("#sampleloop2").hide();
-            $("#sampleloop3").hide();
-            $(".card__hospital-listing").removeClass("-seeall");
-            $("#locatortoollist-button").removeClass("-seeallbtn");
-            $("#locatortoollist").removeClass("-fullwidth");
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+                    currentPos = pos;
+                    geocoder
+                        .geocode({ location: pos })
+                        .then((response) => {
+                            document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                        })
+                        .catch((e) => window.alert("Geocoder failed due to: " + e));
+                    getHostpitals(pos, 1);
+                },
+                (error) => {
+                    geocoder.geocode({ address: "Bangkok" }, function (results, status) {
+                        const pos = {
+                            lat: results[0].geometry.location.lat(),
+                            lng: results[0].geometry.location.lng(),
+                        };
+                        currentPos = pos;
+                        geocoder
+                            .geocode({ location: pos })
+                            .then((response) => {
+                                document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                            })
+                            .catch((e) => window.alert("Geocoder failed due to: " + e));
+                        getHostpitals(pos, 1);
+                    });
+                },
+                {
+                    timeout: 10000,
+                    maximumAge: 10000,
+                    enableHighAccuracy: true,
+                }
+            );
+        } else {
+            geocoder.geocode({ address: "Bangkok" }, function (results, status) {
+                const pos = {
+                    lat: results[0].geometry.location.lat(),
+                    lng: results[0].geometry.location.lng(),
+                };
+                currentPos = pos;
+                geocoder
+                    .geocode({ location: pos })
+                    .then((response) => {
+                        document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                    })
+                    .catch((e) => window.alert("Geocoder failed due to: " + e));
+                getHostpitals(pos, 1);
+            });
+        }
+    };
+</script><script>
+    /*
+    $(document).ready(function () {
+        const geocoder = new google.maps.Geocoder();
+
+        $("#hospitalist").hide();
+        $("#locatortoolmap").addClass("-maphidden");
+        $("#sampleloop2").hide();
+        $("#allhospitals").show();
+        $("#locatortoollist").addClass("-fullwidth");
+        $("#locatortoollist-button").addClass("-seeallbtn");
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+                    geocoder
+                        .geocode({ location: pos })
+                        .then((response) => {
+                            document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                        })
+                        .catch((e) => window.alert("Geocoder failed due to: " + e));
+                    getHostpitals(pos, 1);
+                },
+                (error) => {
+                    geocoder.geocode({ address: "Bangkok" }, function (results, status) {
+                        const pos = {
+                            lat: results[0].geometry.location.lat(),
+                            lng: results[0].geometry.location.lng(),
+                        };
+                        geocoder
+                            .geocode({ location: pos })
+                            .then((response) => {
+                                document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                            })
+                            .catch((e) => window.alert("Geocoder failed due to: " + e));
+                        getHostpitals(pos, 1);
+                    });
+                },
+                {
+                    timeout: 10000,
+                    maximumAge: 10000,
+                    enableHighAccuracy: true,
+                }
+            );
+        } else {
+            geocoder.geocode({ address: "Bangkok" }, function (results, status) {
+                const pos = {
+                    lat: results[0].geometry.location.lat(),
+                    lng: results[0].geometry.location.lng(),
+                };
+                geocoder
+                    .geocode({ location: pos })
+                    .then((response) => {
+                        document.getElementById("current_loc").innerHTML = response.results[0]?.formatted_address;
+                    })
+                    .catch((e) => window.alert("Geocoder failed due to: " + e));
+                getHostpitals(pos, 1);
+            });
+        }
+
+        $("#btnseemore").hide();
+        $("#btnseeall").hide();
+        $("#btnseemap").show();
+
+        $(".card__hospital-listing").click(function () {
+            // DEMO
         });
-        /*
-        $("#locatortoolmap").show();
-            $("#sampleloop2").show();
-            $("#sampleloop3").hide();
-            $(".card__hospital-listing").removeClass("-seeall");
-            $("#locatortoollist-button").removeClass("-seeallbtn");
-            $("#locatortoollist").removeClass("-fullwidth");
-        */
-        $("#btnseemap").click(() => {
-            $("#locatortoolmap").removeClass("-maphidden");
-            $("#btnseemap").hide();
-            $("#btnseemore").show();
-            $(".card__hospital-listing").removeClass("-seeall");
-            $("#locatortoollist").removeClass("-fullwidth");
-            $("#btnseemore").attr("disabled", true);
-        });
-        $("#btnseeall").click(function () {
-            window.location.href = "/locator/seeall";
-        });
+        
     });
+    */
 </script>

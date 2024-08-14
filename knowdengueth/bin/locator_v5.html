@@ -1,141 +1,88 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <div id="locatorwarp">
-    <div id="locatorheadwarp">
-        <div class="locatorheadwarpin">
-            <div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_locator2.png" /></div>
+<div id="locatorheadwarp">
+<div class="locatorheadwarpin">
+<div class="locatorheadcol1"><img alt="KnowDengue_element_1" class="locatorheadpinimg" src="https://flexcdn.github.io/knowdengueth/pin_locator2.png" /></div>
 
-            <div class="locatorheadcol2">
-                <div class="locatorheadcol2top">สถานพยาบาลใกล้คุณที่แนะนำการฉีดวัคซีนไข้เลือดออก</div>
+<div class="locatorheadcol2">
+<div class="locatorheadcol2top">สถานพยาบาลใกล้คุณที่แนะนำการฉีดวัคซีนไข้เลือดออก</div>
 
-                <div class="locatorheadcol2bottom">ถึงเวลาปรึกษาแพทย์เพื่อเพิ่มเกราะเกี่ยวกับวิธีการป้องกันไข้เลือดออกและการฉีดวัคซีน</div>
-            </div>
-
-            <div class="knowclearall">&nbsp;</div>
-        </div>
-    </div>
-    <!-- /locatorheadwarp -->
-
-    <div id="locatorshowadress">
-        <div class="locatorshowadress-header">
-            <svg
-                class="locatorshowadress-mapbuttonpin"
-                data-arp-injected="true"
-                fill="#c12b2c"
-                height="30px"
-                id="Capa_1"
-                version="1.1"
-                viewbox="0 0 297 297"
-                width="30px"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-                <g>
-                    <path
-                        d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645   c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645   C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892   c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"
-                    ></path>
-                    <path
-                        d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614   c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901   c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104   C179.265,127.948,165.464,141.901,148.5,141.901z"
-                    ></path>
-                </g>
-            </svg>
-            ตอนนี้คุณอยู่ที่
-        </div>
-
-        <div class="locatorshowadress-adress" id="current_loc"> &nbsp; </div>
-
-        <div class="knowclearall">&nbsp;</div>
-    </div>
-    <!-- /locatorshowadress -->
-
-    <div id="locatortooldiv">
-        <div class="locatortoolmap-defualt" id="locatortoolmap">
-            <div id="locatortoolmap-header">คลินิกใกล้คุณ</div>
-
-            <div id="map">&nbsp;</div>
-            <!--<img src="https://www.prachachat.net/wp-content/uploads/2023/08/Google-Maps.png" class="locatortoolmapbox"/>-->
-
-            <div id="locatortoolmap-filtertools">
-                <div id="locatortoolmap-box1" class="locatortoolmap-box locatortoolmap-box1">
-                    <div class="locatortoolmap-search">
-                        <input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="ค้นหาจากชื่อสถานพยาบาล..." type="text" />
-                        <button class="locatortoolmap-searchButton" id="searchBtn" type="button">
-                            <svg
-                                data-arp-injected="true"
-                                fill="#143858"
-                                height="15px"
-                                id="Capa_1"
-                                version="1.1"
-                                viewbox="0 0 183.792 183.792"
-                                width="15px"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
-                                <path
-                                    d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22  c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583  c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0  C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806  c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25  c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div id="locatortoolmap-box2" class="locatortoolmap-box locatortoolmap-box2">
-                    <label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
-
-                    <div class="locatortoolmap-select"><select id="hospitaltype"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div id="locatortoolmap-box3" class="locatortoolmap-box locatortoolmap-box3">
-                    <label class="locatortoolmap-label">จังหวัด</label>
-
-                    <div class="locatortoolmap-select"><select id="province"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div id="locatortoolmap-box4" class="locatortoolmap-box locatortoolmap-box4">
-                    <label class="locatortoolmap-label">อำเภอ/เขต</label>
-
-                    <div class="locatortoolmap-select"><select id="district"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div id="locatortoolmap-box5" class="locatortoolmap-box locatortoolmap-box5">
-                    <label class="locatortoolmap-label">แขวง/ตำบล</label>
-
-                    <div class="locatortoolmap-select"><select id="subdistrict"></select></div>
-
-                    <div class="knowclearall">&nbsp;</div>
-                </div>
-
-                <div class="knowclearall">&nbsp;</div>
-            </div>
-        </div>
-
-        <div class="locatortoollist-defualt" id="locatortoollist">
-            <div id="locatortoollist-header">ผลการค้นหา</div>
-            <!-- START CARD LOOP -->
-
-            <div id="hospitalist">&nbsp;</div>
-
-            <div id="allhospitals">&nbsp;</div>
-
-            <div class="locatortoollist-div" id="locatortoollist-button">
-                <button class="locatortoollist-button1" id="btnseemore">ดูเพิ่มเติม</button><button class="locatortoollist-button1" id="btnseemap">ดูแผนที่</button><button class="locatortoollist-button2" id="btnseeall">ดูทั้งหมด</button>
-            </div>
-        </div>
-
-        <div class="knowclearall">&nbsp;</div>
-    </div>
-    <!-- /locatortooldiv -->
+<div class="locatorheadcol2bottom">ถึงเวลาปรึกษาแพทย์เพื่อเพิ่มเกราะเกี่ยวกับวิธีการป้องกันไข้เลือดออกและการฉีดวัคซีน</div>
 </div>
-<style type="text/css">
- 
-@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+</div>
+<!-- /locatorheadwarp -->
+
+<div id="locatorshowadress">
+<div class="locatorshowadress-header"><svg class="locatorshowadress-mapbuttonpin" data-arp-injected="true" fill="#c12b2c" height="30px" id="Capa_1" version="1.1" viewbox="0 0 297 297" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645   c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645   C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892   c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"></path> <path d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614   c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901   c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104   C179.265,127.948,165.464,141.901,148.5,141.901z"></path> </g> </svg> ตอนนี้คุณอยู่ที่</div>
+
+<div class="locatorshowadress-adress" id="current_loc">&nbsp;</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+<!-- /locatorshowadress -->
+
+<div id="locatortooldiv">
+<div class="locatortoolmap-defualt" id="locatortoolmap">
+<div id="locatortoolmap-header">คลินิกใกล้คุณ</div>
+
+<div id="map">&nbsp;</div>
+<!--<img src="https://www.prachachat.net/wp-content/uploads/2023/08/Google-Maps.png" class="locatortoolmapbox"/>-->
+
+<div id="locatortoolmap-filtertools">
+<div class="locatortoolmap-box locatortoolmap-box1" id="locatortoolmap-box1">
+<div class="locatortoolmap-search"><input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="ค้นหาจากชื่อสถานพยาบาล..." type="text" /><button class="locatortoolmap-searchButton" id="searchBtn" type="button"><svg data-arp-injected="true" fill="#143858" height="15px" id="Capa_1" version="1.1" viewbox="0 0 183.792 183.792" width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <path d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22  c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583  c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0  C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806  c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25  c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"></path> </svg></button></div>
+</div>
+
+<div class="locatortoolmap-box locatortoolmap-box2" id="locatortoolmap-box2"><label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
+
+<div class="locatortoolmap-select"><select id="hospitaltype"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="locatortoolmap-box locatortoolmap-box3" id="locatortoolmap-box3"><label class="locatortoolmap-label">จังหวัด</label>
+
+<div class="locatortoolmap-select"><select id="province"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="locatortoolmap-box locatortoolmap-box4" id="locatortoolmap-box4"><label class="locatortoolmap-label">อำเภอ/เขต</label>
+
+<div class="locatortoolmap-select"><select id="district"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="locatortoolmap-box locatortoolmap-box5" id="locatortoolmap-box5"><label class="locatortoolmap-label">แขวง/ตำบล</label>
+
+<div class="locatortoolmap-select"><select id="subdistrict"></select></div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+</div>
+
+<div class="locatortoollist-defualt" id="locatortoollist">
+<div id="locatortoollist-header">ผลการค้นหา</div>
+<!-- START CARD LOOP -->
+
+<div id="hospitalist">&nbsp;</div>
+
+<div id="allhospitals">&nbsp;</div>
+
+<div class="locatortoollist-div" id="locatortoollist-button"><button class="locatortoollist-button1" id="btnseemore">ดูเพิ่มเติม</button><button class="locatortoollist-button1" id="btnseemap">ดูแผนที่</button><button class="locatortoollist-button2" id="btnseeall">ดูทั้งหมด</button></div>
+</div>
+
+<div class="knowclearall">&nbsp;</div>
+</div>
+<!-- /locatortooldiv --></div>
+<style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Overwrite Class */
 body {
@@ -826,13 +773,8 @@ button.gm-ui-hover-effect {
         padding-top: 15px !important;
     }
 }
-
- 
 </style>
-<!-- JS FOR DEMO -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&loading=async&callback=initMap&v=weekly" defer></script>
-<script>
+<!-- JS FOR DEMO --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&loading=async&callback=initMap&v=weekly" defer></script><script>
     var map = null;
     var markers = [];
     const iconurl = "https://flexcdn.github.io/knowdengueth/pin_locator_sml4.png";
@@ -1261,7 +1203,7 @@ button.gm-ui-hover-effect {
                                 {
                                     type: "a",
                                     attrs: {
-                                        href: val.website,
+                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
                                         target: "_blank",
                                         class: "card__hospital-mapbutton",
                                     },
@@ -1382,7 +1324,7 @@ button.gm-ui-hover-effect {
                                     attrs: {
                                         class: "card__hospital-mapbutton",
                                         target: "_blank",
-                                        href: val.website,
+                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
                                     },
                                     children: ["แผนที่การเดินทาง"],
                                 },
@@ -1467,7 +1409,7 @@ button.gm-ui-hover-effect {
                                     attrs: {
                                         class: "card__hospital-mapbutton",
                                         target: "_blank",
-                                        href: val.website,
+                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
                                     },
                                     children: ["แผนที่การเดินทาง"],
                                 },
@@ -1541,7 +1483,7 @@ button.gm-ui-hover-effect {
                                     attrs: {
                                         class: "card__hospital-mapbutton",
                                         target: "_blank",
-                                        href: val.website,
+                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
                                     },
                                     children: ["แผนที่การเดินทาง"],
                                 },
@@ -1781,7 +1723,7 @@ button.gm-ui-hover-effect {
                                     attrs: {
                                         class: "card__hospital-mapbutton",
                                         target: "_blank",
-                                        href: val.website,
+                                        href: "https://www.google.com/maps/place/" + val.lat + "," + val.lon,
                                     },
                                     children: ["แผนที่การเดินทาง"],
                                 },
@@ -2128,8 +2070,7 @@ button.gm-ui-hover-effect {
             }
         });
     };
-</script>
-<script>
+</script><script>
     $(document).ready(function () {
         /*
         const geocoder = new google.maps.Geocoder();
