@@ -19,10 +19,10 @@
     background-position: center center;
 }
 #block-kd-endemic-main-navigation > ul > li:nth-child(5) > a:before {
-	background-image: url(/sites/default/files/inline-images/pin_locator_sml4.png);
+	/* background-image: url(/sites/default/files/inline-images/pin_locator_sml4.png);
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 80% 80% !important;
+	background-size: 80% 80% !important; */
 }
 
 
@@ -76,6 +76,18 @@ div.ui-dialog > div.ui-dialog-titlebar > span.ui-dialog-title::before {
     max-width: 300px;
     margin: auto;
 }
+body > div.conditional-message-top {
+	font-size: 0px !important;
+}
+body > div.conditional-message-top > span {
+	font-size: 14px !important;
+}
+body > div.conditional-message-top::before {
+	content: 'This website is intended for an audience within Thailand and does not constitute as medical advice.';
+	color: #143858;
+    font-family: "Kanit-SemiBold", sans-serif;
+    font-size: 14px;
+}
 
 </style>
 
@@ -87,14 +99,17 @@ div.ui-dialog > div.ui-dialog-titlebar > span.ui-dialog-title::before {
 </div> <!-- /global-footer -->
 
 <div id="hidden-footer" style="display: none;">
+
 <img alt="icon-vaccine" data-entity-type="file" data-entity-uuid="ca67effa-ae02-4d34-9b42-1e30e0d67916" src="/sites/default/files/inline-images/icon-vaccine.png" />
 <img alt="pin_locator_sml4" data-entity-type="file" data-entity-uuid="72cf07c2-7984-40d9-bdb2-7c7102df440f" src="/sites/default/files/inline-images/pin_locator_sml4.png" />
+<img alt="Takeda_Kao_MOU" data-entity-type="file" data-entity-uuid="a7bfed7a-ca1d-4af6-941d-ce245ac13c31" src="/sites/default/files/inline-images/Takeda_Kao_MOU_8_thumb_0.jpg" />
+
 </div> <!-- /hidden-footer -->
 
 <div id="ingma-footer" style="display: none;">
 	<b>ข้อจำกัดความรับผิด (Disclaimer)</b>
 	<ul>
-		<li>ข้อมูลนี้มีไว้เพื่อเป็นข้อมูลสาธารณะเท่านั้น ไม่ควรใช้สำหรับการวินิจฉัยหรือรักษา และไม่ได้มีวัตถุประสงค์เพื่อแทนที่การปรึกษากับผู้ให้บริการด้านสุขภาพ โปรดปรึกษาผู้ให้บริการด้านสุขภาพของคุณเพื่อขอคำแนะนำ</li>
+		<li>ข้อมูลในเอกสารฉบับนี้จัดทำขึ้นสำหรับประชาชนทั่วไป โดยมีวัตถุประสงค์เพื่อให้ข้อมูลเท่านั้น ข้อมูลนี้ไม่ควรถูกนำไปใช้เพื่อวินิจฉัยหรือรักษาปัญหาสุขภาพหรือโรคใด ๆ การให้ข้อมูลดังกล่าวไม่มีวัตถุประสงค์เป็นการทดแทนการปรึกษากับผู้ให้บริการทางการแพทย์ โปรดปรึกษาผู้ให้บริการทางการแพทย์ของท่านสำหรับคำแนะนำเพิ่มเติม</li>
 		<li>ผู้ป่วยไข้เลือดออกส่วนใหญ่จะอาการไม่มาก ในบางรายอาจมีอาการรุนแรง เลือดออกมาก จนอาจถึงขั้นช็อกและเสียชีวิต</li>
 	</ul>
 </div> <!-- /ingma-footer -->
