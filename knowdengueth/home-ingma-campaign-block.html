@@ -21,6 +21,20 @@
 #home-ingma-campaign-block > div:nth-child(4) {
     min-height: 20px;
 }
+.nviseparator {
+    min-height: 30px !important;
+}
+.nvivdoblock {
+    padding-bottom: 0px !important;
+    min-height: 250px !important;
+}
+.nvivdotext {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.nvivdotext > div > a:hover {
+    text-decoration: none !important;
+}
 .ingma-thumb-h2 {
     color: #143858;
     font-size: 28px;
@@ -45,6 +59,23 @@ a.btn-ingma-thumb > img {
 }
 .ingma-thumb-article__content-desc {
     font-weight: 300;
+}
+
+@media (max-width: 1359px) {
+
+#home-ingma-campaign-block > div:nth-child(5), 
+#home-ingma-campaign-block > div:nth-child(6), 
+#home-ingma-campaign-block > div:nth-child(7),
+#home-ingma-campaign-block > div:nth-child(8),
+#home-ingma-campaign-block > div:nth-child(9),
+#home-ingma-campaign-block > div:nth-child(10) {
+    min-height: auto !important;
+}
+.nvivdotext {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 }
 
 @media (max-width: 991px) {
@@ -159,4 +190,27 @@ a.btn-ingma-thumb > img {
             </div>
         </div>
     </div>
+
+    <div class="col-md-12 nviseparator"> </div>
+
+    <div class="col-md-4 nvivdoblock">
+        <div class="ingma-thumb-article__image">
+            <a class="btn-ingma-thumb" href="https://www.youtube.com/watch?v=64WsA9-q3zA" target="_blank">
+                <img alt="หลากหลายเรื่องน่ารู้เกี่ยวกับวัคซีนไข้เลือดออก" data-entity-type="file" data-entity-uuid="9083bc06-1311-4b6f-8189-b921f888f511" src="/sites/default/files/inline-images/NVI-vdo-thumb.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="col-md-8 nvivdoblock">
+        <div class="ingma-thumb-article__content nvivdotext">
+            <div class="ingma-thumb-article__content-title">
+                <a class="ingma-link-text" href="https://www.youtube.com/watch?v=64WsA9-q3zA" target="_blank">หลากหลายเรื่องน่ารู้เกี่ยวกับวัดซีนไข้เลือดออก<br>
+                    สาเหตุของการเกิดโรคไข้เลือดออก คืออะไร ?<br>
+                    แล้วเราจะป้องกันไข้เลือดออกได้อย่างไร ?<br>
+                    พบคำตอบได้จากคลิปวิดีโอนี้ โดย แพทย์หญิงสุดา พันธุ์รินทร์<br>
+                    อายุรแพทย์โรคภูมิแพ้และภูมิคุ้มกันคลินิก<br>
+                    ผู้เชี่ยวชาญนายแพทย์ระดับ 9 สถานเสาวภาสภากาชาดไทย</a>
+            </div>
+        </div>
+    </div>
+
 </div>
