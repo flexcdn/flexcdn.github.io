@@ -487,7 +487,7 @@ document.getElementById('f1').addEventListener('submit', (e)=>{
         showModal(document.getElementById('smallShoes'));
         //$('#smallShoes').modal('show');
     }else{
-        document.location.href = './hae-questionnaire-result/?' + new URLSearchParams(formData).toString();
+        document.location.href = '/patient/hae-questionnaire-result/?' + new URLSearchParams(formData).toString();
         //console.log(new URLSearchParams(formData).toString());
         //alert('OK');
     }
