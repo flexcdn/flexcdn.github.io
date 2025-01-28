@@ -1309,7 +1309,7 @@ select::-ms-expand {
     margin-bottom: 10px;
 }
 .card__hospital-note {
-    max-height: 84px;
+    max-height: none !important;
     padding-top: 10px;
     border-top: 1px #ded5d0 solid;
     width: 100%;
@@ -1426,10 +1426,10 @@ select::-ms-expand {
     margin-left: 5px !important;
     margin-right: 5px !important;
     margin-bottom: 10px !important;
-    height: 445px !important;
+    height: auto !important;
 }
 .-seeall > div.card__hospital-note {
-    display: none !important;
+
 }
 .-seeall > div.card__hospital-name {
     height: 68px !important;
@@ -1656,6 +1656,7 @@ button.gm-ui-hover-effect {
     };
 
     const renderCard = (el, val) => {
+
         const html = h({
             type: "div",
             attrs: {
@@ -1983,29 +1984,270 @@ button.gm-ui-hover-effect {
                     },
                     children: [
                         {
-                            type: "svg",
+                            type: "table",
                             attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "#0081a0",
-                                width: "20px",
-                                height: "20px",
-                                viewBox: "0 0 1920 1920",
-                                "data-arp-injected": true,
-                                class: "card__hospital-icon",
+                                class: "table table-bordered table-hover",
+                                id: "diagnosing_tabledesktop"
                             },
                             children: [
                                 {
-                                    type: "path",
-                                    attrs: {
-                                        d:
-                                            "m1783.68 1468.235-315.445 315.445v-315.445h315.445Zm-541.327-338.823v112.94h-903.53v-112.94h903.53Zm338.936-338.824V903.53H338.824V790.59h1242.465ZM621.176 0c93.403 0 169.412 76.01 169.412 169.412 0 26.09-6.437 50.484-16.94 72.62L999.98 468.255l-79.962 79.962-226.221-226.334c-22.137 10.504-46.532 16.942-72.622 16.942-93.402 0-169.411-76.01-169.411-169.412C451.765 76.009 527.775 0 621.176 0Zm395.295 225.882v112.942h790.588v1016.47h-451.765v451.765H112.941V338.824h225.883V225.882H0V1920h1421.478c45.176 0 87.755-17.619 119.717-49.581l329.224-329.11c31.962-32.076 49.581-74.655 49.581-119.831V225.882h-903.53Z",
-                                        "fill-rule": "evenodd",
-                                    },
+                                    type: "thead",
+                                    children: [
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "th", attrs: { rowspan: "2" }, children: ["โรงพยาบาล"] },
+                                                { type: "th", attrs: { colspan: "2" }, children: ["รายละเอียดติดต่อเพื่อทำนัดหมายเข้าพบแพทย์"] }
+                                            ]
+                                        },
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "th", children: ["ผู้ป่วยอายุ ≤ 18 ปี"] },
+                                                { type: "th", children: ["ผู้ป่วยอายุ > 18 ปี"] }
+                                            ]
+                                        }
+                                    ]
                                 },
-                            ],
-                        },
-                        val.note,
-                    ],
+                                {
+                                    type: "tbody",
+                                    children: [
+                                        // Row 1: รพ.จุฬาลงกรณ์
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "td", children: ["รพ.จุฬาลงกรณ์", { type: "br" }, "สภากาชาดไทย"] },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "div",
+                                                            attrs: { class: "row" },
+                                                            children: [
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-4" },
+                                                                    children: [
+                                                                        {
+                                                                            type: "a",
+                                                                            attrs: { href: "tel:0918390900" },
+                                                                            children: ["📞 091-839-0900"]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-4" },
+                                                                    children: [
+                                                                        {
+                                                                            type: "a",
+                                                                            attrs: { href: "https://line.me/R/ti/p/@757cssev", target: "_blank" },
+                                                                            children: ["💬 @757cssev"]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "div",
+                                                            attrs: { class: "row" },
+                                                            children: [
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-12" },
+                                                                    children: [
+                                                                        "☎️ 02-256-4000",
+                                                                        { type: "br" },
+                                                                        "แจ้งว่า: ขอติดต่อเพื่อทำการนัดหมายเข้าพบ และปรึกษาแพทย์"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        // Row 2: รพ.ศิริราช
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "td", children: ["รพ.ศิริราช"] },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "div",
+                                                            attrs: { class: "row" },
+                                                            children: [
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-4" },
+                                                                    children: [
+                                                                        {
+                                                                            type: "a",
+                                                                            attrs: { href: "tel:024195670" },
+                                                                            children: ["📞 02-419-5670"]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "a",
+                                                            attrs: { href: "mailto:allergymedsi@gmail.com" },
+                                                            children: ["📧 allergymedsi@gmail.com"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        // Row 3: รพ.รามาธิบดี
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "td", children: ["รพ.รามาธิบดี"] },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "div",
+                                                            attrs: { class: "row" },
+                                                            children: [
+                                                                { type: "div", attrs: { class: "col-xs-4" }, children: ["หน่วยโรคภูมิแพ้"] },
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-4" },
+                                                                    children: [
+                                                                        {
+                                                                            type: "a",
+                                                                            attrs: { href: "tel:022011760" },
+                                                                            children: ["📞 02-201-1760"]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "div",
+                                                            attrs: { class: "row" },
+                                                            children: [
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-6" },
+                                                                    children: [
+                                                                        "หน่วยโรคภูมิแพ้ อิมูนโนวิทยา และโรคข้อ",
+                                                                        { type: "br" },
+                                                                        {
+                                                                            type: "a",
+                                                                            attrs: { href: "tel:022011779" },
+                                                                            children: ["📞 02-201-1779"]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        // Row 4: รพ.สงขลานครินทร์
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "td", children: ["รพ.สงขลานครินทร์"] },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "a",
+                                                            attrs: { href: "tel:0637868376" },
+                                                            children: ["📞 063-786-8376"]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "a",
+                                                            attrs: { href: "mailto:iporntip@mediecine.psu.ac.th" },
+                                                            children: ["📧 iporntip@mediecine.psu.ac.th"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        // Row 5: รพ.มหาราชนครเชียงใหม่
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "td", children: ["รพ.มหาราชนครเชียงใหม่"] },
+                                                { type: "td", children: ["-"] },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "a",
+                                                            attrs: { href: "mailto:mati.c@cmu.ac.th" },
+                                                            children: ["📧 mati.c@cmu.ac.th"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        // Row 6: รพ.ศรีนครินทร์
+                                        {
+                                            type: "tr",
+                                            children: [
+                                                { type: "td", children: ["รพ.ศรีนครินทร์"] },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "a",
+                                                            attrs: { href: "tel:043366683" },
+                                                            children: ["📞 043-366683"]
+                                                        },
+                                                        { type: "br" },
+                                                        {
+                                                            type: "a",
+                                                            attrs: { href: "tel:043366687" },
+                                                            children: ["📞 043-366687"]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    type: "td",
+                                                    children: [
+                                                        {
+                                                            type: "a",
+                                                            attrs: { href: "tel:043363664" },
+                                                            children: ["📞 043-363664"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     type: "div",
@@ -2086,6 +2328,7 @@ button.gm-ui-hover-effect {
                 },
             ],
         });
+
         el.appendChild(html);
     };
 
@@ -2099,7 +2342,7 @@ button.gm-ui-hover-effect {
         const infoWindow = new google.maps.InfoWindow();
         currentPage = page;
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&" + field + "=" + pid + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
+        fetch("https://knowhaeth.flexsolutions.business/api.php?hospitals&" + field + "=" + pid + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
             .then((res) => res.json())
             .then((data) => {
                 let el = document.getElementById("hospitalist");
@@ -2179,7 +2422,7 @@ button.gm-ui-hover-effect {
             });
     };
     const getAllHospitals = (pos) => {
-        fetch("https://knowdengueth.flexsolutions.business/api.php?allhospitals&lat=" + pos.lat + "&lon=" + pos.lng)
+        fetch("https://knowhaeth.flexsolutions.business/api.php?allhospitals&lat=" + pos.lat + "&lon=" + pos.lng)
             .then((res) => res.json())
             .then((data) => {
                 const el = document.getElementById("allhospitals");
@@ -2258,7 +2501,7 @@ button.gm-ui-hover-effect {
         const infoWindow = new google.maps.InfoWindow();
         currentPage = page;
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
+        fetch("https://knowhaeth.flexsolutions.business/api.php?hospitals&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page)
             .then((res) => res.json())
             .then((data) => {
                 let el = document.getElementById("hospitalist");
@@ -2354,7 +2597,7 @@ button.gm-ui-hover-effect {
 
         const sort = document.getElementById('sortcard').value;
         
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitals&type=" + type + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
+        fetch("https://knowhaeth.flexsolutions.business/api.php?hospitals&type=" + type + "&lat=" + pos.lat + "&lon=" + pos.lng + "&page=" + page + "&sort=" + sort + "&size=30")
             .then((res) => res.json())
             .then((data) => {
                 document.getElementById('totalHospital').innerHTML = data.data.total;
@@ -2490,7 +2733,7 @@ button.gm-ui-hover-effect {
             return;
         }
 
-        fetch("https://knowdengueth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&lat=" + window.position.lat + "&lon=" + window.position.lng + "&page=" + page)
+        fetch("https://knowhaeth.flexsolutions.business/api.php?search&q=" + searchBox.value + "&lat=" + window.position.lat + "&lon=" + window.position.lng + "&page=" + page)
             .then((res) => res.json())
             .then((data) => {
                 let el = document.getElementById("hospitalist");
@@ -2601,7 +2844,8 @@ button.gm-ui-hover-effect {
             fillOpacity: 0.5,
         };
         map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 12,
+            center: { lat: 13.736717, lng: 100.523186 }, // Center of Thailand
+            zoom: 5, // Zoom level for a wider view
             disableDefaultUI: true,
             mapId: "7ba7b4dd9a3d916",
         });
@@ -2613,7 +2857,7 @@ button.gm-ui-hover-effect {
         resetDropdown("district");
         resetDropdown("subdistrict");
         
-        fetch("https://knowdengueth.flexsolutions.business/api.php?hospitaltypes")
+        fetch("https://knowhaeth.flexsolutions.business/api.php?hospitaltypes")
             .then((res) => res.json())
             .then((data) => {
                 if (!data.error) {
@@ -2624,7 +2868,7 @@ button.gm-ui-hover-effect {
                     document.getElementById("hospitaltype").disabled = false;
 
                     getTypeHostpitals(currentPos, 1, 0);
-                    fetch("https://knowdengueth.flexsolutions.business/api.php?provinces&type=0")
+                    fetch("https://knowhaeth.flexsolutions.business/api.php?provinces&type=0")
                         .then((res) => res.json())
                         .then((data) => {
                             if (!data.error) {
@@ -2745,7 +2989,7 @@ button.gm-ui-hover-effect {
             resetDropdown("district");
             resetDropdown("subdistrict");
 
-            fetch("https://knowdengueth.flexsolutions.business/api.php?provinces&type=" + e.target.value)
+            fetch("https://knowhaeth.flexsolutions.business/api.php?provinces&type=" + e.target.value)
                 .then((res) => res.json())
                 .then((data) => {
                     if (!data.error) {
@@ -2799,7 +3043,7 @@ button.gm-ui-hover-effect {
                 getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "pid", ev.target.value, 1);
             });
 
-            fetch("https://knowdengueth.flexsolutions.business/api.php?districts&pid=" + ev.target.value)
+            fetch("https://knowhaeth.flexsolutions.business/api.php?districts&pid=" + ev.target.value)
                 .then((res) => res.json())
                 .then((data) => {
                     if (!data.error) {
@@ -2839,7 +3083,7 @@ button.gm-ui-hover-effect {
                 getFilterHostpitals({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }, "did", ev.target.value, 1);
             });
 
-            fetch("https://knowdengueth.flexsolutions.business/api.php?subdistricts&did=" + ev.target.value)
+            fetch("https://knowhaeth.flexsolutions.business/api.php?subdistricts&did=" + ev.target.value)
                 .then((res) => res.json())
                 .then((data) => {
                     if (!data.error) {
