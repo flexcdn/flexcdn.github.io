@@ -898,6 +898,10 @@ section > div.region.region-content > h1 {
                     <div class="knowclearall">&nbsp;</div>
                 </div>
 
+                <div id="locatortoolmap-box6" class="locatortoolmap-box locatortoolmap-box6">
+                    <button id="locatortool-mapbutton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#1b374f" width="20px" height="20px" version="1.1" id="Capa_1" viewBox="0 0 297 297" xml:space="preserve" data-arp-injected="true" class="card__hospital-mapbuttonpin"><g><path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645   c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645   C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892   c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"></path><path d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614   c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901   c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104   C179.265,127.948,165.464,141.901,148.5,141.901z"></path></g></svg>ค้นหาจากตำแหน่งของฉัน</button>
+                </div>
+
                 <div class="knowclearall">&nbsp;</div>
             </div>
 
@@ -1266,6 +1270,7 @@ select::-ms-expand {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 12px;
 }
 #locatortoolmap-filtertools-header {
     font-size: 24px;
@@ -1298,7 +1303,27 @@ select::-ms-expand {
 }
 .locatortoolmap-box2 > div {
 }
-
+#locatortool-mapbutton {
+    background-color: #59c7e6;
+    padding: 7px;
+    border: 1px solid #59c7e6;
+    padding-left: 17px;
+    padding-bottom: 9px;
+    padding-right: 20px;
+    border-radius: 25px;
+    color: #1b374f;
+    text-decoration: none;
+}
+#locatortool-mapbutton:hover {
+    text-decoration: none;
+    background-color: #004d98;
+    border: 1px solid #004d98;
+    color: #fff;
+}
+.locatortoolmap-box6 {
+    text-align: center;
+    margin-top: 10px;
+}
 
 /* Locator Card Class */
 
@@ -3901,6 +3926,65 @@ button.gm-ui-hover-effect {
             }
         });
     };
+
+document.getElementById("locatortool-mapbutton").addEventListener("click", () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            const userPos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+            };
+
+            let nearestMarker = null;
+            let nearestDistance = Infinity;
+
+            // Find the nearest marker
+            markers.forEach((marker) => {
+                const markerPos = marker.position;
+                const distance = haversineDistance(userPos, markerPos);
+
+                if (distance < nearestDistance) {
+                    nearestDistance = distance;
+                    nearestMarker = marker;
+                }
+            });
+
+            if (nearestMarker) {
+                // Simulate click event on the nearest marker to open the InfoWindow
+                google.maps.event.trigger(nearestMarker, "click");
+
+                // Scroll to the map
+                document.getElementById("map").scrollIntoView({ behavior: "smooth", block: "start" });
+
+                // Hide filter tools
+                const filterTools = document.getElementById("locatortoolmap-filtertools");
+                if (filterTools) {
+                    filterTools.style.display = "none";
+                }
+            } else {
+                alert("ไม่พบโรงพยาบาลที่ใกล้ที่สุด");
+            }
+        });
+    } else {
+        alert("เบราว์เซอร์ของคุณไม่รองรับการระบุตำแหน่ง");
+    }
+});
+
+// Function to calculate the distance between two coordinates (Haversine formula)
+function haversineDistance(coord1, coord2) {
+    const R = 6371; // Radius of Earth in km
+    const dLat = (coord2.lat - coord1.lat) * (Math.PI / 180);
+    const dLon = (coord2.lng - coord1.lng) * (Math.PI / 180);
+    const lat1 = coord1.lat * (Math.PI / 180);
+    const lat2 = coord2.lat * (Math.PI / 180);
+
+    const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+}
+
 </script>
 <script>
     $(document).ready(function () {
