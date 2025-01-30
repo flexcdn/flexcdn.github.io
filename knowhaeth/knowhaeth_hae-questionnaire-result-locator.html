@@ -58,7 +58,7 @@
     </div>
 </div> <!-- /knowhaeth-questionresult-diagnosing -->
 
-<div class="row" id="knowhaeth-questionresult-diagnosingtable">
+<div class="row" id="knowhaeth-questionresult-diagnosingtable" style="display: none !important;">
 
 <div class="col-md-12" id="knowhaeth-questionhrdiv"><hr></div>
 
@@ -602,7 +602,7 @@ div.content > div > div:nth-child(3) > div {
 
 <!-- END DIAGNOSING BLOCK 2#1 -->
 
-</div>
+</div> <!-- /knowhaeth-questionresult-diagnosingtable -->
 
 <div id="knowhaeth-questionresulthidden">
 
@@ -785,39 +785,20 @@ section > div.region.region-content > h1 {
 
 </style>
 
-<script>
-const urlSearchParams = new URLSearchParams(window.location.search);
-const params = Object.fromEntries(urlSearchParams.entries());
-
-const symtoms = Object.entries(params).filter(([key, value]) => value=='y');
-
-if(Object.keys(params).length == 0 || symtoms.length == 0){
-    document.getElementById('knowhaeth-questionresult-title').style.display = 'none';
-    document.getElementById('knowhaeth-questionresult-suggest').style.display = 'none';
-    document.getElementById('knowhaeth-questionresult-diagnosing').style.display = 'none';
-    document.getElementById('knowhaeth-questionresult-diagnosingtable').style.display = 'none';
-}else{
-    document.getElementById('knowhaeth-questionresult-zerotitle').style.display = 'none';
-    document.getElementById('knowhaeth-questionresult-sum').innerHTML = symtoms.length;
-
-    Object.entries(params).forEach(el => {
-        if(el[1] == 'n'){
-            document.getElementById('img'+ el[0]).src = '/sites/default/files/inline-images/' + el[0] + 'no.png';
-        }else{
-            document.getElementById('img'+ el[0]).src = '/sites/default/files/inline-images/' + el[0] + 'yes.png';
-        }
-    });
-}
-</script>
-
 <hr>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
 <div id="locatorwarp">
 
-    <div id="locatortoolmap-header">
-        การสนับสนุนดูแลผู้ป่วยโรค HAE<br>
-        รายชื่อโรงพยาบาลที่รับตรวจวินิจฉัยโรค HAE ใกล้คุณ
+    <div class="row" id="locatortoolmap-header">
+        <div class="col-xs-2">
+            <img alt="knowhaeth_mapicon" data-entity-type="file" data-entity-uuid="fa31c0fa-f45f-48c5-9154-546f2819c85b" src="/sites/default/files/inline-images/knowhaeth_mapicon.png" width="125" height="125"/>
+        </div>
+        <div class="col-xs-10">
+            <h4 class="treating_block1_h4">การสนับสนุนดูแลผู้ป่วยโรค HAE</h4>
+            <h5 class="treating_block1_h5">รายชื่อโรงพยาบาลที่รับตรวจวินิจฉัยโรค HAE ใกล้คุณ</h5>
+        </div>
     </div>
 
     <div id="locatorshowadress-div">
@@ -963,6 +944,9 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
 .footer__links li:last-child {
     display: list-item !important;
 }
+div.content > div > hr {
+    margin-top: 50px;
+}
 
 /* Header Class */
 
@@ -1068,6 +1052,26 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
     font-weight: 500;
     padding-bottom: 15px;
     color: #1b374f;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#locatortoolmap-header > div.col-xs-2 {
+    max-width: 160px;
+}
+#locatortoolmap-header > div.col-xs-10 {
+    padding-top: 8px;
+}
+#locatortoolmap-header > div.col-xs-10 > h4 {
+    font-family: "Kanit", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    line-height: 100%;
+}
+#locatortoolmap-header > div.col-xs-10 > h5 {
+    font-size: 26px !important;
+    font-weight: 300 !important;
+    font-family: "Kanit", sans-serif;
 }
 #locatortoolmap {
     float: none;
@@ -1295,6 +1299,7 @@ select::-ms-expand {
 .locatortoolmap-box2 > div {
 }
 
+
 /* Locator Card Class */
 
 #hospitalist {
@@ -1313,6 +1318,10 @@ select::-ms-expand {
     margin-bottom: 20px;
     padding: 15px;
     display: block;
+    transition: all 0.3s ease;
+}
+.card__hospital-listing:hover {
+    background: #fff !important;
 }
 .card__hospital-name {
     font-size: 24px;
@@ -1472,6 +1481,7 @@ select::-ms-expand {
     margin-right: 5px !important;
     margin-bottom: 10px !important;
     height: auto !important;
+    border: 1px solid #f5f5f5;
 }
 .-seeall > div.card__hospital-note {
 
@@ -3933,4 +3943,30 @@ button.gm-ui-hover-effect {
             window.location.href = "/locator/seeall";
         });
     });
+</script>
+
+<script>
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+
+const symtoms = Object.entries(params).filter(([key, value]) => value=='y');
+
+if(Object.keys(params).length == 0 || symtoms.length == 0){
+    document.getElementById('knowhaeth-questionresult-title').style.display = 'none';
+    document.getElementById('knowhaeth-questionresult-suggest').style.display = 'none';
+    document.getElementById('knowhaeth-questionresult-diagnosing').style.display = 'none';
+    // document.getElementById('knowhaeth-questionresult-diagnosingtable').style.display = 'none';
+    document.getElementById('locatorwarp').style.display = 'none';
+}else{
+    document.getElementById('knowhaeth-questionresult-zerotitle').style.display = 'none';
+    document.getElementById('knowhaeth-questionresult-sum').innerHTML = symtoms.length;
+
+    Object.entries(params).forEach(el => {
+        if(el[1] == 'n'){
+            document.getElementById('img'+ el[0]).src = '/sites/default/files/inline-images/' + el[0] + 'no.png';
+        }else{
+            document.getElementById('img'+ el[0]).src = '/sites/default/files/inline-images/' + el[0] + 'yes.png';
+        }
+    });
+}
 </script>
