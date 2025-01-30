@@ -815,45 +815,52 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <div id="locatorwarp">
 
-    <div id="locatortoolmap-header">คลินิกใกล้คุณ</div>
-
-    <div id="locatorshowadress">
-        <div class="locatorshowadress-header">
-            <svg
-                class="locatorshowadress-mapbuttonpin"
-                data-arp-injected="true"
-                fill="#c12b2c"
-                height="30px"
-                id="Capa_1"
-                version="1.1"
-                viewbox="0 0 297 297"
-                width="30px"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-                <g>
-                    <path
-                        d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645   c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645   C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892   c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"
-                    ></path>
-                    <path
-                        d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614   c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901   c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104   C179.265,127.948,165.464,141.901,148.5,141.901z"
-                    ></path>
-                </g>
-            </svg>
-            ตอนนี้คุณอยู่ที่
-        </div>
-
-        <div class="locatorshowadress-adress" id="current_loc"> &nbsp; </div>
-
-        <div class="knowclearall">&nbsp;</div>
+    <div id="locatortoolmap-header">
+        การสนับสนุนดูแลผู้ป่วยโรค HAE<br>
+        รายชื่อโรงพยาบาลที่รับตรวจวินิจฉัยโรค HAE ใกล้คุณ
     </div>
-    <!-- /locatorshowadress -->
+
+    <div id="locatorshowadress-div">
+        <div id="locatorshowadress">
+            <div class="locatorshowadress-header">
+                <svg
+                    class="locatorshowadress-mapbuttonpin"
+                    data-arp-injected="true"
+                    fill="#f00"
+                    height="30px"
+                    id="Capa_1"
+                    version="1.1"
+                    viewbox="0 0 297 297"
+                    width="30px"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                    <g>
+                        <path
+                            d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645   c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645   C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892   c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"
+                        ></path>
+                        <path
+                            d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614   c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901   c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104   C179.265,127.948,165.464,141.901,148.5,141.901z"
+                        ></path>
+                    </g>
+                </svg>
+                ตอนนี้คุณอยู่ที่
+            </div>
+
+            <div class="locatorshowadress-adress" id="current_loc"> &nbsp; </div>
+
+            <div class="knowclearall">&nbsp;</div>
+        </div>
+    </div><!-- /locatorshowadress -->
 
     <div id="locatortooldiv">
         <div class="locatortoolmap-defualt" id="locatortoolmap">
 
             <div id="locatortoolmap-filtertools">
+
+                <div id="locatortoolmap-filtertools-header">ค้นหาสถานพยาบาล</div>
+
                 <div id="locatortoolmap-box1" class="locatortoolmap-box locatortoolmap-box1">
                     <div class="locatortoolmap-search">
                         <input class="locatortoolmap-searchTerm" id="searchBox" name="q" placeholder="ค้นหาจากชื่อสถานพยาบาล..." type="text" />
@@ -879,7 +886,7 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
                 </div>
 
                 <div id="locatortoolmap-box2" class="locatortoolmap-box locatortoolmap-box2">
-                    <label class="locatortoolmap-label">ประเภทของสถานพยาบาล</label>
+                    <label class="locatortoolmap-label">ประเภท</label>
 
                     <div class="locatortoolmap-select"><select id="hospitaltype"></select></div>
 
@@ -918,7 +925,7 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
         </div>
 
         <div class="locatortoollist-defualt -fullwidth" id="locatortoollist">
-            <div id="locatortoollist-header">ผลการค้นหา</div>
+            <div id="locatortoollist-header">รายชื่อโรงพยาบาลทั้งหมด</div>
             <!-- START CARD LOOP -->
 
             <div id="hospitalist">&nbsp;</div>
@@ -1018,13 +1025,18 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
 
 /* You Address Class */
 
+#locatorshowadress-div {
+    background-color: #59c7e6;
+    border-radius: 12px 12px 0px 0px;
+}
 #locatorshowadress {
     max-width: 680px;
     width: 100%;
     margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 25px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 0px;
+    color: #fff;
 }
 .locatorshowadress-header {
     float: left;
@@ -1032,7 +1044,7 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
     font-size: 24px;
     font-weight: 400;
     min-width: 190px;
-    padding-top: 0px;
+    padding-top: 5px;
 }
 .locatorshowadress-adress {
     float: left;
@@ -1060,9 +1072,9 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
 #locatortoolmap {
     float: none;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
     /* position: -webkit-sticky; */
     /* position: sticky; */
     top: 0;
@@ -1083,8 +1095,8 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
     height: 500px;
     width: 100%;
     background: #c2d3dd;
-    border: 1px solid #1b374f;
-    border-radius: 8px;
+    border: none;
+    border-radius: 0px 0px 12px 12px;
     height: 500px;
 }
 #mapinfowindow > h1 {
@@ -1153,11 +1165,12 @@ button.gm-ui-hover-effect > span {
 }
 .locatortoolmap-searchTerm {
     width: 100%;
-    border: 3px solid #c2d3dd;
-    background-color: #c2d3dd;
+    border: 3px solid #fff;
+    background-color: #fff;
     border-right: none;
-    padding: 15px;
+    padding: 9px;
     height: 36px;
+    font-size: 12px;
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #143858;
@@ -1169,8 +1182,8 @@ button.gm-ui-hover-effect > span {
 .locatortoolmap-searchButton {
     width: 60px;
     height: 36px;
-    border: 1px solid #c2d3dd;
-    background: #c2d3dd;
+    border: 1px solid #fff;
+    background: #fff;
     text-align: center;
     color: #1b374f;
     border-radius: 0 5px 5px 0;
@@ -1184,9 +1197,10 @@ select {
     box-shadow: none;
     flex: 1;
     padding: 0 1em;
-    padding-left: 25px;
+    padding-left: 15px;
     font-family: "Kanit", sans-serif;
-    background-color: #c2d3dd;
+    font-size: 12px;
+    background-color: #fff;
     color: #143858;
     background-image: none;
     cursor: pointer;
@@ -1197,16 +1211,17 @@ select::-ms-expand {
 .locatortoolmap-label {
     float: left;
     width: 25%;
-    min-width: 90px;
-    padding-top: 5px;
-    text-align: right;
-    color: #0081a0;
+    font-size: 12px;
+    min-width: auto;
+    padding-top: 10px;
+    text-align: left;
+    color: #004d98;
     font-weight: 300;
 }
 .locatortoolmap-select {
     position: relative;
     display: flex;
-    width: 70%;
+    width: 65%;
     height: 35px;
     border-radius: 25px;
     overflow: hidden;
@@ -1217,9 +1232,9 @@ select::-ms-expand {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 7px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 9px;
+    padding-right: 12px;
+    padding-left: 10px;
     background-color: #143858;
     color: #c2d3dd;
     transition: 0.25s all ease;
@@ -1230,35 +1245,42 @@ select::-ms-expand {
 }
 #locatortoolmap-filtertools {
     position: absolute;
-    z-index: 99;
-    background-color: #fff;
+    z-index: 8;
+    background-color: #c2d3dd;
     width: 320px;
     padding: 10px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
 }
+#locatortoolmap-filtertools-header {
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 500;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #004d98;
+}
 .locatortoolmap-box {
     float: left;
-    width: 50%;
+    width: 100%;
     max-width: 360px;
-    padding: 10px;
-    min-height: 70px;
+    padding: 5px;
+    min-height: 45px;
 }
 .locatortoolmap-box1 {
     width: 100%;
-    max-width: 690px;
-    padding-left: 85px;
+    max-width: 100%;
     float: none;
     display: block;
     margin: auto;
+    padding-bottom: 20px;
 }
 .locatortoolmap-box2 {
 }
 .locatortoolmap-box2 > label {
-    width: 25% !important;
+    width: 24% !important;
     max-width: 100px;
-    margin-top: -12px;
 }
 .locatortoolmap-box2 > div {
 }
@@ -1649,7 +1671,7 @@ button.gm-ui-hover-effect {
 <script>
     var map = null;
     var markers = [];
-    const iconurl = "https://flexcdn.github.io/knowdengueth/pin_locator_sml4.png";
+    const iconurl = "https://flexcdn.github.io/knowhaeth/pin_locator_sml.png";
     var currentPage = 1;
 
     const resetDropdown = (name) => {
