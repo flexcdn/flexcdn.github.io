@@ -1613,67 +1613,88 @@ select::-ms-expand {
     margin-top: -45px;
 }
 
+@media (max-width: 1599px) {
+
+.-seeall {
+    max-width: 333px !important;
+}
+
+}
+
+@media (max-width: 1399px) {
+
+.-seeall {
+    max-width: 303px !important;
+}
+
+}
+
 @media (max-width: 1360px) {
 
-.locatortoolmap-box2 > label,
-.locatortoolmap-box3 > label,
-.locatortoolmap-box4 > label,
-.locatortoolmap-box5 > label {
-    min-width: 40px;
-    width: 30% !important;
-    max-width: 100px;
-    margin-top: 0px;
-    font-size: 12px;
-    line-height: 110%;
-}
-.locatortoolmap-select {
-    width: 60% !important;
-    max-width: 155px !important;
-}
-.locatortoolmap-box1 {
-    padding-left: 0px;
-    padding-top: 35px !important;
-    padding-bottom: 20px !important;
-    min-height: 40px;
-    display: flex;
-}
-.locatortoolmap-search {
-    max-width: 460px;
-    margin-left: auto;
-}
 #locatortoolmap-filtertools {
     padding-top: 0px !important;
 }
 .locatortoolmap-label {
-    text-align: right;
+
 }
 
 }
 
 @media (max-width: 1080px) {
 
-#locatortoolmap {
-    width: 57% !important;
+.-seeall {
+    max-width: 48% !important;
 }
-#locatortoollist {
-    width: 42% !important;
+
+}
+
+@media (max-width: 991px) {
+
+#locatortoolmap-filtertools {
+    position: static !important;
+    margin: 0px;
+    border-radius: 0px;
+    width: 100%;
+    padding: 10px !important;
+}
+.locatortoolmap-box1 {
+    padding-left: 0px;
+    padding-top: 5px !important;
+    padding-bottom: 10px !important;
+    min-height: 40px;
+    display: flex;
+}
+.locatortoolmap-box {
+    width: 100%;
+    max-width: 100% !important;
+}
+.locatortoolmap-box2 > label {
+    width: 20% !important;
+    max-width: 100px;
 }
 .locatortoolmap-select {
-    max-width: 130px !important;
+    width: 75% !important;
+}
+#locatortoolmap-header > div.col-xs-10 > h4 {
+    font-size: 32px;
+}
+#locatortoolmap-header > div.col-xs-10 > h5 {
+    font-size: 22px !important;
+}
+#locatortoolmap-header > div.col-xs-2 > img {
+    width: 100%;
+    height: auto;
+}
+#locatortoolmap-header > div.col-xs-10 {
+    padding-top: 0px;
 }
 
 }
 
 @media (max-width: 935px) {
-    .locatorheadcol2top {
-        height: auto;
-    }
-}
 
-@media (max-width: 800px) {
-
-.locatortoolmap-select {
-    max-width: 110px !important;
+.locatorheadcol2top {
+    height: auto;
 }
 
 }
@@ -1692,8 +1713,9 @@ select::-ms-expand {
     position: static !important;
 }
 #locatortoolmap-filtertools {
-    max-width: 360px;
+    max-width: 100%;
     margin: auto;
+    zoom: 70%;
 }
 #locatortoollist {
     width: 100% !important;
@@ -1736,10 +1758,24 @@ button.gm-ui-hover-effect {
 
 }
 
-@media (max-width: 697px) {
-    .locatorheadcol1 {
-        margin-top: 26px;
-    }
+@media (max-width: 676px) {
+
+#locatortoolmap-header > div.col-xs-10 > h4 {
+    margin-top: 0px;
+    font-size: 26px;
+}
+#locatortoolmap-header > div.col-xs-10 > h5 {
+    font-size: 18px !important;
+}
+.-seeall {
+    max-width: 100% !important;
+}
+#mapinfowindow > a.card__hospital-mapbutton {
+    font-size: 22px;
+    background-size: 20px;
+    zoom: 50%;
+}
+
 }
 
 @media (max-width: 481px) {
