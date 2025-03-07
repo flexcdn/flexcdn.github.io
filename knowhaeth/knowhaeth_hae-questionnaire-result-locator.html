@@ -52,7 +52,8 @@
         และ รับการตรวจวินิจฉัยอย่างเหมาะสม</div>
 </div> <!-- /knowhaeth-questionresult-suggest -->
 
-<div class="row" id="knowhaeth-questionresult-diagnosing">
+<!-- HIDE PDF ATTACHMENT -->
+<div class="row" id="knowhaeth-questionresult-diagnosing" style="display: none;">
     <div class="col-md-12">
         <a href="/sites/default/files/2023-01/Final-Thai-CPG-for-HAE-Jan-2023-TH_0.pdf" target="_blank" class="btn btn-primary btn-lg btn-mainsubmit">แนวทางวินิจฉัยและรักษาโรค HAE</a>
     </div>
@@ -464,6 +465,7 @@ div.content > div > div:nth-child(3) > div {
     padding-left: 10px;
 }
 
+
 @media (max-width: 1399px) {
 
 #diagnosing_tabledesktop > tbody > tr> td {
@@ -787,8 +789,15 @@ section > div.region.region-content > h1 {
 
 <hr>
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<!-- Sample link that triggers the dialog -->
+<p>Click the link below to test the leaving site confirmation:</p>
+<a href="https://openai.com/" class="linkout">Visit OpenAI</a>
+<a href="https://google.com/" class="testmultiplecasss linkout">Visit Google</a>
 
+<hr>
+
+<!-- LOCATOR APP -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <div id="locatorwarp">
 
     <div class="row" id="locatortoolmap-header">
@@ -922,7 +931,23 @@ section > div.region.region-content > h1 {
         <div class="knowclearall">&nbsp;</div>
     </div>
     <!-- /locatortooldiv -->
-</div>
+</div> <!-- /locatorwarp -->
+
+<!-- LINKOUT Modal -->
+<div id="leaveSiteModal">
+    <div class="modal-content">
+        <div class="modal-header">You are now leaving the KnowHAE website</div>
+        <div class="modal-body">
+            This link opens a website that is not operated by Takeda. We are not responsible for the content or availability of linked websites.
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-continue">Continue</button>
+        </div>
+    </div>
+</div> <!-- /leaveSiteModal -->
+
+<!-- CSS FOR APP -->
 <style type="text/css">
  
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -1612,6 +1637,91 @@ select::-ms-expand {
     padding-left: 20px;
     margin-top: -45px;
 }
+.lineincard {
+    background-image: url(/sites/default/files/inline-images/knowhaeth_diagnosing_line.png);
+    background-repeat: no-repeat;
+    background-size: 17px;
+    padding-left: 21px;
+    background-position: 0px 5px;
+}
+
+/* KnowHAE Linkout Class */
+
+#leaveSiteModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#leaveSiteModal > div {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    width: 100%;
+    max-width: 670px;
+}
+.modal-content {
+    background: #fff;
+    width: 400px;
+    margin: 12% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+#leaveSiteModal > div > div {
+    padding: 10px 10px !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#leaveSiteModal > div > div.modal-header {
+    color: #0f0f0f;
+    font-family: "Sofiapro-Regular", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    white-space: normal;
+}
+#leaveSiteModal > div > div.modal-body {
+    color: #595959;
+    font-family: "Sofiapro-Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+}
+#leaveSiteModal > div > div.modal-footer {
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#leaveSiteModal > div > div.modal-footer > button.btn.btn-cancel {
+    width: 125px;
+    margin-right: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-color: #4c4948;
+    border: 0;
+    border-radius: 40px;
+    color: #fff;
+    font-family: "OpenSans",sans-serif;
+    font-size: 18px;
+    font-family: "Sofiapro-Regular", sans-serif;
+}
+#leaveSiteModal > div > div.modal-footer > button.btn.btn-continue {
+    width: 135px;
+    margin-left: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-color: #e1242a;
+    border: 0;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Sofiapro-Regular", sans-serif;
+}
+
 
 @media (max-width: 1599px) {
 
@@ -1791,7 +1901,8 @@ button.gm-ui-hover-effect {
 
  
 </style>
-<!-- JS FOR DEMO -->
+
+<!-- JS FOR APP -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&loading=async&callback=initMap&v=weekly" defer></script>
 <script>
@@ -2239,8 +2350,9 @@ button.gm-ui-hover-effect {
                                                                     children: [
                                                                         {
                                                                             type: "a",
-                                                                            attrs: { href: "https://line.me/R/ti/p/@757cssev", target: "_blank" },
-                                                                            children: ["💬 @757cssev"]
+                                                                            attrs: { href: "https://line.me/R/ti/p/@757cssev", target: "_blank",
+                                                                            class: "lineincard linkout" },
+                                                                            children: ["@757cssev"]
                                                                         }
                                                                     ]
                                                                 }
@@ -2280,6 +2392,18 @@ button.gm-ui-hover-effect {
                                                                             type: "a",
                                                                             attrs: { href: "mailto:pedallergy.siriraj@gmail.com" },
                                                                             children: ["📧 pedallergy.siriraj@gmail.com"]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-12" },
+                                                                    children: [
+                                                                        {
+                                                                            type: "a",
+                                                                            attrs: { href: "https://line.me/R/ti/p/@960gvywo", target: "_blank",
+                                                                            class: "lineincard linkout" },
+                                                                            children: ["@960gvywo"]
                                                                         }
                                                                     ]
                                                                 }
@@ -2444,6 +2568,18 @@ button.gm-ui-hover-effect {
                                                                             children: ["📧 allergymedsi@gmail.com"]
                                                                         }
                                                                     ]
+                                                                },
+                                                                {
+                                                                    type: "div",
+                                                                    attrs: { class: "col-xs-12" },
+                                                                    children: [
+                                                                        {
+                                                                            type: "a",
+                                                                            attrs: { href: "https://line.me/R/ti/p/@allergymedsi", target: "_blank",
+                                                                            class: "lineincard linkout" },
+                                                                            children: ["@allergymedsi"]
+                                                                        }
+                                                                    ]
                                                                 }
                                                             ]
                                                         }
@@ -2587,7 +2723,7 @@ button.gm-ui-hover-effect {
                                     attrs: {
                                         href: val.website,
                                         target: "_blank",
-                                        class: "card__hospital-mapbutton",
+                                        class: "card__hospital-mapbutton linkout",
                                     },
                                     children: [
                                         {
@@ -2826,7 +2962,7 @@ button.gm-ui-hover-effect {
                                 {
                                     type: "a",
                                     attrs: {
-                                        class: "card__hospital-mapbutton",
+                                        class: "card__hospital-mapbutton linkout",
                                         target: "_blank",
                                         href: val.website,
                                     },
@@ -3038,7 +3174,7 @@ button.gm-ui-hover-effect {
                                 {
                                     type: "a",
                                     attrs: {
-                                        class: "card__hospital-mapbutton",
+                                        class: "card__hospital-mapbutton linkout",
                                         target: "_blank",
                                         href: val.website,
                                     },
@@ -3239,7 +3375,7 @@ button.gm-ui-hover-effect {
                                 {
                                     type: "a",
                                     attrs: {
-                                        class: "card__hospital-mapbutton",
+                                        class: "card__hospital-mapbutton linkout",
                                         target: "_blank",
                                         href: val.website,
                                     },
@@ -3606,7 +3742,7 @@ button.gm-ui-hover-effect {
                                 {
                                     type: "a",
                                     attrs: {
-                                        class: "card__hospital-mapbutton",
+                                        class: "card__hospital-mapbutton linkout",
                                         target: "_blank",
                                         href: val.website,
                                     },
@@ -4089,4 +4225,35 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
         }
     });
 }
+</script>
+
+<script>
+    $(document).ready(function () {
+        let externalLink = "";
+
+        // When user clicks an external link
+        $(".linkout").click(function (e) {
+            e.preventDefault(); // Prevent default navigation
+            externalLink = $(this).attr("href"); // Store link URL
+            $("#leaveSiteModal").fadeIn(); // Show modal
+        });
+
+        // When "Cancel" is clicked, close modal
+        $(".btn-cancel").click(function () {
+            $("#leaveSiteModal").fadeOut();
+        });
+
+        // When "Continue" is clicked, open link in a new tab
+        $(".btn-continue").click(function () {
+            window.open(externalLink, "_blank");
+            $("#leaveSiteModal").fadeOut();
+        });
+
+        // Close modal when clicking outside of it
+        $(window).click(function (event) {
+            if (event.target.id === "leaveSiteModal") {
+                $("#leaveSiteModal").fadeOut();
+            }
+        });
+    });
 </script>
