@@ -789,13 +789,6 @@ section > div.region.region-content > h1 {
 
 <hr>
 
-<!-- Sample link that triggers the dialog -->
-<p>Click the link below to test the leaving site confirmation:</p>
-<a href="https://openai.com/" class="linkout">Visit OpenAI</a>
-<a href="https://google.com/" class="testmultiplecasss linkout">Visit Google</a>
-
-<hr>
-
 <!-- LOCATOR APP -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <div id="locatorwarp">
@@ -941,8 +934,8 @@ section > div.region.region-content > h1 {
             This link opens a website that is not operated by Takeda. We are not responsible for the content or availability of linked websites.
         </div>
         <div class="modal-footer">
-            <button class="btn btn-cancel">Cancel</button>
-            <button class="btn btn-continue">Continue</button>
+            <button id="cancel-btn">Cancel</button>
+            <button id="continue-btn">Continue</button>
         </div>
     </div>
 </div> <!-- /leaveSiteModal -->
@@ -1698,7 +1691,7 @@ select::-ms-expand {
     justify-content: space-between;
     margin-top: 10px;
 }
-#leaveSiteModal > div > div.modal-footer > button.btn.btn-cancel {
+#cancel-btn {
     width: 125px;
     margin-right: 1.5rem;
     padding: 1rem 2.5rem;
@@ -1710,7 +1703,7 @@ select::-ms-expand {
     font-size: 18px;
     font-family: "Sofiapro-Regular", sans-serif;
 }
-#leaveSiteModal > div > div.modal-footer > button.btn.btn-continue {
+#continue-btn {
     width: 135px;
     margin-left: 1.5rem;
     padding: 1rem 2.5rem;
@@ -4228,32 +4221,27 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
 </script>
 
 <script>
-    $(document).ready(function () {
-        let externalLink = "";
+$(document).ready(function() {
+    let targetUrl = '';
 
-        // When user clicks an external link
-        $(".linkout").click(function (e) {
-            e.preventDefault(); // Prevent default navigation
-            externalLink = $(this).attr("href"); // Store link URL
-            $("#leaveSiteModal").fadeIn(); // Show modal
-        });
+    // Use event delegation to capture clicks on dynamically added elements
+    $(document).on("click", ".linkout", function(event) {
+        event.preventDefault(); // Prevent the default behavior of opening the link immediately
+        targetUrl = $(this).attr("href"); // Store the link URL
 
-        // When "Cancel" is clicked, close modal
-        $(".btn-cancel").click(function () {
-            $("#leaveSiteModal").fadeOut();
-        });
-
-        // When "Continue" is clicked, open link in a new tab
-        $(".btn-continue").click(function () {
-            window.open(externalLink, "_blank");
-            $("#leaveSiteModal").fadeOut();
-        });
-
-        // Close modal when clicking outside of it
-        $(window).click(function (event) {
-            if (event.target.id === "leaveSiteModal") {
-                $("#leaveSiteModal").fadeOut();
-            }
-        });
+        // Show the dialog
+        $("#leaveSiteModal").fadeIn();
     });
+
+    // Handle Cancel button
+    $("#cancel-btn").click(function() {
+        $("#leaveSiteModal").fadeOut(); // Close the dialog
+    });
+
+    // Handle Continue button
+    $("#continue-btn").click(function() {
+        window.open(targetUrl, "_blank"); // Open link in new tab
+        $("#leaveSiteModal").fadeOut(); // Close the dialog
+    });
+});
 </script>
