@@ -9,7 +9,7 @@
         
         <p>ผู้สูงอายุ เป็นกลุ่มชีวิตวัยที่ได้ดั่งความรองรับการป่วยในความการได้รับยากพิษที่ เพื่อฟื้นไข้ผู้สูงอายุ เล่นทันตามา พบเสียชีวิตมากไม่น้อย ๆ ... แต่เป็นสาเหตุชีวิต อาจเสียหายที่สุด หากติดไข้เลือดออก เพราจากผู้ป่วยที่เสียชีวิตจาก โรคไข้เลือดออก 8 ใน 10 คน เป็นผู้ป่วยและผู้สูงอายุ</p>
         
-        <p class="secondhand-highlight">แล้วถ้าผู้สูงอายุใกล้ตัวคุณ ติด ไข้เลือดออก คุณอาจทรมานเหมือนอาม่าท่านนี้</p>
+        <p class="secondhand-highlight">แล้วถ้าผู้สูงอายุใกล้ตัวคุณ ติด 'ไข้เลือดออก ' <span class="secondhand-blackfont">คุณอาจทรมานเหมือนอาม่าท่านนี้</span></p>
         
         <div class="secondhand-patient-card">
             <div class="secondhand-patient-image">
@@ -69,6 +69,15 @@
 </div>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#secondhand-senior,
+#secondhand-senior > div,
+#secondhand-senior > div > h1,
+#secondhand-senior > div > p {
+    font-family: "Kanit", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
 
 .secondhand-header-banner {
     width: 100%;
@@ -228,6 +237,133 @@ li {
 
 .secondhand-highlight-text {
     color: #e60000;
+}
+
+/* CSS FIXING */
+
+#secondhand-senior {
+    max-width: 1024px;
+    margin: auto;
+}
+#secondhand-senior > div.secondhand-main-content > h1 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 100%;
+    margin-top: 45px;
+}
+#secondhand-senior > div.secondhand-main-content > p.secondhand-subtitle {
+    text-align: center;
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+#secondhand-senior > div.secondhand-main-content > p:nth-child(3) {
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 300;
+    font-style: normal;
+}
+#secondhand-senior > div.secondhand-main-content > p.secondhand-highlight {
+    font-size: 26px;
+    line-height: 150%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.secondhand-blackfont {
+    color: #000 !important;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-patient-card {
+    max-width: 990px;
+    margin: auto;
+    background-color: transparent;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p.secondhand-patient-name {
+    font-size: 30px;
+    line-height: 140%;
+    font-weight: 500;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p {
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 300;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
+    text-align: left;
+    font-size: 24px;
+    line-height: 140%;
+    color: #000;
+    margin-top: 30px;
+}
+#secondhand-senior > div.secondhand-main-content > h2:nth-child(6) {
+    margin-left: 0px;
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+#secondhand-senior > div.secondhand-main-content > p:nth-child(7) {
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 300;
+    font-style: normal;
+    text-indent: 65px;
+}
+#secondhand-senior > div.secondhand-main-content > h2:nth-child(8) {
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+#secondhand-senior > div.secondhand-main-content > h2:nth-child(8),
+#secondhand-senior > div.secondhand-main-content > h2:nth-child(11) {
+    margin-left: 0px;
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 25px;
+    margin-top: 51px;
+}
+#secondhand-senior > div.secondhand-main-content > ul:nth-child(9),
+#secondhand-senior > div.secondhand-main-content > ul:nth-child(13) {
+    padding-left: 65px;
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 300;
+}
+#secondhand-senior > div.secondhand-main-content > p:nth-child(10),
+#secondhand-senior > div.secondhand-main-content > p:nth-child(12) {
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 300;
+    font-style: normal;
+    text-indent: 65px;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-vaccine-banner {
+    margin-bottom: 0px;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-vaccine-banner > h2 {
+    font-size: 54px;
+    text-shadow: 2px 2px 0 black,
+    2px 2px 2px black;
+    line-height: 125%;
+    font-weight: 500;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-vaccine-banner > p {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 500;
+}
+#secondhand-senior > div.secondhand-main-content > a > div.secondhand-app-text {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 300;
+}
+#secondhand-senior > div.secondhand-main-content > p.secondhand-footer-text {
+    text-align: center;
+    font-size: 34px;
+    line-height: 120%;
+    margin-top: 65px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 </style>
