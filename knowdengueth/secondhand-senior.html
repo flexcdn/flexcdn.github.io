@@ -256,7 +256,7 @@ li {
 #secondhand-senior-header-text > h1 {
     margin-bottom: 0px;
     font-size: 32px;
-    line-height: 100%;
+    line-height: 150%;
     font-weight: 600;
     color: #fff;
 }
@@ -400,6 +400,49 @@ li {
 }
 #secondhand-senior > div > a > div > img {
     width: 180px;
+}
+
+@media (max-width: 1359px) {
+
+#secondhand-senior > div > div.secondhand-patient-card > div.secondhand-patient-info {
+    zoom: 85%;
+}
+
+}
+
+@media (max-width: 888px) {
+
+#secondhand-senior > div > div.secondhand-patient-card > div.secondhand-patient-info {
+    zoom: 65%;
+}
+#secondhand-senior > div.secondhand-main-content > a > div.secondhand-app-text {
+    line-height: 250%;
+}
+#secondhand-senior-header-text {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+}
+
+@media (max-width: 687px) {
+
+#secondhand-senior > div > div.secondhand-patient-card {
+    flex-wrap: wrap;
+}
+#secondhand-senior > div > div.secondhand-patient-card > div.secondhand-patient-image {
+    flex: 0 0 100%;
+}
+#secondhand-senior > div > div.secondhand-patient-card > div.secondhand-patient-info {
+    zoom: 100%;
+    flex: 0 0 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#secondhand-senior > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
+    text-align: center;
+}
+
 }
 
 </style>
