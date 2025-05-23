@@ -1,8 +1,17 @@
-<div id="secondhand-senior">
-    <div class="secondhand-header-banner">
-        <img src="https://placehold.co/800x200/333333/00b8d4?text=ไข้เลือดออกมือสอง" alt="Banner showing a healthcare professional in scrubs with Thai text about secondary dengue fever against a dark background with a teal bottom stripe">
+<div id="secondhand-senior-header">
+
+    <div id="secondhand-senior-header-hero">
+        <img alt="รู้จักไข้เลือดออกมือสอง" data-entity-type="file" data-entity-uuid="5aa46ff4-e8be-4731-be3c-75a46765cde7" src="/sites/default/files/inline-images/secondhand-header_rev2.png" /></div>
+    <div id="secondhand-senior-header-text">
+        <h1>
+            แค่ผู้สูงอายุในบ้านป่วยเป็นไข้เลือดออก คุณจะกลายเป็น <span class="secondhand-senior-header-hashtag">#ไข้เลือดอออกมือสอง</span>
+        </h1>
     </div>
-    
+
+</div>
+
+<div id="secondhand-senior">
+
     <div class="secondhand-main-content">
         <h1>ไข้เลือดออกมือสอง โรคที่คนเจ็บไม่ได้ป่วย</h1>
         <p class="secondhand-subtitle">แต่ต้องทุกข์ทรมาน ... เพราะคนที่รัก 'ติดไข้เลือดออก'</p>
@@ -13,10 +22,7 @@
         
         <div class="secondhand-patient-card">
             <div class="secondhand-patient-image">
-                <img src="https://placehold.co/300x300/cccccc/666666?text=Elderly+Patient" alt="Elderly Asian man with white hair wearing a blue shirt, looking tired and unwell">
-                <div class="secondhand-play-button">
-                    <i class="secondhand-fas fa-play" style="color: #333;"></i>
-                </div>
+                <img alt="คุณป้อม อายุ 67 ปี" data-entity-type="file" data-entity-uuid="9caaa046-3582-4b54-8c99-3e79b1a023af" src="/sites/default/files/inline-images/secondhand-senior-profile.png" />
             </div>
             <div class="secondhand-patient-info">
                 <p class="secondhand-patient-name">คุณป้อม อายุ 67 ปี<br>ผู้ป่วย #ไข้เลือดออกมือสอง</p>
@@ -56,11 +62,8 @@
         </div>
         
         <a href="#" class="secondhand-app-button">
-            <div class="secondhand-app-logo">
-                <img src="https://placehold.co/80x40/ffffff/00b8d4?text=MORDEE" alt="MORDEE app logo">
-            </div>
             <div class="secondhand-app-text">
-                คลิก เพื่อปรึกษาแพทย์ ถึงการฉีดวัคซีนไข้เลือดออก
+                คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="37b561ff-d57a-4d66-b0d9-cbe4af02f0bc" src="/sites/default/files/inline-images/secondhand-mordee-btn.png" /> เพื่อปรึกษาแพทย์ ถึงการฉีดวัคซีนไข้เลือดออก
             </div>
         </a>
         
@@ -183,7 +186,7 @@ li {
 }
 
 .secondhand-vaccine-banner {
-    background-color: #ff3b30;
+    background-color: #f00;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -202,7 +205,7 @@ li {
 
 .secondhand-app-button {
     display: flex;
-    background-color: #ff3b30;
+    background-color: #f00;
     color: white;
     padding: 15px;
     border-radius: 10px;
@@ -239,7 +242,32 @@ li {
     color: #e60000;
 }
 
-/* CSS FIXING */
+/* HEADER CSS */
+
+#secondhand-senior-header {
+    margin-bottom: 0px;
+}
+#secondhand-senior-header-text {
+    background: linear-gradient(0deg,#41948e 0%,#008ba6 100%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+#secondhand-senior-header-text > h1 {
+    margin-bottom: 0px;
+    font-size: 32px;
+    line-height: 100%;
+    font-weight: 600;
+    color: #fff;
+}
+#secondhand-senior-header-text > h1 > span {
+    color: #fff;
+    background-color: #f00;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* CSS OVERWRITE */
 
 #secondhand-senior {
     max-width: 1024px;
@@ -357,6 +385,11 @@ li {
     line-height: 150%;
     font-weight: 300;
 }
+#secondhand-senior > div.secondhand-main-content > a:hover,
+#secondhand-senior > div.secondhand-main-content > a > div.secondhand-app-text:hover {
+    text-decoration: none;
+    color: #fff;
+}
 #secondhand-senior > div.secondhand-main-content > p.secondhand-footer-text {
     text-align: center;
     font-size: 34px;
@@ -364,6 +397,9 @@ li {
     margin-top: 65px;
     margin-bottom: 15px;
     font-weight: 500;
+}
+#secondhand-senior > div > a > div > img {
+    width: 180px;
 }
 
 </style>
