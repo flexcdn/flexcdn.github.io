@@ -17,6 +17,20 @@
     </div>
 </div> <!-- /leaveSiteModal -->
 
+<!-- LINKOUT Modal 2 (For Footer Logo) -->
+<div id="leaveSiteModal2">
+    <div class="modal-content">
+        <div class="modal-header">You are now leaving the KnowHAE website</div>
+        <div class="modal-body">
+            This link opens a website that is not operated by Takeda. We are not responsible for the content or availability of linked websites.
+        </div>
+        <div class="modal-footer">
+            <button id="cancel-btn2">Cancel</button>
+            <button id="continue-btn2">Continue</button>
+        </div>
+    </div>
+</div> <!-- /leaveSiteModal -->
+
 <p class="footerblock">เว็บไซต์นี้สำหรับผู้ใช้ที่อยู่ในประเทศอื่นๆ นอกเหนือจากประเทศสหรัฐอเมริกาหรือประเทศอังกฤษ เว็บไซต์นี้ได้รับการพัฒนาภายใต้ทาเคดา ซึ่งสอดคล้องกับธุรกิจของบริษัทและมาตรการทางกฎหมาย ทาเคดามีความตั้งใจที่จะนำเสนอข้อมูลที่ถูกต้องแม่นยำ อย่างไรก็ตามข้อมูลที่นำเสนอบนเว็บไซต์อาจไม่ครบถ้วนและละเอียดเพียงพอที่จะใช้ทดแทนการเข้าพบแพทย์หรือปรึกษาแพทย์หรือผู้เชี่ยวชาญทางการแพทย์ได้ ทาเคดาไม่แนะนำให้ผู้ใช้เว็บไซต์ทำการรักษาตนเองหากมีปัญหาด้านสุขภาพ หากท่านมีปัญหาทางด้านสุขภาพต่างๆ ควรเข้าพบและทำการปรึกษาแพทย์หรือผู้เชี่ยวชาญทางการแพทย์ทันที</p>
 
 <p class="footerblock"><span lang="EN-TH">Copyright © 2025 ทาเคดาขอสงวนสิทธิ์ในการนำตราสัญลักษณ์หรือโลโก้ต่างๆที่อยู่ภายใต้ทรัพย์สินของบริษัท ทาเคดาไปใช้ และ ในปัจจุบันบริษัทไชร์ถือเป็นส่วนหนึ่งของบริษัททาเคดา<br />
@@ -106,6 +120,74 @@ C-ANPROM/TH/FIR/0094: Mar 2025</span></p>
     font-family: "Sofiapro-Regular", sans-serif;
 }
 
+/* KnowHAE Linkout Class 2 */
+
+#leaveSiteModal2 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#leaveSiteModal2 > div {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    width: 100%;
+    max-width: 670px;
+}
+#leaveSiteModal2 > div > div {
+    padding: 10px 10px !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#leaveSiteModal2 > div > div.modal-header {
+    color: #0f0f0f;
+    font-family: "Sofiapro-Regular", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    white-space: normal;
+}
+#leaveSiteModal2 > div > div.modal-body {
+    color: #595959;
+    font-family: "Sofiapro-Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+}
+#leaveSiteModal2 > div > div.modal-footer {
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#cancel-btn2 {
+    width: 125px;
+    margin-right: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-color: #4c4948;
+    border: 0;
+    border-radius: 40px;
+    color: #fff;
+    font-family: "OpenSans",sans-serif;
+    font-size: 18px;
+    font-family: "Sofiapro-Regular", sans-serif;
+}
+#continue-btn2 {
+    width: 135px;
+    margin-left: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-color: #e1242a;
+    border: 0;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Sofiapro-Regular", sans-serif;
+}
+
 </style>
 
 <!-- Link Out Modal -->
@@ -131,6 +213,30 @@ $(document).ready(function() {
     $("#continue-btn").click(function() {
         window.open(targetUrl, "_blank"); // Open link in new tab
         $("#leaveSiteModal").fadeOut(); // Close the dialog
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    let targetUrl = '';
+
+    // เลือกเฉพาะลิงก์โลโก้ตาม path CSS
+    $("#block-knowhae-footer > div > a").on("click", function(event) {
+        event.preventDefault();
+        targetUrl = "http://www.takeda.com/countries";
+        $("#leaveSiteModal2").fadeIn();
+    });
+
+    // ถ้า Cancel กดปิด modal เฉย ๆ
+    $("#cancel-btn2").click(function() {
+        $("#leaveSiteModal2").fadeOut();
+    });
+
+    // เมื่อ Continue ถูกกด ให้เปลี่ยนลิงก์แทนการใช้ window.open
+    $("#continue-btn2").click(function() {
+        window.location.href = targetUrl;  // เปลี่ยนหน้าหลักไปเลย
+        $("#leaveSiteModal2").fadeOut(); // (จริงๆ ไม่จำเป็น เพราะจะโหลดหน้าใหม่ทันที)
     });
 });
 </script>
