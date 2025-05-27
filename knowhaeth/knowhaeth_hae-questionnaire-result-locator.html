@@ -926,20 +926,6 @@ section > div.region.region-content > h1 {
     <!-- /locatortooldiv -->
 </div> <!-- /locatorwarp -->
 
-<!-- LINKOUT Modal -->
-<div id="leaveSiteModal">
-    <div class="modal-content">
-        <div class="modal-header">You are now leaving the KnowHAE website</div>
-        <div class="modal-body">
-            This link opens a website that is not operated by Takeda. We are not responsible for the content or availability of linked websites.
-        </div>
-        <div class="modal-footer">
-            <button id="cancel-btn">Cancel</button>
-            <button id="continue-btn">Continue</button>
-        </div>
-    </div>
-</div> <!-- /leaveSiteModal -->
-
 <!-- CSS FOR APP -->
 <style type="text/css">
  
@@ -1638,84 +1624,6 @@ select::-ms-expand {
     background-position: 0px 5px;
 }
 
-/* KnowHAE Linkout Class */
-
-#leaveSiteModal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-#leaveSiteModal > div {
-    padding-left: 7.5rem;
-    padding-right: 7.5rem;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-    width: 100%;
-    max-width: 670px;
-}
-.modal-content {
-    background: #fff;
-    width: 400px;
-    margin: 12% auto;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-#leaveSiteModal > div > div {
-    padding: 10px 10px !important;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-#leaveSiteModal > div > div.modal-header {
-    color: #0f0f0f;
-    font-family: "Sofiapro-Regular", sans-serif;
-    font-size: 22px;
-    line-height: 32px;
-    text-align: center;
-    white-space: normal;
-}
-#leaveSiteModal > div > div.modal-body {
-    color: #595959;
-    font-family: "Sofiapro-Regular", sans-serif;
-    font-size: 18px;
-    font-weight: 100;
-}
-#leaveSiteModal > div > div.modal-footer {
-    text-align: center;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-#cancel-btn {
-    width: 125px;
-    margin-right: 1.5rem;
-    padding: 1rem 2.5rem;
-    background-color: #4c4948;
-    border: 0;
-    border-radius: 40px;
-    color: #fff;
-    font-family: "OpenSans",sans-serif;
-    font-size: 18px;
-    font-family: "Sofiapro-Regular", sans-serif;
-}
-#continue-btn {
-    width: 135px;
-    margin-left: 1.5rem;
-    padding: 1rem 2.5rem;
-    background-color: #e1242a;
-    border: 0;
-    border-radius: 40px;
-    color: #fff;
-    font-size: 18px;
-    font-family: "Sofiapro-Regular", sans-serif;
-}
-
-
 @media (max-width: 1599px) {
 
 .-seeall {
@@ -1896,7 +1804,6 @@ button.gm-ui-hover-effect {
 </style>
 
 <!-- JS FOR APP -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXYED_MB0fTuA8XRYNno82ImliWEFL0&loading=async&callback=initMap&v=weekly" defer></script>
 <script>
     var map = null;
@@ -4218,30 +4125,4 @@ if(Object.keys(params).length == 0 || symtoms.length == 0){
         }
     });
 }
-</script>
-
-<script>
-$(document).ready(function() {
-    let targetUrl = '';
-
-    // Use event delegation to capture clicks on dynamically added elements
-    $(document).on("click", ".linkout", function(event) {
-        event.preventDefault(); // Prevent the default behavior of opening the link immediately
-        targetUrl = $(this).attr("href"); // Store the link URL
-
-        // Show the dialog
-        $("#leaveSiteModal").fadeIn();
-    });
-
-    // Handle Cancel button
-    $("#cancel-btn").click(function() {
-        $("#leaveSiteModal").fadeOut(); // Close the dialog
-    });
-
-    // Handle Continue button
-    $("#continue-btn").click(function() {
-        window.open(targetUrl, "_blank"); // Open link in new tab
-        $("#leaveSiteModal").fadeOut(); // Close the dialog
-    });
-});
 </script>
