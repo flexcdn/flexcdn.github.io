@@ -60,9 +60,9 @@
             <p>หากฉีดครบโดส ไม่ต้องฉีดเข็มกระตุ้นซ้ำ</p>
         </div>
         
-        <a href="#" class="secondhand-app-button">
+        <a href="https://www.google.com/" target="_blank" class="secondhand-app-button">
             <div class="secondhand-app-text">
-                คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="37b561ff-d57a-4d66-b0d9-cbe4af02f0bc" src="/sites/default/files/inline-images/secondhand-mordee-btn.png" /> เพื่อปรึกษาแพทย์ถึงวิธีการป้องกันต่างๆและการฉีดวัดขืนไข้เลือดออก
+                คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="37b561ff-d57a-4d66-b0d9-cbe4af02f0bc" src="/sites/default/files/inline-images/secondhand-mordee-btn.png" class="secondhand-app-logo"/> ป้องกันยุงกัด กำจัดแหล่งยุงเกิด <span class="secondhand-app-highlight">ปรึกษาแพทย์</span> เรื่องการฉีดวัคซีน
             </div>
         </a>
         
@@ -207,6 +207,17 @@ li {
 .secondhand-vaccine-banner p {
     margin-bottom: 10px;
 }
+.secondhand-footer-text {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+.secondhand-highlight-text {
+    color: #e60000;
+}
+
+/* MORDEE BTN CSS */
 
 .secondhand-app-button {
     display: flex;
@@ -218,33 +229,33 @@ li {
     align-items: center;
     text-decoration: none;
 }
-
-.secondhand-app-logo {
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px;
-    margin-right: 10px;
-    width: 80px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.secondhand-app-button:hover,
+.secondhand-app-text:hover {
+    text-decoration: none;
+    color: #fff;
 }
-
+.secondhand-app-button:focus {
+    color: #fff;
+}
+.secondhand-app-logo {
+    width: 160px !important;
+    margin-top: -5px;
+}
 .secondhand-app-text {
     flex-grow: 1;
     text-align: center;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 300;
 }
-
-.secondhand-footer-text {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.secondhand-highlight-text {
-    color: #e60000;
+.secondhand-app-highlight {
+    background-color: #fff;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 black, 2px 2px 2px black;
 }
 
 /* HEADER CSS */
@@ -385,16 +396,6 @@ li {
     line-height: 150%;
     font-weight: 500;
 }
-#secondhand-senior > div.secondhand-main-content > a > div.secondhand-app-text {
-    font-size: 24px;
-    line-height: 150%;
-    font-weight: 300;
-}
-#secondhand-senior > div.secondhand-main-content > a:hover,
-#secondhand-senior > div.secondhand-main-content > a > div.secondhand-app-text:hover {
-    text-decoration: none;
-    color: #fff;
-}
 #secondhand-senior > div.secondhand-main-content > p.secondhand-footer-text {
     text-align: center;
     font-size: 34px;
@@ -402,9 +403,6 @@ li {
     margin-top: 65px;
     margin-bottom: 65px;
     font-weight: 500;
-}
-#secondhand-senior > div > a > div > img {
-    width: 180px;
 }
 .secondhand-ref-text {
     font-size: 16px;
