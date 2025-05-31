@@ -184,8 +184,7 @@
     
     <a href="https://www.google.com/" target="_blank" class="locatorcontent-mordee-button">
         <div class="locatorcontent-mordee-text">
-            คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="37b561ff-d57a-4d66-b0d9-cbe4af02f0bc" src="/sites/default/files/inline-images/secondhand-mordee-btn.png" class="locatorcontent-mordee-logo" /> ป้องกันยุงกัด กำจัดแหล่งยุงเกิด
-            <span class="locatorcontent-mordee-highlight">ปรึกษาแพทย์</span> เรื่องการฉีดวัคซีน
+            <div class="locatorcontent-mordee-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="locatorcontent-mordee-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดชีนไข้เลือดออก
         </div>
     </a>
 
@@ -810,6 +809,12 @@ select::-ms-expand {
     width: 160px !important;
     margin-top: -5px;
 }
+.locatorcontent-mordee-logo2 {
+    width: 160px !important;
+    margin-top: -5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .locatorcontent-mordee-text {
     flex-grow: 1;
     text-align: center;
@@ -884,6 +889,18 @@ select::-ms-expand {
 #locatorcontent-mordee-alert-btn:focus,
 #locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text:focus {
     text-decoration: none !important;
+}
+.locatorcontent-mordee-btnin {
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
+    background-color: #fff;
+    padding: 5px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 black, 2px 2px 2px black;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 @media (max-width: 1360px) {
@@ -964,16 +981,16 @@ select::-ms-expand {
     bottom: 4px;
     max-width: 85%;
 }
-#locatorcontent-mordee-alert-btn > div.secondhand-app-text {
+#locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text {
     width: 100% !important;
     padding: 0px !important;
     font-size: 16px !important;
 }
-#locatorcontent-mordee-alert-btn > div > img.secondhand-app-logo {
+#locatorcontent-mordee-alert-btn > div > img.locatorcontent-mordee-logo {
     display: inline-block !important;
     width: 115px !important;
 }
-#locatorcontent-mordee-alert-btn > div > span.secondhand-app-highlight {
+#locatorcontent-mordee-alert-btn > div > span.locatorcontent-mordee-highlight {
     padding-left: 8px;
     padding-right: 8px;
     margin-left: 5px;
@@ -1053,12 +1070,21 @@ button.gm-ui-hover-effect {
     bottom: 30px;
     padding-right: 10px;
 }
-#locatorcontent-mordee-alert-btn > div.secondhand-app-text {
+#locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text {
     padding-bottom: 20px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
     text-align: left !important;
     text-align: left !important;
+}
+
+}
+
+@media (max-width: 530px) {
+
+.locatorcontent-mordee-btnin {
+    max-width: 230px;
+    line-height: 190%;
 }
 
 }
