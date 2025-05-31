@@ -1,5 +1,28 @@
+<!-- https://dev-knowdengue-thailand.pantheonsite.io/block/24?destination=/homepage -->
+
 <p>1. Alagarasu K. Genetic of susceptibility to severe dengue virus infections: an update and implications for prophylaxis, prognosis and therapeutics. Dengue Bulletin 2016; 39: 1-18.<br />
 2. Bureau of Epidemiology, D. o. D. C., MoPH, Thailand (2022). "Bureau of Epidemiology, Department of Disease Control." Annual Epidemiology Surveillance Report (2010 to 2021), Report 506, Retrieved 11/02/2022, from http://doe.moph.go.th/surdata/disease.php?ds=262766<br />
 3. Joao T, Leyanna G, Eric M, Adhara L, Wai WH, Giovanini EC, et al. Relevance of non-communicable comorbidities for the development of the severe forms of dengue: a systematic literature review. &nbsp;PLoS Negl Trop Dis 10(1): e0004284. doi:10.1371/journal.pntd.0004284<br />
 4. María G.Guzmán et. al. Effect of age on outcome of secondary dengue 2 infections. International Journal of Infectious &nbsp;Diseases 2002;6:118-124<br />
 5. ไข้เลือดออก (Dengue fever) [อินเทอร์เน็ต]. นนทบุรี :กรมควบคุมโรค; 2563 [เข้าถึงเมื่อ 29 &nbsp;กันยายน 2565]. เข้าถึงได้จาก: https://ddc.moph.go.th/disease_detail.php?d=44</p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    (function($) {
+    $(document).ready(function() {
+        // 1. เลือก radio "ล่าสุด"
+        var $radioLatest = $('#edit-sort-by-published-at-1');
+
+        if ($radioLatest.length) {
+        $radioLatest.prop('checked', true);
+        console.log('✔ ปุ่ม "ล่าสุด" ถูกสั่งให้เลือกเรียบร้อยแล้ว!');
+
+        // 2. trigger ปุ่ม Apply เพื่อให้ Content reload
+        $('#edit-submit-home-page-content').trigger('click');
+        console.log('✔ ปุ่ม Apply ถูกสั่งคลิกแล้ว!');
+        } else {
+        console.log('✘ ไม่เจอปุ่ม "ล่าสุด" ใน DOM!');
+        }
+    });
+    })(jQuery);
+</script>
