@@ -1,3 +1,14 @@
+<div id="secondhand-alert-div" class="secondhand-alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <div class="secondhand-alert-inner">
+    <a href="https://www.google.com/" target="_blank" id="secondhand-alert-btn">
+        <div class="secondhand-app-text">
+                คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="37b561ff-d57a-4d66-b0d9-cbe4af02f0bc" src="/sites/default/files/inline-images/secondhand-mordee-btn.png" class="secondhand-app-logo"/> ป้องกันยุงกัด กำจัดแหล่งยุงเกิด <span class="secondhand-app-highlight">ปรึกษาแพทย์</span> เรื่องการฉีดวัคซีน
+         </div>
+    </a>
+    </div>
+</div>
+
 <div id="secondhand-family-header">
 
     <div id="secondhand-family-header-hero">
@@ -259,6 +270,65 @@ li {
     box-shadow: 2px 2px 0 black, 2px 2px 2px black;
 }
 
+/* MORDEE FLOAT CSS */
+
+.secondhand-alert {
+    padding: 0px;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    top: 25vh;
+    right: auto;
+    left: 5px;
+    width: 100%;
+    max-width: 250px;
+    z-index: 999;
+}
+.closebtn {
+    color: #f00;
+    font-family: 'Kanit', sans-serif !important;
+    background-color: #fff;
+    font-weight: normal;
+    float: right;
+    font-size: 58px;
+    line-height: 20px;
+    padding-left: 6px;
+    padding-right: 13px;
+    padding-top: 2px;
+    padding-bottom: 13px;
+    max-width: 36px;
+    max-height: 36px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 100%;
+    /* transform: translate(-850%,-10px); */
+}
+.closebtn:hover {
+  color: black;
+}
+#secondhand-alert-btn > div.secondhand-app-text {
+    flex-grow: unset !important;
+    width: 210px !important;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f00;
+    border-radius: 20px;
+    color: #fff !important;
+    line-height: 175%;
+}
+#secondhand-alert-btn > div > img.secondhand-app-logo {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#secondhand-alert-btn:hover,
+#secondhand-alert-btn > div.secondhand-app-text:hover,
+#secondhand-alert-btn:focus,
+#secondhand-alert-btn > div.secondhand-app-text:focus {
+    text-decoration: none !important;
+}
+
 /* HEADER CSS */
 
 #secondhand-family-header {
@@ -451,22 +521,79 @@ li {
 
 }
 
+@media (max-width: 800px) {
+
+#secondhand-senior > div.secondhand-main-content > a > div.secondhand-app-text {
+    width: 580px;
+    display: block !important;
+    flex-grow: unset !important;
+    margin: auto;
+}
+    
+}
+
 @media (max-width: 687px) {
 
-#secondhand-family > div > div.secondhand-patient-card {
+#secondhand-senior > div > div.secondhand-patient-card {
     flex-wrap: wrap;
 }
-#secondhand-family > div > div.secondhand-patient-card > div.secondhand-patient-image {
+#secondhand-senior > div > div.secondhand-patient-card > div.secondhand-patient-image {
     flex: 0 0 100%;
 }
-#secondhand-family > div > div.secondhand-patient-card > div.secondhand-patient-info {
+#secondhand-senior > div > div.secondhand-patient-card > div.secondhand-patient-info {
     zoom: 100%;
     flex: 0 0 100%;
     padding-top: 40px;
     padding-bottom: 40px;
 }
-#secondhand-family > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
+#secondhand-senior > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
     text-align: center;
+}
+
+#secondhand-alert-div {
+    top: auto;
+    bottom: 4px;
+    max-width: 85%;
+}
+#secondhand-alert-btn > div.secondhand-app-text {
+    width: 100% !important;
+    padding: 0px !important;
+    font-size: 16px !important;
+}
+#secondhand-alert-btn > div > img.secondhand-app-logo {
+    display: inline-block !important;
+    width: 115px !important;
+}
+#secondhand-alert-btn > div > span.secondhand-app-highlight {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+}
+
+@media (max-width: 620px) {
+
+#secondhand-alert-div {
+    max-width: 400px;
+    bottom: 30px;
+    padding-right: 10px;
+}
+#secondhand-alert-btn > div.secondhand-app-text {
+    padding-bottom: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    text-align: left !important;
+    text-align: left !important;
+}
+
+}
+
+@media (max-width: 480px) {
+
+#secondhand-senior > div.secondhand-main-content > a > div.secondhand-app-text {
+    width: 280px;
 }
 
 }
