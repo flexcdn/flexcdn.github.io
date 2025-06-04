@@ -1,7 +1,7 @@
 <div id="secondhand-alert-div" class="secondhand-alert">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     <div class="secondhand-alert-inner">
-    <a href="https://www.google.com/" target="_blank" id="secondhand-alert-btn">
+    <a href="https://lin.ee/A22uwF3" target="_blank" id="secondhand-alert-btn">
         <div class="secondhand-app-text">
                 <div class="secondhand-app-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="secondhand-app-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดชีนไข้เลือดออก
          </div>
@@ -12,7 +12,8 @@
 <div id="secondhand-comorbidity-header">
 
     <div id="secondhand-comorbidity-header-hero">
-        <img alt="รู้จักไข้เลือดออกมือสอง" data-entity-type="file" data-entity-uuid="5aa46ff4-e8be-4731-be3c-75a46765cde7" src="/sites/default/files/inline-images/secondhand-header_rev2.png" /></div>
+        <img alt="แค่คนใกล้ชิดที่มีโรคเรื้อรังติดไข้เลือดออก" data-entity-type="file" data-entity-uuid="0fa912e2-ce68-4971-ab28-cade99160c0a" src="/sites/default/files/inline-images/4-KV_Savvy-Sam-with-Comorbidities.jpg" />
+    </div>
     <div id="secondhand-comorbidity-header-text">
         <h1>
             แค่คนใกล้ชิดที่มีโรคเรื้อรังติดไข้เลือดออก คุณก็กลายเป็น <span class="secondhand-comorbidity-header-hashtag">#ไข้เลือดอออกมือสอง</span>
@@ -71,10 +72,11 @@
             <p>หากฉีดครบโดส ไม่ต้องฉีดเข็มกระตุ้นซ้ำ</p>
         </div>
         
-        <a href="https://www.google.com/" target="_blank" class="secondhand-app-button">
+        <a href="https://lin.ee/A22uwF3" target="_blank" class="secondhand-app-button">
             <div class="secondhand-app-text">
                 <div class="secondhand-app-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="secondhand-app-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดชีนไข้เลือดออก
             </div>
+            <img alt="คลิกที่นี่" data-entity-type="file" data-entity-uuid="0d473d02-b12e-476f-811d-17f3ce1c39c6" src="/sites/default/files/inline-images/new_btn_arrow.png" class="secondhand-btn-arrow" />
         </a>
         
         <p class="secondhand-footer-text">"รีบป้องกัน<span class="secondhand-highlight-text">คนใกล้ชิดที่มีโรคประจำตัว</span>จากไข้เลือดออก"</p>
@@ -232,14 +234,21 @@ li {
 /* MORDEE BTN CSS */
 
 .secondhand-app-button {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: linear-gradient(184deg, #ff0040, #a50000);
     display: flex;
-    background-color: #f00;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 15px 0;
     align-items: center;
-    text-decoration: none;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 65px;
 }
 .secondhand-app-button:hover,
 .secondhand-app-text:hover {
@@ -260,11 +269,29 @@ li {
     margin-right: 10px;
 }
 .secondhand-app-text {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ff9b84 5%, #ff0000 100%);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 7px;
+    padding-top: 30px;
+    padding-bottom: 35px;
     flex-grow: 1;
     text-align: center;
     font-size: 24px;
     line-height: 150%;
     font-weight: 300;
+}
+.secondhand-btn-arrow {
+    display: block !important;
+    position: absolute;
+    width: 80px !important;
+    height: auto;
+    transform: translate(280px,90px);
 }
 .secondhand-app-highlight {
     background-color: #fff;
@@ -330,6 +357,7 @@ li {
     padding: 10px;
     font-size: 16px;
     background-color: #f00;
+    background: #f00 !important;
     border-radius: 20px;
     color: #fff !important;
     line-height: 175%;
@@ -345,47 +373,6 @@ li {
 #secondhand-alert-btn:focus,
 #secondhand-alert-btn > div.secondhand-app-text:focus {
     text-decoration: none !important;
-}
-
-/* HEADER CSS */
-
-.secondhand-app-button {
-    display: flex;
-    background-color: #f00;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 15px 0;
-    align-items: center;
-    text-decoration: none;
-}
-.secondhand-app-button:hover,
-.secondhand-app-text:hover {
-    text-decoration: none;
-    color: #fff;
-}
-.secondhand-app-button:focus {
-    color: #fff;
-}
-.secondhand-app-logo {
-    width: 160px !important;
-    margin-top: -5px;
-}
-.secondhand-app-text {
-    flex-grow: 1;
-    text-align: center;
-    font-size: 24px;
-    line-height: 150%;
-    font-weight: 300;
-}
-.secondhand-app-highlight {
-    background-color: #fff;
-    color: #000;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 600;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0 black, 2px 2px 2px black;
 }
 
 /* HEADER CSS */
@@ -666,7 +653,10 @@ li {
     text-align: left !important;
 }
 .secondhand-app-text {
-    line-height: 150%;
+    line-height: 150% !important;
+}
+.secondhand-btn-arrow {
+    display: none !important;
 }
 
 }
