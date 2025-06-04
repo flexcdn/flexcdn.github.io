@@ -186,6 +186,7 @@
         <div class="locatorcontent-mordee-text">
             <div class="locatorcontent-mordee-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="locatorcontent-mordee-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดชีนไข้เลือดออก
         </div>
+        <img alt="คลิกที่นี่" data-entity-type="file" data-entity-uuid="0d473d02-b12e-476f-811d-17f3ce1c39c6" src="/sites/default/files/inline-images/new_btn_arrow.png" class="locatorcontent-mordee-btn-arrow" />
     </a>
 
 </div>
@@ -788,14 +789,21 @@ select::-ms-expand {
 /* MORDEE BTN CSS */
 
 .locatorcontent-mordee-button {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: linear-gradient(184deg, #ff0040, #a50000);
     display: flex;
-    background-color: #f00;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 15px 0;
     align-items: center;
-    text-decoration: none;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 65px;
 }
 .locatorcontent-mordee-button:hover,
 .locatorcontent-mordee-text:hover {
@@ -816,11 +824,29 @@ select::-ms-expand {
     margin-right: 10px;
 }
 .locatorcontent-mordee-text {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ff9b84 5%, #ff0000 100%);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 7px;
+    padding-top: 30px;
+    padding-bottom: 35px;
     flex-grow: 1;
     text-align: center;
     font-size: 24px;
     line-height: 150%;
     font-weight: 300;
+}
+.locatorcontent-mordee-btn-arrow {
+    display: block !important;
+    position: absolute;
+    width: 80px !important;
+    height: auto;
+    transform: translate(280px,90px);
 }
 .locatorcontent-mordee-highlight {
     background-color: #fff;
@@ -830,6 +856,18 @@ select::-ms-expand {
     font-weight: 600;
     border-radius: 10px;
     box-shadow: 2px 2px 0 black, 2px 2px 2px black;
+}
+.locatorcontent-mordee-btnin {
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
+    background-color: #fff;
+    padding: 5px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 black, 2px 2px 2px black;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 /* MORDEE FLOAT CSS */
@@ -971,6 +1009,9 @@ select::-ms-expand {
     flex-grow: unset !important;
     margin: auto;
 }
+.locatorcontent-mordee-button {
+    background-image: none !important;
+}
 
 }
 
@@ -1076,6 +1117,9 @@ button.gm-ui-hover-effect {
     padding-right: 15px !important;
     text-align: left !important;
     text-align: left !important;
+}
+.locatorcontent-mordee-btn-arrow {
+    display: none !important;
 }
 
 }
