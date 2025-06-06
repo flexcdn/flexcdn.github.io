@@ -42,10 +42,9 @@
     margin-bottom: 20px;
     margin-top: 30px;
 }
-#home-ingma-campaign-block > div:nth-child(5),
-#home-ingma-campaign-block > div:nth-child(6),
-#home-ingma-campaign-block > div:nth-child(7) {
-    min-height: 300px;
+.subheaderknowing,
+.colknowing {
+    min-height: auto !important;
 }
 .ingma-thumb-article__image {
     margin-bottom: 15px;
@@ -60,17 +59,12 @@ a.btn-ingma-thumb > img {
 .ingma-thumb-article__content-desc {
     font-weight: 300;
 }
+.colsecond {
+    min-height: 380px;
+}
 
 @media (max-width: 1359px) {
 
-#home-ingma-campaign-block > div:nth-child(5), 
-#home-ingma-campaign-block > div:nth-child(6), 
-#home-ingma-campaign-block > div:nth-child(7),
-#home-ingma-campaign-block > div:nth-child(8),
-#home-ingma-campaign-block > div:nth-child(9),
-#home-ingma-campaign-block > div:nth-child(10) {
-    min-height: auto !important;
-}
 .nvivdotext {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -98,7 +92,54 @@ a.btn-ingma-thumb > img {
 </style>
 
 <div class="row" id="home-ingma-campaign-block">
-    <div class="col-md-4">
+
+    <div id="secondhand" class="col-md-4 colsecond">
+        <div class="ingma-thumb-article__image">
+            <a class="btn-ingma-thumb" href="/secondhand/family">
+                <img alt="แค่ลูกคุณป่วยเป็นไข้เลือดออก" data-entity-type="file" data-entity-uuid="7bb366f0-25bc-40fb-a816-3ffa33d8cc9b" src="/sites/default/files/inline-images/2-KV_Family-with-Kids.jpg" />
+            </a>
+        </div>
+
+        <div class="ingma-thumb-article__content">
+            <div class="ingma-thumb-article__content-title"><a class="ingma-link-text" href="/secondhand/family">ไข้เลือดออกมือสองกับผู้ปกครอง</a></div>
+
+            <div class="ingma-thumb-article__content-desc">ผู้ป่วยไข้เลือดออก อันดับ 1 คือเด็ก เพราะคุณปกป้องลูกจากยุงลายไม่ได้ตลอดเวลา</div>
+        </div>
+    </div>
+
+    <div class="col-md-4 colsecond">
+        <div class="ingma-thumb-article__image">
+            <a class="btn-ingma-thumb" href="/secondhand/comorbidity">
+                <img alt="แค่คนใกล้ชิดที่มีโรคเรื้อรังติดไข้เลือดออก" data-entity-type="file" data-entity-uuid="0fa912e2-ce68-4971-ab28-cade99160c0a" src="/sites/default/files/inline-images/4-KV_Savvy-Sam-with-Comorbidities.jpg" />
+            </a>
+        </div>
+
+        <div class="ingma-thumb-article__content">
+            <div class="ingma-thumb-article__content-title">
+                <a class="ingma-link-text" href="/secondhand/comorbidity">
+                    ไข้เลือดออกมือสองกับผู้มีโรคประจำตัว
+                </a>
+            </div>
+
+            <div class="ingma-thumb-article__content-desc">อ้วน เบาหวาน หัวใจ โรคไต เสี่ยงไข้เลือดออกรุนแรง ช็อก หัวใจล้มเหลว ตับ-ไตวาย และเสียชีวิตสูงขึ้น</div>
+        </div>
+    </div>
+
+    <div class="col-md-4 colsecond">
+        <div class="ingma-thumb-article__image">
+            <a class="btn-ingma-thumb" href="/secondhand/senior">
+                <img alt="แค่ผู้สูงอายุในบ้านป่วยเป็นไข้เลือดออก" data-entity-type="file" data-entity-uuid="1e6e09ed-11d8-485d-8013-f6cae26fb613" src="/sites/default/files/inline-images/3-KV_Senior.jpg" />
+            </a>
+        </div>
+
+        <div class="ingma-thumb-article__content">
+            <div class="ingma-thumb-article__content-title"><a class="ingma-link-text" href="/secondhand/senior">ไข้เลือดออกมือสองกับผู้สูงวัย</a></div>
+
+            <div class="ingma-thumb-article__content-desc">ผู้ใหญ่และผู้สูงวัย เสี่ยงดับก่อนวัยเพราะไข้เลือดออก สาเหตุหลักมาจากการมีโรคประจำตัว</div>
+        </div>
+    </div>
+
+    <div class="col-md-4 colingma">
         <div class="ingma-thumb-article__image">
             <a class="btn-ingma-thumb" href="/the-unknown-dengue">
                 <img alt="ยิ่งไม่รู้ยิ่งต้องป้องกัน" data-entity-type="file" data-entity-uuid="8c97a289-16a0-42ca-9bd9-730e9d04e2f4" src="/sites/default/files/inline-images/Takeda_Banner-%28Opt%29--02.jpg" />
@@ -112,7 +153,7 @@ a.btn-ingma-thumb > img {
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 colingma">
         <div class="ingma-thumb-article__image">
             <a class="btn-ingma-thumb" href="/ingma-victim-story">
                 <img alt="รีวิวจากอิงมา" data-entity-type="file" data-entity-uuid="f33d5fff-3fb5-4c36-8b98-c0da03fef8c1" src="/sites/default/files/inline-images/ingma-victim-story-slider.jpg" />
@@ -131,7 +172,7 @@ a.btn-ingma-thumb > img {
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 colingma">
         <div class="ingma-thumb-article__image">
             <a class="btn-ingma-thumb" href="/dengue-vaccination">
                 <img alt="ถึงเวลาคนไทย สู้กลับ ไข้เลือดออก" data-entity-type="file" data-entity-uuid="0d51109f-50b3-403b-8599-87235a621aa0" src="/sites/default/files/inline-images/Takeda_AW05_93672_wider-prog.jpg" />
@@ -145,11 +186,11 @@ a.btn-ingma-thumb > img {
         </div>
     </div>
 
-    <div class="col-md-12">
+    <div class="col-md-12 subheaderknowing">
         <h2 class="ingma-thumb-h2">รู้จักโรคไข้เลือดออก</h2>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 colknowing">
         <div class="ingma-thumb-article__image">
             <a class="btn-ingma-thumb" href="https://players.brightcove.net/3871979173001/i4wxuqUSK_default/index.html?videoId=6361134719112" target="_blank">
                 <img alt="EP1 ไข้เลือดออกกับการวินิจฉัย" data-entity-type="file" data-entity-uuid="21571674-3cc2-44f9-b97b-a0a75e72b0dc" src="/sites/default/files/inline-images/EP1-vdo-thumb.jpg" />
@@ -163,7 +204,7 @@ a.btn-ingma-thumb > img {
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 colknowing">
         <div class="ingma-thumb-article__image">
             <a class="btn-ingma-thumb" href="https://players.brightcove.net/3871979173001/i4wxuqUSK_default/index.html?videoId=6361136701112" target="_blank">
                 <img alt="EP2 ความรุนแรงและการป้องกันโรคไข้เลือดออก" data-entity-type="file" data-entity-uuid="e4d1829a-bef3-480d-a0cd-caaa9ad9a74f" src="/sites/default/files/inline-images/EP2-vdo-thumb.jpg" />
@@ -177,7 +218,7 @@ a.btn-ingma-thumb > img {
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 colknowing">
         <div class="ingma-thumb-article__image">
             <a class="btn-ingma-thumb" href="https://players.brightcove.net/3871979173001/i4wxuqUSK_default/index.html?videoId=6361136197112" target="_blank">
                 <img alt="EP3 การฉีดวัคซีนไข้เลือดออก" data-entity-type="file" data-entity-uuid="785ea597-707b-4190-92c4-d1db2710cee2" src="/sites/default/files/inline-images/EP3-vdo-thumb.jpg" />
