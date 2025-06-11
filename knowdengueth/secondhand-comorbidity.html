@@ -9,12 +9,12 @@
     </div>
 </div>
 
-<div id="secondhand-comorbidity-header">
+<div id="secondhand-content-header">
 
-    <div id="secondhand-comorbidity-header-hero">
+    <div id="secondhand-content-header-hero">
         <img alt="ไข้เลือดอออกมือสอง" data-entity-type="file" data-entity-uuid="ab5c56cc-9a67-4f92-a821-aa5cb5d1836c" src="/sites/default/files/inline-images/Takeda-2025_Website-Banner-Main.jpg" />
     </div>
-    <div id="secondhand-comorbidity-header-text">
+    <div id="secondhand-content-header-text">
         <h1>
             แค่คนใกล้ชิดที่มีโรคเรื้อรังติดไข้เลือดออก คุณก็กลายเป็น <span class="secondhand-comorbidity-header-hashtag">#ไข้เลือดอออกมือสอง</span>
         </h1>
@@ -22,7 +22,7 @@
 
 </div>
 
-<div id="secondhand-comorbidity">
+<div id="secondhand-content">
 
     <div class="secondhand-main-content">
         <h1>ไข้เลือดออกมือสอง โรคที่คนเจ็บไม่ได้ป่วย</h1>
@@ -102,11 +102,11 @@
             <p>หากฉีดครบโดส ไม่ต้องฉีดเข็มกระตุ้นซ้ำ</p>
         </div>
         
-        <a href="https://lin.ee/A22uwF3" target="_blank" class="secondhand-app-button">
-            <div class="secondhand-app-text">
-                <div class="secondhand-app-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="secondhand-app-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดซีนไข้เลือดออก
+        <a href="https://lin.ee/A22uwF3" target="_blank" id="secondhandbtn-mordee-mainbtn">
+            <div class="secondhandbtn-mordee-text">
+                <div class="secondhandbtn-mordee-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="secondhandbtn-mordee-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดซีนไข้เลือดออก
             </div>
-            <img alt="คลิกที่นี่" data-entity-type="file" data-entity-uuid="0d473d02-b12e-476f-811d-17f3ce1c39c6" src="/sites/default/files/inline-images/new_btn_arrow.png" class="secondhand-btn-arrow" />
+            <img alt="คลิกที่นี่" data-entity-type="file" data-entity-uuid="0d473d02-b12e-476f-811d-17f3ce1c39c6" src="/sites/default/files/inline-images/new_btn_arrow.png" class="secondhandbtn-mordee-btn-arrow" />
         </a>
         
         <p class="secondhand-footer-text">"รีบป้องกัน<span class="secondhand-highlight-text">คนใกล้ชิดที่มีโรคประจำตัว</span>จากไข้เลือดออก"</p>
@@ -123,10 +123,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-#secondhand-comorbidity,
-#secondhand-comorbidity > div,
-#secondhand-comorbidity > div > h1,
-#secondhand-comorbidity > div > p {
+#secondhand-content,
+#secondhand-content > div,
+#secondhand-content > div > h1,
+#secondhand-content > div > p {
     font-family: "Kanit", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
@@ -265,7 +265,7 @@ li {
 
 /* MORDEE BTN CSS */
 
-.secondhand-app-button {
+#secondhandbtn-mordee-mainbtn {
     width: 100%;
     max-width: 620px;
     height: auto;
@@ -280,27 +280,24 @@ li {
     font-size: 20px;
     font-weight: bold;
     margin: auto;
-    margin-top: 65px;
+    margin-top: 55px;
+    margin-bottom: 30px;
 }
-.secondhand-app-button:hover,
-.secondhand-app-text:hover {
+#secondhandbtn-mordee-mainbtn:hover,
+.secondhandbtn-mordee-text:hover {
     text-decoration: none;
     color: #fff;
 }
-.secondhand-app-button:focus {
+#secondhandbtn-mordee-mainbtn:focus {
     color: #fff;
 }
-.secondhand-app-logo {
-    width: 160px !important;
-    margin-top: -5px;
-}
-.secondhand-app-logo2 {
+.secondhandbtn-mordee-logo2 {
     width: 160px !important;
     margin-top: -5px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.secondhand-app-text {
+.secondhandbtn-mordee-text {
     width: 100%;
     height: auto;
     border-radius: 25px;
@@ -318,23 +315,14 @@ li {
     line-height: 150%;
     font-weight: 300;
 }
-.secondhand-btn-arrow {
+.secondhandbtn-mordee-btn-arrow {
     display: block !important;
     position: absolute;
     width: 80px !important;
     height: auto;
     transform: translate(280px,90px);
 }
-.secondhand-app-highlight {
-    background-color: #fff;
-    color: #000;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 600;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0 black, 2px 2px 2px black;
-}
-.secondhand-app-btnin {
+.secondhandbtn-mordee-btnin {
     width: 100%;
     max-width: 440px;
     margin: auto;
@@ -406,26 +394,45 @@ li {
 #secondhand-alert-btn > div.secondhand-app-text:focus {
     text-decoration: none !important;
 }
+#secondhand-alert-btn > div > div.secondhand-app-btnin {
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
+    background-color: #fff;
+    padding: 5px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 black, 2px 2px 2px black;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+#secondhand-alert-btn > div > div > img.secondhand-app-logo2 {
+    max-width: 145px;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+}
 
 /* HEADER CSS */
 
-#secondhand-comorbidity-header {
+#secondhand-content-header {
     margin-bottom: 0px;
 }
-#secondhand-comorbidity-header-text {
+#secondhand-content-header-text {
     background: linear-gradient(0deg,#41948e 0%,#008ba6 100%);
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
 }
-#secondhand-comorbidity-header-text > h1 {
+#secondhand-content-header-text > h1 {
     margin-bottom: 0px;
     font-size: 32px;
     line-height: 150%;
     font-weight: 600;
     color: #fff;
 }
-#secondhand-comorbidity-header-text > h1 > span {
+#secondhand-content-header-text > h1 > span {
     color: #fff;
     background-color: #f00;
     padding-left: 10px;
@@ -434,30 +441,30 @@ li {
 
 /* CSS OVERWRITE */
 
-#secondhand-comorbidity {
+#secondhand-content {
     max-width: 1024px;
     margin: auto;
 }
-#secondhand-comorbidity > div.secondhand-main-content > h1 {
+#secondhand-content > div.secondhand-main-content > h1 {
     text-align: center;
     font-size: 42px;
     line-height: 100%;
     margin-top: 45px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > p.secondhand-subtitle {
+#secondhand-content > div.secondhand-main-content > p.secondhand-subtitle {
     text-align: center;
     font-size: 30px;
     line-height: 120%;
     margin-bottom: 50px;
     font-weight: 500;
 }
-#secondhand-comorbidity > div.secondhand-main-content > p:nth-child(3) {
+#secondhand-content > div.secondhand-main-content > p:nth-child(3) {
     font-size: 22px;
     line-height: 150%;
     font-weight: 300;
     font-style: normal;
 }
-#secondhand-comorbidity > div.secondhand-main-content > p.secondhand-highlight {
+#secondhand-content > div.secondhand-main-content > p.secondhand-highlight {
     font-size: 26px;
     line-height: 150%;
     text-align: center;
@@ -467,85 +474,85 @@ li {
 .secondhand-blackfont {
     color: #000 !important;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-patient-card {
+#secondhand-content > div.secondhand-main-content > div.secondhand-patient-card {
     max-width: 990px;
     margin: auto;
     background-color: transparent;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p.secondhand-patient-name {
+#secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p.secondhand-patient-name {
     font-size: 30px;
     line-height: 140%;
     font-weight: 500;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p {
+#secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p {
     font-size: 24px;
     line-height: 140%;
     font-weight: 300;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
+#secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
     text-align: left;
     font-size: 24px;
     line-height: 140%;
     color: #000;
     margin-top: 30px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > h2:nth-child(6) {
+#secondhand-content > div.secondhand-main-content > h2:nth-child(6) {
     margin-left: 0px;
     font-size: 30px;
     line-height: 120%;
     margin-bottom: 20px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > p:nth-child(7) {
+#secondhand-content > div.secondhand-main-content > p:nth-child(7) {
     font-size: 22px;
     line-height: 150%;
     font-weight: 300;
     font-style: normal;
     text-indent: 65px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > h2:nth-child(8) {
+#secondhand-content > div.secondhand-main-content > h2:nth-child(8) {
     font-size: 30px;
     line-height: 120%;
     margin-bottom: 20px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > h2:nth-child(8),
-#secondhand-comorbidity > div.secondhand-main-content > h2:nth-child(11) {
+#secondhand-content > div.secondhand-main-content > h2:nth-child(8),
+#secondhand-content > div.secondhand-main-content > h2:nth-child(11) {
     margin-left: 0px;
     font-size: 30px;
     line-height: 120%;
     margin-bottom: 25px;
     margin-top: 51px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > ul:nth-child(9),
-#secondhand-comorbidity > div.secondhand-main-content > ul:nth-child(13) {
+#secondhand-content > div.secondhand-main-content > ul:nth-child(9),
+#secondhand-content > div.secondhand-main-content > ul:nth-child(13) {
     padding-left: 65px;
     font-size: 22px;
     line-height: 150%;
     font-weight: 300;
 }
-#secondhand-comorbidity > div.secondhand-main-content > p:nth-child(10),
-#secondhand-comorbidity > div.secondhand-main-content > p:nth-child(12) {
+#secondhand-content > div.secondhand-main-content > p:nth-child(10),
+#secondhand-content > div.secondhand-main-content > p:nth-child(12) {
     font-size: 22px;
     line-height: 150%;
     font-weight: 300;
     font-style: normal;
     text-indent: 65px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-vaccine-banner {
+#secondhand-content > div.secondhand-main-content > div.secondhand-vaccine-banner {
     margin-bottom: 0px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-vaccine-banner > h2 {
+#secondhand-content > div.secondhand-main-content > div.secondhand-vaccine-banner > h2 {
     font-size: 54px;
     text-shadow: 2px 2px 0 black,
     2px 2px 2px black;
     line-height: 125%;
     font-weight: 500;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-vaccine-banner > p {
+#secondhand-content > div.secondhand-main-content > div.secondhand-vaccine-banner > p {
     font-size: 24px;
     line-height: 150%;
     font-weight: 500;
 }
-#secondhand-comorbidity > div.secondhand-main-content > p.secondhand-footer-text {
+#secondhand-content > div.secondhand-main-content > p.secondhand-footer-text {
     text-align: center;
     font-size: 34px;
     line-height: 120%;
@@ -562,7 +569,7 @@ li {
 
 /* UPDATE DESIGN LAYOUT OVERWRITE */
 
-#secondhand-comorbidity > div > p:nth-child(3) {
+#secondhand-content > div > p:nth-child(3) {
     background-color: #e6f6f3;
     padding: 25px;
     text-align: center;
@@ -580,29 +587,29 @@ li {
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
+#secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
     background-color: #178fa0;
     text-align: center;
     padding: 15px;
     border-radius: 50px;
     color: #fff;
 }
-#secondhand-comorbidity > div > h2:nth-child(6) {
+#secondhand-content > div > h2:nth-child(6) {
     background-color: #e6f6f3;
     padding: 25px;
     text-align: left;
     margin-bottom: 0px !important;
 }
-#secondhand-comorbidity > div > p:nth-child(7) {
+#secondhand-content > div > p:nth-child(7) {
     background-color: #e6f6f3;
     padding: 25px;
     text-align: left;
     padding-top: 0px !important;
 }
-#secondhand-comorbidity > div > ul:nth-child(9) > li::marker {
+#secondhand-content > div > ul:nth-child(9) > li::marker {
     font-size: 0px;
 }
-#secondhand-comorbidity > div > ul:nth-child(9) > li::before {
+#secondhand-content > div > ul:nth-child(9) > li::before {
     content: "";
     display: block;
     position: absolute;
@@ -685,7 +692,7 @@ li {
 
 @media (max-width: 1359px) {
 
-#secondhand-comorbidity > div > div.secondhand-patient-card > div.secondhand-patient-info {
+#secondhand-content > div > div.secondhand-patient-card > div.secondhand-patient-info {
     zoom: 85%;
 }
 
@@ -693,13 +700,13 @@ li {
 
 @media (max-width: 888px) {
 
-#secondhand-comorbidity > div > div.secondhand-patient-card > div.secondhand-patient-info {
+#secondhand-content > div > div.secondhand-patient-card > div.secondhand-patient-info {
     zoom: 65%;
 }
-#secondhand-comorbidity > div.secondhand-main-content > a > div.secondhand-app-text {
+#secondhand-content > div.secondhand-main-content > a > div.secondhand-app-text {
     line-height: 250%;
 }
-#secondhand-comorbidity-header-text {
+#secondhand-content-header-text {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -708,7 +715,7 @@ li {
 
 @media (max-width: 800px) {
 
-#secondhand-comorbidity > div.secondhand-main-content > a > div.secondhand-app-text {
+#secondhand-content > div.secondhand-main-content > a > div.secondhand-app-text {
     width: 580px;
     display: block !important;
     flex-grow: unset !important;
@@ -724,24 +731,33 @@ li {
 .secondhand-prevent-card {
     flex: 1 1 100%;
 }
+.secondhandbtn-mordee-text {
+    width: 580px;
+    display: block !important;
+    flex-grow: unset !important;
+    margin: auto;
+}
+#secondhandbtn-mordee-mainbtn {
+    background-image: none !important;
+}
     
 }
 
 @media (max-width: 687px) {
 
-#secondhand-comorbidity > div > div.secondhand-patient-card {
+#secondhand-content > div > div.secondhand-patient-card {
     flex-wrap: wrap;
 }
-#secondhand-comorbidity > div > div.secondhand-patient-card > div.secondhand-patient-image {
+#secondhand-content > div > div.secondhand-patient-card > div.secondhand-patient-image {
     flex: 0 0 100%;
 }
-#secondhand-comorbidity > div > div.secondhand-patient-card > div.secondhand-patient-info {
+#secondhand-content > div > div.secondhand-patient-card > div.secondhand-patient-info {
     zoom: 100%;
     flex: 0 0 100%;
     padding-top: 40px;
     padding-bottom: 40px;
 }
-#secondhand-comorbidity > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
+#secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > a {
     text-align: center;
 }
 
@@ -752,8 +768,10 @@ li {
 }
 #secondhand-alert-btn > div.secondhand-app-text {
     width: 100% !important;
-    padding: 0px !important;
     font-size: 16px !important;
+    padding-top: 12px !important;
+    padding-left: 15px !important;
+    padding-bottom: 10px !important;
 }
 #secondhand-alert-btn > div > img.secondhand-app-logo {
     display: inline-block !important;
@@ -765,9 +783,6 @@ li {
     margin-left: 5px;
     margin-right: 5px;
 }
-#secondhand-alert-btn > div.secondhand-app-text {
-    padding-top: 12px !important;
-}
 #secondhand-alert-btn > div > div.secondhand-app-btnin {
     width: auto;
     max-width: max-content;
@@ -777,6 +792,7 @@ li {
     color: #fff;
     display: inline-block;
     margin-bottom: 5px;
+    padding-right: 10px;
 }
 #secondhand-alert-btn > div > div > img.secondhand-app-logo2 {
     width: 110px !important;
@@ -784,6 +800,9 @@ li {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 2px 2px 0 black, 2px 2px 2px black;
+    display: inline-block !important;
+    margin-left: 5px;
+    margin-right: 10px;
 }
 
 }
@@ -807,6 +826,9 @@ li {
 .secondhand-btn-arrow {
     display: none !important;
 }
+.secondhandbtn-mordee-btn-arrow {
+    display: none !important;
+}
 
 }
 
@@ -816,12 +838,19 @@ li {
     max-width: 230px;
     line-height: 190%;
 }
+.secondhandbtn-mordee-btnin {
+    max-width: 230px;
+    line-height: 190%;
+}
 
 }
 
 @media (max-width: 480px) {
 
-#secondhand-comorbidity > div.secondhand-main-content > a > div.secondhand-app-text {
+#secondhand-content > div.secondhand-main-content > a > div.secondhand-app-text {
+    width: 280px;
+}
+.secondhandbtn-mordee-text {
     width: 280px;
 }
 

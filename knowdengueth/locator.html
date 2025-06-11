@@ -15,11 +15,11 @@
     </div>
     <!-- /locatorheadwarp -->
 
-    <a href="https://lin.ee/A22uwF3" target="_blank" class="locatorcontent-mordee-button">
-        <div class="locatorcontent-mordee-text">
-            <div class="locatorcontent-mordee-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="locatorcontent-mordee-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดซีนไข้เลือดออก
+    <a href="https://lin.ee/A22uwF3" target="_blank" id="secondhandbtn-mordee-mainbtn">
+        <div class="secondhandbtn-mordee-text">
+            <div class="secondhandbtn-mordee-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="secondhandbtn-mordee-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัดซีนไข้เลือดออก
         </div>
-        <img alt="คลิกที่นี่" data-entity-type="file" data-entity-uuid="0d473d02-b12e-476f-811d-17f3ce1c39c6" src="/sites/default/files/inline-images/new_btn_arrow.png" class="locatorcontent-mordee-btn-arrow" />
+        <img alt="คลิกที่นี่" data-entity-type="file" data-entity-uuid="0d473d02-b12e-476f-811d-17f3ce1c39c6" src="/sites/default/files/inline-images/new_btn_arrow.png" class="secondhandbtn-mordee-btn-arrow" />
     </a>
 
     <div id="locatorshowadress">
@@ -788,7 +788,7 @@ select::-ms-expand {
 
 /* MORDEE BTN CSS */
 
-.locatorcontent-mordee-button {
+#secondhandbtn-mordee-mainbtn {
     width: 100%;
     max-width: 620px;
     height: auto;
@@ -806,25 +806,21 @@ select::-ms-expand {
     margin-top: -45px;
     margin-bottom: 30px;
 }
-.locatorcontent-mordee-button:hover,
-.locatorcontent-mordee-text:hover {
+#secondhandbtn-mordee-mainbtn:hover,
+.secondhandbtn-mordee-text:hover {
     text-decoration: none;
     color: #fff;
 }
-.locatorcontent-mordee-button:focus {
+#secondhandbtn-mordee-mainbtn:focus {
     color: #fff;
 }
-.locatorcontent-mordee-logo {
-    width: 160px !important;
-    margin-top: -5px;
-}
-.locatorcontent-mordee-logo2 {
+.secondhandbtn-mordee-logo2 {
     width: 160px !important;
     margin-top: -5px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.locatorcontent-mordee-text {
+.secondhandbtn-mordee-text {
     width: 100%;
     height: auto;
     border-radius: 25px;
@@ -842,23 +838,14 @@ select::-ms-expand {
     line-height: 150%;
     font-weight: 300;
 }
-.locatorcontent-mordee-btn-arrow {
+.secondhandbtn-mordee-btn-arrow {
     display: block !important;
     position: absolute;
     width: 80px !important;
     height: auto;
     transform: translate(280px,90px);
 }
-.locatorcontent-mordee-highlight {
-    background-color: #fff;
-    color: #000;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 600;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0 black, 2px 2px 2px black;
-}
-.locatorcontent-mordee-btnin {
+.secondhandbtn-mordee-btnin {
     width: 100%;
     max-width: 440px;
     margin: auto;
@@ -907,7 +894,7 @@ select::-ms-expand {
 .closebtn:hover {
   color: black;
 }
-#locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text {
+#locatorcontent-mordee-alert-btn > div.secondhandbtn-mordee-text {
     flex-grow: unset !important;
     width: 210px !important;
     padding: 10px;
@@ -924,12 +911,12 @@ select::-ms-expand {
     margin-bottom: 10px;
 }
 #locatorcontent-mordee-alert-btn:hover,
-#locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text:hover,
+#locatorcontent-mordee-alert-btn > div.secondhandbtn-mordee-text:hover,
 #locatorcontent-mordee-alert-btn:focus,
-#locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text:focus {
+#locatorcontent-mordee-alert-btn > div.secondhandbtn-mordee-text:focus {
     text-decoration: none !important;
 }
-.locatorcontent-mordee-btnin {
+.secondhandbtn-mordee-btnin {
     width: 100%;
     max-width: 440px;
     margin: auto;
@@ -1004,13 +991,13 @@ select::-ms-expand {
 .locatortoolmap-select {
     max-width: 110px !important;
 }
-.locatorcontent-mordee-text {
+.secondhandbtn-mordee-text {
     width: 580px;
     display: block !important;
     flex-grow: unset !important;
     margin: auto;
 }
-.locatorcontent-mordee-button {
+#secondhandbtn-mordee-mainbtn {
     background-image: none !important;
 }
 
@@ -1023,7 +1010,7 @@ select::-ms-expand {
     bottom: 4px;
     max-width: 85%;
 }
-#locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text {
+#locatorcontent-mordee-alert-btn > div.secondhandbtn-mordee-text {
     width: 100% !important;
     padding: 0px !important;
     font-size: 16px !important;
@@ -1112,14 +1099,14 @@ button.gm-ui-hover-effect {
     bottom: 30px;
     padding-right: 10px;
 }
-#locatorcontent-mordee-alert-btn > div.locatorcontent-mordee-text {
+#locatorcontent-mordee-alert-btn > div.secondhandbtn-mordee-text {
     padding-bottom: 20px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
     text-align: left !important;
     text-align: left !important;
 }
-.locatorcontent-mordee-btn-arrow {
+.secondhandbtn-mordee-btn-arrow {
     display: none !important;
 }
 
@@ -1127,7 +1114,7 @@ button.gm-ui-hover-effect {
 
 @media (max-width: 530px) {
 
-.locatorcontent-mordee-btnin {
+.secondhandbtn-mordee-btnin {
     max-width: 230px;
     line-height: 190%;
 }
@@ -1144,7 +1131,7 @@ button.gm-ui-hover-effect {
     width: 100% !important;
     padding-top: 15px !important;
 }
-.locatorcontent-mordee-text {
+.secondhandbtn-mordee-text {
     width: 280px;
 }
 
