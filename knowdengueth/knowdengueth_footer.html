@@ -2,10 +2,24 @@
 
 /* https://dev-knowdengue-thailand.pantheonsite.io/block/22?destination=/node/82 */
 
+/* HIDE SECONDHAND VDO */
+
+#secondhand-content > div > p.secondhand-main-p-2:nth-child(8) {
+    display: none !important;
+	visibility: hidden !important;
+}
+#secondhand-embed,
+#secondhand-embed1,
+#secondhand-embed2,
+#secondhand-embed3 {
+    display: none !important;
+	visibility: hidden !important;
+}
+
 /* FOOTER -- GLOBAL CSS */
 
 #navbar > div > div.region-navigation {
-	zoom: 80% !important;
+	zoom: 75% !important;
     /* overflow-x: hidden; */
 }
 #navbar > div > div > div.kd-header__top {
@@ -16,6 +30,12 @@
 }
 #navbar-collapse {
 	padding-bottom: 0px !important;
+}
+#navbar > div > div > div.kd-header__top > section.block-views-exposed-filter-blockcontent-search-page-1 {
+	max-width: 205px !important;
+}
+#navbar > div > div > div.kd-header__top > section.block-views-exposed-filter-blockcontent-search-page-1 > form > div > div > div > input {
+	max-width: 165px !important;
 }
 .kd-header.navbar-default .navbar-nav>li>a:before {
     height: 35px !important;
