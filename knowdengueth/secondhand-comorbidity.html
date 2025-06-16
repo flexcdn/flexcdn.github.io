@@ -33,14 +33,14 @@
         <p class="secondhand-highlight">แล้วถ้าคนใกล้ชิดที่มีโรคเรื้อรัง ติด ‘ไข้เลือดออก’  <span class="secondhand-blackfont">คุณอาจทรมานเหมือนชายคนนี้</span></p>
         
         <div class="secondhand-patient-card">
-            <div class="secondhand-patient-image">
-                <img alt="คุณโส อายุ 27 ปี" data-entity-type="file" data-entity-uuid="1d164c0e-4f7c-4ba4-9630-5e46c53836a1" src="/sites/default/files/inline-images/secondhand-comorbidity-profile.png" />
+            <div class="secondhand-patient-image" id="patient-video">
+                <iframe width="100%" height="450" src="https://players.brightcove.net/3871979173001/i4wxuqUSK_default/index.html?videoId=6374340851112" title="ไข้เลือดออกมือสอง โรคที่คนเจ็บไม่ได้ป่วย" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="secondhand-patient-info" style="padding: 20px; margin-top: 0px;">
+            <div class="secondhand-patient-info" style="padding: 20px; margin-top: 15px;">
                 <p class="secondhand-patient-name">คุณโส อายุ 27 ปี <br>ผู้ป่วย #ไข้เลือดออกมือสอง</p>
                 <p>แม่ของเขาต้องป่วยรุนแรงจากโรคไข้เลือดออก เนื่องจากมีโรคประจำตัว เบาหวาน โรคหัวใจ และอายุเยอะ ทำให้ต้องนอนรักษาตัวในโรงพยาบาลเป็นเวลานาน</p>
                 <p>โสยอมหยุดกิจการ ยอมขาดรายได้ เพื่อมาดูแลแม่ที่เขารักมากที่สุด แต่วันหนึ่ง ความเครียดของโสก็เพิ่มอย่างทวีคูณ เมื่อหมอได้แจ้งข่าวน่ากังวลเกี่ยวกับแม่ของโส จนทำให้เขาอยากย้อนเวลากลับไปปกป้องแม่ให้ดีกว่าเดิม</p>
-                <a href="#" class="secondhand-read-more">&lt;&lt; คลิกวิดีโอ เพื่อติดตามเรื่องราวของเธอ</a>
+                <a href="#patient-video" class="secondhand-read-more">&lt;&lt; คลิกวิดีโอ เพื่อติดตามเรื่องราวของเธอ</a>
             </div>
         </div>
         
@@ -482,6 +482,7 @@ li {
     max-width: 990px;
     margin: auto;
     background-color: transparent;
+    overflow: visible;
 }
 #secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p.secondhand-patient-name {
     font-size: 30px;
@@ -579,10 +580,11 @@ li {
     text-align: center;
 }
 .secondhand-patient-image {
-    flex: 0 0 50%;
+    flex: 0 0 46%;
+    padding-top: 5px;
 }
 .secondhand-patient-info {
-    flex: 0 0 50%;
+    flex: 0 0 54%;
     padding: 30px;
     height: max-content;
     background-color: #f2f2f2;

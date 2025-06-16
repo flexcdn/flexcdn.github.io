@@ -33,14 +33,14 @@
         <p class="secondhand-highlight">แต่ถ้าลูกคุณติด ‘ไข้เลือดออก’ <span class="secondhand-blackfont">คุณอาจทรมานเหมือนคุณแม่ท่านนี้</span></p>
         
         <div class="secondhand-patient-card">
-            <div class="secondhand-patient-image">
-                <img alt="คุณแอน อายุ 35 ปี" data-entity-type="file" data-entity-uuid="88221e9c-64b8-4a89-91a7-7ba7a058e91f" src="/sites/default/files/inline-images/secondhand-family-profile.png" />
+            <div class="secondhand-patient-image" id="patient-video">
+                <iframe width="100%" height="450" src="https://players.brightcove.net/3871979173001/i4wxuqUSK_default/index.html?videoId=6374342328112" title="ไข้เลือดออกมือสอง โรคที่คนเจ็บไม่ได้ป่วย" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div class="secondhand-patient-info" style="margin-top: 5px !important;">
                 <p class="secondhand-patient-name">คุณแอน อายุ 35 ปี <br>ผู้ป่วย #ไข้เลือดออกมือสอง</p>
                 <p>คุณแม่ลูกหนึ่ง ที่ต้องทุกข์ทรมานจากการที่ลูกชายป่วยเป็นไข้เลือดออก ในช่วงเวลานั้นเธอต้องเผชิญกับความเครียดจากภาระรับผิดชอบทั้งเรื่องงานและลูก </p>
                 <p>ซึ่งในวันที่อาการของลูกเธอหนักมาก และหมอบอกว่าโรคนี้ไม่มียารักษาเฉพาะเจาะจง ทำให้ความเครียดของเธอเพิ่มขึ้นหลายเท่า และนั่นทำให้เกิดห้วงความคิดหนึ่ง ที่เธอเผลอคิดว่า “ลูกเธออาจไม่รอด”</p>
-                <a href="#" class="secondhand-read-more">&lt;&lt; คลิกวิดีโอ เพื่อติดตามเรื่องราวของเธอ</a>
+                <a href="#patient-video" class="secondhand-read-more">&lt;&lt; คลิกวิดีโอ เพื่อติดตามเรื่องราวของเธอ</a>
             </div>
         </div>
         
@@ -482,6 +482,7 @@ li {
     max-width: 990px;
     margin: auto;
     background-color: transparent;
+    overflow: visible;
 }
 #secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p.secondhand-patient-name {
     font-size: 30px;
@@ -579,10 +580,11 @@ li {
     text-align: center;
 }
 .secondhand-patient-image {
-    flex: 0 0 50%;
+    flex: 0 0 46%;
+    padding-top: 5px;
 }
 .secondhand-patient-info {
-    flex: 0 0 50%;
+    flex: 0 0 54%;
     padding: 30px;
     height: max-content;
     background-color: #f2f2f2;

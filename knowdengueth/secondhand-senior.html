@@ -33,10 +33,10 @@
         <p class="secondhand-highlight">แล้วถ้าผู้สูงอายุใกล้ตัวคุณ ติด ‘ไข้เลือดออก’ <span class="secondhand-blackfont">คุณอาจทรมานเหมือนอาม่าท่านนี้</span></p>
         
         <div class="secondhand-patient-card">
-            <div class="secondhand-patient-image">
-                <img alt="คุณป้อม อายุ 67 ปี" data-entity-type="file" data-entity-uuid="9caaa046-3582-4b54-8c99-3e79b1a023af" src="/sites/default/files/inline-images/secondhand-senior-profile.png" />
+            <div class="secondhand-patient-image" id="patient-video">
+                <iframe width="100%" height="450" src="https://players.brightcove.net/3871979173001/i4wxuqUSK_default/index.html?videoId=6374340069112" title="ไข้เลือดออกมือสอง โรคที่คนเจ็บไม่ได้ป่วย" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="secondhand-patient-info">
+            <div class="secondhand-patient-info" style="margin-top: 5px;">
                 <p class="secondhand-patient-name">คุณป้อม อายุ 67 ปี<br>ผู้ป่วย #ไข้เลือดออกมือสอง</p>
                 <p>อาม่าป้อม เคยมีเพื่อนสนิทอยู่คนหนึ่ง ซึ่งเป็นคนที่แข็งแรงมาก แต่แล้ววันหนึ่งอาการป่วยที่เพื่อนคนนั้นคิดว่าเป็นเรื่องธรรมดา กลับเปลี่ยนความคิดของอาม่าป้อม และเพื่อนคนอื่น ๆ ในกลุ่ม ไปตลอดกาล </p>
                 <p>เพื่อนของเธอป่วยรุนแรงจากไข้เลือดออก และต้องเข้ารักษาตัวในโรงพยาบาลเป็นเวลานาน ผลสุดท้ายจะเป็นอย่างไร ...</p>
@@ -482,6 +482,7 @@ li {
     max-width: 990px;
     margin: auto;
     background-color: transparent;
+    overflow: visible;
 }
 #secondhand-content > div.secondhand-main-content > div.secondhand-patient-card > div.secondhand-patient-info > p.secondhand-patient-name {
     font-size: 30px;
@@ -579,10 +580,11 @@ li {
     text-align: center;
 }
 .secondhand-patient-image {
-    flex: 0 0 50%;
+    flex: 0 0 46%;
+    padding-top: 5px;
 }
 .secondhand-patient-info {
-    flex: 0 0 50%;
+    flex: 0 0 54%;
     padding: 30px;
     height: max-content;
     background-color: #f2f2f2;
