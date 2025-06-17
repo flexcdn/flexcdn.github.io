@@ -136,6 +136,24 @@ body > div.conditional-message-top::before {
 	</ul>
 </div> <!-- /ingma-footer -->
 
+<script>
+// รวม Tag ทั้ง 2 เจ้ามาที่ Function เดียวเพื่อให้ Tag พร้อมกันได้
+function trackAddLineEvent() {
+
+    // META Standard Event = ส่ง event ไป Meta Pixel
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'Contact');
+    }
+
+    // Google Snippet event = ส่ง event ไป Google Analytics (ผ่าน Google Tag) ตัด callback ออกเนื่องการไป Line เป็น Link out
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion', {
+			'send_to': 'AW-17143575464/M2DHCOfikNMaEKjn2O4_'
+		});
+    }
+}
+</script>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
