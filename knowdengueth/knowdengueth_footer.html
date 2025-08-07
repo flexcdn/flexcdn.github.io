@@ -2,6 +2,13 @@
 
 /* https://dev-knowdengue-thailand.pantheonsite.io/block/22?destination=/node/82 */
 
+#secondhandbtn-newbtn-zone {
+	display: none !important;
+}
+#secondhandbtn-mordee-mainbtn {
+
+}
+
 /* FOOTER -- GLOBAL CSS */
 
 #navbar > div > div.region-navigation {
@@ -194,7 +201,7 @@ body > div.conditional-message-top::before {
 
 </style>
 
-<div id="secondhand-alert-div" class="secondhand-alert" style="display:none">
+<div id="secondhand-alert-div" class="secondhand-alert" style="display: none;">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     <div class="secondhand-alert-inner">
     <a href="https://lin.ee/A22uwF3" target="_blank" id="secondhand-alert-btn" onclick="trackAddLineEvent()">
@@ -276,20 +283,17 @@ src="https://www.facebook.com/tr?id=541247655500433&ev=PageView&noscript=1"
 
 <!-- Show / Hide “หมอดี” floating banner -->
 <script>
+
 document.addEventListener('DOMContentLoaded', function () {
   const banner = document.getElementById('secondhand-alert-div');
   if (!banner) return;
 
   const path = window.location.pathname || '';
 
-  /* เงื่อนไขที่ต้องการแสดงแบนเนอร์
-        /article               (และ /article/…)
-        /secondhand            (และ /secondhand/…)
-        /know-the-numbers-th
-        /locator               (และ /locator/… เช่น /locator/seeall)
-  */
-  const show = /^\/(?:article|secondhand|know-the-numbers-th|locator)(?:\/|$)/.test(path);
+  /* const show = /^\/(?:article|secondhand|know-the-numbers-th|locator)(?:\/|$)/.test(path); */
+  const show = /^\/(?:secondhand|locator)(?:\/|$)/.test(path);
 
   banner.style.display = show ? 'block' : 'none';
 });
+
 </script>
