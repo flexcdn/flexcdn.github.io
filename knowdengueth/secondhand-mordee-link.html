@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <title>กำลังนำคุณออกจาก knowdengueth.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Immediate redirect (works even when JS is disabled in most browsers) -->
+    <meta http-equiv="refresh" content="0;url=https://lin.ee/A22uwF3" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+
+    <style>
+      :root{
+        --text:#111;
+        --muted:#5b5b5b;
+        --red:#e3222a;
+        --grey:#3f3f3f;
+        --bg:#fff;
+        --btn-radius:48px;
+      }
+      html,body{
+        margin:0; padding:0;
+        background:var(--bg);
+        color:var(--text);
+        font-family: "Kanit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Thai", "Noto Sans", sans-serif;
+      }
+      .wrap{
+        max-width:460px;
+        margin:6vh auto;
+        padding:0 24px;
+        text-align:center;
+      }
+      h1{
+        font-size: clamp(28px, 4.6vw, 28px);
+        line-height:1.2;
+        margin:0 0 12px;
+        font-weight:800;
+      }
+      .host{
+        display:block;
+        font-size: clamp(28px, 4.6vw, 28px);
+        line-height:1.2;
+        font-weight:900;
+      }
+      p.lead{
+        font-size: clamp(18px, 2.3vw, 18px);
+        line-height:1.6;
+        color:var(--text);
+        margin:22px 0 36px;
+      }
+      .actions{
+        display:flex;
+        gap:24px;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        margin-top:16px;
+      }
+      .btn{
+        display:inline-block;
+        min-width:140px;
+        padding:12px 12px;
+        border-radius:var(--btn-radius);
+        text-decoration:none;
+        color:#fff;
+        font-size: clamp(18px, 2.4vw, 18px);
+        font-weight:700;
+        box-shadow: 0 6px 16px rgba(0,0,0,.08);
+        transition: transform .12s ease, filter .12s ease, opacity .12s ease;
+      }
+      .btn:focus-visible{ outline: 3px solid rgba(0,0,0,.25); outline-offset: 2px; }
+      .btn:hover{ transform: translateY(-1px); filter: brightness(1.03);}
+      .btn:active{ transform: translateY(0); filter: brightness(.97); }
+      .btn-grey{ background:var(--grey); }
+      .btn-red{ background:var(--red); }
+
+      /* Basic noscript fallback layout keeps same design */
+      noscript .nojs{
+        display:block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap" aria-live="polite">
+      <h1>ท่านต้องการออกจากเว็บไซต์
+        <span class="host">knowdengueth.com หรือไม่</span>
+      </h1>
+
+      <p class="lead">
+        ท่านสามารถศึกษาข้อมูลเพิ่มเติมจากเว็บไซต์ดังกล่าวได้
+        โดยเว็บไซต์ที่ท่านต้องการไปเยี่ยมชมอยู่นอกเหนือการดูแลของเรา
+      </p>
+
+      <div class="actions">
+        <a id="cancel" href="#" class="btn btn-grey" role="button" aria-label="ยกเลิก และกลับไปหน้าก่อนหน้า">ยกเลิก</a>
+        <a id="continue" href="https://lin.ee/A22uwF3" class="btn btn-red" role="button" rel="noopener">ทำต่อ</a>
+      </div>
+
+      <!-- If meta refresh or JS is blocked, user can still click "ทำต่อ" -->
+      <noscript>
+        <div class="nojs" style="margin-top:20px; color:#666;">
+          เบราว์เซอร์ของคุณปิดการใช้งาน JavaScript ไว้ โปรดกดปุ่ม <strong>ทำต่อ</strong> เพื่อไปยังปลายทาง
+        </div>
+      </noscript>
+    </div>
+
+    <script>
+      (function () {
+        var target = "https://lin.ee/A22uwF3";
+
+        // Most reliable client redirect; does not create an extra history entry
+        try {
+          window.location.replace(target);
+        } catch (e) {
+          // Fallback
+          window.location.href = target;
+        }
+
+        // Wire up buttons (in case redirect is blocked)
+        var cont = document.getElementById("continue");
+        if (cont) cont.setAttribute("href", target);
+
+        var cancel = document.getElementById("cancel");
+        if (cancel) {
+          cancel.addEventListener("click", function (ev) {
+            ev.preventDefault();
+            if (window.history && history.length > 1) {
+              history.back();
+            } else {
+              // Fallback if no history
+              window.location.assign("/");
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
