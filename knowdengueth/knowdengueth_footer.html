@@ -108,6 +108,28 @@ body > div.conditional-message-top::before {
     font-family: "Kanit-SemiBold", sans-serif;
     font-size: 14px;
 }
+.footertext {
+    margin-bottom: 15px !important;
+}
+.pvsession {
+    line-height: 200% !important;
+}
+.link-qr-code {
+    padding: 11px;
+    width: 59px !important;
+    height: 58px !important;
+    display: inline-block;
+    border-radius: 60%;
+    border: 1px #007a7d solid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.gemadversereporting-qr-code {
+    width: 35px;
+}
+#ingma-footer > p.pvsession {
+    margin-top: 25px;
+}
 
 /* HIDE FOOTER LOGO */
 
@@ -194,9 +216,72 @@ body > div.conditional-message-top::before {
 #secondhand-alert-btn > div > div > img.secondhand-app-logo2 {
     max-width: 145px;
 	height: auto;
-    display: block;
+    display: block !important;
     margin: auto;
     margin-bottom: 5px;
+}
+#secondhand-taamjib-btn {
+    background: #e6f6f3;
+    border-radius: 16px 16px;
+    box-shadow: 0 6px 14px rgba(0,0,0,.08);
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    background-image: url(/sites/default/files/inline-images/doctorsum_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5px;
+    height: 200px;
+    max-width: 205px;
+    display: flex;
+    flex-direction: column;
+}
+.secondhandbtn-taamjib-floatbutton {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    align-self: stretch;
+    margin-bottom: 0;
+    padding: 5px 18px;
+    background: transparent !important;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+.secondhandbtn-taamjib-floatbuttoninner {
+    margin: auto;
+    padding: 3px;
+    width: 100%;
+    max-width: 225px;
+    background-color: #0b957d;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+
+#secondhand-alert-div {
+    max-width: 100%;
+    zoom: 70% !important;
+    top: 109vh;
+    left: auto;
+    right: 25px;
+}
+#secondhand-alert-btn {
+    display: inline-block;
+    float: right;
+}
+#secondhand-taamjib-btn {
+    float: right;
+    margin-right: 10px;
+}
+
 }
 
 </style>
@@ -204,18 +289,23 @@ body > div.conditional-message-top::before {
 <div id="secondhand-alert-div" class="secondhand-alert">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     <div class="secondhand-alert-inner">
-    <a href="https://knowdengueth.com/sites/default/files/secondhand-mordee-link.html" target="_blank" id="secondhand-alert-btn" onclick="trackAddLineEvent()">
-        <div class="secondhand-app-text">
-                <div class="secondhand-app-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="secondhand-app-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัคซีนไข้เลือดออก
-         </div>
-    </a>
+        <a href="https://knowdengueth.com/sites/default/files/secondhand-mordee-link.html" target="_blank" id="secondhand-alert-btn" onclick="trackAddLineEvent()">
+            <div class="secondhand-app-text">
+                    <div class="secondhand-app-btnin">คลิก <img alt="หมอดี" data-entity-type="file" data-entity-uuid="377f6e60-7a11-45a3-8973-3379a24ae4a1" src="/sites/default/files/inline-images/secondhand-mordee-btn2.png" class="secondhand-app-logo2"/> เพื่อปรึกษาแพทย์</div>ถึงวิธีการป้องกันต่าง ๆ และการฉีดวัคซีนไข้เลือดออก
+            </div>
+        </a>
+        <a href="https://knowdengueth.com/sites/default/files/secondhand-taamjib-link.html" target="_blank" id="secondhand-taamjib-btn" onclick="trackAddLineEvent()">
+            <div class="secondhandbtn-taamjib-floatbutton">
+                <div class="secondhandbtn-taamjib-floatbuttoninner">เรื่องไข้เลือดออก 1 นาที เริ่ม →</div>
+            </div>
+        </a>
     </div>
 </div> <!-- /secondhand-alert-div -->
 
 <div id="global-footer">
-<p>This information is available to the public for information purposes only; it should not be used for diagnosing or treating a health problem or disease. It is not intended to substitute for consultation with a healthcare provider. Please consult your healthcare provider for further advice.</p>
-
-<p>The information on this website is updated by 4 June 2025</p>
+<p class="footertext">This information is available to the public for information purposes only; it should not be used for diagnosing or treating a health problem or disease. It is not intended to substitute for consultation with a healthcare provider. Please consult your healthcare provider for further advice.</p>
+<p class="pvsession">ในกรณีที่ท่านต้องการรายงานอาการไม่พึงประสงค์จากการใช้ผลิตภัณฑ์ยาของบริษัททาเคดา โปรดติดต่อบุคลากรทางการแพทย์ของท่าน (เช่น แพทย์หรือเภสัชกร) หรือหน่วยงานด้านสุขภาพ และท่านยังสามารถรายงานมาที่บริษัทฯ ได้ที่ <a href="https://gemadversereporting.com" target="_blank">gemadversereporting.com</a> หรือสแกน <a href="/sites/default/files/inline-images/gemadversereporting-qr-code.png" target="_blank" class="link-qr-code"><img alt="gemadversereporting.com" src="/sites/default/files/inline-images/gemadversereporting-qr-code.png" class="gemadversereporting-qr-code" /></a> หรือส่งอีเมล <a href="mailto:AE.Thailand@Takeda.com" target="_blank">AE.Thailand@Takeda.com</a></p>
+<p class="footerdate">The information on this website is updated by 4 June 2025</p>
 
 </div> <!-- /global-footer -->
 
@@ -224,6 +314,7 @@ body > div.conditional-message-top::before {
 <img alt="icon-vaccine" data-entity-type="file" data-entity-uuid="ca67effa-ae02-4d34-9b42-1e30e0d67916" src="/sites/default/files/inline-images/icon-vaccine.png" />
 <img alt="pin_locator_sml4" data-entity-type="file" data-entity-uuid="72cf07c2-7984-40d9-bdb2-7c7102df440f" src="/sites/default/files/inline-images/pin_locator_sml4.png" />
 <img alt="Takeda_Kao_MOU" data-entity-type="file" data-entity-uuid="a7bfed7a-ca1d-4af6-941d-ce245ac13c31" src="/sites/default/files/inline-images/Takeda_Kao_MOU_8_thumb_0.jpg" />
+<img alt="gemadversereporting.com" data-entity-type="file" data-entity-uuid="0ec1b9c9-d526-4439-8bc4-ca44fc4f111a" src="/sites/default/files/inline-images/gemadversereporting-qr-code.png" />
 
 </div> <!-- /hidden-footer -->
 
@@ -233,6 +324,8 @@ body > div.conditional-message-top::before {
 		<li>ข้อมูลในเอกสารฉบับนี้จัดทำขึ้นสำหรับประชาชนทั่วไป โดยมีวัตถุประสงค์เพื่อให้ข้อมูลเท่านั้น ข้อมูลนี้ไม่ควรถูกนำไปใช้เพื่อวินิจฉัยหรือรักษาปัญหาสุขภาพหรือโรคใด ๆ การให้ข้อมูลดังกล่าวไม่มีวัตถุประสงค์เป็นการทดแทนการปรึกษากับผู้ให้บริการทางการแพทย์ โปรดปรึกษาผู้ให้บริการทางการแพทย์ของท่านสำหรับคำแนะนำเพิ่มเติม</li>
 		<li>ผู้ป่วยไข้เลือดออกส่วนใหญ่จะอาการไม่มาก ในบางรายอาจมีอาการรุนแรง เลือดออกมาก จนอาจถึงขั้นช็อกและเสียชีวิต</li>
 	</ul>
+    <p class="pvsession">ในกรณีที่ท่านต้องการรายงานอาการไม่พึงประสงค์จากการใช้ผลิตภัณฑ์ยาของบริษัททาเคดา โปรดติดต่อบุคลากรทางการแพทย์ของท่าน (เช่น แพทย์หรือเภสัชกร) หรือหน่วยงานด้านสุขภาพ และท่านยังสามารถรายงานมาที่บริษัทฯ ได้ที่ <a href="https://gemadversereporting.com" target="_blank">gemadversereporting.com</a> หรือสแกน <a href="/sites/default/files/inline-images/gemadversereporting-qr-code.png" target="_blank" class="link-qr-code"><img alt="gemadversereporting.com" src="/sites/default/files/inline-images/gemadversereporting-qr-code.png" class="gemadversereporting-qr-code" /></a> หรือส่งอีเมล <a href="mailto:AE.Thailand@Takeda.com" target="_blank">AE.Thailand@Takeda.com</a></p>
+<p class="footerdate">The information on this website is updated by 4 June 2025</p>
 </div> <!-- /ingma-footer -->
 
 <script>
