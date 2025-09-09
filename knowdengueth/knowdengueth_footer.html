@@ -221,8 +221,9 @@ body > div.conditional-message-top::before {
     margin-bottom: 5px;
 }
 #secondhand-taamjib-btn {
-    background: #e6f6f3;
+    background: #f00;
     border-radius: 16px 16px;
+    border: 10px #f00 solid;
     box-shadow: 0 6px 14px rgba(0,0,0,.08);
     padding: 0px;
     text-align: center;
@@ -234,8 +235,8 @@ body > div.conditional-message-top::before {
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 5px;
-    height: 200px;
-    max-width: 205px;
+    height: 210px;
+    max-width: 210px;
     display: flex;
     flex-direction: column;
 }
@@ -245,7 +246,6 @@ body > div.conditional-message-top::before {
     margin-top: auto;
     align-self: stretch;
     margin-bottom: 0;
-    padding: 5px 18px;
     background: transparent !important;
     color: #fff;
     text-decoration: none;
@@ -253,6 +253,10 @@ body > div.conditional-message-top::before {
     letter-spacing: .2px;
 }
 .secondhandbtn-taamjib-floatbuttoninner {
+    border-top: 5px #f00 solid;
+    border-left: 0px #f00 solid;
+    border-right: 0px #f00 solid;
+    border-bottom: 0px #f00 solid;
     margin: auto;
     padding: 3px;
     width: 100%;
@@ -261,7 +265,7 @@ body > div.conditional-message-top::before {
     color: #fff;
     font-weight: 400;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
 }
 
 @media (max-width: 767px) {
@@ -280,6 +284,9 @@ body > div.conditional-message-top::before {
 #secondhand-taamjib-btn {
     float: right;
     margin-right: 10px;
+    width: 210px;
+    height: 210px;
+    margin-top: 0px;
 }
 
 }
