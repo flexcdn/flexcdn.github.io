@@ -1,80 +1,192 @@
+<!-- https://dev-thai-adhd.pantheonsite.io/node/65/edit?destination=/admin/content -->
+
 <div id="thaiadhd-parent-articles">
-    <h2>Tabs</h2>
-    <p>Click on the buttons inside the tabbed menu:</p>
-
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    <!-- HERO -->
+     <div class="thaiadhd-tophero">
+        <div class="thaiadhd-topcontainer">
+            <p>คุณกำลังศึกษา, ฉันเป็นพ่อแม่หรือผู้ปกครอง ของเด็กที่เป็นโรคสมาธิสั้น</p>
+            <p>เลือกช่วงวัยหรือบทบาทของคุณ</p>
+        </div>
+    </div>
+    <div class="thaiadhd-hero">
+        <div class="thaiadhd-container thaiadhd-welcome">
+            <h1>โรคสมาธิสั้น คืออะไร?</h1>
+            <p>ชวนมาทำความรู้จักกับโรคสมาธิสั้น</p>
+        </div>
     </div>
 
-    <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-    </div>
+    <div id="thaiadhd-parent-articles-container">
 
-    <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-    </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'article1')">London</button>
+            <button class="tablinks" onclick="openCity(event, 'article2')">Paris</button>
+            <button class="tablinks" onclick="openCity(event, 'article3')">Tokyo</button>
+        </div>
 
-    <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-    </div>
+        <div id="article1" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
 
-    <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+        <div id="article2" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="article3" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+    </div>
 </div>
 
 <style>
-/* Style the tab */
+
+#thaiadhd-parent-articles {
+
+}
+
+/* Container: two columns — left tab list, right content */
+#thaiadhd-parent-articles-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 24px;
+    align-items: start;
+    max-width: 1120px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+/* Hero / Welcome  */
+#thaiadhd-home {
+    padding: 0px !important;
+}
+.thaiadhd-container {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding: 28px 24px;
+}
+.thaiadhd-tophero {
+    padding: 5px 0 5px 0;
+    background: #4C475D;
+    background: linear-gradient(90deg,rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+}
+.thaiadhd-topcontainer {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding: 5px 5px;
+    text-align: right;
+    color: #fff;
+}
+.thaiadhd-topcontainer p {
+    margin-top: 0px;
+}
+.thaiadhd-hero {
+    padding: 15px 0 15px 0;
+    background: #ebe3ef;
+}
+.thaiadhd-hero .thaiadhd-welcome {
+    background: transparent;
+    padding: 5px;
+}
+.thaiadhd-hero .thaiadhd-welcome h1 {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    text-align: left;
+    color: #000;
+    display: block;
+    padding: 0px;
+    border: none;
+}
+.thaiadhd-hero .thaiadhd-welcome p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+}
+
+/* Tab list as a vertical stack */
 .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* Style the buttons inside the tab */
+/* Buttons inside the vertical tablist */
 .tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+    background: #f1f1f1;
+    border: 1px solid #e3e5ec;
+    outline: 0;
+    cursor: pointer;
+    padding: 16px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    border-radius: 16px;
+    color: #2b3242;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    width: 100%;
+    margin-top: 0px;
 }
-
-/* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+    background: #e9eaf4;
 }
-
-/* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+    background: #9b71b0;
+    color: #fff;
+    border-color: #9b71b0;
 }
 
-/* Style the tab content */
+/* Tab content on the right column */
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+    display: none;
+    padding: 0;
+    border: 0;
+    grid-column: 2 / -1;
+}
+.tabcontent h3 {
+    margin-top: 0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 700px) {
+    #thaiadhd-parent-articles-container {
+        grid-template-columns: 1fr;
+    }
+    .tabcontent {
+        grid-column: 1 / -1;
+    }
 }
 </style>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        if (evt && evt.currentTarget) evt.currentTarget.className += " active";
+    }
+    // Auto open the first tab when the DOM is ready
+    document.addEventListener("DOMContentLoaded", function () {
+        var firstBtn = document.querySelector("#thaiadhd-parent-articles-container .tab .tablinks");
+        if (firstBtn) {
+            firstBtn.click();
+        }
+    });
+</script>
