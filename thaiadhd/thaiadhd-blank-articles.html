@@ -1,0 +1,364 @@
+<!-- https://dev-thai-adhd.pantheonsite.io/node/65/edit?destination=/admin/content -->
+
+<div id="thaiadhd-parent-articles">
+    <!-- HERO -->
+     <div class="thaiadhd-tophero">
+        <div class="thaiadhd-topcontainer">
+            <p>คุณกำลังศึกษา, ฉันเป็นพ่อแม่หรือผู้ปกครอง ของเด็กที่เป็นโรคสมาธิสั้น</p>
+            <p>เลือกช่วงวัยหรือบทบาทของคุณ</p>
+        </div>
+    </div>
+    <div class="thaiadhd-hero">
+        <div class="thaiadhd-container thaiadhd-welcome">
+            <h1>โรคสมาธิสั้น คืออะไร?</h1>
+            <p>ชวนมาทำความรู้จักกับโรคสมาธิสั้น</p>
+        </div>
+    </div>
+
+    <div id="thaiadhd-parent-articles-container">
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'article1')">London</button>
+            <button class="tablinks" onclick="openTab(event, 'article2')">Paris</button>
+            <button class="tablinks" onclick="openTab(event, 'article3')">Tokyo</button>
+            <button type="button" class="tablinks tablinksmore" id="thaiadhd-tab-next">บทความถัดไป <span class="thaiadhd-arrow">→</span></button>
+            <a href="/#learnmore" class="tablinks tablinksmore tablinksmore2" role="button">กลับไปเลือกดูเมนู <span class="thaiadhd-arrow">↑</span></a>
+        </div>
+
+        <div id="article1" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="article2" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="article3" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+    </div>
+
+      <!-- LEARN MORE GRID -->
+    <section class="thaiadhd-learn">
+        <div class="thaiadhd-container">
+        <h2>เลือกดูในหัวข้ออื่น ๆ เพิ่มเติม</h2>
+
+        <div class="thaiadhd-grid">
+            <!-- Card 1 -->
+            <div class="thaiadhd-card">
+                <a href="/parent-or-carer/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-1">
+                        ฉันเป็นพ่อแม่หรือผู้ปกครอง
+                        <span>ของเด็กที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="thaiadhd-card">
+                <a href="/young-person/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-2">
+                        ฉันเป็นคนหนุ่มสาว
+                        <span>ที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="thaiadhd-card">
+                <a href="/adult/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-3">
+                        ฉันเป็นผู้ใหญ่
+                        <span>ที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="thaiadhd-card">
+                <a href="/educator/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-4">
+                        ฉันเป็นคุณครูของนักเรียน
+                        <span>ที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+</div>
+
+<style>
+
+main > div.content {
+    margin-bottom: 0px !important;
+}
+.content>div a:last-of-type {
+    display: inherit !important;
+}
+#thaiadhd-parent-articles {
+
+}
+
+/* Container: two columns — left tab list, right content */
+#thaiadhd-parent-articles-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 24px;
+    align-items: start;
+    max-width: 1120px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+/* Hero / Welcome  */
+#thaiadhd-home {
+    padding: 0px !important;
+}
+.thaiadhd-container {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding: 28px 24px;
+}
+.thaiadhd-tophero {
+    padding: 5px 0 5px 0;
+    background: #4C475D;
+    background: linear-gradient(90deg,rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+}
+.thaiadhd-topcontainer {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding: 5px 5px;
+    text-align: right;
+    color: #fff;
+}
+.thaiadhd-topcontainer p {
+    margin-top: 0px;
+}
+.thaiadhd-hero {
+    padding: 15px 0 15px 0;
+    background: #ebe3ef;
+}
+.thaiadhd-hero .thaiadhd-welcome {
+    background: transparent;
+    padding: 5px;
+}
+.thaiadhd-hero .thaiadhd-welcome h1 {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    text-align: left;
+    color: #000;
+    display: block;
+    padding: 0px;
+    border: none;
+}
+.thaiadhd-hero .thaiadhd-welcome p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+}
+
+/* Tab list as a vertical stack */
+.tab {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Buttons inside the vertical tablist */
+.tab .tablinks{
+    background: #f1f1f1;
+    border: 1px solid #e3e5ec;
+    outline: 0;
+    cursor: pointer;
+    padding: 16px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    border-radius: 16px;
+    color: #2b3242;
+    transition: background 0.2s ease, color 0.2s ease;
+    width: 100%;
+    margin-top: 0px;
+    font-family: "Noto Sans Thai", sans-serif !important;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* for <a> */
+}
+.tab .tablinks:hover {
+    background: #e9eaf4;
+}
+.tab .tablinks.active {
+    background: #9b71b0;
+    color: #fff;
+    border-color: #9b71b0;
+}
+
+/* Tab content on the right column */
+.tabcontent {
+    display: none;
+    padding: 0;
+    border: 0;
+    grid-column: 2 / -1;
+}
+.tabcontent h3 {
+    margin-top: 0;
+}
+
+/* ------------------------------
+       Learn more grid
+------------------------------ */
+.thaiadhd-learn {
+    padding: 0px;
+}
+.thaiadhd-learn > div.thaiadhd-container {
+    padding-bottom: 0px !important;
+}
+.thaiadhd-learn h2 {
+    color: #000;
+    font-size: 24px;
+    margin: 0 0 12px;
+}
+.thaiadhd-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+}
+.thaiadhd-card {
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+.thaiadhd-card:hover {
+    opacity: 0.7;
+}
+.thaiadhd-cardlink,
+.thaiadhd-card-footer > a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.thaiadhd-card a img {
+    width: 100% !important;
+    height: 335px !important;
+    object-fit: cover;
+    flex: 1;
+    margin: 0px !important;
+}
+.thaiadhd-card-footer {
+    padding: 12px 14px;
+    color: var(--thaiadhd-white);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+}
+.thaiadhd-card-footer span {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 2px;
+    opacity: 0.95;
+}
+.tablinksmore {
+    background: #fff !important;
+}
+.tablinksmore2 {
+    max-width: 310px;
+}
+.thaiadhd-arrow {
+    color: #283549;
+    border-radius: 999px;
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+/* footer color bars for 4 tiles */
+.thaiadhd-foot-1 {
+    background: #9b71b0;
+}
+.thaiadhd-foot-2 {
+    background: #50b0c0;
+}
+.thaiadhd-foot-3 {
+    background: #eba801;
+}
+.thaiadhd-foot-4 {
+    background: #da5284;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 700px) {
+    #thaiadhd-parent-articles-container {
+        grid-template-columns: 1fr;
+    }
+    .tabcontent {
+        grid-column: 1 / -1;
+    }
+}
+@media (max-width: 600px) {
+    .thaiadhd-hero .thaiadhd-welcome h1 {
+        font-size: 20px;
+    }
+    .thaiadhd-hero .thaiadhd-welcome p {
+        font-size: 13.5px;
+    }
+    .thaiadhd-learn h2 {
+        font-size: 18px;
+    }
+}
+</style>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        if (evt && evt.currentTarget) evt.currentTarget.className += " active";
+    }
+    // Auto open the first tab when the DOM is ready
+    document.addEventListener("DOMContentLoaded", function () {
+        var firstBtn = document.querySelector("#thaiadhd-parent-articles-container .tab .tablinks");
+        if (firstBtn) {
+            firstBtn.click();
+        }
+        // Next tab button: go to next content tab, wrap to first when at the end
+        var nextBtn = document.getElementById('thaiadhd-tab-next');
+        if (nextBtn) {
+            var contentBtns = Array.from(document.querySelectorAll('#thaiadhd-parent-articles-container .tab .tablinks:not(.tablinksmore)'));
+            nextBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (!contentBtns.length) return;
+                var currentIndex = contentBtns.findIndex(function (btn) { return btn.classList.contains('active'); });
+                if (currentIndex < 0) currentIndex = 0;
+                var nextIndex = (currentIndex + 1) % contentBtns.length;
+                contentBtns[nextIndex].click();
+            });
+        }
+    });
+</script>
