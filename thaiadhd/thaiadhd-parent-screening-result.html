@@ -1,7 +1,14 @@
 <!-- https://dev-thai-adhd.pantheonsite.io/node/63/edit?destination=/admin/content -->
 
 <div id="thaiadhd-parent-screening-result">
-    <main class="thaiadhd-page">
+    <!-- HERO -->
+    <div class="thaiadhd-hero">
+        <div class="thaiadhd-container thaiadhd-welcome">
+        <h1>แบบประเมินพฤติกรรม SNAP-IV (สำหรับ ผู้ปกครอง)</h1>
+        <p>Swanson, Nolan and Pelham IV Questionnaire (Short Form)</p>
+        </div>
+    </div>
+    <main class="thaiadhd-container">
         <section class="thaiadhd-result">
             <div class="thaiadhd-bar">ผลลัพธ์</div>
             <div class="thaiadhd-head">
@@ -24,7 +31,7 @@
             </div>
             <div class="thaiadhd-actions">
                 <a href="#" class="thaiadhd-btn thaiadhd-btn-primary">บันทึกไฟล์ PDF</a>
-                <a href="#" class="thaiadhd-btn thaiadhd-btn-outline">กลับสู่หน้าแรก</a>
+                <a href="/parent-or-carer/screening" class="thaiadhd-btn thaiadhd-btn-outline">กลับสู่หน้าแรก</a>
             </div>
         </section>
     </main>
@@ -48,27 +55,48 @@
 * {
     box-sizing: border-box;
 }
-html,
-body {
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: var(--thaiadhd-ink);
-    font-family:
-        "Noto Sans Thai",
-        system-ui,
-        -apple-system,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-    line-height: 1.6;
+.content>div a:last-of-type {
+    display: inherit !important;
 }
-.thaiadhd-page {
+
+/* ----------------------------------------------------
+       Page header
+---------------------------------------------------- */
+.thaiadhd-container {
     max-width: var(--thaiadhd-container);
     margin: 48px auto 72px;
     padding: 0 24px;
 }
+.thaiadhd-hero {
+    padding: 15px 0 15px 0;
+    background: #4C475D;
+    background: linear-gradient(90deg,rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+}
+.thaiadhd-hero .thaiadhd-welcome {
+    background: transparent;
+    padding: 5px;
+    margin: auto !important;
+}
+.thaiadhd-hero .thaiadhd-welcome h1 {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.1px;
+    color: #fff;
+    text-align: left;
+    padding: 0px;
+    background: transparent;
+    border-top: none;
+}
+.thaiadhd-hero .thaiadhd-welcome p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 16px;
+    color: #fff;
+}
+/* ----------------------------------------------------
+       Result
+---------------------------------------------------- */
 .thaiadhd-result {
     border-radius: 16px;
     background: var(--thaiadhd-card);
@@ -92,6 +120,11 @@ body {
     font-size: 36px;
     font-weight: 800;
     letter-spacing: 0.2px;
+    color: #fff;
+    text-align: left;
+    padding: 0px;
+    background: transparent;
+    border-top: none;
 }
 .thaiadhd-head p {
     margin: 0;
@@ -169,7 +202,7 @@ body {
     }
 }
 @media (max-width: 640px) {
-    .thaiadhd-page {
+    .thaiadhd-container {
         margin: 28px auto 48px;
         padding: 0 16px;
     }
@@ -196,6 +229,14 @@ body {
     }
     .thaiadhd-btn {
         width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .thaiadhd-hero .thaiadhd-welcome h1 {
+        font-size: 20px;
+    }
+    .thaiadhd-hero .thaiadhd-welcome p {
+        font-size: 13.5px;
     }
 }
 
