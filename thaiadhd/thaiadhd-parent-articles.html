@@ -18,9 +18,11 @@
     <div id="thaiadhd-parent-articles-container">
 
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'article1')">London</button>
-            <button class="tablinks" onclick="openCity(event, 'article2')">Paris</button>
-            <button class="tablinks" onclick="openCity(event, 'article3')">Tokyo</button>
+            <button class="tablinks" onclick="openTab(event, 'article1')">London</button>
+            <button class="tablinks" onclick="openTab(event, 'article2')">Paris</button>
+            <button class="tablinks" onclick="openTab(event, 'article3')">Tokyo</button>
+            <button type="button" class="tablinks tablinksmore" id="thaiadhd-tab-next">บทความถัดไป <span class="thaiadhd-arrow">→</span></button>
+            <a href="/#learnmore" class="tablinks tablinksmore tablinksmore2" role="button">กลับไปเลือกดูเมนู <span class="thaiadhd-arrow">↑</span></a>
         </div>
 
         <div id="article1" class="tabcontent">
@@ -39,10 +41,66 @@
         </div>
 
     </div>
+
+      <!-- LEARN MORE GRID -->
+    <section class="thaiadhd-learn">
+        <div class="thaiadhd-container">
+        <h2>เลือกดูในหัวข้ออื่น ๆ เพิ่มเติม</h2>
+
+        <div class="thaiadhd-grid">
+            <!-- Card 1 -->
+            <div class="thaiadhd-card">
+                <a href="/parent-or-carer/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-1">
+                        ฉันเป็นพ่อแม่หรือผู้ปกครอง
+                        <span>ของเด็กที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="thaiadhd-card">
+                <a href="/young-person/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-2">
+                        ฉันเป็นคนหนุ่มสาว
+                        <span>ที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="thaiadhd-card">
+                <a href="/adult/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-3">
+                        ฉันเป็นผู้ใหญ่
+                        <span>ที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="thaiadhd-card">
+                <a href="/educator/articles" class="thaiadhd-cardlink">
+                    <div class="thaiadhd-card-footer thaiadhd-foot-4">
+                        ฉันเป็นคุณครูของนักเรียน
+                        <span>ที่เป็นโรคสมาธิสั้น</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
 </div>
 
 <style>
 
+main > div.content {
+    margin-bottom: 0px !important;
+}
+.content>div a:last-of-type {
+    display: inherit !important;
+}
 #thaiadhd-parent-articles {
 
 }
@@ -120,7 +178,7 @@
 }
 
 /* Buttons inside the vertical tablist */
-.tab button {
+.tab .tablinks{
     background: #f1f1f1;
     border: 1px solid #e3e5ec;
     outline: 0;
@@ -131,16 +189,18 @@
     text-align: left;
     border-radius: 16px;
     color: #2b3242;
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
     width: 100%;
     margin-top: 0px;
+    font-family: "Noto Sans Thai", sans-serif !important;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* for <a> */
 }
-.tab button:hover {
+.tab .tablinks:hover {
     background: #e9eaf4;
 }
-.tab button.active {
+.tab .tablinks.active {
     background: #9b71b0;
     color: #fff;
     border-color: #9b71b0;
@@ -157,6 +217,94 @@
     margin-top: 0;
 }
 
+/* ------------------------------
+       Learn more grid
+------------------------------ */
+.thaiadhd-learn {
+    padding: 0px;
+}
+.thaiadhd-learn > div.thaiadhd-container {
+    padding-bottom: 0px !important;
+}
+.thaiadhd-learn h2 {
+    color: #000;
+    font-size: 24px;
+    margin: 0 0 12px;
+}
+.thaiadhd-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+}
+.thaiadhd-card {
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+.thaiadhd-card:hover {
+    opacity: 0.7;
+}
+.thaiadhd-cardlink,
+.thaiadhd-card-footer > a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.thaiadhd-card a img {
+    width: 100% !important;
+    height: 335px !important;
+    object-fit: cover;
+    flex: 1;
+    margin: 0px !important;
+}
+.thaiadhd-card-footer {
+    padding: 12px 14px;
+    color: var(--thaiadhd-white);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+}
+.thaiadhd-card-footer span {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 2px;
+    opacity: 0.95;
+}
+.tablinksmore {
+    background: #fff !important;
+}
+.tablinksmore2 {
+    max-width: 310px;
+}
+.thaiadhd-arrow {
+    color: #283549;
+    border-radius: 999px;
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+/* footer color bars for 4 tiles */
+.thaiadhd-foot-1 {
+    background: #9b71b0;
+}
+.thaiadhd-foot-2 {
+    background: #50b0c0;
+}
+.thaiadhd-foot-3 {
+    background: #eba801;
+}
+.thaiadhd-foot-4 {
+    background: #da5284;
+}
+
 /* Responsive: stack on small screens */
 @media (max-width: 700px) {
     #thaiadhd-parent-articles-container {
@@ -166,10 +314,21 @@
         grid-column: 1 / -1;
     }
 }
+@media (max-width: 600px) {
+    .thaiadhd-hero .thaiadhd-welcome h1 {
+        font-size: 20px;
+    }
+    .thaiadhd-hero .thaiadhd-welcome p {
+        font-size: 13.5px;
+    }
+    .thaiadhd-learn h2 {
+        font-size: 18px;
+    }
+}
 </style>
 
 <script>
-    function openCity(evt, cityName) {
+    function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -179,7 +338,7 @@
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(tabName).style.display = "block";
         if (evt && evt.currentTarget) evt.currentTarget.className += " active";
     }
     // Auto open the first tab when the DOM is ready
@@ -187,6 +346,19 @@
         var firstBtn = document.querySelector("#thaiadhd-parent-articles-container .tab .tablinks");
         if (firstBtn) {
             firstBtn.click();
+        }
+        // Next tab button: go to next content tab, wrap to first when at the end
+        var nextBtn = document.getElementById('thaiadhd-tab-next');
+        if (nextBtn) {
+            var contentBtns = Array.from(document.querySelectorAll('#thaiadhd-parent-articles-container .tab .tablinks:not(.tablinksmore)'));
+            nextBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (!contentBtns.length) return;
+                var currentIndex = contentBtns.findIndex(function (btn) { return btn.classList.contains('active'); });
+                if (currentIndex < 0) currentIndex = 0;
+                var nextIndex = (currentIndex + 1) % contentBtns.length;
+                contentBtns[nextIndex].click();
+            });
         }
     });
 </script>
