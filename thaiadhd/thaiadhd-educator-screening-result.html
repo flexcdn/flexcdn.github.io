@@ -1,0 +1,243 @@
+<!-- https://dev-thai-adhd.pantheonsite.io/node/64/edit?destination=/admin/content -->
+
+<div id="thaiadhd-parent-screening-result">
+    <!-- HERO -->
+    <div class="thaiadhd-hero">
+        <div class="thaiadhd-container thaiadhd-welcome">
+        <h1>แบบประเมินพฤติกรรม SNAP-IV (สำหรับ คุณครู)</h1>
+        <p>Swanson, Nolan and Pelham IV Questionnaire (Short Form)</p>
+        </div>
+    </div>
+    <main class="thaiadhd-container">
+        <section class="thaiadhd-result">
+            <div class="thaiadhd-bar">ผลลัพธ์</div>
+            <div class="thaiadhd-head">
+                <h1>ไม่มีความเสี่ยงที่จะเป็นโรคสมาธิสั้น</h1>
+                <p>คะแนน: 34/78</p>
+            </div>
+            <div class="thaiadhd-body">
+                <div class="thaiadhd-item">
+                    <b>อาการขาดสมาธิ: 20/27 คะแนน</b>
+                    <p>สูงกว่าคะแนนมาตรฐาน สงสัยว่าเด็กมีปัญหาด้าน "อาการขาดสมาธิ"</p>
+                </div>
+                <div class="thaiadhd-item">
+                    <b>อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น: 24/27 คะแนน</b>
+                    <p>สูงกว่าคะแนนมาตรฐาน สงสัยว่าเด็กมีปัญหาด้าน "อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น"</p>
+                </div>
+                <div class="thaiadhd-item">
+                    <b>อาการดื้อต่อด้าน: 14/24 คะแนน</b>
+                    <p>อยู่ในเกณฑ์คะแนนมาตรฐาน ไม่พบว่าเด็กมีปัญหาด้าน "อาการดื้อต่อด้าน"</p>
+                </div>
+            </div>
+            <div class="thaiadhd-actions">
+                <a href="#" class="thaiadhd-btn thaiadhd-btn-primary">บันทึกไฟล์ PDF</a>
+                <a href="/educator/screening" class="thaiadhd-btn thaiadhd-btn-outline">กลับสู่หน้าแรก</a>
+            </div>
+        </section>
+    </main>
+</div>
+
+<style>
+
+:root {
+    --thaiadhd-ink: #1c2430;
+    --thaiadhd-ink-soft: #3a4354;
+    --thaiadhd-muted: #ecf2f5;
+    --thaiadhd-card: #ffffff;
+    --thaiadhd-dark-1: #1a1033; /* top bar */
+    --thaiadhd-dark-2: #3a364c; /* headline strip */
+    --thaiadhd-accent: #2b1a4e; /* primary button */
+    --thaiadhd-outline: #3b3258; /* outline stroke color */
+    --thaiadhd-btn-ink: #ffffff;
+    --thaiadhd-radius: 14px;
+    --thaiadhd-container: 1160px;
+}
+* {
+    box-sizing: border-box;
+}
+.content>div a:last-of-type {
+    display: inherit !important;
+}
+
+/* ----------------------------------------------------
+       Page header
+---------------------------------------------------- */
+.thaiadhd-container {
+    max-width: var(--thaiadhd-container);
+    margin: 48px auto 72px;
+    padding: 0 24px;
+}
+.thaiadhd-hero {
+    padding: 15px 0 15px 0;
+    background: #DA5283;
+    background: linear-gradient(90deg,rgba(218, 82, 131, 1) 0%, rgba(116, 44, 70, 1) 100%);
+}
+.thaiadhd-hero .thaiadhd-welcome {
+    background: transparent;
+    padding: 5px;
+    margin: auto !important;
+}
+.thaiadhd-hero .thaiadhd-welcome h1 {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.1px;
+    color: #fff;
+    text-align: left;
+    padding: 0px;
+    background: transparent;
+    border-top: none;
+}
+.thaiadhd-hero .thaiadhd-welcome p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 16px;
+    color: #fff;
+}
+/* ----------------------------------------------------
+       Result
+---------------------------------------------------- */
+.thaiadhd-result {
+    border-radius: 16px;
+    background: var(--thaiadhd-card);
+    overflow: hidden;
+    border: 1px solid #e8ecf2;
+}
+.thaiadhd-bar {
+    background: var(--thaiadhd-dark-1);
+    color: #fff;
+    padding: 16px 24px;
+    font-weight: 800;
+    font-size: 22px;
+}
+.thaiadhd-head {
+    background: var(--thaiadhd-dark-2);
+    color: #fff;
+    padding: 28px 32px;
+}
+.thaiadhd-head h1 {
+    margin: 0 0 10px 0;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #fff;
+    text-align: left;
+    padding: 0px;
+    background: transparent;
+    border-top: none;
+}
+.thaiadhd-head p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.95;
+}
+.thaiadhd-body {
+    background: var(--thaiadhd-muted);
+    padding: 26px 32px 30px;
+}
+.thaiadhd-item + .thaiadhd-item {
+    margin-top: 18px;
+}
+.thaiadhd-item b {
+    font-size: 20px;
+    color: #243042;
+}
+.thaiadhd-item p {
+    margin: 6px 0 0 0;
+    color: #39475c;
+    font-size: 18px;
+}
+.thaiadhd-actions {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    padding: 26px 24px 34px;
+    background: #fff;
+}
+.thaiadhd-btn {
+    border-radius: 999px;
+    padding: 16px 32px;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 260px;
+}
+.thaiadhd-btn-primary {
+    background: var(--thaiadhd-accent);
+    color: var(--thaiadhd-btn-ink);
+    box-shadow: 0 10px 20px rgba(31, 16, 60, 0.16);
+}
+.thaiadhd-btn-primary:hover {
+    background: #241442;
+}
+.thaiadhd-btn-outline {
+    background: #f7f7fb;
+    color: #2b2a3e;
+    border: 2px solid var(--thaiadhd-outline);
+}
+.thaiadhd-btn-outline:hover {
+    background: #edeef8;
+}
+@media (max-width: 980px) {
+    .thaiadhd-head h1 {
+        font-size: 32px;
+    }
+    .thaiadhd-head p {
+        font-size: 18px;
+    }
+    .thaiadhd-item b {
+        font-size: 18px;
+    }
+    .thaiadhd-item p {
+        font-size: 16px;
+    }
+    .thaiadhd-btn {
+        min-width: 220px;
+        padding: 14px 26px;
+    }
+}
+@media (max-width: 640px) {
+    .thaiadhd-container {
+        margin: 28px auto 48px;
+        padding: 0 16px;
+    }
+    .thaiadhd-bar {
+        font-size: 20px;
+        padding: 14px 18px;
+    }
+    .thaiadhd-head {
+        padding: 22px 20px;
+    }
+    .thaiadhd-head h1 {
+        font-size: 26px;
+    }
+    .thaiadhd-head p {
+        font-size: 16px;
+    }
+    .thaiadhd-body {
+        padding: 18px 20px;
+    }
+    .thaiadhd-actions {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+    }
+    .thaiadhd-btn {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .thaiadhd-hero .thaiadhd-welcome h1 {
+        font-size: 20px;
+    }
+    .thaiadhd-hero .thaiadhd-welcome p {
+        font-size: 13.5px;
+    }
+}
+
+</style>
