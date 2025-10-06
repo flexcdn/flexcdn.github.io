@@ -94,6 +94,20 @@
     <img src="/sites/default/files/thaiadhd/b551d8e30375e11400c5b807e5dd60f6.jpg" width="1920" height="1080">
   </div>
 
+  <!-- MODAL: Assessment chooser -->
+  <div class="thaiadhd-modal" id="thaiadhd-assess-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="thaiadhd-modal-backdrop"></div>
+    <div class="thaiadhd-modal-dialog" role="document">
+      <div class="thaiadhd-modal-closediv"><button type="button" class="thaiadhd-modal-close" aria-label="ปิดหน้าต่าง">×</button></div>
+      <h3 class="thaiadhd-modal-title">กรุณาเลือกแบบประเมินความเสี่ยงโรคสมาธิสั้น</h3>
+      <div class="thaiadhd-modal-body">
+        <a href="/parent-or-carer/screening" class="thaiadhd-modal-cta thaiadhd-cta-parent"><span>แบบประเมินความเสี่ยงโรคสมาธิสั้น</span><strong>สำหรับพ่อแม่ และ ผู้ปกครอง</strong>
+        </a>
+        <a href="/educator/screening" class="thaiadhd-modal-cta thaiadhd-cta-teacher"><span>แบบประเมินความเสี่ยงโรคสมาธิสั้น</span><strong>สำหรับคุณครู</strong></a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <style>
@@ -412,4 +426,162 @@
     }
 }
 
+/* ------------------------------
+   Assessment chooser – Modal
+------------------------------ */
+.thaiadhd-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.thaiadhd-modal.is-open {
+    display: flex;
+}
+.thaiadhd-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 16, 28, 0.55);
+    backdrop-filter: blur(2px);
+}
+.thaiadhd-modal-dialog {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    width: min(880px, 92vw);
+    overflow: hidden;
+}
+.thaiadhd-modal-title {
+    margin: 0;
+    background: #e9f0f4;
+    padding: 18px 24px 16px 24px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #243042;
+    text-align: center;
+}
+.thaiadhd-modal-body {
+    padding: 28px 26px 34px 26px;
+}
+.thaiadhd-modal-cta {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 999px;
+    padding: 18px 22px;
+    margin: 0 auto 28px auto;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    max-width: 560px;
+}
+.thaiadhd-modal-cta:last-child {
+    margin-bottom: 0;
+}
+.thaiadhd-cta-parent {
+    background: linear-gradient(180deg, #a27abd, #9b71b0);
+}
+.thaiadhd-cta-parent:hover {
+    filter: brightness(0.98);
+}
+.thaiadhd-cta-teacher {
+    background: linear-gradient(180deg, #d7688e, #cf5a85);
+}
+.thaiadhd-cta-teacher:hover {
+    filter: brightness(0.98);
+}
+.thaiadhd-modal-cta span {
+    display: block;
+    font-size: 21px;
+    opacity: 0.95;
+    line-height: 1.25;
+    font-weight: 400;
+}
+.thaiadhd-modal-cta strong {
+    display: block;
+    font-size: 21px;
+    line-height: 1.25;
+}
+.thaiadhd-modal-close {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 0;
+    background: #eef3f7;
+    color: #2c3140;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+.thaiadhd-modal-close:hover {
+    background: #e2e9ee;
+}
+
+/* Prevent body scroll when modal open */
+body.thaiadhd-noscroll {
+    overflow: hidden;
+}
+
+/* Responsive modal */
+@media (max-width: 640px) {
+    .thaiadhd-modal-title {
+        font-size: 18px;
+        padding: 14px;
+    }
+    .thaiadhd-modal-cta {
+        padding: 16px 18px;
+        margin-bottom: 18px;
+    }
+    .thaiadhd-modal-cta span {
+        font-size: 16px;
+    }
+    .thaiadhd-modal-cta strong {
+        font-size: 20px;
+    }
+}
+
 </style>
+
+<script>
+(function(){
+  function onReady(fn){
+    if(document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+  onReady(function(){
+    var modal = document.getElementById('thaiadhd-assess-modal');
+    if(!modal) return;
+
+    var openers = document.querySelectorAll('.thaiadhd-assess .thaiadhd-button');
+    var closeBtn = modal.querySelector('.thaiadhd-modal-close');
+    var backdrop = modal.querySelector('.thaiadhd-modal-backdrop');
+
+    function openModal(){
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.classList.add('thaiadhd-noscroll');
+      if(closeBtn) closeBtn.focus();
+    }
+    function closeModal(){
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.classList.remove('thaiadhd-noscroll');
+    }
+
+    openers.forEach(function(btn){
+      btn.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
+    });
+    if(closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeModal(); });
+    if(backdrop) backdrop.addEventListener('click', function(e){ e.preventDefault(); closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+  });
+})();
+</script>
