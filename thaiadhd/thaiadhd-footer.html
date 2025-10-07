@@ -1,5 +1,44 @@
 <!-- https://dev-thai-adhd.pantheonsite.io/admin/content/block/1 -->
 
+<!-- MODAL: Assessment chooser -->
+<div class="thaiadhd-modal" id="thaiadhd-assess-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="thaiadhd-modal-backdrop"></div>
+    <div class="thaiadhd-modal-dialog" role="document">
+        <div class="thaiadhd-modal-closediv">
+            <button type="button" class="thaiadhd-modal-close" aria-label="ปิดหน้าต่าง">×</button>
+        </div>
+        <h3 class="thaiadhd-modal-title">กรุณาเลือกแบบประเมินความเสี่ยงโรคสมาธิสั้น</h3>
+        <div class="thaiadhd-modal-body">
+            <a href="/parent-or-carer/screening" class="thaiadhd-modal-cta thaiadhd-cta-parent"
+                ><span>แบบประเมินความเสี่ยงโรคสมาธิสั้น</span><strong>สำหรับพ่อแม่ และ ผู้ปกครอง</strong>
+            </a>
+            <a href="/educator/screening" class="thaiadhd-modal-cta thaiadhd-cta-teacher"
+                ><span>แบบประเมินความเสี่ยงโรคสมาธิสั้น</span><strong>สำหรับคุณครู</strong></a
+            >
+        </div>
+    </div>
+</div>
+
+<!-- FLOAT: assessment banner -->
+<div class="thaiadhd-float" id="thaiadhd-float" role="region" aria-label="แบบประเมินความเสี่ยง – ป้ายลอย">
+    <button type="button" class="thaiadhd-float-close" aria-label="ปิดแบนเนอร์แนะนำ">×</button>
+    <div class="thaiadhd-assess-card">
+        <div class="thaiadhd-assess-text">
+            <h3>แบบประเมินความเสี่ยงโรคสมาธิสั้น</h3>
+            <p>
+                ระบบการคัดกรองโรคสมาธิสั้น (ADHD) ใช้ช่องทางด่วน
+                ลองใช้เครื่องมือคัดกรองด้วยตนเองเพื่อทดสอบโอกาสในการประเมินคร่าวและเชื่อถือได้
+            </p>
+            <a href="#" class="thaiadhd-button">คลิกที่นี่เพื่อทำแบบประเมิน</a>
+        </div>
+        <div class="thaiadhd-assess-image" aria-hidden="true"></div>
+    </div>
+</div>
+
+<p>
+    Copyright © <span class="year">year</span> Takeda Pharmaceutical Company Limited
+</p>
+
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
@@ -33,8 +72,419 @@ footer {
     background: var(--paleGrey) !important;
 }
 
+/* ------------------------------
+       Assessment CTA
+------------------------------ */
+.thaiadhd-assess {
+    padding-top: 0px;
+}
+.thaiadhd-assess h2 {
+    color: #000;
+    font-size: 24px;
+    margin: 0 0 16px 0;
+}
+.thaiadhd-assess-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 0;
+    background: #191138;
+    border-radius: var(--thaiadhd-card-radius);
+    overflow: hidden;
+    min-height: 220px;
+}
+.thaiadhd-assess-text {
+    padding: 24px 28px 26px 28px;
+    color: var(--thaiadhd-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.thaiadhd-assess-text h3 {
+    margin: 0;
+    color: var(--thaiadhd-white);
+    font-size: 24px;
+    letter-spacing: 0.1px;
+}
+.thaiadhd-assess-text p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 16px;
+    max-width: 52ch;
+}
+.thaiadhd-button {
+    align-self: flex-start;
+    background: var(--thaiadhd-primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 20px !important;
+    text-align: center;
+    max-width: 300px;
+    margin-top: 20px;
+}
+.thaiadhd-button:focus-visible {
+    outline: 3px solid var(--thaiadhd-focus);
+    outline-offset: 2px;
+}
+.thaiadhd-button:hover {
+    background: var(--thaiadhd-primary-hover);
+}
+.thaiadhd-assess-image {
+    position: relative;
+    isolation: isolate;
+    background-image: url(/sites/default/files/thaiadhd/b551d8e30375e11400c5b807e5dd60f6.jpg);
+    background-size: 570px;
+    background-position: center center;
+}
+.thaiadhd-assess-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,rgba(25, 17, 56, 1) 2%, rgba(36, 35, 86, 0) 100%);
+    z-index: 1;
+}
+.thaiadhd-assess-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.95) contrast(1.05) brightness(0.95);
+}
+
+/* ------------------------------
+   Assessment chooser – Modal
+------------------------------ */
+.thaiadhd-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.thaiadhd-modal.is-open {
+    display: flex;
+}
+.thaiadhd-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 16, 28, 0.55);
+    backdrop-filter: blur(2px);
+}
+.thaiadhd-modal-dialog {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    width: min(880px, 92vw);
+    overflow: hidden;
+}
+.thaiadhd-modal-title {
+    margin: 0;
+    background: #e9f0f4;
+    padding: 18px 24px 16px 24px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #243042;
+    text-align: center;
+}
+.thaiadhd-modal-body {
+    padding: 28px 26px 34px 26px;
+}
+.thaiadhd-modal-cta {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 999px;
+    padding: 18px 22px;
+    margin: 0 auto 28px auto;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    max-width: 560px;
+}
+.thaiadhd-modal-cta:last-child {
+    margin-bottom: 0;
+}
+.thaiadhd-cta-parent {
+    background: linear-gradient(180deg, #a27abd, #9b71b0);
+}
+.thaiadhd-cta-parent:hover {
+    filter: brightness(0.98);
+}
+.thaiadhd-cta-teacher {
+    background: linear-gradient(180deg, #d7688e, #cf5a85);
+}
+.thaiadhd-cta-teacher:hover {
+    filter: brightness(0.98);
+}
+.thaiadhd-modal-cta span {
+    display: block;
+    font-size: 21px;
+    opacity: 0.95;
+    line-height: 1.25;
+    font-weight: 400;
+}
+.thaiadhd-modal-cta strong {
+    display: block;
+    font-size: 21px;
+    line-height: 1.25;
+}
+.thaiadhd-modal-close {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 0;
+    background: #eef3f7;
+    color: #2c3140;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    line-height: 100%;
+}
+.thaiadhd-modal-close:hover {
+    background: #e2e9ee;
+}
+
+/* Prevent body scroll when modal open */
+body.thaiadhd-noscroll {
+    overflow: hidden;
+}
+
+/* Responsive modal */
+@media (max-width: 640px) {
+    .thaiadhd-modal-title {
+        font-size: 18px;
+        padding: 14px;
+    }
+    .thaiadhd-modal-cta {
+        padding: 16px 18px;
+        margin-bottom: 18px;
+    }
+    .thaiadhd-modal-cta span {
+        font-size: 16px;
+    }
+    .thaiadhd-modal-cta strong {
+        font-size: 20px;
+    }
+}
+
+/* ------------------------------
+   Floating assessment banner
+------------------------------ */
+.thaiadhd-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: min(280px, 92vw);
+    z-index: 9998;
+    filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.3));
+    animation: thaiadhd-float-in 0.28s ease-out both;
+    cursor: pointer;
+}
+@keyframes thaiadhd-float-in {
+    from {
+        transform: translateY(14px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.thaiadhd-float .thaiadhd-assess-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border-radius: 14px;
+}
+.thaiadhd-float .thaiadhd-assess-text {
+    padding: 18px 18px 16px;
+}
+.thaiadhd-float .thaiadhd-assess-text h3 {
+    font-size: 20px;
+}
+.thaiadhd-float .thaiadhd-assess-text p {
+    font-size: 14px;
+    opacity: 0.95;
+}
+.thaiadhd-float .thaiadhd-assess-image {
+    height: 150px;
+    background-size: cover;
+}
+.thaiadhd-float .thaiadhd-button {
+    font-size: 16px !important;
+    padding: 9px 14px;
+    margin-top: 14px;
+}
+.thaiadhd-float-close {
+    position: absolute;
+    top: -27px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: rgba(15, 22, 53, 0.85);
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 2;
+}
+.thaiadhd-float-close:hover {
+    filter: brightness(1.05);
+}
+#thaiadhd-float > div > div.thaiadhd-assess-text {
+    gap: 5px;
+}
+#thaiadhd-float > div > div.thaiadhd-assess-text > h3 {
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+}
+#thaiadhd-float > div > div.thaiadhd-assess-text > p:nth-child(2) {
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+}
+#thaiadhd-float > div > div.thaiadhd-assess-text > p:nth-child(3) {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: -40px;
+    z-index: 999;
+}
+#thaiadhd-float > div > div.thaiadhd-assess-text > p:nth-child(3) > a {
+    background: #bd120a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 999px;
+    font-size: 14px !important;
+    text-align: center;
+    max-width: 300px;
+}
+#thaiadhd-float > div > div.thaiadhd-assess-image::before {
+    background: linear-gradient(0deg, rgba(25, 17, 56, 0) 0%, rgba(25, 17, 56, 1) 70%);
+}
+#thaiadhd-float > div > div.thaiadhd-assess-image {
+    background-size: 400px !important;
+    background-position-x: center;
+    background-position-y: -5px;
+}
+
+@media (max-width: 480px) {
+    .thaiadhd-float {
+        right: 12px;
+        left: 12px;
+        width: auto;
+    }
+    .thaiadhd-float .thaiadhd-assess-image {
+        height: 130px;
+    }
+}
+
 </style>
 
-<p>
-    Copyright © <span class="year">year</span> Takeda Pharmaceutical Company Limited
-</p>
+<script>
+(function(){
+  function onReady(fn){
+    if(document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  onReady(function(){
+    // === Config for floating banner re-appear ===
+    // Change the number below to control WHEN the banner returns after being closed.
+    // Example: 6 hours = 6 * 60 * 60 * 1000, 24 hours = 24 * 60 * 60 * 1000, 7 days = 7 * 24 * 60 * 60 * 1000
+    var FLOAT_DISMISS_KEY = 'thaiadhdFloatDismissedAt';
+    var FLOAT_DISMISS_TTL_MS = 6 * 60 * 60 * 1000; // <<<< EDIT HERE (default: 6 hours)
+
+    function wasDismissedRecently(){
+      try{
+        var ts = parseInt(localStorage.getItem(FLOAT_DISMISS_KEY) || '0', 10);
+        return ts && (Date.now() - ts) < FLOAT_DISMISS_TTL_MS;
+      }catch(_){ return false; }
+    }
+    function rememberDismiss(){
+      try{ localStorage.setItem(FLOAT_DISMISS_KEY, String(Date.now())); }catch(_){}
+    }
+    function clearIfExpired(){
+      try{
+        var ts = parseInt(localStorage.getItem(FLOAT_DISMISS_KEY) || '0', 10);
+        if(!ts) return;
+        if((Date.now() - ts) >= FLOAT_DISMISS_TTL_MS){
+          localStorage.removeItem(FLOAT_DISMISS_KEY);
+        }
+      }catch(_){}
+    }
+
+    // Clear old timestamp if it has expired (so banner can show again)
+    clearIfExpired();
+
+    var modal = document.getElementById('thaiadhd-assess-modal');
+    if(!modal) return;
+
+    var openers = document.querySelectorAll('.thaiadhd-assess .thaiadhd-button, .thaiadhd-float .thaiadhd-button');
+    var closeBtn = modal.querySelector('.thaiadhd-modal-close');
+    var backdrop = modal.querySelector('.thaiadhd-modal-backdrop');
+
+    // Handle floating banner dismiss + click-to-open
+    var floatWrap = document.querySelector('.thaiadhd-float');
+    if(floatWrap){
+      if(wasDismissedRecently()){
+        // Hide banner if user dismissed it within TTL
+        floatWrap.parentNode && floatWrap.parentNode.removeChild(floatWrap);
+      }else{
+        // Wire up interactions when banner is visible
+        var floatClose = floatWrap.querySelector('.thaiadhd-float-close');
+        if(floatClose){
+          floatClose.addEventListener('click', function(){
+            rememberDismiss();
+            floatWrap.remove();
+          });
+        }
+        var floatCard = floatWrap.querySelector('.thaiadhd-assess-card');
+        if(floatCard){
+          floatCard.addEventListener('click', function(e){
+            if(e.target.closest('.thaiadhd-float-close')) return;
+            if(e.target.closest('.thaiadhd-button')) return; // opener already handled
+            e.preventDefault(); openModal();
+          });
+        }
+      }
+    }
+
+    function openModal(){
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.classList.add('thaiadhd-noscroll');
+      if(closeBtn) closeBtn.focus();
+    }
+    function closeModal(){
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.classList.remove('thaiadhd-noscroll');
+    }
+
+    openers.forEach(function(btn){
+      btn.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
+    });
+    if(closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeModal(); });
+    if(backdrop) backdrop.addEventListener('click', function(e){ e.preventDefault(); closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+  });
+})();
+</script>
