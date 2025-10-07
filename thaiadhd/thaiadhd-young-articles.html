@@ -1,6 +1,6 @@
 <!-- https://dev-thai-adhd.pantheonsite.io/node/68/edit?destination=/admin/content -->
 
-<div id="thaiadhd-parent-articles">
+<div id="thaiadhd-young-articles">
     <!-- HERO -->
      <div class="thaiadhd-tophero">
         <div class="thaiadhd-topcontainer">
@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div id="thaiadhd-parent-articles-container">
+    <div id="thaiadhd-young-articles-container">
 
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'article1')">โรคสมาธิสั้น (Attention Deficit Hyperactivity Disorder, ADHD) คือ อะไร</button>
@@ -128,12 +128,12 @@ main > div.content {
 .content>div a:last-of-type {
     display: inherit !important;
 }
-#thaiadhd-parent-articles {
+#thaiadhd-young-articles {
 
 }
 
 /* Container: two columns — left tab list, right content */
-#thaiadhd-parent-articles-container {
+#thaiadhd-young-articles-container {
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 24px;
@@ -334,7 +334,7 @@ main > div.content {
 
 /* Responsive: stack on small screens */
 @media (max-width: 700px) {
-    #thaiadhd-parent-articles-container {
+    #thaiadhd-young-articles-container {
         grid-template-columns: 1fr;
     }
     .tabcontent {
@@ -391,14 +391,14 @@ main > div.content {
     }
     // Auto open the first tab when the DOM is ready
     document.addEventListener("DOMContentLoaded", function () {
-        var firstBtn = document.querySelector("#thaiadhd-parent-articles-container .tab .tablinks");
+        var firstBtn = document.querySelector("#thaiadhd-young-articles-container .tab .tablinks");
         if (firstBtn) {
             firstBtn.click();
         }
         // Next tab button: go to next content tab, wrap to first when at the end
         var nextBtn = document.getElementById('thaiadhd-tab-next');
         if (nextBtn) {
-            var contentBtns = Array.from(document.querySelectorAll('#thaiadhd-parent-articles-container .tab .tablinks:not(.tablinksmore)'));
+            var contentBtns = Array.from(document.querySelectorAll('#thaiadhd-young-articles-container .tab .tablinks:not(.tablinksmore)'));
             nextBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 if (!contentBtns.length) return;
