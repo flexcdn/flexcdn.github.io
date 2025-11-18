@@ -22,16 +22,15 @@
   <!-- ASSESSMENT SECTION -->
   <section class="thaiadhd-assess">
     <div class="thaiadhd-container">
-      <h2>สนใจทำแบบประเมินความเสี่ยงโรคสมาธิสั้น</h2>
+      <h2>สงสัยว่ามีความเสี่ยงโรคสมาธิสั้น?</h2>
 
       <div class="thaiadhd-assess-card">
-        <div class="thaiadhd-assess-text">
-          <h3>แบบประเมินความเสี่ยงโรคสมาธิสั้น</h3>
-          <p>ระบบการคัดกรองโรคสมาธิสั้น (ADHD) ใช้ช่องทางด่วน ลองใช้เครื่องมือคัดกรองด้วยตนเองเพื่อทดสอบโอกาสในการประเมินคร่าวและเชื่อถือได้</p>
-          <a href="#" class="thaiadhd-button">คลิกที่นี่เพื่อทำแบบประเมิน</a>
-        </div>
-        <div class="thaiadhd-assess-image">
-          <img src="" alt="ADHD banner">
+        <div class="thaiadhd-assess-cardin">
+            <div class="thaiadhd-assess-image">
+            </div>
+            <div class="thaiadhd-assess-text">
+            <a href="#" class="thaiadhd-button thaiadhd-button-home">คลิกที่นี่เพื่อทำแบบประเมิน</a>
+            </div>
         </div>
       </div>
     </div>
@@ -92,6 +91,7 @@
 
   <div id="thaiadhd-hidden">
     <img src="/sites/default/files/thaiadhd/b551d8e30375e11400c5b807e5dd60f6.jpg" width="1920" height="1080">
+    <img src="/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png" width="640" height="720">
   </div>
 
 </div>
@@ -161,6 +161,7 @@
     opacity: 0.85;
     font-size: 16px;
     color: #fff;
+    padding-bottom: 10px;
 }
 
 /* ------------------------------
@@ -265,6 +266,66 @@
     background: #da5284;
 }
 
+
+/* NEW Screening button overwrite */
+.thaiadhd-assess-card {
+    background: #191138;
+    background-image: linear-gradient(184deg, #a4a4bc, #2b2c64);
+    border-radius: var(--thaiadhd-card-radius);
+    overflow: hidden;
+    min-height: 220px;
+    padding: 7px;
+}
+.thaiadhd-assess-cardin {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 0;
+    background: #19113a;
+    background-image: linear-gradient(184deg, #77718b, #19113a);
+    border-radius: var(--thaiadhd-card-radius);
+    overflow: hidden;
+    min-height: 220px;
+}
+.thaiadhd-button-home {
+    max-width: 500px !important;
+    width: 90% !important;
+    margin: auto !important;
+    padding: 15px !important;
+    font-size: 28px !important;
+}
+@media (max-width: 900px) {
+
+.thaiadhd-assess-card {
+    background: #19113a;
+    background-image: linear-gradient(184deg, #77718b, #19113a);
+    padding: 0px;
+}
+.thaiadhd-assess-cardin {
+    grid-template-columns: 1fr;
+    background-color: transparent !important;
+    background-image: url(/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png);
+    background-size: 290px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.thaiadhd-assess-image {
+    order: -1;
+    min-height: 245px;
+    background-image: none !important;
+}
+.thaiadhd-assess-text {
+    background-color: transparent !important;
+    padding: 0px !important;
+    padding-bottom: 15px !important;
+}
+.thaiadhd-button-home {
+    font-size: 21px !important;
+    padding: 10px !important;
+}
+
+}
+
 /* ------------------------------
        Responsiveness
 ------------------------------ */
@@ -273,7 +334,7 @@
         --thaiadhd-container: 1000px;
     }
     .thaiadhd-assess-card {
-        grid-template-columns: 1fr 1fr;
+
     }
 }
 @media (max-width: 900px) {
@@ -281,11 +342,10 @@
         padding: 22px 18px;
     }
     .thaiadhd-assess-card {
-        grid-template-columns: 1fr;
+
     }
     .thaiadhd-assess-image {
-        order: -1;
-        height: 180px;
+
     }
     .thaiadhd-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -324,7 +384,7 @@
         grid-template-columns: 1fr;
     }
     .thaiadhd-assess-image {
-        height: 160px;
+
     }
     .thaiadhd-card {
         min-height: 220px;

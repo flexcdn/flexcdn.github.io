@@ -22,10 +22,10 @@
 <!-- FLOAT: assessment banner -->
 <div class="thaiadhd-float" id="thaiadhd-float" role="region" aria-label="แบบประเมินความเสี่ยง – ป้ายลอย">
     <button type="button" class="thaiadhd-float-close" aria-label="ปิดแบนเนอร์แนะนำ">×</button>
-    <div class="thaiadhd-assess-card">
+    <div class="thaiadhd-assess-card thaiadhd-assess-card-float">
         <div class="thaiadhd-assess-text">
-            <h3>แบบประเมินความเสี่ยงโรคสมาธิสั้น</h3>
-            <p style="padding-bottom: 20px;"></p>
+            <h3>สงสัยว่า<br>มีความเสี่ยงโรคสมาธิสั้น?</h3>
+            <p></p>
             <a href="#" class="thaiadhd-button">คลิกที่นี่เพื่อทำแบบประเมิน</a>
         </div>
         <div class="thaiadhd-assess-image" aria-hidden="true"></div>
@@ -122,6 +122,9 @@ footer {
     margin: 0 0 16px 0;
 }
 .thaiadhd-assess-card {
+
+}
+.thaiadhd-assess-card-float {
     position: relative;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -159,7 +162,6 @@ footer {
     font-weight: 700;
     padding: 10px 16px;
     border-radius: 999px;
-    font-size: 20px !important;
     text-align: center;
     max-width: 300px;
     margin-top: 20px;
@@ -174,10 +176,12 @@ footer {
 .thaiadhd-assess-image {
     position: relative;
     isolation: isolate;
-    background-image: url(/sites/default/files/thaiadhd/b551d8e30375e11400c5b807e5dd60f6.jpg);
-    background-size: 570px;
-    background-position: center center;
+    background-image: url(/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png);
+    background-size: 310px;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
+/* 
 .thaiadhd-assess-image::before {
     content: "";
     position: absolute;
@@ -191,6 +195,10 @@ footer {
     object-fit: cover;
     object-position: center;
     filter: saturate(0.95) contrast(1.05) brightness(0.95);
+}
+*/
+#thaiadhd-float > div > div.thaiadhd-assess-image {
+    background-image: none !important;
 }
 
 /* ------------------------------
@@ -345,7 +353,7 @@ body.thaiadhd-noscroll {
     border-radius: 14px;
 }
 .thaiadhd-float .thaiadhd-assess-text {
-    padding: 18px 18px 16px;
+    padding: 10px 18px 16px;
 }
 .thaiadhd-float .thaiadhd-assess-text h3 {
     font-size: 20px;
@@ -355,8 +363,7 @@ body.thaiadhd-noscroll {
     opacity: 0.95;
 }
 .thaiadhd-float .thaiadhd-assess-image {
-    height: 150px;
-    background-size: cover;
+    height: 50px;
 }
 .thaiadhd-float .thaiadhd-button {
     font-size: 16px !important;
@@ -388,13 +395,15 @@ body.thaiadhd-noscroll {
 }
 #thaiadhd-float > div > div.thaiadhd-assess-text > h3 {
     color: #fff;
-    font-size: 15px;
-    text-align: left;
+    font-size: 21px;
+    text-align: center;
 }
 #thaiadhd-float > div > div.thaiadhd-assess-text > p:nth-child(2) {
     color: #fff;
-    font-size: 12px;
+    font-size: 0px;
     text-align: left;
+    height: 135px;
+    width: auto;
 }
 #thaiadhd-float > div > div.thaiadhd-assess-text > p:nth-child(3) {
     display: block;
@@ -422,6 +431,12 @@ body.thaiadhd-noscroll {
     background-position-x: center;
     background-position-y: -5px;
 }
+#thaiadhd-float > div.thaiadhd-assess-card-float {
+    background-image: url(/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png);
+    background-size: 180px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
 
 @media (max-width: 480px) {
     .thaiadhd-float {
@@ -430,8 +445,28 @@ body.thaiadhd-noscroll {
         width: auto;
     }
     .thaiadhd-float .thaiadhd-assess-image {
-        height: 130px;
+
     }
+}
+
+/* ------------------------------
+    FIX Global Responsive
+------------------------------ */
+
+@media (max-width: 700px) {
+
+.thaiadhd-tophero,
+.thaiadhd-hero,
+#thaiadhd-parent-articles-container,
+#thaiadhd-educator-articles-container,
+#thaiadhd-adult-articles-container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.thaiadhd-card-footer {
+    min-height: 120px !important;
+}
+
 }
 
 </style>
