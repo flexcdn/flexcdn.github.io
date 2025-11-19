@@ -29,7 +29,8 @@
             <div class="thaiadhd-assess-image">
             </div>
             <div class="thaiadhd-assess-text">
-            <a href="#" class="thaiadhd-button thaiadhd-button-home">คลิกที่นี่เพื่อทำแบบประเมิน</a>
+                <a href="#" class="thaiadhd-button thaiadhd-button-home">คลิกที่นี่เพื่อทำแบบประเมิน</a>
+                <img alt="คลิกที่นี่" src="/sites/default/files/thaiadhd/new_btn_arrow2.png" class="thaiadhd-assess-btn-arrow" />
             </div>
         </div>
       </div>
@@ -272,7 +273,7 @@
     background: #191138;
     background-image: linear-gradient(184deg, #a4a4bc, #2b2c64);
     border-radius: var(--thaiadhd-card-radius);
-    overflow: hidden;
+    overflow: visible;
     min-height: 220px;
     padding: 7px;
 }
@@ -284,7 +285,7 @@
     background: #19113a;
     background-image: linear-gradient(184deg, #77718b, #19113a);
     border-radius: var(--thaiadhd-card-radius);
-    overflow: hidden;
+    overflow: visible;
     min-height: 220px;
 }
 .thaiadhd-button-home {
@@ -294,6 +295,15 @@
     padding: 15px !important;
     font-size: 28px !important;
 }
+.thaiadhd-assess-btn-arrow {
+    display: block !important;
+    position: absolute;
+    width: 100px !important;
+    height: auto;
+    transform: translate(380px,110px);
+    z-index: 9;
+}
+
 @media (max-width: 900px) {
 
 .thaiadhd-assess-card {
@@ -322,6 +332,9 @@
 .thaiadhd-button-home {
     font-size: 21px !important;
     padding: 10px !important;
+}
+.thaiadhd-assess-btn-arrow {
+    display: none !important;
 }
 
 }
