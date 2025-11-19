@@ -4,34 +4,144 @@
   <!-- HERO -->
   <div class="thaiadhd-hero">
     <div class="thaiadhd-container thaiadhd-welcome">
-      <h1>ยินดีต้อนรับ,</h1>
+      <h1>เลือกเกมส์ที่ท่านสนใจ</h1>
       <p>ที่นี่คือแหล่งความรู้ที่เชื่อถือได้สำหรับคุณ หากคุณสนใจเรียนรู้เกี่ยวกับโรคสมาธิสั้น (ADHD) เพิ่มเติม</p>
     </div>
   </div>
 
-  <!-- INFO BANNER -->
-  <section class="thaiadhd-info">
-    <div class="thaiadhd-container">
-      <div class="thaiadhd-info-card">
-        <p><b>โรคสมาธิสั้น (ADHD)</b> ไม่ใช่เพียงโรคในวัยเด็กเท่านั้น แต่ยังส่งผลกระทบต่อทั้งเด็กและผู้ใหญ่ด้วย โรคสมาธิสั้นสามารถส่งผลกระทบต่อทุกแง่มุมของชีวิต
-          ตั้งแต่บ้าน โรงเรียน ที่ทำงาน และความสัมพันธ์ ด้วยจึงการวินิจฉัยและรักษาโรคนี้จึงมีความสำคัญอย่างยิ่ง</p>
+  <!-- GAME DEMO SECTION -->
+  <section class="thaiadhd-gamewarp">
+    <div class="thaiadhd-gameagesum">
+        Your Age <span class="thaiadhd-ageshow">0</span> Years old.
+    </div>
+    <div class="thaiadhd-gamecontainer">
+      <div class="thaiadhd-gamewarp-card">
+        <a href="/sites/default/files/thaiadhd/game-demo/1763388344019.jpg" target="_blank"><img src="/sites/default/files/thaiadhd/game-demo/1763388344019.jpg" class="thaiadhd-gamewarp-cardpic">
+        Game 1: Dimensional Change Card Sort (DCCS)</a>
+      </div>
+      <div class="thaiadhd-gamewarp-card">
+        <a href="/sites/default/files/thaiadhd/game-demo/1763388375581.jpg" target="_blank"><img src="/sites/default/files/thaiadhd/game-demo/1763388375581.jpg" class="thaiadhd-gamewarp-cardpic">
+        Game 2: Flanker / Child ANT (Attention Network Measures)</a>
+      </div>
+      <div class="thaiadhd-gamewarp-card">
+        <a href="/sites/default/files/thaiadhd/game-demo/1763388403932.jpg" target="_blank"><img src="/sites/default/files/thaiadhd/game-demo/1763388403932.jpg" class="thaiadhd-gamewarp-cardpic">
+        Game 3: Go/No-Go</a>
       </div>
     </div>
   </section>
 
-  <!-- MAIN SECTION -->
-  <section class="thaiadhd-textwarp">
-    <div class="thaiadhd-container">
-      <div class="thaiadhd-textwarp-card">
-        <p><b>โรคสมาธิสั้น (ADHD)</b> ไม่ใช่เพียงโรคในวัยเด็กเท่านั้น แต่ยังส่งผลกระทบต่อทั้งเด็กและผู้ใหญ่ด้วย โรคสมาธิสั้นสามารถส่งผลกระทบต่อทุกแง่มุมของชีวิต
-          ตั้งแต่บ้าน โรงเรียน ที่ทำงาน และความสัมพันธ์ ด้วยจึงการวินิจฉัยและรักษาโรคนี้จึงมีความสำคัญอย่างยิ่ง</p>
+    <!-- Age selection modal overlay -->
+    <div id="thaiadhd-age-overlay" aria-hidden="false">
+      <div class="thaiadhd-age-modal" role="dialog" aria-modal="true" aria-labelledby="thaiadhd-age-title">
+        <div class="thaiadhd-age-card">
+
+          <div class="thaiadhd-age-title" id="thaiadhd-age-title">Your Age</div>
+
+          <div class="thaiadhd-age-main">
+            <span class="thaiadhd-age-prefix">I am</span>
+            <select id="thaiadhd-age-select" class="thaiadhd-age-select" aria-label="Select your age">
+              <!-- Age options 13–99 -->
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18" selected>18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+              <option value="60">60</option>
+              <option value="61">61</option>
+              <option value="62">62</option>
+              <option value="63">63</option>
+              <option value="64">64</option>
+              <option value="65">65</option>
+              <option value="66">66</option>
+              <option value="67">67</option>
+              <option value="68">68</option>
+              <option value="69">69</option>
+              <option value="70">70</option>
+              <option value="71">71</option>
+              <option value="72">72</option>
+              <option value="73">73</option>
+              <option value="74">74</option>
+              <option value="75">75</option>
+              <option value="76">76</option>
+              <option value="77">77</option>
+              <option value="78">78</option>
+              <option value="79">79</option>
+              <option value="80">80</option>
+              <option value="81">81</option>
+              <option value="82">82</option>
+              <option value="83">83</option>
+              <option value="84">84</option>
+              <option value="85">85</option>
+              <option value="86">86</option>
+              <option value="87">87</option>
+              <option value="88">88</option>
+              <option value="89">89</option>
+              <option value="90">90</option>
+              <option value="91">91</option>
+              <option value="92">92</option>
+              <option value="93">93</option>
+              <option value="94">94</option>
+              <option value="95">95</option>
+              <option value="96">96</option>
+              <option value="97">97</option>
+              <option value="98">98</option>
+              <option value="99">99</option>
+            </select>
+          </div>
+
+          <div class="thaiadhd-age-btn">
+            <button type="button" id="thaiadhd-age-submit" class="thaiadhd-age-submit">
+                Submit
+            </button>
+          </div>
+
+        </div>
       </div>
     </div>
-  </section>
 
-  <div id="thaiadhd-hidden">
-    
-  </div>
+  <div id="thaiadhd-hidden"></div>
 
 </div>
 
@@ -135,12 +245,211 @@
     padding: 10px 10px;
     text-align: left;
 }
+
 .thaiadhd-textwarp-card p {
     margin: 0;
     color: #2a3648;
     font-size: 18px;
     line-height: 175%;
     text-align: left;
+}
+
+/* ------------------------------
+       Game demo section
+------------------------------ */
+.thaiadhd-gamewarp {
+    padding: 45px 0 60px;
+    background: #ffffff;
+}
+.thaiadhd-gameagesum {
+    max-width: 1120px;
+    margin: auto;
+    padding-bottom: 25px;
+}
+.thaiadhd-ageshow {
+    min-width: 90px;
+    text-align: center;
+    padding: 3px 9px 3px 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background: #4C475D;
+    background: linear-gradient(90deg, rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+    color: #ffffff;
+    font-size: 18px;
+}
+.thaiadhd-gamecontainer {
+    max-width: var(--thaiadhd-container);
+    margin-inline: auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 40px;
+    row-gap: 32px;
+    align-items: flex-start;
+    justify-items: center;
+}
+
+/* card wrapper */
+.thaiadhd-gamewarp-card {
+    width: 100%;
+}
+
+/* ให้สไตล์กับลิงก์ที่ครอบทั้งการ์ด */
+.thaiadhd-gamewarp-card a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #1c2430;
+    text-decoration: none;
+}
+
+/* hover ให้ดูเป็นปุ่มคลิกได้หน่อย */
+.thaiadhd-gamewarp-card a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* รูปเกม */
+.thaiadhd-gamewarp-cardpic {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    margin: 0 auto 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
+}
+
+/* Responsive: 2 columns on tablets */
+@media (max-width: 900px) {
+    .thaiadhd-gamecontainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 28px;
+        row-gap: 28px;
+    }
+    .thaiadhd-gamewarp-card a {
+        font-size: 18px;
+    }
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 600px) {
+    .thaiadhd-gamewarp {
+        padding: 28px 0 44px;
+    }
+    .thaiadhd-gamecontainer {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 24px;
+        padding-inline: 18px;
+    }
+    .thaiadhd-gamewarp-cardpic {
+        max-width: 100%;
+    }
+    .thaiadhd-gamewarp-card a {
+        font-size: 17px;
+    }
+}
+
+/* ------------------------------
+       Age selection modal
+------------------------------ */
+#thaiadhd-age-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.thaiadhd-age-modal {
+    width: min(340px, 92vw);
+}
+
+.thaiadhd-age-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 22px 18px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    font-family: inherit;
+}
+
+.thaiadhd-age-title {
+    font-size: 14px;
+    color: #777f90;
+    margin-bottom: 4px;
+    max-width: 200px;
+    margin: auto;
+}
+
+.thaiadhd-age-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    max-width: 180px;
+    margin: auto;
+}
+
+.thaiadhd-age-prefix {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1c2430;
+}
+
+.thaiadhd-age-select {
+    min-width: 90px;
+    text-align: center;
+    padding: 7px 22px 6px 19px;
+    border-radius: 10px;
+    background: #1ca39b;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background-image: none;
+}
+.thaiadhd-age-btn {
+    margin-top: 20px;
+}
+.thaiadhd-age-submit {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 16px;
+    background: var(--thaiadhd-primary);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0px;
+    font-family: "Noto Sans Thai", sans-serif !important;
+}
+
+.thaiadhd-age-submit:hover {
+    background: var(--thaiadhd-primary-hover);
+}
+
+@media (max-width: 480px) {
+    .thaiadhd-age-card {
+        padding: 18px 16px 16px;
+    }
+    .thaiadhd-age-prefix {
+        font-size: 22px;
+    }
+    .thaiadhd-age-select {
+        font-size: 22px;
+    }
 }
 
 /* ------------------------------
@@ -190,3 +499,40 @@
 }
 
 </style>
+
+<script>
+(function () {
+  var overlay   = document.getElementById('thaiadhd-age-overlay');
+  var submitBtn = document.getElementById('thaiadhd-age-submit');
+  var ageSelect = document.getElementById('thaiadhd-age-select');
+  var ageShow   = document.querySelector('.thaiadhd-ageshow');
+
+  // helper: อัปเดตตัวเลขที่ Your Age … Years old.
+  function updateAgeDisplay() {
+    if (ageShow && ageSelect) {
+      ageShow.textContent = ageSelect.value;
+    }
+  }
+
+  // ตั้งค่าเริ่มต้นให้ตรงกับ option ที่ถูกเลือก (ตอนนี้คือ 18)
+  if (ageShow && ageSelect) {
+    updateAgeDisplay();
+  }
+
+  if (overlay && submitBtn) {
+    submitBtn.addEventListener('click', function () {
+      // เวลา user กด ตกลง ให้ดึงค่า age มาแสดง
+      updateAgeDisplay();
+
+      // ปิด modal สำหรับ demo
+      overlay.style.display = 'none';
+      overlay.setAttribute('aria-hidden', 'true');
+
+      // debug ใน console เผื่ออยากเช็ก
+      if (ageSelect) {
+        console.log('Selected age:', ageSelect.value);
+      }
+    });
+  }
+})();
+</script>

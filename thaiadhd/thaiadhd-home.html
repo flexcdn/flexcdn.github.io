@@ -90,6 +90,15 @@
     </div>
   </section>
 
+  <!-- GAME DEMO BTN -->
+  <section class="thaiadhd-textwarp thaiadhd-gamedemowarp">
+    <div class="thaiadhd-container">
+      <div class="thaiadhd-textwarp-card">
+        <a class="thaiadhd-button-gamedemo" href="/select-game">เลือกเกมส์ที่ท่านสนใจ (DEMO)</a>
+      </div>
+    </div>
+  </section>
+
   <div id="thaiadhd-hidden">
     <img src="/sites/default/files/thaiadhd/b551d8e30375e11400c5b807e5dd60f6.jpg" width="1920" height="1080">
     <img src="/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png" width="640" height="720">
@@ -182,6 +191,50 @@
     color: #2a3648;
     font-size: 18px;
     line-height: 175%;
+}
+
+/* ------------------------------
+       Main Warp
+------------------------------ */
+.thaiadhd-textwarp {
+}
+.thaiadhd-textwarp-card {
+    background: transparent;
+    padding: 10px 10px;
+    text-align: left;
+}
+.thaiadhd-textwarp-card p {
+    margin: 0;
+    color: #2a3648;
+    font-size: 18px;
+    line-height: 175%;
+    text-align: left;
+}
+
+/* ------------------------------
+       Game Demo Warp
+------------------------------ */
+.thaiadhd-gamedemowarp {
+    padding-top: 10px;
+}
+.thaiadhd-button-gamedemo {
+    align-self: flex-start;
+    background: var(--thaiadhd-primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    text-align: center;
+    max-width: 800px !important;
+    width: 90% !important;
+    margin: auto !important;
+    padding: 15px !important;
+    font-size: 28px !important;
+    background: #4C475D;
+    background: linear-gradient(90deg, rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+}
+.thaiadhd-button-gamedemo:hover {
+    background: var(--thaiadhd-primary-hover) !important;
 }
 
 /* ------------------------------
