@@ -1,0 +1,192 @@
+<!-- https://dev-thai-adhd.pantheonsite.io/node/69/edit?destination=/admin/content -->
+
+<div id="thaiadhd-warp">
+  <!-- HERO -->
+  <div class="thaiadhd-hero">
+    <div class="thaiadhd-container thaiadhd-welcome">
+      <h1>ยินดีต้อนรับ,</h1>
+      <p>ที่นี่คือแหล่งความรู้ที่เชื่อถือได้สำหรับคุณ หากคุณสนใจเรียนรู้เกี่ยวกับโรคสมาธิสั้น (ADHD) เพิ่มเติม</p>
+    </div>
+  </div>
+
+  <!-- INFO BANNER -->
+  <section class="thaiadhd-info">
+    <div class="thaiadhd-container">
+      <div class="thaiadhd-info-card">
+        <p><b>โรคสมาธิสั้น (ADHD)</b> ไม่ใช่เพียงโรคในวัยเด็กเท่านั้น แต่ยังส่งผลกระทบต่อทั้งเด็กและผู้ใหญ่ด้วย โรคสมาธิสั้นสามารถส่งผลกระทบต่อทุกแง่มุมของชีวิต
+          ตั้งแต่บ้าน โรงเรียน ที่ทำงาน และความสัมพันธ์ ด้วยจึงการวินิจฉัยและรักษาโรคนี้จึงมีความสำคัญอย่างยิ่ง</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN SECTION -->
+  <section class="thaiadhd-textwarp">
+    <div class="thaiadhd-container">
+      <div class="thaiadhd-textwarp-card">
+        <p><b>โรคสมาธิสั้น (ADHD)</b> ไม่ใช่เพียงโรคในวัยเด็กเท่านั้น แต่ยังส่งผลกระทบต่อทั้งเด็กและผู้ใหญ่ด้วย โรคสมาธิสั้นสามารถส่งผลกระทบต่อทุกแง่มุมของชีวิต
+          ตั้งแต่บ้าน โรงเรียน ที่ทำงาน และความสัมพันธ์ ด้วยจึงการวินิจฉัยและรักษาโรคนี้จึงมีความสำคัญอย่างยิ่ง</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="thaiadhd-hidden">
+    
+  </div>
+
+</div>
+
+<style>
+
+:root {
+    --thaiadhd-bg-grad-start: #2d2450;
+    --thaiadhd-bg-grad-end: #0a1b3a;
+    --thaiadhd-primary: #bd120a; /* CTA red */
+    --thaiadhd-primary-hover: #a9121c;
+    --thaiadhd-ink: #1c2430; /* main text */
+    --thaiadhd-ink-soft: #364355; /* secondary text */
+    --thaiadhd-muted: #eef4fb; /* light card bg */
+    --thaiadhd-panel: #0f1635; /* dark panel */
+    --thaiadhd-panel2: #1a2456;
+    --thaiadhd-border: #e5e9f0;
+    --thaiadhd-white: #fff;
+    --thaiadhd-focus: #4c7df0;
+    --thaiadhd-card-radius: 16px;
+    --thaiadhd-container: 1120px;
+}
+#thaiadhd-float {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* ------------------------------
+       Overwrite
+------------------------------ */
+
+.content>div a:last-of-type {
+    display: block;
+    font-size: 1em;
+}
+
+/* ------------------------------
+       Hero / Welcome
+------------------------------ */
+#thaiadhd-warp {
+    padding: 0px !important;
+}
+.thaiadhd-container {
+    max-width: var(--thaiadhd-container);
+    margin-inline: auto;
+    padding: 28px 24px;
+}
+.thaiadhd-hero {
+    padding: 15px 0 15px 0;
+    background: #4C475D;
+    background: linear-gradient(90deg,rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+}
+.thaiadhd-hero .thaiadhd-welcome {
+    background: transparent;
+    padding: 5px;
+}
+.thaiadhd-hero .thaiadhd-welcome h1 {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.1px;
+    color: #fff;
+    text-align: left;
+    padding: unset;
+    background: none;
+}
+.thaiadhd-hero .thaiadhd-welcome p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------
+       Info banner
+------------------------------ */
+.thaiadhd-info {
+}
+.thaiadhd-info-card {
+    background: var(--thaiadhd-muted);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+    text-align: center;
+}
+.thaiadhd-info-card p {
+    margin: 0;
+    color: #2a3648;
+    font-size: 18px;
+    line-height: 175%;
+}
+
+/* ------------------------------
+       Main Warp
+------------------------------ */
+.thaiadhd-textwarp {
+}
+.thaiadhd-textwarp-card {
+    background: transparent;
+    padding: 10px 10px;
+    text-align: left;
+}
+.thaiadhd-textwarp-card p {
+    margin: 0;
+    color: #2a3648;
+    font-size: 18px;
+    line-height: 175%;
+    text-align: left;
+}
+
+/* ------------------------------
+       Responsiveness
+------------------------------ */
+@media (max-width: 1100px) {
+    :root {
+        --thaiadhd-container: 1000px;
+    }
+}
+@media (max-width: 900px) {
+    .thaiadhd-container {
+        padding: 22px 18px;
+    }
+    .thaiadhd-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .thaiadhd-card {
+        min-height: 240px;
+    }
+}
+@media (max-width: 600px) {
+    .thaiadhd-hero .thaiadhd-welcome h1 {
+        font-size: 20px;
+    }
+    .thaiadhd-hero .thaiadhd-welcome p {
+        font-size: 13.5px;
+    }
+    .thaiadhd-info-card p {
+        font-size: 14px;
+    }
+    .thaiadhd-button {
+        font-size: 13.5px;
+        padding: 9px 14px;
+    }
+}
+@media (max-width: 420px) {
+    .thaiadhd-grid {
+        grid-template-columns: 1fr;
+    }
+    .thaiadhd-card {
+        min-height: 220px;
+    }
+    .thaiadhd-card-footer {
+        font-size: 14px;
+    }
+}
+
+</style>
