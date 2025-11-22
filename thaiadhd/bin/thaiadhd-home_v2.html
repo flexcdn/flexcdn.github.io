@@ -25,8 +25,14 @@
       <h2>สงสัยว่ามีความเสี่ยงโรคสมาธิสั้น?</h2>
 
       <div class="thaiadhd-assess-card">
-        <a href="#" class="thaiadhd-button" id="thaiadhd-screenbtn-home"><img alt="คลิกที่นี่เพื่อทำแบบประเมิน" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn1.png" /></a>
-        <a href="/select-game" id="thaiadhd-gamebtn-home"><img alt="เลือกเกมส์ที่ท่านสนใจ" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn2.png" /></a>
+        <div class="thaiadhd-assess-cardin">
+            <div class="thaiadhd-assess-image">
+            </div>
+            <div class="thaiadhd-assess-text">
+                <a href="#" class="thaiadhd-button thaiadhd-button-home">คลิกที่นี่เพื่อทำแบบประเมิน</a>
+                <img alt="คลิกที่นี่" src="/sites/default/files/thaiadhd/new_btn_arrow2.png" class="thaiadhd-assess-btn-arrow" />
+            </div>
+        </div>
       </div>
     </div>
   </section>
@@ -80,6 +86,15 @@
                 </div>
             </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME DEMO BTN -->
+  <section class="thaiadhd-textwarp thaiadhd-gamedemowarp">
+    <div class="thaiadhd-container">
+      <div class="thaiadhd-textwarp-card">
+        <a class="thaiadhd-button-gamedemo" href="/select-game">เลือกเกมส์ที่ท่านสนใจ (DEMO)</a>
       </div>
     </div>
   </section>
@@ -303,36 +318,62 @@
     background: #da5284;
 }
 
-/* screen btn overwrite */
-#thaiadhd-screenbtn-home {
-    padding: 0px !important;
+
+/* NEW Screening button overwrite */
+.thaiadhd-assess-card {
+    background: #191138;
+    background-image: linear-gradient(184deg, #a4a4bc, #2b2c64);
+    border-radius: var(--thaiadhd-card-radius);
+    overflow: visible;
+    min-height: 220px;
+    padding: 7px;
+}
+.thaiadhd-assess-cardin {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 0;
+    background: #19113a;
+    background-image: linear-gradient(184deg, #77718b, #19113a);
+    border-radius: var(--thaiadhd-card-radius);
+    overflow: visible;
+    min-height: 220px;
+}
+.thaiadhd-button-home {
+    max-width: 500px !important;
+    width: 90% !important;
+    margin: auto !important;
+    padding: 15px !important;
+    font-size: 28px !important;
+}
+.thaiadhd-assess-btn-arrow {
     display: block !important;
-    background: none !important;
-    max-width: 640px;
-    width: 100%;
-    margin: auto;
-}
-#thaiadhd-screenbtn-home > img {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-}
-#thaiadhd-gamebtn-home {
-    padding: 0px !important;
-    display: block !important;
-    background: none !important;
-    max-width: 640px;
-    width: 100%;
-    margin: auto;
-}
-#thaiadhd-gamebtn-home > img {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+    position: absolute;
+    width: 100px !important;
+    height: auto;
+    transform: translate(380px,110px);
+    z-index: 9;
 }
 
 @media (max-width: 900px) {
 
+.thaiadhd-assess-card {
+    background: #19113a;
+    background-image: linear-gradient(184deg, #77718b, #19113a);
+    padding: 0px;
+}
+.thaiadhd-assess-cardin {
+    grid-template-columns: 1fr;
+    background-color: transparent !important;
+    background-image: url(/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png);
+    background-size: 290px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
 .thaiadhd-assess-image {
-
+    order: -1;
+    min-height: 245px;
+    background-image: none !important;
 }
 .thaiadhd-assess-text {
     background-color: transparent !important;
