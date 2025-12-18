@@ -24,9 +24,9 @@
     <div class="thaiadhd-container">
       <h2>สงสัยว่ามีความเสี่ยงโรคสมาธิสั้น?</h2>
 
-      <div class="thaiadhd-assess-card">
-        <a href="#" class="thaiadhd-button" id="thaiadhd-screenbtn-home"><img alt="คลิกที่นี่เพื่อทำแบบประเมิน" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn1.png" /></a>
-        <a href="/select-game" id="thaiadhd-gamebtn-home"><img alt="เลือกเกมส์ที่ท่านสนใจ" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn2.png" /></a>
+      <div id="thaiadhd-assess-newbtn" class="thaiadhd-assess-card">
+        <a href="#" class="thaiadhd-button" id="thaiadhd-screenbtn-home"><img alt="คลิกที่นี่เพื่อทำแบบประเมิน" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn-v2-1.png" /></a>
+        <a href="/select-game" id="thaiadhd-gamebtn-home"><img alt="เลือกเกมส์ที่ท่านสนใจ" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn-v2-2.png" /></a>
       </div>
     </div>
   </section>
@@ -85,8 +85,11 @@
   </section>
 
   <div id="thaiadhd-hidden">
+    <img alt="คลิกที่นี่เพื่อทำแบบประเมิน" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn1.png" />
+    <img alt="เลือกเกมส์ที่ท่านสนใจ" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn2.png" />
     <img src="/sites/default/files/thaiadhd/b551d8e30375e11400c5b807e5dd60f6.jpg" width="1920" height="1080">
     <img src="/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png" width="640" height="720">
+
   </div>
 
 </div>
@@ -206,7 +209,6 @@
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 999px;
     text-align: center;
     max-width: 800px !important;
     width: 90% !important;
@@ -303,30 +305,104 @@
     background: #da5284;
 }
 
+/* ------------------------------
+       Assess buttons (2 columns)
+------------------------------ */
+#thaiadhd-assess-newbtn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    justify-items: stretch;
+    padding: 0 !important;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+#thaiadhd-assess-newbtn > a {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+#thaiadhd-assess-newbtn > a > img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+}
+
 /* screen btn overwrite */
 #thaiadhd-screenbtn-home {
     padding: 0px !important;
     display: block !important;
-    background: none !important;
     max-width: 640px;
     width: 100%;
     margin: auto;
+    background: linear-gradient(-45deg, #f6df54, #f68337, #ffb639, #c45d19);
+    background-size: 400% 400%;
+    animation: gradientbtn1 15s ease infinite;
+    border-radius: 20px;
+    box-shadow:0 0 35px #f68b3a;
+    animation:
+        gradientbtn1 15s ease infinite,
+        blinkbtn1 2.0s linear infinite;
 }
 #thaiadhd-screenbtn-home > img {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
+    border-radius: 20px;
 }
 #thaiadhd-gamebtn-home {
     padding: 0px !important;
     display: block !important;
-    background: none !important;
     max-width: 640px;
     width: 100%;
     margin: auto;
+    background: linear-gradient(-45deg, #6d39b5, #27184e, #6b0fff, #27184e);
+    background-size: 400% 400%;
+    animation: gradientbtn1 15s ease infinite;
+    border-radius: 20px;
+    box-shadow:0 0 5px #321e5e;
+    animation:
+        gradientbtn2 15s ease infinite,
+        blinkbtn2 2.0s linear infinite;
 }
 #thaiadhd-gamebtn-home > img {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
+    border-radius: 20px;
+}
+
+@keyframes gradientbtn1 {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes blinkbtn1 {
+  0%{ box-shadow:0 0 25px #f68b3a; }
+  50%{ box-shadow:0 0 10px #f68b3a; }
+}
+
+@keyframes gradientbtn2 {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes blinkbtn2 {
+  50%{ box-shadow:0 0 25px #321e5e; }
+  0%{ box-shadow:0 0 10px #321e5e; }
 }
 
 @media (max-width: 900px) {
@@ -363,6 +439,10 @@
 @media (max-width: 900px) {
     .thaiadhd-container {
         padding: 22px 18px;
+    }
+    #thaiadhd-assess-newbtn {
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
     .thaiadhd-assess-card {
 
