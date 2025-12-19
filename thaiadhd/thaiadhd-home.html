@@ -84,12 +84,31 @@
     </div>
   </section>
 
+  <section id="thaiadhd-home-logo">
+    <div class="thaiadhd-home-logo-row1">
+        <img src="/sites/default/files/thaiadhd/thaiadhd-homelogo-s1.png" width="482" height="216">
+    </div>
+    <div class="thaiadhd-home-logo-row2">
+        Transforming Neurodiversity and ADHD
+    </div>
+    <div class="thaiadhd-home-logo-row3">
+        <div class="thaiadhd-home-logo2-col1">
+            <img src="/sites/default/files/thaiadhd/thaiadhd-homelogo-s2-1.png" width="381" height="150">
+        </div>
+        <div class="thaiadhd-home-logo2-col2">
+            <img src="/sites/default/files/thaiadhd/thaiadhd-homelogo-s2-2.png" width="487" height="150">
+        </div>
+        <div class="thaiadhd-home-logo2-col3">
+            <img src="/sites/default/files/thaiadhd/thaiadhd-homelogo-s2-3.png" width="439" height="150">
+        </div>
+    </div>
+  </section>
+
   <div id="thaiadhd-hidden">
     <img alt="คลิกที่นี่เพื่อทำแบบประเมิน" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn1.png" />
     <img alt="เลือกเกมส์ที่ท่านสนใจ" src="/sites/default/files/thaiadhd/thaiadhd-assess-homebtn2.png" />
     <img src="/sites/default/files/thaiadhd/b551d8e30375e11400c5b807e5dd60f6.jpg" width="1920" height="1080">
     <img src="/sites/default/files/thaiadhd/thaiadhd-assess-image_v2.png" width="640" height="720">
-
   </div>
 
 </div>
@@ -405,6 +424,80 @@
   0%{ box-shadow:0 0 10px #321e5e; }
 }
 
+/* ------------------------------
+       Home logos section
+------------------------------ */
+#thaiadhd-home-logo {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+
+#thaiadhd-home-logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.thaiadhd-home-logo-row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    max-width: 360px;
+    margin: auto;
+}
+
+.thaiadhd-home-logo-row1 img {
+    width: min(720px, 100%);
+    height: auto;
+}
+
+.thaiadhd-home-logo-row2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1.15;
+    color: #f12026;
+    margin: 5px 0 15px;
+    padding: 0 24px;
+    font-family: "Noto Sans Thai", sans-serif !important;
+}
+
+.thaiadhd-home-logo-row2::before,
+.thaiadhd-home-logo-row2::after {
+    content: '"';
+    color: #f12026;
+}
+
+.thaiadhd-home-logo-row3 {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; /* no gap between columns */
+    align-items: center;
+}
+
+.thaiadhd-home-logo2-col1,
+.thaiadhd-home-logo2-col2,
+.thaiadhd-home-logo2-col3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* ensure no spacing */
+    margin: 0;
+}
+
+.thaiadhd-home-logo2-col1 img,
+.thaiadhd-home-logo2-col2 img,
+.thaiadhd-home-logo2-col3 img {
+    width: auto !important;
+    height: auto !important;
+    max-height: 90px;
+    margin: auto;
+}
+
 @media (max-width: 900px) {
 
 .thaiadhd-assess-image {
@@ -423,6 +516,14 @@
     display: none !important;
 }
 
+    /* Home logos: switch to 1 column on mobile */
+    .thaiadhd-home-logo-row2 {
+        font-size: 22px;
+        margin: 12px 0 14px;
+    }
+    .thaiadhd-home-logo-row3 {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ------------------------------
@@ -480,6 +581,9 @@
     .thaiadhd-button {
         font-size: 13.5px;
         padding: 9px 14px;
+    }
+    .thaiadhd-home-logo-row2 {
+        font-size: 18px;
     }
 }
 @media (max-width: 420px) {
