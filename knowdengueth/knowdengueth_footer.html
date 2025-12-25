@@ -9,6 +9,12 @@
 	display: none !important;
 }
 
+/*
+.kd-header.navbar-default .navbar-nav>li a[href="/know-the-symptoms"]:before {
+    background-image: url(/themes/custom/kd_endemic/images/icon-kts.svg);
+}
+*/
+
 /* FOOTER -- GLOBAL CSS */
 
 #navbar > div > div.region-navigation {
@@ -20,6 +26,7 @@
 }
 #navbar-collapse > div > div.kd-endemic-language {
 	margin-top: 0px;
+    transform: translateY(-10px);
 }
 #navbar-collapse {
 	padding-bottom: 0px !important;
@@ -35,13 +42,25 @@
     width: 35px !important;
 	background-size: 100% 100% !important;
 }
-#block-kd-endemic-main-navigation > ul > li:nth-child(3) > a:before {
+#block-kd-endemic-main-navigation > ul > li > a[href="/dengue-vaccination"]:before {
     background-image: url(/sites/default/files/inline-images/icon-vaccine.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
-#block-kd-endemic-main-navigation > ul > li:nth-child(6) > a:before {
+#block-kd-endemic-main-navigation > ul > li > a[href="/locator"]:before {
 	background-image: url(/sites/default/files/inline-images/pin_locator_sml4.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 80% 80% !important;
+}
+#block-kd-endemic-main-navigation > ul > li > a[href="/secondhand"]:before {
+	background-image: url(/themes/custom/kd_endemic/images/icon-kts.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 80% 80% !important;
+}
+#block-kd-endemic-main-navigation > ul > li > a[href="/doctordiaryvideos"]:before {
+	background-image: url(/sites/default/files/inline-images/meetdoctor_icon.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 80% 80% !important;
@@ -266,6 +285,15 @@ body > div.conditional-message-top::before {
     font-weight: 400;
     font-size: 12px;
     border-radius: 0px 0px 5px 5px;
+}
+
+
+@media screen and (min-width: 992px) {
+
+.kd-header.navbar-default .navbar-nav>li>a {
+    font-size: 15px !important;
+}
+
 }
 
 @media (max-width: 767px) {
