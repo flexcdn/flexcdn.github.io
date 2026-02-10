@@ -11,276 +11,370 @@
     </div>
     <main class="thaiadhd-container">
         <p class="thaiadhd-topnote">
-            โปรดประเมินอาการในแต่ละข้อต่อไปนี้ ตรวจคำอธิบายคะแนนของสูตร-คะเเนนกำกับบนระเบียนเพื่อคำนวณ
-            กรุณาระบุให้ครบทุกข้อ
+            โปรดประเมินอาการในแต่ละข้อต่อไปนี้ ตรวจคำอธิบายคะแนนของสูตร-คะแนนกำกับบนระเบียนเพื่อคำนวณ กรุณาระบุให้ครบทุกข้อ
         </p>
-        <div class="thaiadhd-sectioncap">อาการขาดสมาธิ</div>
 
-        <form class="thaiadhd-form">
-            <!-- Q1 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    1. มักไม่ละเอียดรอบคอบหรือสะเพร่าในการทำงานต่าง ๆ เช่น การบ้าน <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q1" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q1" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q1" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q1" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label
-                        >
+        <form class="thaiadhd-form" id="thaiadhd-form-warp">
+
+            <!-- Section 1 -->
+            <div id="thaiadhd-section1">
+                <div class="thaiadhd-sectioncap">อาการขาดสมาธิ</div>
+                <!-- Q1 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        1. มักไม่ละเอียดรอบคอบหรือสะเพร่าในการทำงานต่าง ๆ เช่น การบ้าน <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q1" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q1" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q1" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q1" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
                     </div>
+                </div>
+                <!-- Q2 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        2. ทำอะไรนาน ๆ ไม่ได้ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q2" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q2" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q2" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q2" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q3 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        3. ดูเหมือนไม่ค่อยฟังเวลามีคนพูดด้วย <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q3" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q3" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q3" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q3" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q4 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        4. มักทำการบ้านไม่เสร็จ หรือทำงานที่ได้รับมอบหมายไม่สำเร็จ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q4" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q4" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q4" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q4" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q5 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        5. จัดระเบียบงานและกิจกรรมต่าง ๆ ไม่เป็น <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q5" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q5" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q5" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q5" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q6 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        6. มักหลีกเลี่ยงกิจกรรมที่ต้องใช้ความอดทนในการทำให้สำเร็จ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q6" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q6" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q6" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q6" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q7 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        7. ทำของหายบ่อย ๆ (เช่น ของเล่น สมุดจดงาน เครื่องเขียน) <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q7" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q7" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q7" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q7" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q8 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        8. วอกแวกง่าย <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q8" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q8" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q8" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q8" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q9 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        9. ขี้ลืม <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q9" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q9" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q9" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q9" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thaiadhd-actions">
+                    <button type="button" class="thaiadhd-next" id="thaiadhd-nextBtn1">
+                            หัวข้อถัดไป
+                            <span class="thaiadhd-arrow">→</span>
+                    </button>
+                </div>
+                
+                <div class="thaiadhd-hrline"></div>
+
+            </div>
+
+            <!-- Section 2 -->
+            <div id="thaiadhd-section2">
+                <div class="thaiadhd-sectioncap">อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น</div>
+                <!-- Q10 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        10. มือเท้ายุกยิก นั่งบิดไปมา <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q10" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q10" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q10" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q10" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q11 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        11. นั่งไม่ติดที่ ชอบลุกจากที่นั่งในชั้นเรียน หรือจากที่ที่ควรจะนั่งเรียบร้อย <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q11" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q11" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q11" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q11" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q12 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        12. วิ่งหรือปีนป่ายมากเกินควรอย่างไม่รู้กาลเทศะ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q12" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q12" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q12" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q12" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q13 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        13. เล่นหรือทำกิจกรรมเงียบ ๆ ไม่เป็น <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q13" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q13" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q13" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q13" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q14 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        14. พร้อมจะเคลื่อนไหวอยู่เสมอเหมือนติดเครื่องอยู่ตลอดเวลา <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q14" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q14" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q14" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q14" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q15 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        15. พูดมาก <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q15" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q15" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q15" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q15" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q16 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        16. มักโพล่งคำตอบออกมาก่อนจะฟังคำถามจบ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q16" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q16" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q16" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q16" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q17 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        17. ไม่ชอบรอคิว <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q17" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q17" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q17" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q17" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q18 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        18. ชอบสอดแทรกผู้อื่น เช่น ชอบพูดแทรกขณะผู้ใหญ่กำลังสนทนากัน <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q18" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q18" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q18" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q18" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thaiadhd-actions">
+                    <button type="button" class="thaiadhd-next" id="thaiadhd-nextBtn2">
+                            หัวข้อถัดไป
+                            <span class="thaiadhd-arrow">→</span>
+                    </button>
+                </div>
+                
+                <div class="thaiadhd-hrline"></div>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="thaiadhd-section3">
+                <div class="thaiadhd-sectioncap">อาการดื้อต่อต้าน</div>
+                <!-- Q19 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        19. อารมณ์เสียง่าย <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q19" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q19" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q19" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q19" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q20 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        20. ชอบโต้เถียงกับผู้ใหญ่ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q20" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q20" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q20" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q20" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q21 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        21. ไม่ยอมทำตามสิ่งที่ผู้ใหญ่สั่งหรือวางกฎเกณฑ์ไว้ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q21" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q21" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q21" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q21" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q22 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        22. จงใจก่อกวนผู้อื่น <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q22" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q22" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q22" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q22" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q23 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        23. มักตำหนิผู้อื่นในสิ่งที่ตนเองทำผิด <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q23" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q23" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q23" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q23" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q24 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        24. ขี้รำคาญ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q24" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q24" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q24" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q24" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q25 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        25. โกรธบึ้งตึงเป็นประจำ <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q25" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q25" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q25" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q25" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q26 -->
+                <div class="thaiadhd-qrow">
+                    <div class="thaiadhd-qtitle">
+                        26. เจ้าคิดเจ้าแค้น <span class="thaiadhd-req">*</span>
+                        <div class="thaiadhd-choice">
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q26" value="0" required /><span class="thaiadhd-pill">ไม่เลย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q26" value="1" /><span class="thaiadhd-pill">เล็กน้อย</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q26" value="2" /><span class="thaiadhd-pill">ค่อนข้างมาก</span></label>
+                            <label class="thaiadhd-opt"><input class="thaiadhd-radio" type="radio" name="q26" value="3" /><span class="thaiadhd-pill">มาก</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thaiadhd-actions">
+                    <button type="button" class="thaiadhd-next" id="thaiadhd-endBtn">
+                        ดูผลการประเมิน <span class="thaiadhd-arrow">→</span>
+                    </button>
                 </div>
             </div>
 
-            <!-- Q2 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    2. ทำอะไรนาน ๆ ไม่ได้ <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q2" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q2" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q2" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q2" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Q3 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    3. ดูเหมือนไม่ตั้งใจฟังเวลามีคนพูดด้วย <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q3" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q3" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q3" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q3" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Q4 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    4. มักทำการบ้านไม่เสร็จ หรือทำงานที่ได้รับมอบหมายไม่สำเร็จ <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q4" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q4" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q4" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q4" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label
-                        >
-                    </div>
-                </div>
-            </div>
-
-            <!-- Q5 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    5. จัดระเบียบงานและกิจกรรมต่าง ๆ ไม่เป็น <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q5" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q5" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q5" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q5" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Q6 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    6. มักหลีกเลี่ยงกิจกรรมที่ต้องใช้ความอดทนในการทำให้สำเร็จ <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q6" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q6" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q6" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q6" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Q7 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    7. ทำของหายบ่อย ๆ (เช่น ของเล่น สมุดงาน เครื่องเขียน) <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q7" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q7" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q7" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q7" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Q8 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    8. วอกแวกง่าย <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q8" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q8" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q8" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q8" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Q9 -->
-            <div class="thaiadhd-qrow">
-                <div class="thaiadhd-qtitle">
-                    9. ลืมง่าย <span class="thaiadhd-req">*</span>
-                    <div class="thaiadhd-choice">
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q9" required /><span class="thaiadhd-pill"
-                                >ไม่เลย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q9" /><span class="thaiadhd-pill"
-                                >เล็กน้อย</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q9" /><span class="thaiadhd-pill"
-                                >ค่อนข้างมาก</span
-                            ></label
-                        >
-                        <label class="thaiadhd-opt"
-                            ><input class="thaiadhd-radio" type="radio" name="q9" /><span class="thaiadhd-pill"
-                                >มาก</span
-                            ></label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="thaiadhd-actions">
-                <button type="button" class="thaiadhd-next" id="thaiadhd-nextBtn" onclick="window.location.href='/parent-or-carer/screening/result';">
-                    หัวข้อถัดไป
-                    <span class="thaiadhd-arrow">→</span>
-                </button>
-            </div>
         </form>
     </main>
 </div>
 
+<div id="thaiadhd-Progress">
+    <div id="thaiadhd-Bar"></div>
+</div>
 
 <style>
 
@@ -316,7 +410,10 @@ input[type="checkbox"], input[type="radio"] {
     width: auto !important;
     height: 57px !important;
 }
-
+#thaiadhd-educator-screening > main > form > p {
+    margin: 0px !important;
+    display: none !important;
+}
 /* ----------------------------------------------------
        Page header
 ---------------------------------------------------- */
@@ -355,7 +452,7 @@ input[type="checkbox"], input[type="radio"] {
 .thaiadhd-topnote {
     font-size: 14px;
     color: var(--thaiadhd-ink-soft);
-    margin-bottom: 12px;
+    margin-bottom: 0px;
 }
 .thaiadhd-sectioncap {
     display: inline-block;
@@ -367,6 +464,7 @@ input[type="checkbox"], input[type="radio"] {
     font-size: 21px;
     color: #40506a;
     margin-bottom: 0px;
+    margin-top: 20px;
     width: 100%;
 }
 /* ----------------------------------------------------
@@ -403,7 +501,7 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: 700;
 }
 .thaiadhd-req {
-    color: #9b71b0;
+    color: #e1242a;
 }
 /* Every option pill sits in the right column and stacks vertically */
 .thaiadhd-opt { grid-column: 2 !important; position: relative; display: block; }
@@ -434,6 +532,23 @@ input[type="checkbox"], input[type="radio"] {
     user-select: none;
     transition: all 0.15s ease;
     margin: 6px 0;
+}
+.thaiadhd-hrline {
+    /* border-bottom: 1px solid #40506a;
+    margin-bottom: 20px;
+    padding-top: 0px; */
+}
+
+#thaiadhd-section1,
+#thaiadhd-section2,
+#thaiadhd-section3 {
+  transition: all 0.5s ease;
+}
+
+#thaiadhd-section2,
+#thaiadhd-section3 {
+  display: none;
+  opacity: 0;
 }
 
 /* ----------------------------------------------------
@@ -513,6 +628,31 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: 700;
     margin-left: auto;
 }
+#thaiadhd-Progress {
+    width: 100%;
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 0px;
+    z-index: 99;
+}
+#thaiadhd-Bar {
+    height: 30px;
+    background: linear-gradient(to left, #4c475d, #1a123b);
+    /* width of the bar set initially to 0% to hide it */
+    
+    width: 0%;
+    /* transition for smooth animation */
+    
+    transition: all ease-in-out 0.5s;
+}
+#thaiadhd-Progress::before {
+    content: "ความคืบหน้าแบบประเมิน";
+    position: absolute;
+    padding-top: 4px;
+    padding-left: 10px;
+    color: #fff;
+}
+
 /* ----------------------------------------------------
        Responsive
 ---------------------------------------------------- */
@@ -550,3 +690,217 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 </style>
+
+<script>
+(function () {
+  function qs(sel, root) { return (root || document).querySelector(sel); }
+
+  function findFirstUnanswered(form, qCount) {
+    for (var i = 1; i <= qCount; i++) {
+      var name = 'q' + i;
+      var checked = qs("input[name='" + name + "']:checked", form);
+      if (!checked) return name;
+    }
+    return null;
+  }
+
+  function findFirstUnansweredInRange(form, start, end) {
+    for (var i = start; i <= end; i++) {
+        var name = 'q' + i;
+        var checked = qs("input[name='" + name + "']:checked", form);
+        if (!checked) return name;
+    }
+    return null;
+  }
+
+  function buildQuery(form, qCount) {
+    var parts = [];
+    for (var i = 1; i <= qCount; i++) {
+      var name = 'q' + i;
+      var checked = qs("input[name='" + name + "']:checked", form);
+      var val = checked ? checked.value : '';
+      parts.push(encodeURIComponent(name) + '=' + encodeURIComponent(val));
+    }
+    return parts.join('&');
+  }
+
+  function countAnswered(form, qCount) {
+    var answered = 0;
+    for (var i = 1; i <= qCount; i++) {
+      var name = 'q' + i;
+      var checked = qs("input[name='" + name + "']:checked", form);
+      if (checked) answered++;
+    }
+    return answered;
+  }
+
+  function updateProgressBar(form, qCount) {
+    var bar = document.getElementById('thaiadhd-Bar');
+    if (!bar) return;
+
+    var answered = countAnswered(form, qCount);
+
+    // Per requirement: each answered question adds 3.7% (cap at 100%)
+    var percent = answered * 3.85;
+    if (percent > 100) percent = 100;
+
+    // Keep it neat (avoid long decimals)
+    bar.style.width = percent.toFixed(1) + '%';
+  }
+
+  function scrollToQuestion(form, qName) {
+    var any = qs("input[name='" + qName + "']", form);
+    if (!any) return;
+
+    var row = any.closest ? any.closest('.thaiadhd-qrow') : null;
+    var target = row || any;
+
+    try {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (e) {
+      target.scrollIntoView(true);
+    }
+
+    if (row) {
+      row.style.outline = '3px solid #e1242a';
+      row.style.outlineOffset = '10px';
+      row.style.borderRadius = '15px';
+      window.setTimeout(function () {
+        row.style.outline = '';
+        row.style.outlineOffset = '';
+        row.style.borderRadius = '';
+      }, 1800);
+    }
+  }
+
+  function init() {
+    var root = document.getElementById('thaiadhd-educator-screening');
+    if (!root) return;
+
+    var form = qs('form.thaiadhd-form', root);
+    var endBtn = document.getElementById('thaiadhd-endBtn');
+    if (!form || !endBtn) return;
+
+    var section1 = document.getElementById('thaiadhd-section1');
+    var section2 = document.getElementById('thaiadhd-section2');
+    var section3 = document.getElementById('thaiadhd-section3');
+    var nextBtn1 = document.getElementById('thaiadhd-nextBtn1');
+    var nextBtn2 = document.getElementById('thaiadhd-nextBtn2');
+
+    function showSection(el) {
+    if (!el) return;
+    el.style.transition = 'all 0.5s ease';
+    el.style.display = 'block';
+    // trigger transition
+    window.requestAnimationFrame(function () {
+        el.style.opacity = '1';
+    });
+    }
+
+    function hideSection(el) {
+    if (!el) return;
+    el.style.transition = 'all 0.5s ease';
+    el.style.opacity = '0';
+    window.setTimeout(function () {
+        el.style.display = 'none';
+    }, 500);
+    }
+
+    /* Force initial state (กัน Drupal/CSS override) */
+    if (section1) {
+    section1.style.transition = 'all 0.5s ease';
+    section1.style.display = 'block';
+    section1.style.opacity = '1';
+    }
+    if (section2) {
+    section2.style.transition = 'all 0.5s ease';
+    section2.style.display = 'none';
+    section2.style.opacity = '0';
+    }
+    if (section3) {
+    section3.style.transition = 'all 0.5s ease';
+    section3.style.display = 'none';
+    section3.style.opacity = '0';
+    }
+
+    if (nextBtn1) {
+      nextBtn1.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        var firstMissing = findFirstUnansweredInRange(form, 1, 9);
+        if (firstMissing) {
+          alert('กรุณาเลือกคำตอบให้ครบทุกข้อก่อนดำเนินการต่อ');
+          scrollToQuestion(form, firstMissing);
+          return;
+        }
+
+        hideSection(section1);
+        showSection(section2);
+
+        var formWarp = document.getElementById('thaiadhd-form-warp');
+        if (formWarp && formWarp.scrollIntoView) {
+          formWarp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        updateProgressBar(form, Q_COUNT);
+      });
+    }
+
+    if (nextBtn2) {
+      nextBtn2.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        var firstMissing = findFirstUnansweredInRange(form, 10, 18);
+        if (firstMissing) {
+          alert('กรุณาเลือกคำตอบให้ครบทุกข้อก่อนดำเนินการต่อ');
+          scrollToQuestion(form, firstMissing);
+          return;
+        }
+
+        hideSection(section2);
+        showSection(section3);
+
+        var formWarp = document.getElementById('thaiadhd-form-warp');
+        if (formWarp && formWarp.scrollIntoView) {
+          formWarp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        updateProgressBar(form, Q_COUNT);
+      });
+    }
+
+    var Q_COUNT = 26;
+
+    // Progress bar: update on load and whenever any answer changes
+    updateProgressBar(form, Q_COUNT);
+
+    form.addEventListener('change', function (e) {
+      var t = e.target;
+      if (!t) return;
+      if (t.matches && t.matches('input[type="radio"][name^="q"]')) {
+        updateProgressBar(form, Q_COUNT);
+      }
+    });
+
+    endBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // 1) Validate required groups (q1..q26)
+      var firstMissing = findFirstUnanswered(form, Q_COUNT);
+      if (firstMissing) {
+        alert('กรุณาเลือกคำตอบให้ครบทุกข้อก่อนสรุปผลการประเมิน');
+        scrollToQuestion(form, firstMissing);
+        return;
+      }
+
+      // 2) Build params and redirect
+      var query = buildQuery(form, Q_COUNT);
+      window.location.href = '/parent-or-carer/screening/result/?' + query;
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
