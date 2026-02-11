@@ -79,6 +79,12 @@
         </section>
 
         <div id="thaiadhd-resultdate-warp">ผลการประเมิน ณ วันที่ <span id="thaiadhd-resultdate">11 กุมภาพันธ์ 2569, 14:10 น.</span></div>
+
+        <div id="thaiadhd-reference">
+            <div class="thaiadhd-reference-header">เอกสารอ้างอิงจาก</div>
+            <div class="thaiadhd-reference-items">a. Swanson JM, Nolan W, Pelham WE. The SNAP-IV Teacher and Parent Rating Scale. Irvine (CA): University of California, Irvine; 1992.</div>
+            <div class="thaiadhd-reference-items">b. ณัทธร พิทยรัตน์เสถียร, ธันวรุจน์ บูรณะสุขสกุล, ดุษฎี จึงศิรกุลวิทย์, ทรงภูมิ เบญญากร. คุณสมบัติของแบบคัดกรองโรคสมาธิสั้นชื่อ Swanson, Nolan, and Pelham IV Scale (SNAP-IV) และ Strengths and Difficulties Questionnaire ส่วนที่เกี่ยวข้องกับพฤติกรรมอยู่ไม่นิ่ง/สมาธิสั้น (SDQ-ADHD) ฉบับภาษาไทย. วารสารสมาคมจิตแพทย์แห่งประเทศไทย. 2557;59(2):97-110.</div>
+        </div>
         
     </main>
 </div>
@@ -263,6 +269,46 @@ html, body {
     text-align: center;
 }
 
+/* ----------------------------------------------------
+   Academic references (standard look)
+---------------------------------------------------- */
+#thaiadhd-reference{
+  margin-top: 28px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--thaiadhd-border);
+  border-left: 5px solid #40506a;
+  border-radius: 12px;
+}
+
+#thaiadhd-reference .thaiadhd-reference-header{
+  font-weight: 800;
+  font-size: 16px;
+  color: #1f2a3a;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.2px;
+}
+
+#thaiadhd-reference .thaiadhd-reference-items{
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2a3648;
+  margin: 8px 0;
+
+  /* Hanging indent: citation style */
+  padding-left: 22px;
+  text-indent: -22px;
+
+  /* Better wrap for long strings */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* subtle separation between items */
+#thaiadhd-reference .thaiadhd-reference-items + .thaiadhd-reference-items{
+  padding-top: 8px;
+  border-top: 1px dashed #e6ebf2;
+}
 
 @media (max-width: 980px) {
     .thaiadhd-head h1 {
@@ -321,6 +367,15 @@ html, body {
     }
 }
 
+@media (max-width: 520px){
+  #thaiadhd-reference{ padding: 16px; }
+  #thaiadhd-reference .thaiadhd-reference-items{
+    font-size: 13.5px;
+    padding-left: 18px;
+    text-indent: -18px;
+  }
+}
+
 /* ------------------------------
    Print (window.print) styling
 ------------------------------ */
@@ -343,7 +398,7 @@ html, body {
   nav, aside,
   .region-header, .region-primary-menu, .region-secondary-menu,
   .tabs, .messages, .toolbar, .admin-toolbar,
-  .footer, footer {
+  .footer {
     display: none !important;
   }
 
@@ -374,6 +429,19 @@ html, body {
   .thaiadhd-item-last {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+  header {
+    height: 110px !important;
+    overflow: hidden !important;
+  }
+  .thaiadhd-hero {
+    height: 115px !important;
+    overflow: hidden !important;
+  }
+  .thaiadhd-body {
+    padding: 15px !important;
+    height: 580px !important;
+    overflow: hidden !important;
   }
 
   /* Ensure borders/backgrounds still look clean */
@@ -421,10 +489,30 @@ html, body {
     background: #fff !important;
     color: #000 !important;
   }
-  #thaiadhd-resultdate-warp {
+  #thaiadhd-resultdate-warp,
+  #thaiadhd-reference .thaiadhd-reference-header {
     font-size: 14px !important;
   }
-
+  body > div > footer,
+  footer {
+    background: #fff !important;
+    border: none !important;
+    padding: 5px !important;
+    margin-top: 40px !important;
+  }
+  #thaiadhd-reference {
+    padding: 10px !important;
+  }
+  #thaiadhd-reference .thaiadhd-reference-items,
+  .footertext,
+  .pvsession,
+  .footerdate {
+    font-size: 11px !important;
+  }
+  #global-footer > p.appcode,
+  .appcode {
+    text-align: left !important;
+  }
 }
 
 </style>

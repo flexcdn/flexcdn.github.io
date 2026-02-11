@@ -369,6 +369,13 @@
             </div>
 
         </form>
+
+        <div id="thaiadhd-reference">
+            <div class="thaiadhd-reference-header">เอกสารอ้างอิงจาก</div>
+            <div class="thaiadhd-reference-items">a. Swanson JM, Nolan W, Pelham WE. The SNAP-IV Teacher and Parent Rating Scale. Irvine (CA): University of California, Irvine; 1992.</div>
+            <div class="thaiadhd-reference-items">b. ณัทธร พิทยรัตน์เสถียร, ธันวรุจน์ บูรณะสุขสกุล, ดุษฎี จึงศิรกุลวิทย์, ทรงภูมิ เบญญากร. คุณสมบัติของแบบคัดกรองโรคสมาธิสั้นชื่อ Swanson, Nolan, and Pelham IV Scale (SNAP-IV) และ Strengths and Difficulties Questionnaire ส่วนที่เกี่ยวข้องกับพฤติกรรมอยู่ไม่นิ่ง/สมาธิสั้น (SDQ-ADHD) ฉบับภาษาไทย. วารสารสมาคมจิตแพทย์แห่งประเทศไทย. 2557;59(2):97-110.</div>
+        </div>
+
     </main>
 </div>
 
@@ -654,6 +661,47 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* ----------------------------------------------------
+   Academic references (standard look)
+---------------------------------------------------- */
+#thaiadhd-reference{
+  margin-top: 28px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--thaiadhd-border);
+  border-left: 5px solid #40506a;
+  border-radius: 12px;
+}
+
+#thaiadhd-reference .thaiadhd-reference-header{
+  font-weight: 800;
+  font-size: 16px;
+  color: #1f2a3a;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.2px;
+}
+
+#thaiadhd-reference .thaiadhd-reference-items{
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2a3648;
+  margin: 8px 0;
+
+  /* Hanging indent: citation style */
+  padding-left: 22px;
+  text-indent: -22px;
+
+  /* Better wrap for long strings */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* subtle separation between items */
+#thaiadhd-reference .thaiadhd-reference-items + .thaiadhd-reference-items{
+  padding-top: 8px;
+  border-top: 1px dashed #e6ebf2;
+}
+
+/* ----------------------------------------------------
        Responsive
 ---------------------------------------------------- */
 @media (max-width: 1000px) {
@@ -687,6 +735,15 @@ input[type="checkbox"], input[type="radio"] {
     .thaiadhd-sectioncap {
         font-size: 15px;
     }
+}
+
+@media (max-width: 520px){
+  #thaiadhd-reference{ padding: 16px; }
+  #thaiadhd-reference .thaiadhd-reference-items{
+    font-size: 13.5px;
+    padding-left: 18px;
+    text-indent: -18px;
+  }
 }
 
 </style>
