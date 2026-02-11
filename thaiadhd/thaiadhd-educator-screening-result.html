@@ -73,15 +73,18 @@
                 </div>
             </div>
             <div class="thaiadhd-actions">
-                <a href="#" class="thaiadhd-btn thaiadhd-btn-primary">บันทึกไฟล์ PDF</a>
+                <a href="#" id="thaiadhd-savePdfBtn" class="thaiadhd-btn thaiadhd-btn-primary">บันทึกไฟล์ PDF</a>
                 <a href="/educator/screening" class="thaiadhd-btn thaiadhd-btn-outline">กลับสู่หน้าแรก</a>
             </div>
         </section>
+
+        <div id="thaiadhd-resultdate-warp">ผลการประเมิน ณ วันที่ <span id="thaiadhd-resultdate">11 กุมภาพันธ์ 2569, 14:10 น.</span></div>
+        
     </main>
 </div>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&display=swap');
 :root {
     --thaiadhd-ink: #742c46;
     --thaiadhd-ink-soft: #a34264;
@@ -97,6 +100,12 @@
 }
 * {
     box-sizing: border-box;
+}
+html, body {
+    font-family: 'Noto Sans Thai', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+#thaiadhd-educator-screening-result {
+    font-family: 'Noto Sans Thai', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 .content>div a:last-of-type {
     display: inherit !important;
@@ -248,6 +257,12 @@
 #thaiadhd-section3-score {
     font-weight: bold;
 }
+#thaiadhd-resultdate-warp {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
 
 @media (max-width: 980px) {
     .thaiadhd-head h1 {
@@ -304,6 +319,112 @@
     .thaiadhd-hero .thaiadhd-welcome p {
         font-size: 13.5px;
     }
+}
+
+/* ------------------------------
+   Print (window.print) styling
+------------------------------ */
+@media print {
+  /* Force background colors/gradients to render in print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    margin: 12mm;
+  }
+
+  html, body {
+    background: #ffffff !important;
+  }
+
+  /* Hide site chrome / navigation that Drupal may inject */
+  nav, aside,
+  .region-header, .region-primary-menu, .region-secondary-menu,
+  .tabs, .messages, .toolbar, .admin-toolbar,
+  .footer, footer {
+    display: none !important;
+  }
+
+  /* Hide action buttons on print */
+  .thaiadhd-actions,
+  #thaiadhd-savePdfBtn {
+    display: none !important;
+  }
+
+  /* Make layout full width on paper */
+  .thaiadhd-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove any shadows that look bad in print */
+  .thaiadhd-result,
+  .thaiadhd-btn {
+    box-shadow: none !important;
+  }
+
+  /* Keep result card from breaking awkwardly */
+  .thaiadhd-result,
+  .thaiadhd-head,
+  .thaiadhd-body,
+  .thaiadhd-item,
+  .thaiadhd-item-last {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure borders/backgrounds still look clean */
+  .thaiadhd-result {
+    border: 1px solid #e8ecf2 !important;
+  }
+
+  /* Links should not print ugly URLs */
+  a[href]:after {
+    content: "" !important;
+  }
+
+  header .branding {
+    display: block !important;
+    margin: auto !important;
+    text-align: center !important;
+  }
+  header .branding p {
+    text-align: center !important;
+  }
+  .thaiadhd-hero .thaiadhd-welcome p {
+    font-size: 11px !important;
+  }
+  .thaiadhd-bar,
+  .thaiadhd-hero .thaiadhd-welcome h1,
+  .thaiadhd-head p,
+  .thaiadhd-item p, 
+  .thaiadhd-item-last p {
+    font-size: 14px !important;
+  }
+  #thaiadhd-head-result1,
+  #thaiadhd-head-result2,
+  #thaiadhd-head-result3,
+  #thaiadhd-head-result4,
+  #thaiadhd-head-result5,
+  #thaiadhd-head-result6,
+  #thaiadhd-head-result7,
+  #thaiadhd-head-result8 {
+    font-size: 16px !important;
+    color: #fff !important;
+  }
+  .thaiadhd-hero,
+  .thaiadhd-hero .thaiadhd-welcome h1,
+  .thaiadhd-hero .thaiadhd-welcome p {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  #thaiadhd-resultdate-warp {
+    font-size: 14px !important;
+  }
+
 }
 
 </style>
@@ -450,6 +571,31 @@
 
     showById(headId);
 
+    // -------------------------------------------------
+    // Result datetime (Thai format) e.g. "11 กุมภาพันธ์ 2569, 14:10 น."
+    // -------------------------------------------------
+    (function setThaiResultDateTime() {
+      var elDate = document.getElementById('thaiadhd-resultdate');
+      if (!elDate) return;
+
+      var now = new Date();
+
+      // Thai month names
+      var months = [
+        'มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
+        'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'
+      ];
+
+      var day = now.getDate();
+      var monthName = months[now.getMonth()];
+      var buddhistYear = now.getFullYear() + 543;
+
+      var hh = String(now.getHours()).padStart(2, '0');
+      var mm = String(now.getMinutes()).padStart(2, '0');
+
+      elDate.textContent = day + ' ' + monthName + ' ' + buddhistYear + ', ' + hh + ':' + mm + ' น.';
+    })();
+
     // Expose computed values for future extensions (headlines, conditional text, etc.)
     window.thaiadhdSnapIV = {
       q: function (i) { return getIntParam(params, 'q' + i); },
@@ -467,5 +613,34 @@
   } else {
     init();
   }
+})();
+</script>
+
+<script>
+(function () {
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      fn();
+    }
+  }
+
+  onReady(function () {
+    var btn = document.getElementById('thaiadhd-savePdfBtn');
+    if (!btn) return;
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Give the browser one frame to finish any last layout changes.
+      requestAnimationFrame(function () {
+        window.print();
+      });
+    });
+    window.addEventListener('afterprint', function () {
+      // no-op for now (placeholder)
+    });
+  });
 })();
 </script>
