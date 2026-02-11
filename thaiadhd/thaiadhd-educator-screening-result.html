@@ -1,5 +1,28 @@
 <!-- https://dev-thai-adhd.pantheonsite.io/node/64/edit?destination=/admin/content -->
 
+<style>
+#thaiadhd-head-result1,
+#thaiadhd-head-result2,
+#thaiadhd-head-result3,
+#thaiadhd-head-result4,
+#thaiadhd-head-result5,
+#thaiadhd-head-result6,
+#thaiadhd-head-result7,
+#thaiadhd-head-result8,
+#thaiadhd-section1-result1,
+#thaiadhd-section1-result2,
+#thaiadhd-section2-result1,
+#thaiadhd-section2-result2,
+#thaiadhd-section3-result1,
+#thaiadhd-section3-result2 {
+    display: none;
+    opacity: 0;
+    transform: translateY(6px);
+    font-size: 1px;
+    transition: all 0.5s ease;
+}    
+</style>
+
 <div id="thaiadhd-educator-screening-result">
     <!-- HERO -->
     <div class="thaiadhd-hero">
@@ -13,21 +36,40 @@
         <section class="thaiadhd-result">
             <div class="thaiadhd-bar">ผลลัพธ์</div>
             <div class="thaiadhd-head">
-                <h1>ไม่มีความเสี่ยงที่จะเป็นโรคสมาธิสั้น</h1>
-                <p>คะแนน: 34/78</p>
+                <h1 id="thaiadhd-head-result1">ไม่พบความเสี่ยงโรคสมาธิสั้นตามเกณฑ์แบบประเมิน</h1>
+                <h1 id="thaiadhd-head-result2">สงสัยปัญหาด้านอาการขาดสมาธิ</h1>
+                <h1 id="thaiadhd-head-result3">สงสัยปัญหาด้านอาการอยู่ไม่นิ่ง/หุนหันพลันแล่น</h1>
+                <h1 id="thaiadhd-head-result4">มีความเสี่ยงที่จะเป็นโรคสมาธิสั้นตามเกณฑ์แบบประเมิน</h1>
+                <h1 id="thaiadhd-head-result5">สงสัยปัญหาด้านอาการดื้อต่อต้าน</h1>
+                <h1 id="thaiadhd-head-result6">สงสัยปัญหาด้านอาการขาดสมาธิและดื้อต่อต้าน</h1>
+                <h1 id="thaiadhd-head-result7">สงสัยปัญหาด้านอาการอยู่ไม่นิ่ง/หุนหันพลันแล่นและดื้อต่อต้าน</h1>
+                <h1 id="thaiadhd-head-result8">มีความเสี่ยงที่จะเป็นโรคสมาธิสั้นและ<br>อาการดื้อต่อต้านตามเกณฑ์แบบประเมิน</h1>
+                <p>คะแนน: <span id="thaiadhd-head-score">34</span>/78</p>
             </div>
             <div class="thaiadhd-body">
                 <div class="thaiadhd-item">
-                    <b>อาการขาดสมาธิ: 20/27 คะแนน</b>
-                    <p>สูงกว่าคะแนนมาตรฐาน สงสัยว่าเด็กมีปัญหาด้าน "อาการขาดสมาธิ"</p>
+                    <b>อาการขาดสมาธิ: <span id="thaiadhd-section1-score">20</span>/27 คะแนน</b>
+                    <p id="thaiadhd-section1-result1">คะแนนประเมินต่ำกว่าจุดตัดของการมีอาการ “ขาดสมาธิ”</p>
+                    <p id="thaiadhd-section1-result2">คะแนนประเมินสูงกว่าจุดตัดของการมีอาการ “ขาดสมาธิ”<br>
+                    <br>
+                    แบบประเมินนี้จัดทำขึ้นเพื่อใช้ในการคัดกรองเบื้องต้นสำหรับเด็กที่อาจมีปัญหาด้านอาการขาดสมาธิ โดยมิใช่เครื่องมือสำหรับการวินิจฉัยโรคอย่างเป็นทางการ ผลจากแบบประเมินไม่สามารถใช้แทนการวินิจฉัยทางการแพทย์ได้ โดยท่านสามารถเข้ารับการประเมินเพิ่มเติมจากจิตแพทย์เด็กหรือกุมารแพทย์พัฒนาการเพื่อการวินิจฉัยและดูแลช่วยเหลือที่เหมาะสม
+                    </p>
                 </div>
                 <div class="thaiadhd-item">
-                    <b>อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น: 24/27 คะแนน</b>
-                    <p>สูงกว่าคะแนนมาตรฐาน สงสัยว่าเด็กมีปัญหาด้าน "อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น"</p>
+                    <b>อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น: <span id="thaiadhd-section2-score">24</span>/27 คะแนน</b>
+                    <p id="thaiadhd-section2-result1">คะแนนประเมินต่ำกว่าจุดตัดของการมีอาการ “อยู่ไม่นิ่ง/หุนหันพลันแล่น”</p>
+                    <p id="thaiadhd-section2-result2">คะแนนประเมินสูงกว่าจุดตัดของการมีอาการ “อยู่ไม่นิ่ง/หุนหันพลันแล่น"<br>
+                    <br>
+                    แบบประเมินนี้จัดทำขึ้นเพื่อใช้ในการคัดกรองเบื้องต้นสำหรับเด็กที่อาจมีปัญหาด้านอาการขาดสมาธิ โดยมิใช่เครื่องมือสำหรับการวินิจฉัยโรคอย่างเป็นทางการ ผลจากแบบประเมินไม่สามารถใช้แทนการวินิจฉัยทางการแพทย์ได้ โดยท่านสามารถเข้ารับการประเมินเพิ่มเติมจากจิตแพทย์เด็กหรือกุมารแพทย์พัฒนาการเพื่อการวินิจฉัยและดูแลช่วยเหลือที่เหมาะสมหากท่านมีความกังวลใจเกี่ยวกับพฤติกรรมของบุตรหลาน/นักเรียนของท่าน กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อรับคำแนะนำที่เหมาะสม
+                    </p>
                 </div>
-                <div class="thaiadhd-item">
-                    <b>อาการดื้อต่อด้าน: 14/24 คะแนน</b>
-                    <p>อยู่ในเกณฑ์คะแนนมาตรฐาน ไม่พบว่าเด็กมีปัญหาด้าน "อาการดื้อต่อด้าน"</p>
+                <div class="thaiadhd-item-last">
+                    <b>อาการดื้อต่อด้าน: <span id="thaiadhd-section3-score">14</span>/24 คะแนน</b>
+                    <p id="thaiadhd-section3-result1">คะแนนประเมินต่ำกว่าจุดตัดของการมีอาการ “ดื้อต่อต้าน”</p>
+                    <p id="thaiadhd-section3-result2">คะแนนประเมินสูงกว่าจุดตัดของการมีอาการ “ดื้อต่อต้าน"<br>
+                    <br>
+                    แบบประเมินนี้จัดทำขึ้นเพื่อใช้ในการคัดกรองเบื้องต้นสำหรับเด็กที่อาจมีปัญหาด้านอาการขาดสมาธิ โดยมิใช่เครื่องมือสำหรับการวินิจฉัยโรคอย่างเป็นทางการ ผลจากแบบประเมินไม่สามารถใช้แทนการวินิจฉัยทางการแพทย์ได้ โดยท่านสามารถเข้ารับการประเมินเพิ่มเติมจากจิตแพทย์เด็กหรือกุมารแพทย์พัฒนาการเพื่อการวินิจฉัยและดูแลช่วยเหลือที่เหมาะสมหากท่านมีความกังวลใจเกี่ยวกับพฤติกรรมของบุตรหลาน/นักเรียนของท่าน กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อรับคำแนะนำที่เหมาะสม
+                    </p>
                 </div>
             </div>
             <div class="thaiadhd-actions">
@@ -41,14 +83,14 @@
 <style>
 
 :root {
-    --thaiadhd-ink: #1c2430;
-    --thaiadhd-ink-soft: #3a4354;
+    --thaiadhd-ink: #742c46;
+    --thaiadhd-ink-soft: #a34264;
     --thaiadhd-muted: #ecf2f5;
     --thaiadhd-card: #ffffff;
-    --thaiadhd-dark-1: #1a1033; /* top bar */
-    --thaiadhd-dark-2: #3a364c; /* headline strip */
-    --thaiadhd-accent: #2b1a4e; /* primary button */
-    --thaiadhd-outline: #3b3258; /* outline stroke color */
+    --thaiadhd-dark-1: #742c46; /* top bar */
+    --thaiadhd-dark-2: #a34264; /* headline strip */
+    --thaiadhd-accent: #a34264; /* primary button */
+    --thaiadhd-outline: #a34264; /* outline stroke color */
     --thaiadhd-btn-ink: #ffffff;
     --thaiadhd-radius: 14px;
     --thaiadhd-container: 1160px;
@@ -155,7 +197,8 @@
     font-size: 20px;
     color: #243042;
 }
-.thaiadhd-item p {
+.thaiadhd-item p,
+.thaiadhd-item-last p {
     margin: 6px 0 0 0;
     color: #39475c;
     font-size: 18px;
@@ -189,12 +232,23 @@
 }
 .thaiadhd-btn-outline {
     background: #f7f7fb;
-    color: #2b2a3e;
+    color: #630425;
     border: 2px solid var(--thaiadhd-outline);
 }
 .thaiadhd-btn-outline:hover {
     background: #edeef8;
 }
+.thaiadhd-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+#thaiadhd-section1-score,
+#thaiadhd-section2-score,
+#thaiadhd-section3-score {
+    font-weight: bold;
+}
+
 @media (max-width: 980px) {
     .thaiadhd-head h1 {
         font-size: 32px;
@@ -253,3 +307,165 @@
 }
 
 </style>
+
+<script>
+(function () {
+  function getIntParam(params, key) {
+    // Default to 0 if missing/invalid
+    var raw = params.get(key);
+    var n = parseInt(raw, 10);
+    if (isNaN(n)) return 0;
+    // Clamp to expected SNAP-IV range (0..3)
+    if (n < 0) n = 0;
+    if (n > 3) n = 3;
+    return n;
+  }
+
+  function sumRange(params, start, end) {
+    var total = 0;
+    for (var i = start; i <= end; i++) {
+      total += getIntParam(params, 'q' + i);
+    }
+    return total;
+  }
+
+  function setText(id, value) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = String(value);
+  }
+
+  function init() {
+    var params = new URLSearchParams(window.location.search || '');
+
+    // Guard: require exactly 26 SNAP-IV params (q1..q26). If not complete, redirect back.
+    var presentCount = 0;
+    for (var i = 1; i <= 26; i++) {
+      if (params.has('q' + i)) presentCount++;
+    }
+    if (presentCount !== 26) {
+      window.location.href = '/educator/screening';
+      return;
+    }
+
+    var totalAll = sumRange(params, 1, 26);
+    var totalInattentive = sumRange(params, 1, 9);
+    var totalHyper = sumRange(params, 10, 18);
+    var totalOppositional = sumRange(params, 19, 26);
+
+    setText('thaiadhd-head-score', totalAll);
+    setText('thaiadhd-section1-score', totalInattentive);
+    setText('thaiadhd-section2-score', totalHyper);
+    setText('thaiadhd-section3-score', totalOppositional);
+
+        // -------------------------------------------------
+    // Result visibility logic (default hide, then show)
+    // -------------------------------------------------
+    var IDS_TO_HIDE = [
+      'thaiadhd-head-result1',
+      'thaiadhd-head-result2',
+      'thaiadhd-head-result3',
+      'thaiadhd-head-result4',
+      'thaiadhd-head-result5',
+      'thaiadhd-head-result6',
+      'thaiadhd-head-result7',
+      'thaiadhd-head-result8',
+      'thaiadhd-section1-result1',
+      'thaiadhd-section1-result2',
+      'thaiadhd-section2-result1',
+      'thaiadhd-section2-result2',
+      'thaiadhd-section3-result1',
+      'thaiadhd-section3-result2'
+    ];
+
+    function hideById(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = 'none';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(6px)';
+      // Keep tiny font-size only while hidden to allow a smooth growth on show (mainly for H1)
+      if (el.tagName === 'H1') {
+        el.style.fontSize = '1px';
+      }
+    }
+
+    function showById(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+
+      // Make it participate in layout first
+      el.style.display = 'block';
+
+      // For headline H1 only, animate font-size up to the intended size
+      if (el.tagName === 'H1') {
+        el.style.fontSize = '36px';
+      } else {
+        // Let paragraphs keep their CSS-defined font size
+        el.style.fontSize = '18px';
+      }
+
+      // Smooth reveal (opacity + slight move)
+      requestAnimationFrame(function () {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    }
+
+    // Default: hide all controlled result nodes
+    for (var h = 0; h < IDS_TO_HIDE.length; h++) {
+      hideById(IDS_TO_HIDE[h]);
+    }
+
+    // Section cutoffs from matrix
+    // Inattentive (q1-q9): 1-17 = low, 18-27 = high
+    // Hyperactive/Impulsive (q10-q18): 1-10 = low, 11-27 = high
+    // Oppositional (q19-q26): 1-7 = low, 8-24 = high
+    var s1High = totalInattentive >= 18;
+    var s2High = totalHyper >= 11;
+    var s3High = totalOppositional >= 8;
+
+    // Show per-section text blocks (result1 = low, result2 = high)
+    showById(s1High ? 'thaiadhd-section1-result2' : 'thaiadhd-section1-result1');
+    showById(s2High ? 'thaiadhd-section2-result2' : 'thaiadhd-section2-result1');
+    showById(s3High ? 'thaiadhd-section3-result2' : 'thaiadhd-section3-result1');
+
+    // Headline mapping (8 combinations)
+    // 1) s1 low, s2 low, s3 low
+    // 2) s1 high, s2 low, s3 low
+    // 3) s1 low, s2 high, s3 low
+    // 4) s1 high, s2 high, s3 low
+    // 5) s1 low, s2 low, s3 high
+    // 6) s1 high, s2 low, s3 high
+    // 7) s1 low, s2 high, s3 high
+    // 8) s1 high, s2 high, s3 high
+    var headId = 'thaiadhd-head-result1';
+    if (s1High && !s2High && !s3High) headId = 'thaiadhd-head-result2';
+    else if (!s1High && s2High && !s3High) headId = 'thaiadhd-head-result3';
+    else if (s1High && s2High && !s3High) headId = 'thaiadhd-head-result4';
+    else if (!s1High && !s2High && s3High) headId = 'thaiadhd-head-result5';
+    else if (s1High && !s2High && s3High) headId = 'thaiadhd-head-result6';
+    else if (!s1High && s2High && s3High) headId = 'thaiadhd-head-result7';
+    else if (s1High && s2High && s3High) headId = 'thaiadhd-head-result8';
+
+    showById(headId);
+
+    // Expose computed values for future extensions (headlines, conditional text, etc.)
+    window.thaiadhdSnapIV = {
+      q: function (i) { return getIntParam(params, 'q' + i); },
+      totals: {
+        all: totalAll,
+        inattentive: totalInattentive,
+        hyperactiveImpulsive: totalHyper,
+        oppositional: totalOppositional
+      }
+    };
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
