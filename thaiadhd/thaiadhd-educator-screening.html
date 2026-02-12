@@ -128,7 +128,7 @@
                     </div>
                 </div>
 
-                <div class="thaiadhd-actions">
+                <div class="thaiadhd-actions1st">
                     <button type="button" class="thaiadhd-next" id="thaiadhd-nextBtn1">
                             หัวข้อถัดไป
                             <span class="thaiadhd-arrow">→</span>
@@ -252,6 +252,9 @@
                 </div>
 
                 <div class="thaiadhd-actions">
+                    <button type="button" class="thaiadhd-backbtn" id="thaiadhd-backBtn2">
+                            <span class="thaiadhd-arrow">←</span> หัวข้อก่อนหน้า
+                    </button>
                     <button type="button" class="thaiadhd-next" id="thaiadhd-nextBtn2">
                             หัวข้อถัดไป
                             <span class="thaiadhd-arrow">→</span>
@@ -362,6 +365,9 @@
                 </div>
 
                 <div class="thaiadhd-actions">
+                    <button type="button" class="thaiadhd-backbtn" id="thaiadhd-backBtn3">
+                        <span class="thaiadhd-arrow">←</span> หัวข้อก่อนหน้า
+                    </button>
                     <button type="button" class="thaiadhd-next" id="thaiadhd-endBtn">
                         ดูผลการประเมิน <span class="thaiadhd-arrow">→</span>
                     </button>
@@ -599,11 +605,30 @@ input[type="checkbox"], input[type="radio"] {
 /* ----------------------------------------------------
        Footer actions
 ---------------------------------------------------- */
-.thaiadhd-actions {
+.thaiadhd-actions1st {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
     padding: 16px 0;
+}
+.thaiadhd-actions {
+    display: flex;
+    justify-content: space-between; /* back on left, next on right */
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    width: 100%;
+}
+
+.thaiadhd-actions .thaiadhd-backbtn {
+    margin-right: auto;
+}
+.thaiadhd-backbtn {
+    border: none !important;
+    background-color: transparent !important;
+    color: #9d9d9d;
+    cursor: pointer;
+    font-family: "Noto Sans Thai", sans-serif !important;
 }
 .thaiadhd-next {
     appearance: none;
@@ -843,6 +868,8 @@ input[type="checkbox"], input[type="radio"] {
     var section3 = document.getElementById('thaiadhd-section3');
     var nextBtn1 = document.getElementById('thaiadhd-nextBtn1');
     var nextBtn2 = document.getElementById('thaiadhd-nextBtn2');
+    var backBtn2 = document.getElementById('thaiadhd-backBtn2');
+    var backBtn3 = document.getElementById('thaiadhd-backBtn3');
 
     function showSection(el) {
     if (!el) return;
@@ -921,6 +948,36 @@ input[type="checkbox"], input[type="radio"] {
           formWarp.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         updateProgressBar(form, Q_COUNT);
+      });
+    }
+
+    if (backBtn2) {
+      backBtn2.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Go back from Section 2 -> Section 1
+        hideSection(section2);
+        showSection(section1);
+
+        var formWarp = document.getElementById('thaiadhd-form-warp');
+        if (formWarp && formWarp.scrollIntoView) {
+          formWarp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    if (backBtn3) {
+      backBtn3.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Go back from Section 3 -> Section 2
+        hideSection(section3);
+        showSection(section2);
+
+        var formWarp = document.getElementById('thaiadhd-form-warp');
+        if (formWarp && formWarp.scrollIntoView) {
+          formWarp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     }
 
