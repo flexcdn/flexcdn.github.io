@@ -1,0 +1,445 @@
+<!-- https://dev-thai-adhd.pantheonsite.io/node/1/edit -->
+
+<div id="thaiadhd-warp">
+  <!-- HERO -->
+  <div class="thaiadhd-hero">
+    <div class="thaiadhd-container thaiadhd-welcome">
+      <h1>ยินดีต้อนรับ,</h1>
+      <p>ที่นี่คือแหล่งความรู้ที่เชื่อถือได้สำหรับคุณ หากคุณสนใจเรียนรู้เกี่ยวกับโรคสมาธิสั้น (ADHD) เพิ่มเติม</p>
+    </div>
+  </div>
+
+  <!-- UNDER CONSTRUCTION  SECTION -->
+  <section class="thaiadhd-gamewarp" style="min-height: 120px !important;">
+
+  </section>
+
+    <!-- UNDER CONSTRUCTION modal overlay -->
+    <div id="thaiadhd-age-overlay" aria-hidden="false">
+      <div class="thaiadhd-age-modal" role="dialog" aria-modal="true" aria-labelledby="thaiadhd-uctext-title">
+        <div class="thaiadhd-age-card">
+
+          <div class="thaiadhd-uctext-title" id="thaiadhd-uctext-title">
+            กำลังปรับปรุงระบบ
+          </div>
+          <div class="thaiadhd-uctext-desc" id="thaiadhd-uctext-desc">
+            ขออภัย ขณะนี้หน้านี้อยู่ระหว่างการปรับปรุงเพื่อยกระดับประสบการณ์การใช้งาน
+            กรุณากลับมาเยี่ยมชมอีกครั้งในภายหลัง
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  <div id="thaiadhd-hidden"></div>
+
+</div>
+
+<style>
+
+:root {
+    --thaiadhd-bg-grad-start: #2d2450;
+    --thaiadhd-bg-grad-end: #0a1b3a;
+    --thaiadhd-primary: #bd120a; /* CTA red */
+    --thaiadhd-primary-hover: #a9121c;
+    --thaiadhd-ink: #1c2430; /* main text */
+    --thaiadhd-ink-soft: #364355; /* secondary text */
+    --thaiadhd-muted: #eef4fb; /* light card bg */
+    --thaiadhd-panel: #0f1635; /* dark panel */
+    --thaiadhd-panel2: #1a2456;
+    --thaiadhd-border: #e5e9f0;
+    --thaiadhd-white: #fff;
+    --thaiadhd-focus: #4c7df0;
+    --thaiadhd-card-radius: 16px;
+    --thaiadhd-container: 1120px;
+}
+#thaiadhd-float {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* ------------------------------
+       Overwrite
+------------------------------ */
+
+.content>div a:last-of-type {
+    display: block;
+    font-size: 1em;
+}
+nav, .navigation {
+    display: none !important;
+}
+
+/* ------------------------------
+       Hero / Welcome
+------------------------------ */
+#thaiadhd-warp {
+    padding: 0px !important;
+}
+.thaiadhd-container {
+    max-width: var(--thaiadhd-container);
+    margin-inline: auto;
+    padding: 28px 24px;
+}
+.thaiadhd-hero {
+    padding: 15px 0 15px 0;
+    background: #4C475D;
+    background: linear-gradient(90deg,rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+}
+.thaiadhd-hero .thaiadhd-welcome {
+    background: transparent;
+    padding: 5px;
+}
+.thaiadhd-hero .thaiadhd-welcome h1 {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.1px;
+    color: #fff;
+    text-align: left;
+    padding: unset;
+    background: none;
+}
+.thaiadhd-hero .thaiadhd-welcome p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------
+       Info banner
+------------------------------ */
+.thaiadhd-info {
+}
+.thaiadhd-info-card {
+    background: var(--thaiadhd-muted);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+    text-align: center;
+}
+.thaiadhd-info-card p {
+    margin: 0;
+    color: #2a3648;
+    font-size: 18px;
+    line-height: 175%;
+}
+
+/* ------------------------------
+       Main Warp
+------------------------------ */
+.thaiadhd-textwarp {
+}
+.thaiadhd-textwarp-card {
+    background: transparent;
+    padding: 10px 10px;
+    text-align: left;
+}
+
+.thaiadhd-textwarp-card p {
+    margin: 0;
+    color: #2a3648;
+    font-size: 18px;
+    line-height: 175%;
+    text-align: left;
+}
+
+/* ------------------------------
+       UNDER CONSTRUCTION  section
+------------------------------ */
+.thaiadhd-gamewarp {
+    padding: 45px 0 60px;
+    background: #ffffff;
+}
+.thaiadhd-gameagesum {
+    max-width: 1110px;
+    margin: auto;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.thaiadhd-ageshow {
+    min-width: 90px;
+    text-align: center;
+    padding: 3px 9px 3px 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background: #4C475D;
+    background: linear-gradient(90deg, rgba(76, 71, 93, 1) 0%, rgba(26, 18, 59, 1) 100%);
+    color: #ffffff;
+    font-size: 18px;
+}
+.thaiadhd-gamecontainer {
+    max-width: var(--thaiadhd-container);
+    margin-inline: auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 40px;
+    row-gap: 32px;
+    align-items: flex-start;
+    justify-items: center;
+}
+
+/* card wrapper */
+.thaiadhd-gamewarp-card {
+    width: 100%;
+}
+
+/* ให้สไตล์กับลิงก์ที่ครอบทั้งการ์ด */
+.thaiadhd-gamewarp-card a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #1c2430;
+    text-decoration: none;
+}
+
+/* hover ให้ดูเป็นปุ่มคลิกได้หน่อย */
+.thaiadhd-gamewarp-card a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* รูปเกม */
+.thaiadhd-gamewarp-cardpic {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    margin: 0 auto 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
+}
+
+/* Responsive: 2 columns on tablets */
+@media (max-width: 900px) {
+    .thaiadhd-gamecontainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 28px;
+        row-gap: 28px;
+    }
+    .thaiadhd-gamewarp-card a {
+        font-size: 18px;
+    }
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 600px) {
+    .thaiadhd-gamewarp {
+        padding: 28px 0 44px;
+    }
+    .thaiadhd-gamecontainer {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 24px;
+        padding-inline: 18px;
+    }
+    .thaiadhd-gamewarp-cardpic {
+        max-width: 100%;
+    }
+    .thaiadhd-gamewarp-card a {
+        font-size: 17px;
+    }
+}
+
+/* ------------------------------
+       Age selection modal
+------------------------------ */
+#thaiadhd-age-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.thaiadhd-age-modal {
+    width: min(340px, 92vw);
+}
+
+.thaiadhd-age-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 26px 22px 22px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    font-family: inherit;
+}
+
+.thaiadhd-uctext-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1c2430;
+    letter-spacing: 0.2px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 6px auto 10px;
+}
+
+.thaiadhd-uctext-desc {
+    font-size: 15px;
+    font-weight: 500;
+    color: #4b5565;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 280px;
+}
+
+.thaiadhd-age-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    max-width: 180px;
+    margin: auto;
+}
+
+.thaiadhd-age-prefix {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1c2430;
+}
+
+.thaiadhd-age-select {
+    min-width: 90px;
+    text-align: center;
+    padding: 7px 22px 6px 19px;
+    border-radius: 10px;
+    background: #1ca39b;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background-image: none;
+}
+.thaiadhd-age-btn {
+    margin-top: 20px;
+}
+.thaiadhd-age-submit {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 16px;
+    background: var(--thaiadhd-primary);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0px;
+    font-family: "Noto Sans Thai", sans-serif !important;
+}
+
+.thaiadhd-age-submit:hover {
+    background: var(--thaiadhd-primary-hover);
+}
+
+@media (max-width: 480px) {
+    .thaiadhd-age-card {
+        padding: 18px 16px 16px;
+    }
+    .thaiadhd-age-prefix {
+        font-size: 22px;
+    }
+    .thaiadhd-age-select {
+        font-size: 22px;
+    }
+}
+
+/* ------------------------------
+       Responsiveness
+------------------------------ */
+@media (max-width: 1100px) {
+    :root {
+        --thaiadhd-container: 1000px;
+    }
+}
+@media (max-width: 900px) {
+    .thaiadhd-container {
+        padding: 22px 18px;
+    }
+    .thaiadhd-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .thaiadhd-card {
+        min-height: 240px;
+    }
+}
+@media (max-width: 600px) {
+    .thaiadhd-hero .thaiadhd-welcome h1 {
+        font-size: 20px;
+    }
+    .thaiadhd-hero .thaiadhd-welcome p {
+        font-size: 13.5px;
+    }
+    .thaiadhd-info-card p {
+        font-size: 14px;
+    }
+    .thaiadhd-button {
+        font-size: 13.5px;
+        padding: 9px 14px;
+    }
+}
+@media (max-width: 420px) {
+    .thaiadhd-grid {
+        grid-template-columns: 1fr;
+    }
+    .thaiadhd-card {
+        min-height: 220px;
+    }
+    .thaiadhd-card-footer {
+        font-size: 14px;
+    }
+}
+
+</style>
+
+<script>
+(function () {
+  var overlay   = document.getElementById('thaiadhd-age-overlay');
+  var submitBtn = document.getElementById('thaiadhd-age-submit');
+  var ageSelect = document.getElementById('thaiadhd-age-select');
+  var ageShow   = document.querySelector('.thaiadhd-ageshow');
+
+  // helper: อัปเดตตัวเลขที่ Your Age … Years old.
+  function updateAgeDisplay() {
+    if (ageShow && ageSelect) {
+      ageShow.textContent = ageSelect.value;
+    }
+  }
+
+  // ตั้งค่าเริ่มต้นให้ตรงกับ option ที่ถูกเลือก (ตอนนี้คือ 18)
+  if (ageShow && ageSelect) {
+    updateAgeDisplay();
+  }
+
+  if (overlay && submitBtn) {
+    submitBtn.addEventListener('click', function () {
+      // เวลา user กด ตกลง ให้ดึงค่า age มาแสดง
+      updateAgeDisplay();
+
+      // ปิด modal สำหรับ demo
+      overlay.style.display = 'none';
+      overlay.setAttribute('aria-hidden', 'true');
+
+      // debug ใน console เผื่ออยากเช็ก
+      if (ageSelect) {
+        console.log('Selected age:', ageSelect.value);
+      }
+    });
+  }
+})();
+</script>
