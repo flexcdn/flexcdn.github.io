@@ -6,7 +6,7 @@
         <div class="thaiadhd-container thaiadhd-welcome">
         <h1>แบบประเมินพฤติกรรม SNAP-IV (สำหรับ คุณครู)</h1>
         <p>Swanson, Nolan and Pelham IV Questionnaire (Short Form)</p>
-        <p>แบบสอบถามนี้มีไว้สำหรับการประเมินตนเองเบื้องต้นเท่านั้น และไม่ถือเป็นการวินิจฉัยโรคสมาธิสั้น (ADHD) หรือใช้แทนคำแนะนำทางการแพทย์จากผู้เชี่ยวชาญ หากต้องการคำปรึกษาเพิ่มเติม กรุณาติดต่อบุคลากรทางการแพทย์ในสถานพยาบาลใกล้คุณ</p>
+        <p>แบบประเมินนี้มีไว้สำหรับการประเมินเด็กหรือวัยรุ่นที่อาจมีความเสี่ยงต่อภาวะสมาธิสั้นเท่านั้น และไม่สามารถใช้แทนการวินิจฉัยโรคสมาธิสั้น (ADHD) หรือใช้แทนคำแนะนำทางการแพทย์จากผู้เชี่ยวชาญ หากต้องการคำปรึกษาเพิ่มเติม กรุณาติดต่อบุคลากรทางการแพทย์ในสถานพยาบาลใกล้คุณ</p>
         </div>
     </div>
     <main class="thaiadhd-container">
@@ -252,8 +252,8 @@
                 </div>
 
                 <div class="thaiadhd-actions">
-                    <button type="button" class="thaiadhd-backbtn" id="thaiadhd-backBtn2">
-                            <span class="thaiadhd-arrow">←</span> หัวข้อก่อนหน้า
+                    <button type="button" class="thaiadhd-next" id="thaiadhd-backBtn2">
+                            <span class="thaiadhd-arrow2">←</span> หัวข้อก่อนหน้า
                     </button>
                     <button type="button" class="thaiadhd-next" id="thaiadhd-nextBtn2">
                             หัวข้อถัดไป
@@ -365,8 +365,8 @@
                 </div>
 
                 <div class="thaiadhd-actions">
-                    <button type="button" class="thaiadhd-backbtn" id="thaiadhd-backBtn3">
-                        <span class="thaiadhd-arrow">←</span> หัวข้อก่อนหน้า
+                    <button type="button" class="thaiadhd-next" id="thaiadhd-backBtn3">
+                        <span class="thaiadhd-arrow2">←</span> หัวข้อก่อนหน้า
                     </button>
                     <button type="button" class="thaiadhd-next" id="thaiadhd-endBtn">
                         ดูผลการประเมิน <span class="thaiadhd-arrow">→</span>
@@ -660,6 +660,17 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: 700;
     margin-left: auto;
 }
+.thaiadhd-next .thaiadhd-arrow2 {
+    color: #283549;
+    border-radius: 999px;
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    font-weight: 700;
+    transform: translateX(-10px);
+    margin-right: auto;
+}
 #thaiadhd-Progress {
     width: 100%;
     background-color: #f5f5f5;
@@ -760,14 +771,15 @@ input[type="checkbox"], input[type="radio"] {
     .thaiadhd-sectioncap {
         font-size: 15px;
     }
-}
-
-@media (max-width: 520px){
   #thaiadhd-reference{ padding: 16px; }
   #thaiadhd-reference .thaiadhd-reference-items{
     font-size: 13.5px;
     padding-left: 18px;
     text-indent: -18px;
+  }
+  .thaiadhd-next {
+    padding: 5px 12px !important;
+    font-size: 14px !important;
   }
 }
 
