@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <title>กำลังนำคุณออกจาก knowdengueth.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Immediate redirect (works even when JS is disabled in most browsers) -->
+    <meta http-equiv="refresh" content="0.3;url=https://players.brightcove.net/3871979173001/default_default/index.html?videoId=6388585216112" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <script>
+        (function () {
+        var target = "https://players.brightcove.net/3871979173001/default_default/index.html?videoId=6388585216112";
+
+        // ---- fire tracking once per session toกันยิงซ้ำ ----
+        function fireTrackingOnce() {
+            if (sessionStorage.getItem('taamjib_tracked')) return;
+            sessionStorage.setItem('taamjib_tracked', '1');
+
+            // Meta (PageView) — image beacon
+            new Image().src =
+            "https://www.facebook.com/tr?id=541247655500433&ev=PageView&noscript=1&ord=" + Date.now();
+
+            // Google Ads conversion — image beacon
+            new Image().src =
+            "https://www.googleadservices.com/pagead/conversion/17143575464/"+
+            "?label=M2DHCOfikNMaEKjn2O4_&guid=ON&script=0&ord=" + Date.now();
+        }
+
+        // ยิงทันทีที่เข้าหน้า
+        fireTrackingOnce();
+
+        // ถ้าผู้ใช้กดปุ่ม "ทำต่อ" ด้วยตนเอง ก็ยิงซ้ำแบบกันซ้ำอยู่แล้ว
+        var cont = document.getElementById("continue");
+        if (cont) cont.addEventListener("click", fireTrackingOnce, { passive: true });
+
+        var cancel = document.getElementById("cancel");
+        if (cancel) {
+            cancel.addEventListener("click", function (ev) {
+            ev.preventDefault();
+            if (history.length > 1) history.back();
+            else window.location.assign("/");
+            });
+        }
+
+        // หน่วงนิดเดียวให้ beacon ออก แล้วค่อย redirect
+        setTimeout(function () {
+            try { window.location.replace(target); }
+            catch (e) { window.location.href = target; }
+        }, 250); // 150–300ms ก็พอ
+        })();
+    </script>
+
+    <style>
+      :root{
+        --text:#111;
+        --muted:#5b5b5b;
+        --red:#e3222a;
+        --grey:#3f3f3f;
+        --bg:#fff;
+        --btn-radius:48px;
+      }
+      html,body{
+        margin:0; padding:0;
+        background:var(--bg);
+        color:var(--text);
+        font-family: "Kanit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Thai", "Noto Sans", sans-serif;
+      }
+      .wrap{
+        max-width:460px;
+        margin:6vh auto;
+        padding:0 24px;
+        text-align:center;
+      }
+      h1{
+        font-size: clamp(28px, 4.6vw, 28px);
+        line-height:1.2;
+        margin:0 0 12px;
+        font-weight:800;
+      }
+      .host{
+        display:block;
+        font-size: clamp(28px, 4.6vw, 28px);
+        line-height:1.2;
+        font-weight:900;
+      }
+      p.lead{
+        font-size: clamp(18px, 2.3vw, 18px);
+        line-height:1.6;
+        color:var(--text);
+        margin:22px 0 36px;
+      }
+      .actions{
+        display:flex;
+        gap:24px;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        margin-top:16px;
+      }
+      .btn{
+        display:inline-block;
+        min-width:140px;
+        padding:12px 12px;
+        border-radius:var(--btn-radius);
+        text-decoration:none;
+        color:#fff;
+        font-size: clamp(18px, 2.4vw, 18px);
+        font-weight:700;
+        box-shadow: 0 6px 16px rgba(0,0,0,.08);
+        transition: transform .12s ease, filter .12s ease, opacity .12s ease;
+      }
+      .btn:focus-visible{ outline: 3px solid rgba(0,0,0,.25); outline-offset: 2px; }
+      .btn:hover{ transform: translateY(-1px); filter: brightness(1.03);}
+      .btn:active{ transform: translateY(0); filter: brightness(.97); }
+      .btn-grey{ background:var(--grey); }
+      .btn-red{ background:var(--red); }
+
+      /* Basic noscript fallback layout keeps same design */
+      noscript .nojs{
+        display:block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap" aria-live="polite">
+      <h1>โปรดกดปุ่ม <strong>ทำต่อ</strong> เพื่อไปยังปลายทาง</span>
+      </h1>
+
+      <div class="actions">
+        <a id="cancel" href="#" class="btn btn-grey" role="button" aria-label="ยกเลิก และกลับไปหน้าก่อนหน้า">ยกเลิก</a>
+        <a id="continue" href="https://players.brightcove.net/3871979173001/default_default/index.html?videoId=6388585216112" class="btn btn-red" role="button" rel="noreferrer noopener">ทำต่อ</a>
+      </div>
+
+      <!-- If meta refresh or JS is blocked, user can still click "ทำต่อ" -->
+      <noscript>
+        <div class="nojs" style="margin-top:20px; color:#666;">
+          เบราว์เซอร์ของคุณปิดการใช้งาน JavaScript ไว้ โปรดกดปุ่ม <strong>ทำต่อ</strong> เพื่อไปยังปลายทาง
+        </div>
+      </noscript>
+    </div>
+
+    <script>
+      (function () {
+        var target = "https://players.brightcove.net/3871979173001/default_default/index.html?videoId=6388585216112";
+        // Ensure the "ทำต่อ" button always points to target
+        var cont = document.getElementById("continue");
+        if (cont) cont.setAttribute("href", target);
+        // "ยกเลิก" behaves like browser back (with fallback)
+        var cancel = document.getElementById("cancel");
+        if (cancel) {
+          cancel.addEventListener("click", function (ev) {
+            ev.preventDefault();
+            if (window.history && history.length > 1) {
+              history.back();
+            } else {
+              window.location.assign("/");
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
