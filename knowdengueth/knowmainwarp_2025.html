@@ -589,7 +589,7 @@
             }
         
             fetch(
-            "https://opensheet.elk.sh/17U-BN7wqDPJxieSmXtIacWLraK19VkMaFCUk_IQ97Uc/SUMMARY"
+            "https://opensheet.elk.sh/1EePm4Rkg7KXnWpXzAGvSbPxOfxpqjuf7YaTUJ82cQ7Q/SUMMARY"
             )
             .then((res) => res.json())
             .then((data) => {
@@ -611,11 +611,11 @@
                 document.getElementById('info2mobprint').appendChild(info2mob);
         
                 const info3 = document.createElement('span');
-                info3.innerHTML = data[4].ColumnC;
+                info3.innerHTML = data[6].ColumnC;
                 document.getElementById('info3print').appendChild(info3);
         
                 const info4 = document.createElement('span');
-                info4.innerHTML = data[6].ColumnC;
+                info4.innerHTML = data[8].ColumnC;
                 document.getElementById('info4print').appendChild(info4);
         
                 const info5year = document.createElement('span');
@@ -644,8 +644,8 @@
         
                 // Bar graph
         
-                const sicks = [toInt(data[26].ColumnC), toInt(data[31].ColumnC), toInt(data[36].ColumnC), toInt(data[41].ColumnC), toInt(data[46].ColumnC), toInt(data[51].ColumnC), toInt(data[56].ColumnC), toInt(data[61].ColumnC)];
-                const deads = [toInt(data[28].ColumnC), toInt(data[33].ColumnC), toInt(data[38].ColumnC), toInt(data[43].ColumnC), toInt(data[48].ColumnC), toInt(data[53].ColumnC), toInt(data[58].ColumnC), toInt(data[63].ColumnC)];
+                const sicks = [toInt(data[116].ColumnC), toInt(data[121].ColumnC), toInt(data[126].ColumnC), toInt(data[131].ColumnC), toInt(data[136].ColumnC), toInt(data[141].ColumnC), toInt(data[146].ColumnC), toInt(data[151].ColumnC)];
+                const deads = [toInt(data[118].ColumnC), toInt(data[123].ColumnC), toInt(data[128].ColumnC), toInt(data[133].ColumnC), toInt(data[138].ColumnC), toInt(data[143].ColumnC), toInt(data[148].ColumnC), toInt(data[153].ColumnC)];
         
                 //const t_cases = [...sicks, ...deads].reduce((a, b) => a + b, 0);
                 const t_cases = Math.max(...sicks);
@@ -685,75 +685,75 @@
                 
         
                 const ageinfo1c1 = document.createElement('span');
-                ageinfo1c1.innerHTML = data[26].ColumnC;
+                ageinfo1c1.innerHTML = data[116].ColumnC;
                 document.getElementById('ageinfo1c1print').appendChild(ageinfo1c1);
-        
+
                 const ageinfo1c2 = document.createElement('span');
-                ageinfo1c2.innerHTML = data[28].ColumnC;
+                ageinfo1c2.innerHTML = data[118].ColumnC;
                 document.getElementById('ageinfo1c2print').appendChild(ageinfo1c2);
-        
+
                 const ageinfo2c1 = document.createElement('span');
-                ageinfo2c1.innerHTML = data[31].ColumnC;
+                ageinfo2c1.innerHTML = data[121].ColumnC;
                 document.getElementById('ageinfo2c1print').appendChild(ageinfo2c1);
-        
+
                 const ageinfo2c2 = document.createElement('span');
-                ageinfo2c2.innerHTML = data[33].ColumnC;
+                ageinfo2c2.innerHTML = data[123].ColumnC;
                 document.getElementById('ageinfo2c2print').appendChild(ageinfo2c2);
-        
+
                 const ageinfo3c1 = document.createElement('span');
-                ageinfo3c1.innerHTML = data[36].ColumnC;
+                ageinfo3c1.innerHTML = data[126].ColumnC;
                 document.getElementById('ageinfo3c1print').appendChild(ageinfo3c1);
-        
+
                 const ageinfo3c2 = document.createElement('span');
-                ageinfo3c2.innerHTML = data[38].ColumnC;
+                ageinfo3c2.innerHTML = data[128].ColumnC;
                 document.getElementById('ageinfo3c2print').appendChild(ageinfo3c2);
-        
+
                 const ageinfo4c1 = document.createElement('span');
-                ageinfo4c1.innerHTML = data[41].ColumnC;
+                ageinfo4c1.innerHTML = data[131].ColumnC;
                 document.getElementById('ageinfo4c1print').appendChild(ageinfo4c1);
-        
+
                 const ageinfo4c2 = document.createElement('span');
-                ageinfo4c2.innerHTML = data[43].ColumnC;
+                ageinfo4c2.innerHTML = data[133].ColumnC;
                 document.getElementById('ageinfo4c2print').appendChild(ageinfo4c2);
-        
+
                 const ageinfo5c1 = document.createElement('span');
-                ageinfo5c1.innerHTML = data[46].ColumnC;
+                ageinfo5c1.innerHTML = data[136].ColumnC;
                 document.getElementById('ageinfo5c1print').appendChild(ageinfo5c1);
-        
+
                 const ageinfo5c2 = document.createElement('span');
-                ageinfo5c2.innerHTML = data[48].ColumnC;
+                ageinfo5c2.innerHTML = data[138].ColumnC;
                 document.getElementById('ageinfo5c2print').appendChild(ageinfo5c2);
-        
+
                 const ageinfo6c1 = document.createElement('span');
-                ageinfo6c1.innerHTML = data[51].ColumnC;
+                ageinfo6c1.innerHTML = data[141].ColumnC;
                 document.getElementById('ageinfo6c1print').appendChild(ageinfo6c1);
-        
+
                 const ageinfo6c2 = document.createElement('span');
-                ageinfo6c2.innerHTML = data[53].ColumnC;
+                ageinfo6c2.innerHTML = data[143].ColumnC;
                 document.getElementById('ageinfo6c2print').appendChild(ageinfo6c2);
-        
+
                 const ageinfo7c1 = document.createElement('span');
-                ageinfo7c1.innerHTML = data[56].ColumnC;
+                ageinfo7c1.innerHTML = data[146].ColumnC;
                 document.getElementById('ageinfo7c1print').appendChild(ageinfo7c1);
-        
+
                 const ageinfo7c2 = document.createElement('span');
-                ageinfo7c2.innerHTML = data[58].ColumnC;
+                ageinfo7c2.innerHTML = data[148].ColumnC;
                 document.getElementById('ageinfo7c2print').appendChild(ageinfo7c2);
-        
+
                 const ageinfo8c1 = document.createElement('span');
-                ageinfo8c1.innerHTML = data[61].ColumnC;
+                ageinfo8c1.innerHTML = data[151].ColumnC;
                 document.getElementById('ageinfo8c1print').appendChild(ageinfo8c1);
-        
+
                 const ageinfo8c2 = document.createElement('span');
-                ageinfo8c2.innerHTML = data[63].ColumnC;
+                ageinfo8c2.innerHTML = data[153].ColumnC;
                 document.getElementById('ageinfo8c2print').appendChild(ageinfo8c2);
         
                 const ageinfosum1 = document.createElement('span');
-                ageinfosum1.innerHTML = data[8].ColumnB;
+                ageinfosum1.innerHTML = data[13].ColumnB;
                 document.getElementById('ageinfosum1print').appendChild(ageinfosum1);
         
                 const ageinfosum2 = document.createElement('span');
-                ageinfosum2.innerHTML = data[9].ColumnB;
+                ageinfosum2.innerHTML = data[14].ColumnB;
                 document.getElementById('ageinfosum2print').appendChild(ageinfosum2);
         
                 const riskinfo1 = document.createElement('span');
@@ -888,7 +888,7 @@
                                                     }
                                                 });
                         
-                                                fetch("https://opensheet.elk.sh/17U-BN7wqDPJxieSmXtIacWLraK19VkMaFCUk_IQ97Uc/LOCATION")
+                                                fetch("https://opensheet.elk.sh/1EePm4Rkg7KXnWpXzAGvSbPxOfxpqjuf7YaTUJ82cQ7Q/LOCATION")
                                                 .then((res) => res.json())
                                                 .then((data) => {
                                                     document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
@@ -924,7 +924,7 @@
                                                     }
                                                 };
 
-                                                fetch("https://opensheet.elk.sh/17U-BN7wqDPJxieSmXtIacWLraK19VkMaFCUk_IQ97Uc/LOCATION")
+                                                fetch("https://opensheet.elk.sh/1EePm4Rkg7KXnWpXzAGvSbPxOfxpqjuf7YaTUJ82cQ7Q/LOCATION")
                                                 .then((res) => res.json())
                                                 .then((data) => {
                                                     document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
@@ -958,7 +958,7 @@
                                     }
                                 });
         
-                                fetch("https://opensheet.elk.sh/17U-BN7wqDPJxieSmXtIacWLraK19VkMaFCUk_IQ97Uc/LOCATION")
+                                fetch("https://opensheet.elk.sh/1EePm4Rkg7KXnWpXzAGvSbPxOfxpqjuf7YaTUJ82cQ7Q/LOCATION")
                                 .then((res) => res.json())
                                 .then((data) => {
                                     document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
@@ -995,7 +995,7 @@
                             }
                         });
         
-                        fetch("https://opensheet.elk.sh/17U-BN7wqDPJxieSmXtIacWLraK19VkMaFCUk_IQ97Uc/LOCATION")
+                        fetch("https://opensheet.elk.sh/1EePm4Rkg7KXnWpXzAGvSbPxOfxpqjuf7YaTUJ82cQ7Q/LOCATION")
                         .then((res) => res.json())
                         .then((data) => {
                             document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
@@ -1057,7 +1057,7 @@
                                 }
                             };
                         });
-                        fetch("https://opensheet.elk.sh/17U-BN7wqDPJxieSmXtIacWLraK19VkMaFCUk_IQ97Uc/LOCATION")
+                        fetch("https://opensheet.elk.sh/1EePm4Rkg7KXnWpXzAGvSbPxOfxpqjuf7YaTUJ82cQ7Q/LOCATION")
                         .then((res) => res.json())
                         .then((data) => {
                             document.getElementsByClassName('knowtopcol2in3div2')[0].innerHTML = '';
